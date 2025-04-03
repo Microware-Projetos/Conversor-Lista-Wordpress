@@ -1,0 +1,23 @@
+[
+    {
+        "PART_ORIGIN": "Origem",
+        "PROCESSOR": "Processador",
+        "GRAPHICS": "Placa Gráfica",
+        "CHIPSET": "Chipset",
+        "MEMORY": "Memória",
+        "STORAGE": "Storage",
+        "DISPLAY": "Tela",
+        "TOUCH_SCREEN": "Touch",
+        "ETHERNET": "Rede",
+        "WLAN_BUETOOTH": "WLAN",
+        "CASE_MATERIAL": "Case Material",
+        "CAMERA": "Câmera",
+        "MICROPHONE": "Microfone",
+        "COLOR": "Cor",
+        "KEYBOARD": "Teclado",
+        "FINGERPRINT_READER": "Biometria",
+        "EAN_CODE": "Código EAN",
+        "BATTERY": "Bateria",
+        "OS": "Sistema Operacional"
+ }
+]

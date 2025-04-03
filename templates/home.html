@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}Página Inicial{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Header com logo da empresa -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-4 text-center">
+            <img src="{{ url_for('static', filename='logo_mw.png') }}" alt="MW Logo" class="img-fluid" style="max-height: 100px;">
+        </div>
+    </div>
+
+    <!-- Título principal -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8 text-center">
+            <h1 class="display-4">Sistema de Upload de Arquivos</h1>
+            <p class="lead">Selecione a marca para iniciar o processo de upload</p>
+        </div>
+    </div>
+
+    <!-- Cards com logos das marcas -->
+    <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm hover-card">
+                <div class="card-body text-center d-flex flex-column">
+                    <a href="{{ url_for('lenovo.listar_produtos') }}" class="text-decoration-none flex-grow-1 d-flex flex-column">
+                        <div class="logo-container mb-3">
+                            <img src="{{ url_for('static', filename='lenovo.png') }}" alt="Lenovo Logo" class="brand-logo">
+                        </div>
+                        <h3 class="card-title">Lenovo</h3>
+                        <p class="card-text text-muted mt-auto">Clique para fazer upload de arquivos Lenovo</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm hover-card">
+                <div class="card-body text-center d-flex flex-column">
+                    <a href="{{ url_for('hp.upload_page') }}" class="text-decoration-none flex-grow-1 d-flex flex-column">
+                        <div class="logo-container mb-3">
+                            <img src="{{ url_for('static', filename='hp.png') }}" alt="HP Logo" class="brand-logo">
+                        </div>
+                        <h3 class="card-title">HP</h3>
+                        <p class="card-text text-muted mt-auto">Clique para fazer upload de arquivos HP</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm hover-card">
+                <div class="card-body text-center d-flex flex-column">
+                    <a href="{{ url_for('cisco.upload_page') }}" class="text-decoration-none flex-grow-1 d-flex flex-column">
+                        <div class="logo-container mb-3">
+                            <img src="{{ url_for('static', filename='cisco.png') }}" alt="Cisco Logo" class="brand-logo">
+                        </div>
+                        <h3 class="card-title">Cisco</h3>
+                        <p class="card-text text-muted mt-auto">Clique para fazer upload de arquivos Cisco</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    height: 100%;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.card-body a {
+    color: inherit;
+}
+
+.card-body a:hover {
+    color: #0d6efd;
+}
+
+.logo-container {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.card-text {
+    margin-bottom: 0;
+}
+</style>
+{% endblock %} 
