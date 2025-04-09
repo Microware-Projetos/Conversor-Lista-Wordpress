@@ -1,0 +1,126 @@
+{
+    "Colunas": {
+        "PRODUCT_CODE": "sku",
+        "PH_BRAND": "categories",
+        "PH4_DESCRIPTION": "short_description",
+        "PRODUCT_DESCRIPTION": "name",
+        "ORIGEM": "attributes",
+        "PART_ORIGIN": "attributes",
+        "PROCESSOR": "attributes",
+        "GRAPHICS": "attributes",
+        "CHIPSET": "attributes",
+        "MEMORY": "attributes",
+        "STORAGE": "attributes",
+        "DISPLAY": "attributes",
+        "TOUCH_SCREEN": "attributes", 
+        "ETHERNET": "attributes",
+        "WLAN_BUETOOTH": "attributes",
+        "CASE_MATERIAL": "attributes",
+        "CAMERA": "attributes",
+        "MICROPHONE": "attributes",
+        "COLOR": "attributes",
+        "KEYBOARD": "attributes",
+        "FINGERPRINT_READER": "attributes",
+        "BATTERY": "attributes",
+        "OS": "attributes",
+        "DIMENSION": "dimensions",
+        "WEIGHT": "weight",
+        "EAN_CODE": "attributes",
+        "UNIT_GROSS_PRICE": "price"
+    },
+    "Attributes": {
+        "ORIGEM": "Origem",
+        "PART_ORIGIN": "Origem",
+        "PROCESSOR": "Processador",
+        "GRAPHICS": "Placa Gráfica",
+        "CHIPSET": "Chipset",
+        "MEMORY": "Memória",
+        "STORAGE": "Storage",
+        "DISPLAY": "Tela",
+        "TOUCH_SCREEN": "Touch",
+        "ETHERNET": "Rede",
+        "WLAN_BUETOOTH": "WLAN",
+        "CASE_MATERIAL": "Case Material",
+        "CAMERA": "Câmera",
+        "MICROPHONE": "Microfone",
+        "COLOR": "Cor",
+        "KEYBOARD": "Teclado",
+        "FINGERPRINT_READER": "Biometria",
+        "EAN_CODE": "Código EAN",
+        "BATTERY": "Bateria",
+        "OS": "Sistema Operacional"
+    },
+    "TraducaoLinha": {
+        "PCG S&P": "Acessórios",
+        "Visuals": "Monitores",
+        "Tablet Android": "Tablet",
+        "Smart Office": "Equipamento para Reunião",
+        "Tiny-in-One": "Acessórios"
+    },
+    "CustonsCategories": {
+        "Notebook": {
+            "rulePrice": {
+                "Margem": 20,
+                "Adicional": 0
+            },
+            "stock_quantity": 100
+        },
+        "Monitor": {
+            "rulePrice": {
+                "Margem": 30,
+                "Adicional": 0
+            },
+            "stock_quantity": 100
+        },
+        "Phone": {
+            "rulePrice": {
+                "Margem": 30,
+                "Adicional": 0
+            },
+            "stock_quantity": 100
+        },
+        "Desktop": {
+            "rulePrice": {
+                "Margem": 20,
+                "Adicional": 150
+            },
+            "stock_quantity": 100
+        },
+        "Tiny-in-One": {
+            "rulePrice": {
+                "Margem": 20,
+                "Adicional": 150
+            },
+            "stock_quantity": 100
+        },
+        "Workstation": {
+            "rulePrice": {
+                "Margem": 20,
+                "Adicional": 150,
+                "stock_quantity": 100
+            },
+            "Acessórios": {
+                "rulePrice": {
+                    "Margem": 30,
+                    "Adicional": 0
+                },
+                "stock_quantity": 100
+            },
+            "SmartOffice": {
+                "rulePrice": {
+                    "Margem": 20,
+                    "Adicional": 0
+                },
+                "stock_quantity": 100
+            },
+            "Service": {
+                "rulePrice": {
+                    "Margem": 30,
+                    "Adicional": 0
+                },
+                "virtual": true,
+                "stock_quantity": 100
+            }
+        }
+    }
+}

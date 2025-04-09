@@ -1,0 +1,5750 @@
+[
+    {
+        "name": "HP 280 G9 SFF ",
+        "sku": "957K1LA#AK4",
+        "short_description": "Desktop HP 280 G9 SFF  i3-13100 FreeDOS RAM 4GB (1x4GB) DDR4 3200 SSD 256G M.2 2280 PCIe NVMe",
+        "regular_price": 4645.524374999999,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i3-13100"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "FreeDOS"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 4GB (1x4GB) DDR4 3200"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 256G M.2 2280 PCIe NVMe"
+                ],
+                "visible": true
+            },
+            {
+                "id": 41,
+                "options": [
+                    "Intel® H670"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics 730"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852BE Wi-Fi6 +BT 5.2 WW Screw"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 8,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/1"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP 280 G9 SFF ",
+        "sku": "957K5LA#AK4",
+        "short_description": "Desktop HP 280 G9 SFF  i3-13100 FreeDOS RAM 8GB (1x8GB) DDR4 3200 SSD 256G M.2 2280 PCIe NVMe",
+        "regular_price": 4859.726624999999,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i3-13100"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "FreeDOS"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 8GB (1x8GB) DDR4 3200"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 256G M.2 2280 PCIe NVMe"
+                ],
+                "visible": true
+            },
+            {
+                "id": 41,
+                "options": [
+                    "Intel® H670"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics 730"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852BE Wi-Fi6 +BT 5.2 WW Screw"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 8,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/1"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP 280 G9 SFF ",
+        "sku": "957L5LA#AK4",
+        "short_description": "Desktop HP 280 G9 SFF  i7-13700 Win 11 Pro RAM 16GB (1x16GB) DDR4 3200 SSD 512G M.2 2280 PCIe NVMe",
+        "regular_price": 9379.573125,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i7-13700"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB (1x16GB) DDR4 3200"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 512G M.2 2280 PCIe NVMe"
+                ],
+                "visible": true
+            },
+            {
+                "id": 41,
+                "options": [
+                    "Intel® H670"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics 770"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852BE Wi-Fi6 +BT 5.2 WW Screw "
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 8,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/1"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP 280 G9 SFF ",
+        "sku": "957K7LA#AK4",
+        "short_description": "Desktop HP 280 G9 SFF  i5-13500 Win 11 Pro RAM 8GB (1x8GB) DDR4 3200 SSD 256G M.2 2280 PCIe NVMe",
+        "regular_price": 7014.1065,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i5-13500"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 8GB (1x8GB) DDR4 3200"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 256G M.2 2280 PCIe NVMe"
+                ],
+                "visible": true
+            },
+            {
+                "id": 41,
+                "options": [
+                    "Intel® H670"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics 770"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "KBD 125 WD HP BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852BE Wi-Fi6 +BT 5.3 WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 8,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/1"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP 280 G9 SFF ",
+        "sku": "957L1LA#AK4",
+        "short_description": "Desktop HP 280 G9 SFF  i5-13500 Win 11 Pro RAM 16GB (1x16GB) DDR4 3200 SSD 256G M.2 2280 PCIe NVMe",
+        "regular_price": 7266.380625000002,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i5-13500"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB (1x16GB) DDR4 3200"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 256G M.2 2280 PCIe NVMe"
+                ],
+                "visible": true
+            },
+            {
+                "id": 41,
+                "options": [
+                    "Intel® H670"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics 770"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "KBD 125 WD HP BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852BE Wi-Fi6 +BT 5.3 WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 8,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/1"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP 280 G9 SFF ",
+        "sku": "957L4LA#AK4",
+        "short_description": "Desktop HP 280 G9 SFF  i5-13500 Win 11 Pro RAM 16GB (1x16GB) DDR4 3200 SSD 512G M.2 2280 PCIe NVMe",
+        "regular_price": 7791.23775,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i5-13500"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB (1x16GB) DDR4 3200"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 512G M.2 2280 PCIe NVMe"
+                ],
+                "visible": true
+            },
+            {
+                "id": 41,
+                "options": [
+                    "Intel® H670"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics 770"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "KBD 125 WD HP BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852BE Wi-Fi6 +BT 5.3 WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 8,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/1"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "ProDesk 400 G9 DM ",
+        "sku": "940H7LA#AK4",
+        "short_description": "Desktop ProDesk 400 G9 DM  i5-13500T Win 11 Pro RAM 16GB(1x16GB) DDR4 3200 SODIMM SSD 256G 2280 PCIe NVMe Value",
+        "regular_price": 8118.6675,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i5-13500T"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB(1x16GB) DDR4 3200 SODIMM"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 256G 2280 PCIe NVMe Value"
+                ],
+                "visible": true
+            },
+            {
+                "id": 41,
+                "options": [
+                    "Intel Q670"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics 770"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852BE Wi-Fi6 +BT 5.3 WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 8,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/1"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "ProDesk 400 G9 DM ",
+        "sku": "A59H7LA#AK4",
+        "short_description": "Desktop ProDesk 400 G9 DM  i3-13100T Win 11 Pro RAM 16GB(1x16GB) DDR4 3200 SODIMM SSD 512G 2280 PCIe NVMe Value",
+        "regular_price": 7398.091875,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i3-13100T"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB(1x16GB) DDR4 3200 SODIMM"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 512G 2280 PCIe NVMe Value"
+                ],
+                "visible": true
+            },
+            {
+                "id": 41,
+                "options": [
+                    "Intel Q670"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics 730"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852BE Wi-Fi6 +BT 5.3 WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 8,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/1"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "ProDesk 400 G9 DM ",
+        "sku": "A59H8LA#AK4",
+        "short_description": "Desktop ProDesk 400 G9 DM  i5-13500T Win 11 Pro RAM 16GB(1x16GB) DDR4 3200 SODIMM SSD 512G 2280 PCIe NVMe Value",
+        "regular_price": 8300.424375,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i5-13500T"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB(1x16GB) DDR4 3200 SODIMM"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 512G 2280 PCIe NVMe Value"
+                ],
+                "visible": true
+            },
+            {
+                "id": 41,
+                "options": [
+                    "Intel Q670"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics 770"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852BE Wi-Fi6 +BT 5.3 WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 8,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/1"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "EliteDesk 800 G9 DM ",
+        "sku": "940K0LA#AK4",
+        "short_description": "Desktop EliteDesk 800 G9 DM  i5-13500T Win 11 Pro RAM 16GB (1x16GB) DDR5 4800 SSD 512G 2280 PCIe NVMe Value",
+        "regular_price": 8868.386999999999,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i5-13500T"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB (1x16GB) DDR5 4800"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 512G 2280 PCIe NVMe Value"
+                ],
+                "visible": true
+            },
+            {
+                "id": 41,
+                "options": [
+                    "Intel Q670"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics 770"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "KBD HP 125 BLK WD BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 8,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/1"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "EliteDesk 800 G9 DM ",
+        "sku": "940K1LA#AK4",
+        "short_description": "Desktop EliteDesk 800 G9 DM  i7-13700T Win 11 Pro RAM 16GB (1x16GB) DDR5 4800 SSD 512G 2280 PCIe NVMe Value",
+        "regular_price": 10451.886375,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i7-13700T"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB (1x16GB) DDR5 4800"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 512G 2280 PCIe NVMe Value"
+                ],
+                "visible": true
+            },
+            {
+                "id": 41,
+                "options": [
+                    "Intel Q670"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics 770"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "KBD HP 125 BLK WD BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 8,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/1"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP 250R G9",
+        "sku": "AY6W4LA#AK4",
+        "short_description": "Notebook HP 250R G9 i5-1335U Win 11 Pro  SSD 256GB PCIe NVMe Value",
+        "regular_price": 7488.801749999999,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i5-1335U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 15.6 FHD AG LED SVA 250 NWBZ uslim"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN Wi-Fi6 +BT 5.3 w/1AntfPLACvr",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3C 41 WHr Long Life"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP 250R G9",
+        "sku": "AY6W5LA#AK4",
+        "short_description": "Notebook HP 250R G9 i5-1335U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 7428.932999999998,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i5-1335U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 15.6 FHD AG LED SVA 250 NWBZ uslim"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN Wi-Fi6 +BT 5.3 w/1AntfPLACvr",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3C 41 WHr Long Life"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP 250R G9",
+        "sku": "B4LE9LA#AK4",
+        "short_description": "Notebook HP 250R G9 i3-1315U Win 11 Pro  SSD 256GB PCIe NVMe Value",
+        "regular_price": 6343.704374999999,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i3-1315U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 15.6 HD AG LED SVA 250 NWBZ uslim"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN Wi-Fi6 +BT 5.3 w/1AntfPLACvr",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3C 41 WHr Long Life"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Probook 630 G8",
+        "sku": "89T56LA#AK4",
+        "short_description": "Notebook Probook 630 G8 R7-7730U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 10841.916749999997,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "R7-7730U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14 FHD AG LED UWVA 250 fHDC NWBZbent"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "AMD Radeon Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852CE Wi-Fi 6E +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3 cell C Long Life 42Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Probook 445 G10",
+        "sku": "AK5J0LA#AK4",
+        "short_description": "Notebook Probook 445 G10 R5-7530U Win 11 Pro  SSD 256GB PCIe NVMe Value",
+        "regular_price": 8873.85075,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "R5-7530U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14 FHD AG LED UWVA 250 fHDC NWBZbent"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "AMD Radeon Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852CE Wi-Fi 6E +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3 cell C Long Life 42Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Probook 445 G10",
+        "sku": "AK5J1LA#AK4",
+        "short_description": "Notebook Probook 445 G10 R5-7530U Win 11 Pro  SSD 256GB PCIe NVMe Value",
+        "regular_price": 9078.880874999999,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "R5-7530U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14 FHD AG LED UWVA 250 fHDC NWBZbent"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "AMD Radeon Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852CE Wi-Fi 6E +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3 cell C Long Life 42Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Probook 445 G11",
+        "sku": "B0GD5LA#AK4",
+        "short_description": "Notebook Probook 445 G11 R3-7335U Win 11 Pro  SSD 256GB PCIe NVMe Value",
+        "regular_price": 8095.3012499999995,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "R3-7335U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0WUXGAAGLED300UWVAf5MPIR60HzNWBZb"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "AMD Radeon Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852CE Wi-Fi 6E +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT RX 3C Long Life 48Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Probook 445 G11",
+        "sku": "B0GD7LA#AK4",
+        "short_description": "Notebook Probook 445 G11 R5-7535U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 9235.06275,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "R5-7535U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0WUXGAAGLED300UWVAf5MPIR60HzNWBZb"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "AMD Radeon Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852CE Wi-Fi 6E +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT RX 3C Long Life 56Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Probook 445 G10",
+        "sku": "B8JU3LA#AK4",
+        "short_description": "Notebook Probook 445 G10 R5-7530U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 9249.507304945328,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "R5-7530U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14 FHD AG LED UWVA 250 fHDC NWBZbent"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "AMD Radeon Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852CE Wi-Fi 6E +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT RX 3C Long Life 56Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Probook 440 G11",
+        "sku": "B5AX7LA#AK4",
+        "short_description": "Notebook Probook 440 G11 U5-125U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 9038.118110021785,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U5-125U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0WUXGAAGLED300UWVAf5MPIR60HzNWBZb"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I 2230 AX211 Wi-Fi 6E +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT RX 3C Long Life 48Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Probook 440 G11",
+        "sku": "B5AX8LA#AK4",
+        "short_description": "Notebook Probook 440 G11 U7-155U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 10608.20739928768,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-155U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0WUXGAAGLED300UWVAf5MPIR60HzNWBZb"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I 2230 AX211 Wi-Fi 6E +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT RX 3C Long Life 48Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 640 G10",
+        "sku": "A09FGLA#AK4",
+        "short_description": "Notebook Elitebook 640 G10 i7-1365U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 13413.041249999998,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i7-1365U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0FHDAGLED250UWVAfWANfHDCIRNWBZbnt"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3 cell C Long Life 51Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 640 G10",
+        "sku": "A09FVLA#AK4",
+        "short_description": "Notebook Elitebook 640 G10 i7-1365U Win 11 Pro  SSD 256GB PCIe NVMe Value",
+        "regular_price": 13198.594874999999,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i7-1365U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0FHDAGLED250UWVAfWANfHDCIRNWBZbnt"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3 cell C Long Life 51Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 640 G10",
+        "sku": "A09FWLA#AK4",
+        "short_description": "Notebook Elitebook 640 G10 i7-1365U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 14553.000374999998,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i7-1365U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0FHDAGLED250UWVAfWANfHDCIRNWBZbnt"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3 cell C Long Life 51Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 640 G10",
+        "sku": "A09FJLA#AK4",
+        "short_description": "Notebook Elitebook 640 G10 i5-1335U Win 11 Pro  SSD 256GB PCIe NVMe Value",
+        "regular_price": 10402.131375,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i5-1335U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0FHDAGLED250UWVAfWANfHDCIRNWBZbnt"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E 160MHz +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3 cell C Long Life 51Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 640 G10",
+        "sku": "A09FKLA#AK4",
+        "short_description": "Notebook Elitebook 640 G10 i5-1335U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 10744.91775,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i5-1335U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0FHDAGLED250UWVAfWANfHDCIRNWBZbnt"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E 160MHz +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3 cell C Long Life 51Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 640 G10",
+        "sku": "A09FLLA#AK4",
+        "short_description": "Notebook Elitebook 640 G10 i5-1345U Win 11 Pro  SSD 256GB PCIe NVMe Value",
+        "regular_price": 11319.960000000001,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i5-1345U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0FHDAGLED250UWVAfWANfHDCIRNWBZbnt"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3 cell C Long Life 51Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 640 G11",
+        "sku": "AS1E5LA#AK4",
+        "short_description": "Notebook Elitebook 640 G11 U5-135U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 11739.622500000001,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U5-135U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0WUXGAAGLED300UWVAfWWANf5MPIR60Hz"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT RX 3C Long Life 56Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 640 G11",
+        "sku": "AS1E7LA#AK4",
+        "short_description": "Notebook Elitebook 640 G11 U7-165U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 13445.812124999999,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-165U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0WUXGAAGLED300UWVAfWWANf5MPIR60Hz"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT RX 3C Long Life 56Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 645 G11",
+        "sku": "B97BTLA#AK4",
+        "short_description": "Notebook Elitebook 645 G11 R5-PRO-7535U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 9239.430203863556,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "R5-PRO-7535U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0WUXGAAGLED300UWVAf5MPIR60HzNWBZb"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN MT RZ616 Wi-Fi6EAIM-T160MHz+BT5.3WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT RX 3C Long Life 56Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 840 G10",
+        "sku": "A09FMLA#AK4",
+        "short_description": "Notebook Elitebook 840 G10 i5-1345U Win 11 Pro  SSD 256GB PCIe NVMe Value",
+        "regular_price": 13426.607624999999,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i5-1345U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0 WUXGA AG LED 250 UWVA f5MPIRbnt"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3 cell C Long Life 51Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 840 G10",
+        "sku": "A09FXLA#AK4",
+        "short_description": "Notebook Elitebook 840 G10 i5-1335U Win 11 Pro  SSD 256GB PCIe NVMe Value",
+        "regular_price": 12457.280249999998,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i5-1335U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0 WUXGA AG LED 250 UWVA f5MPIRbnt"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E 160MHz +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3 cell C Long Life 51Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 840 G10",
+        "sku": "A09FYLA#AK4",
+        "short_description": "Notebook Elitebook 840 G10 i5-1335U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 13969.367249999998,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i5-1335U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0WUXGAAGWLED+LBL1000UWVAf5MPIRSVR"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E 160MHz +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3 cell C Long Life 51Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 840 G10",
+        "sku": "A09FPLA#AK4",
+        "short_description": "Notebook Elitebook 840 G10 i7-1355U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 14258.36475,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i7-1355U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0 WUXGA AG LED 250 UWVA f5MPIRbnt"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E 160MHz +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3 cell C Long Life 51Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 840 G10",
+        "sku": "A09FQLA#AK4",
+        "short_description": "Notebook Elitebook 840 G10 i7-1355U Win 11 Pro  SSD 256GB PCIe NVMe Value",
+        "regular_price": 13942.153125,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i7-1355U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0 WUXGA AG LED 250 UWVA f5MPIRbnt"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E 160MHz +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3 cell C Long Life 51Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 840 G10",
+        "sku": "A09FRLA#AK4",
+        "short_description": "Notebook Elitebook 840 G10 i7-1355U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 15441.592125,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i7-1355U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0 WUXGA AG LED 250 UWVA f5MPIRbnt"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E 160MHz +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 3 cell C Long Life 51Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 840 G11",
+        "sku": "AM8K7LA#AK4",
+        "short_description": "Notebook Elitebook 840 G11 U5-135U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 11378.329125,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U5-135U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0WUXGAAGLED300UWVAf5MPIRACSNWBZbn"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT BX 3C Long Life 56Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 840 G11",
+        "sku": "B89WQLA#AK4",
+        "short_description": "Notebook Elitebook 840 G11 U5-135U Win 11 Pro  SSD 512GB 2280 PCIe-4x4 OPAL2 NVME TLC",
+        "regular_price": 12000.196874999998,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U5-135U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0 WUXGAAGLED300UWVAf5MPACSNWBZbnt"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT BX 3C Long Life 56Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 840 G11",
+        "sku": "AM8K9LA#AK4",
+        "short_description": "Notebook Elitebook 840 G11 U7-165U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 13012.188,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-165U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0WUXGAAGLED300UWVAf5MPIRACSNWBZbn"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT BX 3C Long Life 56Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elitebook 840 G11",
+        "sku": "B89WLLA#AK4",
+        "short_description": "Notebook Elitebook 840 G11 U7-165U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 13807.628625,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-165U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0WUXGAAGLED300UWVAf5MPIRACSNWBZbn"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT BX 3C Long Life 56Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Elitebook 1040 G11",
+        "sku": "B5EH5LA#AC4",
+        "short_description": "Notebook HP Elitebook 1040 G11 U7-155H Win 11 Pro  SSD 1TB PCIe NVMe Value",
+        "regular_price": 17880.71475,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-155H"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14WUXGAAGWLED+LBL400UWVAfWLANf5MPIRT"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I BE200 Wi-Fi 7 +BT 5.4 nvP WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT ER 6C Long Life 68Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Elitebook X360 1040 G11",
+        "sku": "B59R7LA#AC4",
+        "short_description": "Notebook HP Elitebook X360 1040 G11 U7-155H Win 11 Pro  SSD 1TB PCIe NVMe Value",
+        "regular_price": 18915.723375,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-155H"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0WUXGABVWLED+LBL400UWVAfWLANf5MPI"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I BE200 Wi-Fi 7 +BT 5.4 nvP WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT RX 3C Long Life 56Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Elite Dragonfly G4",
+        "sku": "940B4LA#AC4",
+        "short_description": "Notebook HP Elite Dragonfly G4 i5-1335U Win 11 Pro  SSD 512GB PCIe NVMe Value",
+        "regular_price": 16047.684749999999,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i5-1335U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 13.5WUXGA+AGWLED+LBL400UWVATSALS+ACS"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel Iris Xe Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E 160MHz +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 68Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Elite Dragonfly G4",
+        "sku": "93Z97LA#AC4",
+        "short_description": "Notebook HP Elite Dragonfly G4 i7-1355U Win 11 Pro  SSD 1TB 2280 PCIe-4x4 NVMe TLC",
+        "regular_price": 19492.881375,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i7-1355U"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 13.5WUXGA+AGWLED+LBL400UWVATSALS+ACS"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "No",
+                    "Intel Iris Xe Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E 160MHz +BT 5.3 WW",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "Yes"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 68Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Z2 TWR G9",
+        "sku": "8K5S4LA#AK4",
+        "short_description": "Workstation HP Z2 TWR G9 i7-12700 Win 11 Pro RAM 16GB (1x16GB) DDR5 4800 NECC SSD HP 512GB 2280 PCIe-4x4 Val M.2",
+        "regular_price": 14585.604,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i7-12700"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB (1x16GB) DDR5 4800 NECC"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD HP 512GB 2280 PCIe-4x4 Val M.2",
+                    "no "
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "NVIDIA T400 4GB 3mDP"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_3/3/3"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Z2 TWR G9",
+        "sku": "8K5S5LA#AK4",
+        "short_description": "Workstation HP Z2 TWR G9 i7-12700 Win 11 Pro RAM 16GB (1x16GB) DDR5 4800 NECC SSD HP 512GB 2280 PCIe-4x4 Val M.2",
+        "regular_price": 14509.748,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i7-12700"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB (1x16GB) DDR5 4800 NECC"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD HP 512GB 2280 PCIe-4x4 Val M.2",
+                    "no "
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "AMD Rdn RX 6400 4GB GDDR6"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_3/3/3"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Z2 TWR G9",
+        "sku": "8K6M5LA#AK4",
+        "short_description": "Workstation HP Z2 TWR G9 i7-12700 Win 11 Pro RAM 16GB (1x16GB) DDR5 4800 NECC SSD HP 512GB 2280 PCIe-4x4 Val M.2",
+        "regular_price": 16998.553,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i7-12700"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB (1x16GB) DDR5 4800 NECC"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD HP 512GB 2280 PCIe-4x4 Val M.2",
+                    "no "
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "NVIDIA T1000 8GB 4mDP"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_3/3/3"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Z2 TWR G9",
+        "sku": "8K6M6LA#AK4",
+        "short_description": "Workstation HP Z2 TWR G9 i7-12700 Win 11 Pro RAM 32GB (1x32GB) DDR5 4800 NECC SSD HP 512GB 2280 PCIe-4x4 Val M.2",
+        "regular_price": 18496.819,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i7-12700"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 32GB (1x32GB) DDR5 4800 NECC"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD HP 512GB 2280 PCIe-4x4 Val M.2",
+                    "no "
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "NVIDIA T1000 8GB 4mDP"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_3/3/3"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Z2 TWR G9",
+        "sku": "8L169LA#AK4",
+        "short_description": "Workstation HP Z2 TWR G9 i9-12900 Win 11 Pro HIE RAM 32GB (1x32GB) DDR5 4800 NECC SSD HP 512GB 2280 PCIe-4x4 Val M.2",
+        "regular_price": 28007.496,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i9-12900"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro HIE"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 32GB (1x32GB) DDR5 4800 NECC"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD HP 512GB 2280 PCIe-4x4 Val M.2",
+                    "no "
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "NVIDIA RTX A4000 16GB 4DP"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_3/3/3"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Z2 TWR G9",
+        "sku": "8L170LA#AK4",
+        "short_description": "Workstation HP Z2 TWR G9 i9-12900 Win 11 Pro HIE RAM 32GB (1x32GB) DDR5 4800 NECC SSD HP 1TB 2280 PCIe-4x4 Val M.2",
+        "regular_price": 28735.993000000002,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "i9-12900"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro HIE"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 32GB (1x32GB) DDR5 4800 NECC"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD HP 1TB 2280 PCIe-4x4 Val M.2",
+                    "no "
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "NVIDIA RTX A4000 16GB 4DP"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_3/3/3"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Z4 G5",
+        "sku": "81C88LA#AK4",
+        "short_description": "Workstation HP Z4 G5 Xeon W3-2423 Win 11 Pro WKS RAM 32GB (2x16GB) DDR5 4800 ECC SSD ZTrb 512GB 2280 PCIe-4x4 TLC M.2",
+        "regular_price": 36245.66,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "Xeon W3-2423"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro WKS"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 32GB (2x16GB) DDR5 4800 ECC"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD ZTrb 512GB 2280 PCIe-4x4 TLC M.2",
+                    "SSD ZTrb 512GB 2280 PCIe-4x4 TLC 2nd M.2"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "NVIDIA RTX A4000 16GB 4DP"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZP"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_3/3/3"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Z8 G5",
+        "sku": "827X8LA#AK4",
+        "short_description": "Workstation HP Z8 G5 Xeon 4410Y Win 11 Pro WKS RAM 64GB (2x32GB) DDR5 4800 ECC SSD ZTrb 512GB 2280 PCIe-4x4 TLC M.2",
+        "regular_price": 44574.992000000006,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "Xeon 4410Y"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro WKS"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 64GB (2x32GB) DDR5 4800 ECC"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD ZTrb 512GB 2280 PCIe-4x4 TLC M.2",
+                    "SSD ZTrb 512GB 2280 PCIe-4x4 TLC 2nd M.2"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "NVIDIA RTX A4000 16GB 4DP"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZP"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_3/3/3"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "\tHP Zbook Firefly 14 G11",
+        "sku": "B4NA2LA#AC4",
+        "short_description": "Notebook \tHP Zbook Firefly 14 G11 U7-165H Win 11 Pro RAM 32GB (1x32GB) DDR5 5600 ",
+        "regular_price": 18974.504999999997,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-165H"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 32GB (1x32GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 1TB PCIe NVMe Value",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0WUXGAAGWLED+LBL400UWVAf5MPIRLPAC"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I 1216 AX211 Wi-Fi 6E +BT 5.3vProWW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT BX 3C Long Life 56Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "\tHP Zbook Firefly 16 G11",
+        "sku": "B4NA8LA#AC4",
+        "short_description": "Notebook \tHP Zbook Firefly 16 G11 U7-165H Win 11 Pro RAM 32GB (1x32GB) DDR5 5600 ",
+        "regular_price": 17710.011,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-165H"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 32GB (1x32GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 512GB PCIe NVMe Value",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0WUXGAAGLED300UWVAf5MPIRACSNWBZbn"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I 1216 AX211 Wi-Fi 6E +BT 5.3vProWW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT BX 3C Long Life 56Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "\tHP Zbook Firefly 16 G11",
+        "sku": "B4NA3LA#AC4",
+        "short_description": "Notebook \tHP Zbook Firefly 16 G11 U7-165H Win 11 Pro RAM 32GB (1x32GB) DDR5 5600 ",
+        "regular_price": 18189.578,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-165H"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 32GB (1x32GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 1TB PCIe NVMe Value",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0WUXGAAGLED300UWVAf5MPIRACSNWBZbn"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I 1216 AX211 Wi-Fi 6E +BT 5.3vProWW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT BX 3C Long Life 56Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "\tHP Zbook Firefly 14 G11A",
+        "sku": "B4PZ2LA#AC4",
+        "short_description": "Notebook \tHP Zbook Firefly 14 G11A R7-PRO-8840HS Win 11 Pro RAM 32GB (1x32GB) DDR5 5600 ",
+        "regular_price": 14488.803999999996,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "R7-PRO-8840HS"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 32GB (1x32GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 1TB PCIe NVMe Value",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 14.0WUXGAAGLED300UWVAf5MPIRACSNWBZbn"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN MT MT7925 Wi-Fi 7 +BT 5.4 AIM-T WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT BX 3C Long Life 56Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Zbook Power G11",
+        "sku": "B5EJ0LA#AC4",
+        "short_description": "Notebook HP Zbook Power G11 U7-165H Win 11 Pro RAM 32GB (1x32GB) DDR5 5600 ",
+        "regular_price": 22105.819999999996,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-165H"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 32GB (1x32GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 1TB 2280 PCIe-4x4 NVMe TLC",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0WUXGAAGWLED+LBL400UWVAf5MPIRLP60"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 83Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Zbook Power G11",
+        "sku": "B5EJ1LA#AC4",
+        "short_description": "Notebook HP Zbook Power G11 U7-165H Win 11 Pro RAM 32GB (1x32GB) DDR5 5600 ",
+        "regular_price": 23380.918,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-165H"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 32GB (1x32GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 2TB 2280 PCIe-4x4 NVMe TLC",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0WUXGAAGWLED+LBL400UWVAf5MPIRLP60"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 83Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Zbook Power G11",
+        "sku": "B5EJ2LA#AC4",
+        "short_description": "Notebook HP Zbook Power G11 U7-165H Win 11 Pro RAM 64GB (2x32GB) DDR5 5600 ",
+        "regular_price": 24957.625,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-165H"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 64GB (2x32GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 2TB 2280 PCIe-4x4 NVMe TLC",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0WUXGAAGWLED+LBL400UWVAf5MPIRLP60"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 83Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Zbook Power G11",
+        "sku": "B5EJ4LA#AC4",
+        "short_description": "Notebook HP Zbook Power G11 U7-155H Win 11 Pro RAM 16GB (1x16GB) DDR5 5600 ",
+        "regular_price": 16770.038999999997,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-155H"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB (1x16GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 512GB PCIe NVMe Value",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0WUXGAAGWLED+LBL400UWVAf5MPIRLP60"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I 2230 AX211 Wi-Fi 6E +BT 5.3 WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 83Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Zbook Power G11",
+        "sku": "B5EJ6LA#AC4",
+        "short_description": "Notebook HP Zbook Power G11 U7-165H Win 11 Pro RAM 16GB (1x16GB) DDR5 5600 ",
+        "regular_price": 17894.272,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-165H"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB (1x16GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 512GB PCIe NVMe Value",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0WUXGAAGWLED+LBL400UWVAf5MPIRLP60"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I AX211 Wi-Fi 6E vPro160MHz+BT5.3WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 83Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Zbook Power G11",
+        "sku": "B5EJ7LA#AC4",
+        "short_description": "Notebook HP Zbook Power G11 U7-155H Win 11 Pro RAM 32GB (1x32GB) DDR5 5600 ",
+        "regular_price": 18223.336999999996,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-155H"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 32GB (1x32GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 1TB 2280 PCIe-4x4 NVMe TLC",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0WUXGAAGWLED+LBL400UWVAf5MPIRLP60"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I 2230 AX211 Wi-Fi 6E +BT 5.3 WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 83Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Zbook Power G11",
+        "sku": "B5EK0LA#AC4",
+        "short_description": "Notebook HP Zbook Power G11 U7-155H Win 11 Pro RAM 16GB (1x16GB) DDR5 5600 ",
+        "regular_price": 15225.947,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-155H"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB (1x16GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 512GB PCIe NVMe Value",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0WUXGAAGWLED+LBL400UWVAf5MPIRLP60"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I 2230 AX211 Wi-Fi 6E +BT 5.3 WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 83Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Zbook Power G11",
+        "sku": "B5EK3LA#AC4",
+        "short_description": "Notebook HP Zbook Power G11 U7-155H Win 11 Pro RAM 32GB (1x32GB) DDR5 5600 ",
+        "regular_price": 16679.255999999998,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "U7-155H"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 32GB (1x32GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 1TB 2280 PCIe-4x4 NVMe TLC",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0WUXGAAGWLED+LBL400UWVAf5MPIRLP60"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN I 2230 AX211 Wi-Fi 6E +BT 5.3 WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 83Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Zbook Power G11 A",
+        "sku": "B5JB4LA#AC4",
+        "short_description": "Notebook HP Zbook Power G11 A R7-8845HS Win 11 Pro RAM 16GB (1x16GB) DDR5 5600 ",
+        "regular_price": 14527.050999999998,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "R7-8845HS"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB (1x16GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 512GB PCIe NVMe Value",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0WUXGAAGWLED+LBL400UWVAf5MPIRLP60"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852CE Wi-Fi 6E +BT 5.3 WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 83Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Zbook Power G11 A",
+        "sku": "B5JB6LA#AC4",
+        "short_description": "Notebook HP Zbook Power G11 A R7-8845HS Win 11 Pro RAM 32GB (1x32GB) DDR5 5600 ",
+        "regular_price": 15980.349,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "R7-8845HS"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 32GB (1x32GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 1TB 2280 PCIe-4x4 NVMe TLC",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0WUXGAAGWLED+LBL400UWVAf5MPIRLP60"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852CE Wi-Fi 6E +BT 5.3 WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 83Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Zbook Power G11 A",
+        "sku": "B5JA5LA#AC4",
+        "short_description": "Notebook HP Zbook Power G11 A R7-8845HS Win 11 Pro RAM 16GB (1x16GB) DDR5 5600 ",
+        "regular_price": 16071.22,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "R7-8845HS"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB (1x16GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 512GB PCIe NVMe Value",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0WUXGAAGWLED+LBL400UWVAf5MPIRLP60"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN RT 8852CE Wi-Fi 6E +BT 5.3 WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 83Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Zbook Power G11 A",
+        "sku": "B5JA6LA#AC4",
+        "short_description": "Notebook HP Zbook Power G11 A R7-PRO-8845HS Win 11 Pro RAM 16GB (1x16GB) DDR5 5600 ",
+        "regular_price": 16431.667999999998,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "R7-PRO-8845HS"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB (1x16GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 512GB PCIe NVMe Value",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0WUXGAAGWLED+LBL400UWVAf5MPIRLP60"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN MT RZ616 Wi-Fi6EAIM-T160MHz+BT5.3WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 83Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Zbook Power G11 A",
+        "sku": "B5JA9LA#AC4",
+        "short_description": "Notebook HP Zbook Power G11 A R7-PRO-8845HS Win 11 Pro RAM 32GB (1x32GB) DDR5 5600 ",
+        "regular_price": 17884.987999999998,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "R7-PRO-8845HS"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 32GB (1x32GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 1TB 2280 PCIe-4x4 NVMe TLC",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0WUXGAAGWLED+LBL400UWVAf5MPIRLP60"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN MT RZ616 Wi-Fi6EAIM-T160MHz+BT5.3WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 83Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "HP Zbook Power G11 A",
+        "sku": "B5JA2LA#AC4",
+        "short_description": "Notebook HP Zbook Power G11 A R9-PRO-8945HS Win 11 Pro HIE RAM 32GB (1x32GB) DDR5 5600 ",
+        "regular_price": 23481.259999999995,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 35,
+                "options": [
+                    "R9-PRO-8945HS"
+                ],
+                "visible": true
+            },
+            {
+                "id": 32,
+                "options": [
+                    "Win 11 Pro HIE"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 32GB (1x32GB) DDR5 5600"
+                ],
+                "visible": true
+            },
+            {
+                "id": 20,
+                "options": [
+                    "SSD 2TB 2280 PCIe-4x4 NVMe TLC",
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 21,
+                "options": [
+                    "LCD 16.0 WUXGA AGLED300UWVAf5MPIRNWBZbnt"
+                ],
+                "visible": true
+            },
+            {
+                "id": 42,
+                "options": [
+                    "No"
+                ],
+                "visible": true
+            },
+            {
+                "id": 39,
+                "options": [
+                    "WLAN MT RZ616 Wi-Fi6EAIM-T160MHz+BT5.3WW"
+                ],
+                "visible": true
+            },
+            {
+                "id": 6,
+                "options": [
+                    "BATT 6 cell C Long Life 83Whr FstCrg"
+                ],
+                "visible": true
+            },
+            {
+                "id": 25,
+                "options": [
+                    "W_1/1/0"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Pro T550",
+        "sku": "78L91AA#AC4",
+        "short_description": "Desktop Pro T550  HP ThinPro  ",
+        "regular_price": 3166.6580000000004,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 32,
+                "options": [
+                    "HP ThinPro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 4GB(1x4GB) DDR4 3200 SODIMM"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Pro T550",
+        "sku": "790P6AA#AC4",
+        "short_description": "Desktop Pro T550  Win IoT  ",
+        "regular_price": 3886.069,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 32,
+                "options": [
+                    "Win IoT"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 8GB(1x8GB) DDR4 3200 SODIMM"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Pro T550",
+        "sku": "790S0AA#AC4",
+        "short_description": "Desktop Pro T550  Win IoT  ",
+        "regular_price": 4263.017,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 32,
+                "options": [
+                    "Win IoT"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 8GB(1x8GB) DDR4 3200 SODIMM"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Pro T550",
+        "sku": "790F5AA#AC4",
+        "short_description": "Desktop Pro T550  HP ThinPro  ",
+        "regular_price": 3341.4479999999994,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 32,
+                "options": [
+                    "HP ThinPro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 4GB(1x4GB) DDR4 3200 SODIMM"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Pro T550",
+        "sku": "790P7AA#AC4",
+        "short_description": "Desktop Pro T550  Win IoT  ",
+        "regular_price": 4041.8289999999993,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 32,
+                "options": [
+                    "Win IoT"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 8GB(1x8GB) DDR4 3200 SODIMM"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "Intel UHD Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elite T655",
+        "sku": "6R0Q0AA#AC4",
+        "short_description": "Desktop Elite T655  HP ThinPro  ",
+        "regular_price": 3449.4020000000005,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 32,
+                "options": [
+                    "HP ThinPro"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 4GB(1x4GB) DDR4 3200 SODIMM"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "AMD Radeon Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elite T655",
+        "sku": "6R0Q1AA#AC4",
+        "short_description": "Desktop Elite T655  Win IoT  ",
+        "regular_price": 4340.985000000001,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 32,
+                "options": [
+                    "Win IoT"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 8GB (2x4GB) DDR4 3200 SODIMM"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "AMD Radeon Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elite T655",
+        "sku": "6R0Q2AA#AC4",
+        "short_description": "Desktop Elite T655  Win IoT  ",
+        "regular_price": 4618.295,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 32,
+                "options": [
+                    "Win IoT"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 8GB (2x4GB) DDR4 3200 SODIMM"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "AMD Radeon Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Tz655",
+        "sku": "A4AW1AA#AC4",
+        "short_description": "Desktop Tz655  Zero Client  ",
+        "regular_price": 3708.1219999999994,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 32,
+                "options": [
+                    "Zero Client"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 8GB (2x4GB) DDR4 3200 SODIMM"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "AMD Radeon Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Tz655",
+        "sku": "A4AV3AA#AC4",
+        "short_description": "Desktop Tz655  Zero Client  ",
+        "regular_price": 3860.9119999999994,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 32,
+                "options": [
+                    "Zero Client"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 8GB (2x4GB) DDR4 3200 SODIMM"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "AMD Radeon Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "HP USB 320K KB BRZL"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    },
+    {
+        "name": "Elite T755",
+        "sku": "9J5D2AA#AC4",
+        "short_description": "Desktop Elite T755  Win IoT  ",
+        "regular_price": 6608.2609999999995,
+        "stock_quantity": 100,
+        "attributes": [
+            {
+                "id": 32,
+                "options": [
+                    "Win IoT"
+                ],
+                "visible": true
+            },
+            {
+                "id": 28,
+                "options": [
+                    "RAM 16GB (2x8GB) DDR4 3200 SODIMM"
+                ],
+                "visible": true
+            },
+            {
+                "id": 26,
+                "options": [
+                    "AMD Radeon Graphics"
+                ],
+                "visible": true
+            },
+            {
+                "id": 27,
+                "options": [
+                    "KBD HP 125 BLK WD BRZL"
+                ],
+                "visible": true
+            }
+        ],
+        "images": []
+    }
+]

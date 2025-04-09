@@ -1,25 +1,29 @@
 from . import hp_bp
 from flask import jsonify, render_template, request
+import pandas as pd
+import json
+from .processors import processar_hp_data
 
 @hp_bp.route('/hp', methods=['GET'])
-def upload_page():
+def listar_produtos():
     return render_template('hp_upload.html')
 
 @hp_bp.route('/hp', methods=['POST'])
 def processar_arquivo():
-    arquivo = request.files.get('arquivo')
-    if not arquivo:
-        return jsonify({'erro': 'Nenhum arquivo enviado'}), 400
+    arquivo_produtos = request.files.get('arquivo_produtos')
+    arquivo_precos = request.files.get('arquivo_precos')
+    
+    if not arquivo_produtos or not arquivo_precos:
+        return jsonify({'erro': 'Por favor, envie ambos os arquivos (produtos e preços)'}), 400
 
-    # Aqui você pode implementar sua lógica para processar o arquivo Excel
-    return jsonify({'mensagem': 'Arquivo Excel recebido com sucesso'})
+    try:
+        produtos_processados = processar_hp_data(arquivo_produtos, arquivo_precos)
+            
+        return jsonify({
+            'mensagem': 'Arquivos Excel processados com sucesso',
+            'dados': produtos_processados
+        })
 
-@hp_bp.route('/hp/produtos')
-def listar_produtos():
-    # Aqui você pode implementar sua lógica para listar produtos
-    return jsonify({'mensagem': 'Lista de produtos HP'})
-
-@hp_bp.route('/hp/produtos/<id>')
-def obter_produto(id):
-    # Aqui você pode implementar sua lógica para obter um produto específico
-    return jsonify({'mensagem': f'Produto HP {id}'}) 
+    except Exception as e:
+        print(f"\nErro durante o processamento: {str(e)}")
+        return jsonify({'erro': f'Erro ao processar os arquivos: {str(e)}'}), 500

@@ -2,6 +2,14 @@ from . import lenovo_bp
 from flask import jsonify, render_template, request
 import pandas as pd
 import json
+import requests
+from requests.auth import HTTPBasicAuth
+import time
+from .processors import processar_lenovo_data
+
+# Configurações da API WooCommerce
+WOOCOMMERCE_CONSUMER_KEY = 'ck_d1082fbea981c4912e59da8820c1cebea16d6923'
+WOOCOMMERCE_CONSUMER_SECRET = 'cs_8949a97be104dd97aa02ae6d3b363325ed139765'
 
 @lenovo_bp.route('/lenovo', methods=['GET'])
 def listar_produtos():
@@ -16,73 +24,65 @@ def processar_arquivo():
     lenovo_data = pd.read_excel(arquivo, sheet_name=None)
 
     try:
-        processar_lenovo_data(lenovo_data)
-          # Gera um arquivo JSON com os dados processados
+       
+        # Processa os dados da Lenovo
         produtos_processados = processar_lenovo_data(lenovo_data)
+        
+        # Cria um JSON e salva na pasta
         with open('produtos_processados.json', 'w') as json_file:
             json.dump(produtos_processados, json_file, ensure_ascii=False, indent=4)
+        
+
+        url = "https://ecommerce-teste.microware.com.br/lenovo/wp-json/wc/v3/products/batch"
+        
+        total_produtos = len(produtos_processados)
+        print(f"Iniciando envio de {total_produtos} produtos em batch...")
+        
+        # Processa apenas o primeiro lote de 10 produtos para teste
+        lote_atual = produtos_processados[0:10]
+        print(f"\nEnviando lote de produtos 1 até {min(10, total_produtos)} de {total_produtos}")
+        
+        # Prepara o payload do batch
+        batch_payload = {
+            "create": lote_atual
+        }
+        
+        result = requests.post(
+            url, 
+            auth=HTTPBasicAuth(WOOCOMMERCE_CONSUMER_KEY, WOOCOMMERCE_CONSUMER_SECRET), 
+            json=batch_payload
+        )
+        
+        print(f"Status do envio do lote: {result.status_code}")
+        if result.status_code != 200:
+            print(f"Resposta da API: {result.text}")
+        
+        # Processa os produtos em lotes de 10
+        for i in range(0, total_produtos, 10):
+            lote_atual = produtos_processados[i:i+10]
+            print(f"\nEnviando lote de produtos {i+1} até {min(i+10, total_produtos)} de {total_produtos}")
+            
+            # Prepara o payload do batch
+            batch_payload = {
+                "create": lote_atual
+            }
+            
+            result = requests.post(
+                url, 
+                auth=HTTPBasicAuth(WOOCOMMERCE_CONSUMER_KEY, WOOCOMMERCE_CONSUMER_SECRET), 
+                json=batch_payload
+            )
+            
+            print(f"Status do envio do lote: {result.status_code}")
+            if result.status_code != 200:
+                print(f"Resposta da API: {result.text}")
+            
+            print(f"Lote {i//10 + 1} concluído!")
+            time.sleep(1)  # Pausa entre os lotes
+
+        print("\nProcesso de envio concluído!")
+
     except Exception as e:
         return jsonify({'erro': f'Erro ao processar o arquivo: {str(e)}'}), 500
 
-    return jsonify({'mensagem': 'Arquivo Excel manipulado com sucesso'})
-
-
-def processar_lenovo_data(lenovo_data):
-    # Converte o dicionário de DataFrames em um único DataFrame
-    products_df = pd.concat(lenovo_data.values(), ignore_index=True)
-    
-    # Filtra os produtos
-    products_df = products_df[
-        (products_df["STATE"].str.lower().str.strip() == "sp") &
-        (products_df["CUSTOMER_TYPE"].str.lower().str.strip() == "revenda sem regime")
-    ]
-    MANUFACTURE = "Lenovo"
-    STOCK = 10
-    MARGIN = 20 
-
-    combined_data = []
-    for _, product in products_df.iterrows():
-        combined_data.append({
-            'name': product['PRODUCT_DESCRIPTION'],
-            'sku': product['PRODUCT_CODE'],
-            'short_description': product['PH4_DESCRIPTION'],
-            'price': product['UNIT_GROSS_PRICE(R$)'] * (1 + MARGIN / 100),
-            'stock_quantity': 100,
-            'attributes': processar_attributes(product)
-        })
-    return combined_data
-
-def processar_attributes(product):
-    attributes = []
-    with open('maps/attributesLenovo.json', 'r') as f:
-        attributes_mapping = json.load(f)[0] 
-
-    with open('maps/attributesWordpress.json', 'r') as f:
-        attributes_mapping_wp = json.load(f)
-
-    for lenovo_key, wp_name in attributes_mapping.items():
-        # Encontra o ID correspondente no attributesWordpress
-        wp_attribute = next((attr for attr in attributes_mapping_wp if attr['name'] == wp_name), None)
-        
-        if wp_attribute and lenovo_key in product:
-            # Converte o valor para string e remove valores NaN
-            valor = str(product[lenovo_key])
-            if valor.lower() != 'nan' and valor.strip() != '':
-                # Verifica se já existe um atributo com este ID
-                atributo_existente = next((attr for attr in attributes if attr['id'] == wp_attribute['id']), None)
-                
-                if atributo_existente:
-                    # Se o atributo já existe, adiciona o valor às opções
-                    if valor not in atributo_existente['options']:
-                        atributo_existente['options'].append(valor)
-                else:
-                    # Se o atributo não existe, cria um novo
-                    attributes.append({
-                        'id': wp_attribute['id'],
-                        'options': [valor]
-                    })
-                print(f"Atributo processado: {wp_name} (ID: {wp_attribute['id']}) = {valor}")
-       
-    return attributes
-    
-    
+    return jsonify({'mensagem': 'Lista enviada com sucesso'})

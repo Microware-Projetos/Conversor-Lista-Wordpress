@@ -14,7 +14,7 @@
     <!-- Título principal -->
     <div class="row justify-content-center mb-5">
         <div class="col-md-8 text-center">
-            <h1 class="display-4">Sistema de Upload de Arquivos</h1>
+            <h1 class="display-4">Sistema de Upload de Listas </h1>
             <p class="lead">Selecione a marca para iniciar o processo de upload</p>
         </div>
     </div>
@@ -37,7 +37,7 @@
         <div class="col-md-4 mb-4">
             <div class="card h-100 shadow-sm hover-card">
                 <div class="card-body text-center d-flex flex-column">
-                    <a href="{{ url_for('hp.upload_page') }}" class="text-decoration-none flex-grow-1 d-flex flex-column">
+                    <a href="{{ url_for('hp.listar_produtos') }}" class="text-decoration-none flex-grow-1 d-flex flex-column">
                         <div class="logo-container mb-3">
                             <img src="{{ url_for('static', filename='hp.png') }}" alt="HP Logo" class="brand-logo">
                         </div>
@@ -50,7 +50,7 @@
         <div class="col-md-4 mb-4">
             <div class="card h-100 shadow-sm hover-card">
                 <div class="card-body text-center d-flex flex-column">
-                    <a href="{{ url_for('cisco.upload_page') }}" class="text-decoration-none flex-grow-1 d-flex flex-column">
+                    <a href="{{ url_for('cisco.listar_produtos') }}" class="text-decoration-none flex-grow-1 d-flex flex-column">
                         <div class="logo-container mb-3">
                             <img src="{{ url_for('static', filename='cisco.png') }}" alt="Cisco Logo" class="brand-logo">
                         </div>
