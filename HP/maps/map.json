@@ -151,7 +151,9 @@
 		"Mobile Workstation": "Notebook",
 		"Workstations DT": "Workstation",
 		"Thin Clients": "Desktop",
-		"SmartChoice": "Acessórios"
+		"SmartChoice": "Acessórios",
+		"Display": "Display",
+		"Acessório": "Acessório"
 	},
 	"CustonsCategories": {
 		"Notebook": {

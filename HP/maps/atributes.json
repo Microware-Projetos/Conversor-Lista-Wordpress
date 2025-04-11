@@ -1,166 +1,170 @@
 [
 	{
-		"id": 17,
+		"id": 1,
 		"name": "Altura da embalagem (cm)"
 	},
 	{
-		"id": 6,
+		"id": 2,
 		"name": "Bateria"
 	},
 	{
-		"id": 7,
+		"id": 3,
 		"name": "Biometria"
 	},
 	{
-		"id": 8,
+		"id": 4,
 		"name": "Câmera"
 	},
 	{
-		"id": 9,
+		"id": 5,
 		"name": "Caracteristicas Adicionais"
 	},
 	{
-		"id": 46,
+		"id": 6,
 		"name": "Carregador"
 	},
 	{
-		"id": 47,
+		"id": 7,
 		"name": "Cartão SIM"
 	},
 	{
-		"id": 10,
+		"id": 8,
 		"name": "Case Material"
 	},
 	{
-		"id": 11,
+		"id": 9,
 		"name": "Categoria"
 	},
 	{
-		"id": 41,
+		"id": 10,
 		"name": "Chipset"
 	},
 	{
-		"id": 12,
+		"id": 11,
 		"name": "Classificação Fiscal"
 	},
 	{
-		"id": 13,
+		"id": 12,
 		"name": "Código Anatel"
 	},
 	{
-		"id": 22,
+		"id": 13,
 		"name": "Código EAN"
 	},
 	{
-		"id": 43,
+		"id": 14,
 		"name": "Compatibilidade"
 	},
 	{
-		"id": 14,
+		"id": 15,
 		"name": "Condição"
 	},
 	{
-		"id": 15,
+		"id": 16,
 		"name": "Conteúdo da Embalagem"
 	},
 	{
-		"id": 44,
+		"id": 17,
 		"name": "Cor"
 	},
 	{
-		"id": 19,
+		"id": 18,
 		"name": "Description"
 	},
 	{
-		"id": 45,
+		"id": 19,
 		"name": "Dimensões do produto (cm)"
 	},
 	{
-		"id": 23,
+		"id": 20,
 		"name": "Fabricante"
 	},
 	{
-		"id": 24,
+		"id": 21,
 		"name": "Fonte de alimentação"
 	},
 	{
-		"id": 25,
+		"id": 22,
 		"name": "Garantia"
 	},
 	{
-		"id": 18,
+		"id": 23,
 		"name": "Largura da embalagem (cm)"
 	},
 	{
-		"id": 5,
+		"id": 24,
 		"name": "Lead Time"
 	},
 	{
-		"id": 28,
+		"id": 45,
+		"name": "Marca"
+	},
+	{
+		"id": 25,
 		"name": "Memória"
 	},
 	{
-		"id": 36,
+		"id": 26,
 		"name": "Memória RAM (MB)"
 	},
 	{
-		"id": 29,
+		"id": 27,
 		"name": "Microfone"
 	},
 	{
-		"id": 48,
+		"id": 28,
 		"name": "NFC"
 	},
 	{
-		"id": 31,
+		"id": 29,
 		"name": "Origem"
 	},
 	{
-		"id": 40,
+		"id": 30,
 		"name": "Peso Bruto (kg)"
 	},
 	{
-		"id": 26,
+		"id": 31,
 		"name": "Placa Gráfica"
 	},
 	{
-		"id": 34,
+		"id": 32,
 		"name": "Price"
 	},
 	{
-		"id": 35,
+		"id": 33,
 		"name": "Processador"
 	},
 	{
-		"id": 30,
+		"id": 34,
 		"name": "Product Name"
 	},
 	{
-		"id": 16,
+		"id": 35,
 		"name": "Profundidade da embalagem (cm)"
 	},
 	{
-		"id": 37,
+		"id": 36,
 		"name": "Rede"
 	},
 	{
-		"id": 32,
+		"id": 37,
 		"name": "Sistema Operacional"
 	},
 	{
-		"id": 33,
+		"id": 38,
 		"name": "SKU"
 	},
 	{
-		"id": 20,
+		"id": 39,
 		"name": "Storage"
 	},
 	{
-		"id": 27,
+		"id": 40,
 		"name": "Teclado"
 	},
 	{
-		"id": 21,
+		"id": 41,
 		"name": "Tela"
 	},
 	{
@@ -168,11 +172,11 @@
 		"name": "Touch"
 	},
 	{
-		"id": 38,
+		"id": 43,
 		"name": "Webcam"
 	},
 	{
-		"id": 39,
+		"id": 44,
 		"name": "WLAN"
 	}
 ]

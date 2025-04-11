@@ -3,6 +3,11 @@ import io
 import sys
 import os
 import json
+import requests
+import re
+
+# Cache global para valores normalizados
+normalized_values_cache = {}
 
 def processar_hp_data(produtos, precos):
     df_produtos = ler_arquivo_produto_hp(produtos)
@@ -14,15 +19,20 @@ def processar_hp_data(produtos, precos):
 
 def combinar_dados(df_produtos, df_precos):
     combined_data = []
-    
+
+    images = buscar_imagens()
+    delivery = buscar_delivery()
+    normalized_family = normalize_values_list("Familia")
+    normalized_anatel = normalize_values_list("Anatel")
+
     # Para cada produto na lista de dicionários
     for product in df_produtos:
        
-        if product.get("sheet_name") == "SmartChoice":   
+        if product.get("sheet_name") == "SmartChoice":  
             # Pular o produto se o PN estiver vazio
             if "PN" not in product or pd.isna(product["PN"]):
                 continue
-            
+
             # Encontrar o preço correspondente
             price_info = df_precos[df_precos["SKU"] == product["PN"]]
 
@@ -37,18 +47,21 @@ def combinar_dados(df_produtos, df_precos):
                 'name': str(product.get("SmartChoice", "")) + " " + str(product.get("Descrição", "")),
                 'sku': product["PN"],
                 'short_description': product.get("Descrição", ""),
+                'price': price_por,
                 'regular_price': price_por,
                 'stock_quantity': 100,
                 'attributes': processar_attributes(product),
-                'images': processar_fotos(),
+                'meta_data': processar_fotos(product, images, normalized_family),
+                'dimmensions': processar_dimmensions(product, delivery),
+                'weight': processar_weight(product, delivery),
+                'categories': processar_categories(product, "SmartChoice")
             }
             
         elif product.get("sheet_name") == "Portfólio Acessorios_Monitores":
-            
             # Pular o produto se o SKU estiver vazio
             if "SKU" not in product or pd.isna(product["SKU"]):
                     continue
-            
+
             # Encontrar o preço correspondente
             price_info = df_precos[df_precos["SKU"] == product["SKU"]]
 
@@ -60,16 +73,20 @@ def combinar_dados(df_produtos, df_precos):
             price_por = price_info["Preço Bundle R$"] / (1 - (20 / 100)) if price_info is not None else None
 
             pl_group = str(product.get("PL GROUP", "")).lower()
-            categoria = "Monitor" if "display" in pl_group else "Acessório"
-
+            categoria = "Display" if "display" in pl_group else "Acessório"
+            
             produto_data = {
-                'name': str(product.get("SmartChoice", "")) + " " + str(product.get("Descrição", "")),
+                'name': str(product.get("DESCRIÇÃO", "")),
                 'sku': product["SKU"],
                 'short_description': product.get("Descrição", ""),
+                'price': price_por,
                 'regular_price': price_por,
                 'stock_quantity': 100,
                 'attributes': processar_attributes(product),
-                'images': processar_fotos(),
+                'meta_data': processar_fotos(product, images, normalized_family),
+                'dimmensions': processar_dimmensions(product, delivery),
+                'weight': processar_weight(product, delivery),
+                'categories': processar_categories(product, categoria)
             }
         
         else :
@@ -78,7 +95,7 @@ def combinar_dados(df_produtos, df_precos):
             # Pular o produto se o SKU estiver vazio
             if "SKU" not in product or pd.isna(product["SKU"]):
                     continue
-            
+
             # Encontrar o preço correspondente
             price_info = df_precos[df_precos["SKU"] == product["SKU"]]
 
@@ -108,20 +125,28 @@ def combinar_dados(df_produtos, df_precos):
 
 
             produto_data = {
-                'name': product["Model"],
+                'name': product_type + " " + product["Model"],
                 'sku': product["SKU"],
                 'short_description': descricao,
+                'price': price_por,
                 'regular_price': price_por,
                 'stock_quantity': 100,
                 'attributes': processar_attributes(product),
-                'images': processar_fotos(),
+                'meta_data': processar_fotos(product, images, normalized_family),
+                'dimmensions': processar_dimmensions(product, delivery),
+                'weight': processar_weight(product, delivery),
+                'categories': processar_categories(product, product_type)
             }
-            combined_data.append(produto_data)
+
+        combined_data.append(produto_data)
+    
+
     
     # Converter os dados combinados para JSON e salvar na pasta
     output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'produtos_processados_hp.json')
     with open(output_path, 'w', encoding='utf-8') as json_file:
         json.dump(combined_data, json_file, ensure_ascii=False, indent=4)
+    
     return combined_data
 
 def ler_arquivo_produto_hp(product_file):
@@ -169,6 +194,39 @@ def processar_attributes(product):
     with open('HP/maps/atributes.json', 'r') as f:
         attributes_mapping_wp = json.load(f)
 
+    sheet_name = product["sheet_name"]
+    coluna = ""
+    if sheet_name == "SmartChoice":
+        coluna = "PN"
+    elif sheet_name == "Portfólio Acessorios_Monitores":
+        coluna = "SKU"
+    else:
+        coluna = "Model"
+
+    normalized_family = normalize_values_list("Familia")
+    normalized_anatel = normalize_values_list("Anatel")
+    family = normalized_family.get(product[coluna], "") 
+    anatel = normalized_anatel.get(family, "")
+    if anatel:
+        attributes.append({
+            'id': 13,
+            'options': anatel,
+            'visible': True
+        })
+    else:
+        family = product.get("Model", "").split(' ', 1)[1].lstrip() if ' ' in product.get("Model", "") else product.get("Model", "")
+        family = family.strip()
+        if family.lower().startswith("hp "):
+            family = family[3:]
+        
+        anatel = normalized_anatel.get(family, "")
+        if anatel:
+            attributes.append({
+                'id': 13,
+                'options': anatel,
+                'visible': True
+            })
+
     for hp_key in product:
         # Encontra o valor correspondente em Colunas
         if hp_key in colunas_mapping:
@@ -199,9 +257,218 @@ def processar_attributes(product):
                                 'options': [valor],
                                 'visible': True
                             })
-                    
+
+    attributes.append({
+        'id': 45,
+        'options': ["HP"],
+        'visible': True
+    })                
     return attributes
 
-def processar_fotos():   
-    return []
+def buscar_imagens():
+    url = "https://eprodutos-integracao.microware.com.br/api/photos/allId"
+    response = requests.get(url)
+    if response.status_code != 200:
+        return []
+    # Converte a resposta JSON para DataFrame
+    df = pd.DataFrame(response.json())
+    return df
 
+def buscar_delivery():
+    url = "https://eprodutos-integracao.microware.com.br/api/delivery-info/"
+    response = requests.get(url)
+    if response.status_code != 200:
+        return []
+    df = pd.DataFrame(response.json())
+    return df
+
+def processar_fotos(product, images, normalized_family):
+    df = images
+    base_url = "https://eprodutos-integracao.microware.com.br/api/photos/image/"
+
+    normalize_family = normalized_family.get(product.get("Model", ""), product.get("Descrição", product.get("DESCRIÇÃO", ""))) 
+    sheet_name = product["sheet_name"]
+    category = json.load(open('HP/maps/map.json'))['TraducaoLinha'].get(sheet_name, "Acessório")
+
+    # Tenta buscar imagens com a família específica
+    filtered_df = df[
+        (df['manufacturer'] == "HP") & 
+        (df['category'] == category) & 
+        (df['family'] == normalize_family)
+    ]
+
+    # Se não encontrar, tenta com a família Default
+    if filtered_df.empty:
+        filtered_df = df[
+            (df['manufacturer'] == "HP") &
+            (df['category'] == category) &
+            (df['family'] == "Default")
+        ]
+
+    # Se ainda estiver vazio, retorna meta_data vazio
+    if filtered_df.empty:
+        return []
+
+    # Cria a lista de URLs das imagens
+    image_urls = []
+    for _, row in filtered_df.iterrows():
+        if 'id' in row and 'extension' in row:
+            image_url = f"{base_url}{row['id']}.{row['extension']}"
+            image_urls.append(image_url)
+
+    if not image_urls:
+        return []
+
+    # Primeira imagem é a principal (thumbnail), o resto é galeria
+    meta_data = [
+        {
+            "key": "_external_image_url",
+            "value": image_urls[0]
+        }
+    ]
+
+    if len(image_urls) > 1:
+        meta_data.append({
+            "key": "_external_gallery_images",
+            "value": image_urls[1:]  # restante vira galeria
+        })
+
+    return meta_data
+
+
+def normalize_values_list(value):
+    # Verifica se o valor já está no cache
+    if value in normalized_values_cache:
+        return normalized_values_cache[value]
+    
+    normalize_values_list = []
+    request = requests.get(f"https://eprodutos-integracao.microware.com.br/api/normalize-values")
+    if request.status_code == 200:
+        response_data = request.json()
+        for item in response_data:
+            if item["column"] == value:
+                normalize_values_list = item["from_to"]
+                # Armazena no cache
+                normalized_values_cache[value] = normalize_values_list
+                break
+    return normalize_values_list
+
+def processar_categories(product, categoria):
+ 
+    categories = []
+    with open('HP/maps/categoriesWordpress.json', 'r') as f:
+        categories_mapping = json.load(f)
+    
+    for category in categories_mapping:
+        if category['name'] == categoria:
+            categories.append({"id": category['id']})
+            break
+    
+    # Garante que sempre tenha pelo menos uma categoria
+    if not categories:
+        # Adiciona "Acessório" como categoria padrão
+        for category in categories_mapping:
+            if category['name'] == "Acessório":
+                categories.append({"id": category['id']})
+                break
+
+    return categories
+
+def processar_dimmensions(product, delivery_info):
+    try:
+        # Obtém a família normalizada
+        normalized_family = normalize_values_list("Familia")
+        family = normalized_family.get(
+            product.get("Model", ""), 
+            product.get("Descrição", product.get("DESCRIÇÃO", ""))
+        )
+        
+        # Tenta obter dimensões do delivery_info
+        delivery_info_filtered = delivery_info[delivery_info["family_code"] == family]
+        
+        if not delivery_info_filtered.empty:
+            dimmensions = delivery_info_filtered.iloc[0]
+            return {
+                "length": float(dimmensions["depth"]),  
+                "width": float(dimmensions["width"]),   
+                "height": float(dimmensions["height"])  
+            }
+
+        # Fallback para produtos que não são SmartChoice, Acessórios/Monitores ou Thin Clients
+        elif product.get("sheet_name") not in ["SmartChoice", "Portfólio Acessorios_Monitores", "Thin Clients"]:
+            product_dimensions = product.get("Dimension", "")
+            if product_dimensions:
+                try:
+                    # Remove "cm" e espaços extras
+                    dimensions_str = product_dimensions.lower().replace("cm", "").strip()
+                    # Substitui vírgulas por pontos
+                    dimensions_str = dimensions_str.replace(",", ".")
+                    # Remove espaços extras entre números e 'x'
+                    dimensions_str = re.sub(r'\s*x\s*', 'x', dimensions_str)
+                    
+                    # Divide as dimensões
+                    dimensions = [float(dim.strip()) for dim in dimensions_str.split("x")]
+                    
+                    if len(dimensions) == 3:
+                        return {
+                            "length": dimensions[0],  
+                            "width": dimensions[1],   
+                            "height": dimensions[2]   
+                        }
+                except (ValueError, AttributeError) as e:
+                    print(f"Erro ao processar dimensões: {str(e)} para o valor: {product_dimensions}")
+                    pass
+        
+        # Retorna dimensões padrão mínimas para o WooCommerce
+        return {
+            "length": 0.1,  # 10cm
+            "width": 0.1,
+            "height": 0.1
+        }
+
+    except Exception as e:
+        print(f"Erro ao processar dimensões: {str(e)}")
+        return {
+            "length": 0.1,
+            "width": 0.1,
+            "height": 0.1
+        }
+
+def processar_weight(product, delivery_info):
+    try:
+        # Obtém a família normalizada
+        normalized_family = normalize_values_list("Familia")
+        family = normalized_family.get(
+            product.get("Model", ""), 
+            product.get("Descrição", product.get("DESCRIÇÃO", ""))
+        )
+        
+        # Tenta obter peso do delivery_info
+        delivery_info_filtered = delivery_info[delivery_info["family_code"] == family]
+        
+        if not delivery_info_filtered.empty:
+            weight = delivery_info_filtered.iloc[0]["weight"]
+            return float(weight) if weight is not None else 0.1
+
+        # Fallback para produtos que não são SmartChoice, Acessórios/Monitores ou Thin Clients
+        elif product.get("sheet_name") not in ["SmartChoice", "Portfólio Acessorios_Monitores", "Thin Clients"]:
+            weight_raw = product.get("Weight", "")
+            if weight_raw:
+                try:
+                    # Remove "kg", "Kg", " KG" etc. e troca vírgula por ponto
+                    weight_cleaned = (
+                        weight_raw.lower()
+                        .replace("kg", "")
+                        .replace(",", ".")
+                        .strip()
+                    )
+                    return float(weight_cleaned)
+                except ValueError:
+                    pass
+        
+        # Retorna peso padrão mínimo para o WooCommerce
+        return 0.1  # 100g
+
+    except Exception as e:
+        print(f"Erro ao processar peso: {str(e)}")
+        return 0.1

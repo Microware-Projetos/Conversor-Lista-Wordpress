@@ -1,0 +1,94 @@
+ [
+		{
+			"id": 16,
+			"name": "Acessório"
+		},
+		{
+			"id": 17,
+			"name": "Cabo"
+		},
+		{
+			"id": 18,
+			"name": "Componente"
+		},
+		{
+			"id": 19,
+			"name": "Consumível"
+		},
+		{
+			"id": 20,
+			"name": "Desktop"
+		},
+		{
+			"id": 21,
+			"name": "Display"
+		},
+		{
+			"id": 22,
+			"name": "Equipamento para Reunião"
+		},
+		{
+			"id": 23,
+			"name": "Impressora"
+		},
+		{
+			"id": 24,
+			"name": "Notebook"
+		},
+		{
+			"id": 25,
+			"name": "Leitores"
+		},
+		{
+			"id": 26,
+			"name": "Outros"
+		},
+		{
+			"id": 27,
+			"name": "Equipamento de Segurança"
+		},
+		{
+			"id": 28,
+			"name": "Rede"
+		},
+		{
+			"id": 29,
+			"name": "Serviço"
+		},
+		{
+			"id": 30,
+			"name": "Servidor"
+		},
+		{
+			"id": 31,
+			"name": "Software"
+		},
+		{
+			"id": 32,
+			"name": "Storage"
+		},
+		{
+			"id": 33,
+			"name": "Tablet"
+		},
+		{
+			"id": 34,
+			"name": "Telefonia"
+		},
+		{
+			"id": 35,
+			"name": "Workstation"
+		},
+		{
+			"id": 36,
+			"name": "Licença"
+		},
+		{
+			"id": 37,
+			"name": "Projetor"
+		},
+		{
+			"id": 38,
+			"name": "Videoconferência"
+		}
+	]

@@ -32,7 +32,7 @@ def processar_arquivo():
         with open('produtos_processados.json', 'w') as json_file:
             json.dump(produtos_processados, json_file, ensure_ascii=False, indent=4)
         
-
+        
         url = "https://ecommerce-teste.microware.com.br/lenovo/wp-json/wc/v3/products/batch"
         
         total_produtos = len(produtos_processados)
