@@ -60,9 +60,6 @@ def processar_arquivo():
                 "create": lote_atual
             }
 
-            with open(f'lote_{numero_lote}_debug.json', 'w') as f:
-                json.dump(batch_payload, f, indent=4)
-
             tentativas = 0
             sucesso = False
             while tentativas < 3 and not sucesso:

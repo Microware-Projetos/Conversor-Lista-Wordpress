@@ -285,30 +285,39 @@ def buscar_delivery():
 def processar_fotos(product, images, normalized_family):
     df = images
     base_url = "https://eprodutos-integracao.microware.com.br/api/photos/image/"
+    filtered_df = pd.DataFrame()
 
     normalize_family = normalized_family.get(product.get("Model", ""), product.get("Descrição", product.get("DESCRIÇÃO", ""))) 
     sheet_name = product["sheet_name"]
-    category = json.load(open('HP/maps/map.json'))['TraducaoLinha'].get(sheet_name, "Acessório")
+    category = json.load(open('HP/maps/map.json'))['TraducaoLinha'].get(sheet_name, "Acessorio")
 
-    # Tenta buscar imagens com a família específica
-    filtered_df = df[
-        (df['manufacturer'] == "HP") & 
-        (df['category'] == category) & 
-        (df['family'] == normalize_family)
-    ]
+    search_term = product.get("Model") or product.get("Descrição") or product.get("DESCRIÇÃO") or ""
+
+    for index, row in df.iterrows():
+        if row['family'] in search_term:
+            filtered_df = pd.concat([filtered_df, pd.DataFrame([row])])
 
     # Se não encontrar, tenta com a família Default
     if filtered_df.empty:
         filtered_df = df[
-            (df['manufacturer'] == "HP") &
-            (df['category'] == category) &
-            (df['family'] == "Default")
+            (df['manufacturer'] == "HP") & 
+            (df['category'] == category) & 
+            (df['family'] == normalize_family)
         ]
 
-    # Se ainda estiver vazio, retorna meta_data vazio
+    # Se ainda estiver vazio, tenta com a família Default
     if filtered_df.empty:
-        return []
+        if sheet_name == "Portfólio Acessorios_Monitores":
 
+            pl_group = str(product.get("PL GROUP", "")).lower()
+            default_category = "Monitor" if "display" in pl_group else "Acessorio"
+        else:
+            default_category = json.load(open('HP/maps/map.json'))['DefaultPhotos'].get(sheet_name, "Acessorio")
+        
+        for index, row in df.iterrows():
+            if row['category'] in default_category and row['manufacturer'] == "HP" and row['family'] == "Default":
+                filtered_df = pd.concat([filtered_df, pd.DataFrame([row])])
+        
     # Cria a lista de URLs das imagens
     image_urls = []
     for _, row in filtered_df.iterrows():

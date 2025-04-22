@@ -19,11 +19,20 @@
                         <input type="file" class="form-control" id="arquivo" name="arquivo" accept=".xlsx,.xls" required>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary" id="submitButton">
                             <i class="bi bi-upload me-2"></i>Enviar Arquivo
                         </button>
                     </div>
                 </form>
+                <div id="progresso" class="mt-3" style="display: none;">
+                    <div class="progress mb-3">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <small id="loteAtual">Lote: 0/0</small>
+                        <small id="statusAtual">Status: Aguardando...</small>
+                    </div>
+                </div>
                 <div id="resultado" class="mt-3"></div>
             </div>
         </div>
@@ -33,26 +42,83 @@
 <script>
 document.getElementById('uploadForm').addEventListener('submit', function(e) {
     e.preventDefault();
+    
+    const submitButton = document.getElementById('submitButton');
+    const resultadoDiv = document.getElementById('resultado');
+    const progressoDiv = document.getElementById('progresso');
+    const progressBar = progressoDiv.querySelector('.progress-bar');
+    const loteAtual = document.getElementById('loteAtual');
+    const statusAtual = document.getElementById('statusAtual');
+    
+    // Mostra a barra de progresso
+    progressoDiv.style.display = 'block';
+    
+    // Desabilita o botão e mostra loading
+    submitButton.disabled = true;
+    submitButton.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Enviando...';
+    resultadoDiv.innerHTML = '';
+
     const formData = new FormData();
     const arquivo = document.getElementById('arquivo').files[0];
     formData.append('arquivo', arquivo);
+
+    // Cria um EventSource para receber atualizações em tempo real
+    const eventSource = new EventSource('/progresso');
+    
+    eventSource.onmessage = function(event) {
+        const data = JSON.parse(event.data);
+        
+        if (data.total) {
+            // Atualiza o progresso
+            const progresso = (data.loteAtual / data.total) * 100;
+            progressBar.style.width = `${progresso}%`;
+            loteAtual.textContent = `Lote: ${data.loteAtual}/${data.total}`;
+            statusAtual.textContent = `Status: ${data.status}`;
+        }
+    };
+
+    eventSource.onerror = function() {
+        eventSource.close();
+    };
 
     fetch('/cisco', {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
-    .then(data => {
-        const resultadoDiv = document.getElementById('resultado');
-        if (data.erro) {
-            resultadoDiv.innerHTML = `<div class="alert alert-danger">${data.erro}</div>`;
-        } else {
-            resultadoDiv.innerHTML = `<div class="alert alert-success">${data.mensagem}</div>`;
+    .then(response => {
+        if (!response.ok) {
+            return response.json().then(data => Promise.reject(data));
         }
+        return response.json();
+    })
+    .then(data => {
+        resultadoDiv.innerHTML = `
+            <div class="alert alert-success">
+                <i class="bi bi-check-circle me-2"></i>${data.mensagem}
+            </div>
+        `;
+        // Atualiza o status final
+        statusAtual.textContent = 'Status: Concluído!';
+        progressBar.style.width = '100%';
     })
     .catch(error => {
-        document.getElementById('resultado').innerHTML = 
-            `<div class="alert alert-danger">Erro ao processar o arquivo: ${error}</div>`;
+        const mensagemErro = error.erro || 'Erro ao processar o arquivo';
+        const detalhesErro = error.detalhes ? `<br><small class="text-muted">${error.detalhes}</small>` : '';
+        
+        resultadoDiv.innerHTML = `
+            <div class="alert alert-danger">
+                <i class="bi bi-exclamation-triangle me-2"></i>${mensagemErro}${detalhesErro}
+            </div>
+        `;
+        // Atualiza o status em caso de erro
+        statusAtual.textContent = 'Status: Erro!';
+    })
+    .finally(() => {
+        // Reabilita o botão e restaura o texto original
+        submitButton.disabled = false;
+        submitButton.innerHTML = '<i class="bi bi-upload me-2"></i>Enviar Arquivo';
+        // Fecha a conexão SSE
+        eventSource.close();
     });
 });
 </script>

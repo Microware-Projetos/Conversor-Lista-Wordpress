@@ -156,23 +156,60 @@ def buscar_delivery():
 def processar_fotos(product, images, normalized_family):
     df = images
     base_url = "https://eprodutos-integracao.microware.com.br/api/photos/image/"
+    filtered_df = pd.DataFrame()
 
     normalize_family = normalized_family.get(product["PH4_DESCRIPTION"], "")
 
-    # Tenta buscar imagens com a família específica
-    filtered_df = df[
-        (df['manufacturer'] == "Lenovo") & 
-        (df['category'] == product['PH_BRAND']) & 
-        (df['family'] == (normalize_family if normalize_family else product['PRODUCT_CODE']))
-    ]
+    search_term = product.get("PH4_DESCRIPTION")
+
+    for index, row in df.iterrows():
+        if row['family'] in search_term:
+            filtered_df = pd.concat([filtered_df, pd.DataFrame([row])])
 
     # Se não encontrar, tenta com a família Default
     if filtered_df.empty:
         filtered_df = df[
-            (df['manufacturer'] == "Lenovo") &
-            (df['category'] == product['PH_BRAND']) &
-            (df['family'] == "Default")
+            (df['manufacturer'] == "Lenovo") & 
+            (df['category'] == product['PH_BRAND']) & 
+            (df['family'] == normalize_family)
         ]
+
+    # Se ainda estiver vazio, tenta com a família Default
+    if filtered_df.empty:
+        CATEGORY_MAPPING = {
+        "Notebook": ["Notebook"],
+        "Desktop": ["Desktop"],
+        "Workstation": ["Workstation"],
+        "Tablet Android": ["Tablet"],
+        "Visuals": ["Monitor"],
+        "Smart Office": ["SmartOffice"]
+        }
+
+        default_category = CATEGORY_MAPPING.get(product['PH_BRAND'], ["Acessório"])
+        
+        for index, row in df.iterrows():
+            if row['category'] in default_category and row['manufacturer'] == "Lenovo" and row['family'] == "Default":
+                filtered_df = pd.concat([filtered_df, pd.DataFrame([row])])
+
+    # df = images
+    # base_url = "https://eprodutos-integracao.microware.com.br/api/photos/image/"
+
+    # normalize_family = normalized_family.get(product["PH4_DESCRIPTION"], "")
+
+    # # Tenta buscar imagens com a família específica
+    # filtered_df = df[
+    #     (df['manufacturer'] == "Lenovo") & 
+    #     (df['category'] == product['PH_BRAND']) & 
+    #     (df['family'] == (normalize_family if normalize_family else product['PRODUCT_CODE']))
+    # ]
+
+    # # Se não encontrar, tenta com a família Default
+    # if filtered_df.empty:
+    #     filtered_df = df[
+    #         (df['manufacturer'] == "Lenovo") &
+    #         (df['category'] == product['PH_BRAND']) &
+    #         (df['family'] == "Default")
+    #     ]
 
     # Se ainda estiver vazio, retorna meta_data vazio
     if filtered_df.empty:
