@@ -7,8 +7,8 @@ import requests
 from requests.auth import HTTPBasicAuth 
 import time
 # Configurações da API WooCommerce
-WOOCOMMERCE_CONSUMER_KEY = 'ck_420e820fb1bbf2948d4eddce62e8496cf87669bb'
-WOOCOMMERCE_CONSUMER_SECRET = 'cs_7d6b623f7769a9183a32c8a102e2378c79e14d3b'
+WOOCOMMERCE_CONSUMER_KEY = 'ck_131b451fd7b97ebbb0dfaab74ebd5ce3868e50fe'
+WOOCOMMERCE_CONSUMER_SECRET = 'cs_2fd8a064e9f6df929a2d63c7eceb26dea344b517'
 
 # Variável global para armazenar o progresso
 progresso_atual = {
@@ -42,7 +42,7 @@ def processar_arquivo():
     try:
         produtos_processados = processar_hp_data(arquivo_produtos, arquivo_precos)
 
-        url = "https://ecommerce-teste.microware.com.br/hp/wp-json/wc/v3/products/batch"
+        url = "https://ecommerce.microware.com.br/hp/wp-json/wc/v3/products/batch"
         total_produtos = len(produtos_processados)
         print(f"Iniciando envio de {total_produtos} produtos em batch...")
 

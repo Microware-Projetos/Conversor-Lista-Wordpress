@@ -120,6 +120,8 @@ def processar_attributes(product):
                 if atributo_existente:
                     # Se o atributo já existe, adiciona o valor às opções
                     if valor not in atributo_existente['options']:
+                        if isinstance(atributo_existente['options'], str):
+                            atributo_existente['options'] = [atributo_existente['options']]
                         atributo_existente['options'].append(valor)
                 else:
                     # Se o atributo não existe, cria um novo

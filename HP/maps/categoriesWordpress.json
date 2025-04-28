@@ -1,4 +1,4 @@
- [
+[
 		{
 			"id": 16,
 			"name": "Acessório"
@@ -25,15 +25,15 @@
 		},
 		{
 			"id": 22,
-			"name": "Equipamento para Reunião"
+			"name": "Equipamento de Segurança"
 		},
 		{
 			"id": 23,
-			"name": "Impressora"
+			"name": "Equipamento para Reunião"
 		},
 		{
 			"id": 24,
-			"name": "Notebook"
+			"name": "Impressora"
 		},
 		{
 			"id": 25,
@@ -41,54 +41,58 @@
 		},
 		{
 			"id": 26,
-			"name": "Outros"
-		},
-		{
-			"id": 27,
-			"name": "Equipamento de Segurança"
-		},
-		{
-			"id": 28,
-			"name": "Rede"
-		},
-		{
-			"id": 29,
-			"name": "Serviço"
-		},
-		{
-			"id": 30,
-			"name": "Servidor"
-		},
-		{
-			"id": 31,
-			"name": "Software"
-		},
-		{
-			"id": 32,
-			"name": "Storage"
-		},
-		{
-			"id": 33,
-			"name": "Tablet"
-		},
-		{
-			"id": 34,
-			"name": "Telefonia"
-		},
-		{
-			"id": 35,
-			"name": "Workstation"
-		},
-		{
-			"id": 36,
 			"name": "Licença"
 		},
 		{
-			"id": 37,
+			"id": 27,
+			"name": "Notebook"
+		},
+		{
+			"id": 28,
+			"name": "Outros"
+		},
+		{
+			"id": 29,
 			"name": "Projetor"
+		},
+		{
+			"id": 30,
+			"name": "Rede"
+		},
+		{
+			"id": 31,
+			"name": "Sem categoria"
+		},
+		{
+			"id": 32,
+			"name": "Serviço"
+		},
+		{
+			"id": 33,
+			"name": "Servidor"
+		},
+		{
+			"id": 34,
+			"name": "Software"
+		},
+		{
+			"id": 35,
+			"name": "Storage"
+		},
+		{
+			"id": 36,
+			"name": "Tablet"
+		},
+		{
+			"id": 37,
+			"name": "Telefonia"
 		},
 		{
 			"id": 38,
 			"name": "Videoconferência"
+		},
+		{
+			"id": 39,
+			"name": "Workstation"
 		}
 	]

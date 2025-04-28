@@ -1,98 +1,98 @@
 [
-	{
-		"id": 20,
-		"name": "Acessório"
-	},
-	{
-		"id": 21,
-		"name": "Cabo"
-	},
-	{
-		"id": 22,
-		"name": "Componente"
-	},
-	{
-		"id": 23,
-		"name": "Consumível"
-	},
-	{
-		"id": 24,
-		"name": "Desktop"
-	},
-	{
-		"id": 25,
-		"name": "Display"
-	},
-	{
-		"id": 31,
-		"name": "Equipamento de Segurança"
-	},
-	{
-		"id": 26,
-		"name": "Equipamento para Reunião"
-	},
-	{
-		"id": 27,
-		"name": "Impressora"
-	},
-	{
-		"id": 29,
-		"name": "Leitores"
-	},
-	{
-		"id": 40,
-		"name": "Licença"
-	},
-	{
-		"id": 28,
-		"name": "Notebook"
-	},
-	{
-		"id": 30,
-		"name": "Outros"
-	},
-	{
-		"id": 41,
-		"name": "Projetor"
-	},
-	{
-		"id": 32,
-		"name": "Rede"
-	},
-	{
-		"id": 15,
-		"name": "Sem categoria"
-	},
-	{
-		"id": 33,
-		"name": "Serviço"
-	},
-	{
-		"id": 34,
-		"name": "Servidor"
-	},
-	{
-		"id": 35,
-		"name": "Software"
-	},
-	{
-		"id": 36,
-		"name": "Storage"
-	},
-	{
-		"id": 37,
-		"name": "Tablet"
-	},
-	{
-		"id": 38,
-		"name": "Telefonia"
-	},
-	{
-		"id": 42,
-		"name": "Videoconferência"
-	},
-	{
-		"id": 39,
-		"name": "Workstation"
-	}
+		{
+			"id": 17,
+			"name": "Acessório"
+		},
+		{
+			"id": 18,
+			"name": "Cabo"
+		},
+		{
+			"id": 19,
+			"name": "Componente"
+		},
+		{
+			"id": 20,
+			"name": "Consumível"
+		},
+		{
+			"id": 21,
+			"name": "Desktop"
+		},
+		{
+			"id": 22,
+			"name": "Display"
+		},
+		{
+			"id": 23,
+			"name": "Equipamento de Segurança"
+		},
+		{
+			"id": 24,
+			"name": "Equipamento para Reunião"
+		},
+		{
+			"id": 25,
+			"name": "Impressora"
+		},
+		{
+			"id": 26,
+			"name": "Leitores"
+		},
+		{
+			"id": 27,
+			"name": "Licença"
+		},
+		{
+			"id": 28,
+			"name": "Notebook"
+		},
+		{
+			"id": 29,
+			"name": "Outros"
+		},
+		{
+			"id": 30,
+			"name": "Projetor"
+		},
+		{
+			"id": 31,
+			"name": "Rede"
+		},
+		{
+			"id": 32,
+			"name": "Sem categoria"
+		},
+		{
+			"id": 33,
+			"name": "Serviço"
+		},
+		{
+			"id": 34,
+			"name": "Servidor"
+		},
+		{
+			"id": 35,
+			"name": "Software"
+		},
+		{
+			"id": 36,
+			"name": "Storage"
+		},
+		{
+			"id": 37,
+			"name": "Tablet"
+		},
+		{
+			"id": 38,
+			"name": "Telefonia"
+		},
+		{
+			"id": 39,
+			"name": "Videoconferência"
+		},
+		{
+			"id": 40,
+			"name": "Workstation"
+		}
 ]
