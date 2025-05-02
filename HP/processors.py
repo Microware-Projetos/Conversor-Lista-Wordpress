@@ -5,9 +5,13 @@ import os
 import json
 import requests
 import re
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 # Cache global para valores normalizados
 normalized_values_cache = {}
+EmailProducts = []
 
 def processar_hp_data(produtos, precos):
     df_produtos = ler_arquivo_produto_hp(produtos)
@@ -91,7 +95,6 @@ def combinar_dados(df_produtos, df_precos):
         
         else :
 
-
             # Pular o produto se o SKU estiver vazio
             if "SKU" not in product or pd.isna(product["SKU"]):
                     continue
@@ -147,6 +150,7 @@ def combinar_dados(df_produtos, df_precos):
     with open(output_path, 'w', encoding='utf-8') as json_file:
         json.dump(combined_data, json_file, ensure_ascii=False, indent=4)
     
+    enviar_email(EmailProducts)
     return combined_data
 
 def ler_arquivo_produto_hp(product_file):
@@ -226,6 +230,9 @@ def processar_attributes(product):
                 'options': anatel,
                 'visible': True
             })
+        else:
+            EmailProducts.append(str(product[coluna]) + " - " + "Produto sem codigo anatel")
+
 
     for hp_key in product:
         # Encontra o valor correspondente em Colunas
@@ -283,10 +290,19 @@ def buscar_delivery():
     return df
 
 def processar_fotos(product, images, normalized_family):
+    sheet_name = product["sheet_name"]
+    coluna = ""
+    if sheet_name == "SmartChoice":
+        coluna = "PN"
+    elif sheet_name == "Portfólio Acessorios_Monitores":
+        coluna = "SKU"
+    else:
+        coluna = "Model"
+
     df = images
     base_url = "https://eprodutos-integracao.microware.com.br/api/photos/image/"
     filtered_df = pd.DataFrame()
-
+    
     normalize_family = normalized_family.get(product.get("Model", ""), product.get("Descrição", product.get("DESCRIÇÃO", ""))) 
     sheet_name = product["sheet_name"]
     category = json.load(open('HP/maps/map.json'))['TraducaoLinha'].get(sheet_name, "Acessorio")
@@ -316,6 +332,7 @@ def processar_fotos(product, images, normalized_family):
         for index, row in df.iterrows():
             if isinstance(row['category'], str) and row['category'] in default_category and row['manufacturer'] == "HP" and row['family'] == "Default":
                 filtered_df = pd.concat([filtered_df, pd.DataFrame([row])])
+                EmailProducts.append(str(product[coluna]) + " - " + "Produto com foto default")
         
     # Cria a lista de URLs das imagens
     image_urls = []
@@ -325,6 +342,7 @@ def processar_fotos(product, images, normalized_family):
             image_urls.append(image_url)
 
     if not image_urls:
+        EmailProducts.append(str(product[coluna]) + " - " + "Produto sem foto")
         return []
 
     # Primeira imagem é a principal (thumbnail), o resto é galeria
@@ -384,6 +402,12 @@ def processar_categories(product, categoria):
 
 def processar_dimmensions(product, delivery_info):
     try:
+        sheet_name = product["sheet_name"]
+        coluna = ""
+        if sheet_name == "SmartChoice":
+            coluna = "PN"
+        elif sheet_name == "Portfólio Acessorios_Monitores":
+            coluna = "SKU"
         # Obtém a família normalizada
         normalized_family = normalize_values_list("Familia")
         family = normalized_family.get(
@@ -428,6 +452,7 @@ def processar_dimmensions(product, delivery_info):
                     pass
         
         # Retorna dimensões padrão mínimas para o WooCommerce
+            EmailProducts.append(str(product[coluna]) + " - " + "Produto sem dimensoes")
         return {
             "length": 0.1,  # 10cm
             "width": 0.1,
@@ -436,6 +461,7 @@ def processar_dimmensions(product, delivery_info):
 
     except Exception as e:
         print(f"Erro ao processar dimensões: {str(e)}")
+        EmailProducts.append(str(product[coluna]) + " - " + "Produto sem dimensoes")
         return {
             "length": 0.1,
             "width": 0.1,
@@ -444,6 +470,15 @@ def processar_dimmensions(product, delivery_info):
 
 def processar_weight(product, delivery_info):
     try:
+        sheet_name = product.get("sheet_name", "")
+        coluna = ""
+        if sheet_name == "SmartChoice":
+            coluna = "PN"
+        elif sheet_name == "Portfólio Acessorios_Monitores":
+            coluna = "SKU"
+        else:
+            coluna = "SKU"  # Valor padrão caso não seja nenhum dos casos acima
+            
         # Obtém a família normalizada
         normalized_family = normalize_values_list("Familia")
         family = normalized_family.get(
@@ -471,12 +506,59 @@ def processar_weight(product, delivery_info):
                         .strip()
                     )
                     return float(weight_cleaned)
-                except ValueError:
+                except ValueError as ve:
+                    print(f"Erro ao converter peso: {str(ve)} para o valor: {weight_raw}")
                     pass
         
         # Retorna peso padrão mínimo para o WooCommerce
+        sku = product.get(coluna, "SKU não encontrado")
+        EmailProducts.append(f"{sku} - Produto sem peso")
         return 0.1  # 100g
 
     except Exception as e:
-        print(f"Erro ao processar peso: {str(e)}")
+        sku = product.get(coluna, "SKU não encontrado")
+        print(f"Erro ao processar peso para SKU {sku}: {str(e)}")
+        EmailProducts.append(f"{sku} - Produto sem peso")
         return 0.1
+
+def enviar_email(email_products):
+    servidor_smtp = "smtp.microware.com.br"
+    porta = 25  
+    email_origem = "ecommerce@microware.com.br"
+    email_destino = "ecommerce@microware.com.br"
+    assunto = "Nova lista de produtos HP enviada para o Ecommerce!"
+
+    # Agrupar informações por SKU
+    produtos_agrupados = {}
+    for produto in email_products:
+        sku = produto.split(" - ")[0]
+        problema = produto.split(" - ")[1]
+        if sku not in produtos_agrupados:
+            produtos_agrupados[sku] = []
+        produtos_agrupados[sku].append(problema)
+
+    # Montar o corpo do e-mail
+    corpo = "Segue informações de produtos sem alguns dados:\n\n"
+    for sku, problemas in produtos_agrupados.items():
+        corpo += f"SKU: {sku}\n"
+        corpo += "Problemas encontrados:\n"
+        for problema in problemas:
+            corpo += f"  - {problema}\n"
+        corpo += "\n"
+
+    # Criar a mensagem
+    mensagem = MIMEMultipart()
+    mensagem['From'] = email_origem
+    mensagem['To'] = email_destino
+    mensagem['Subject'] = assunto
+    mensagem.attach(MIMEText(corpo, 'plain'))
+
+    try:
+        # Conectar e enviar
+        servidor = smtplib.SMTP(servidor_smtp, porta)
+        servidor.sendmail(email_origem, email_destino, mensagem.as_string())
+        print("E-mail enviado com sucesso!")
+    except Exception as e:
+        print(f"Erro ao enviar e-mail: {e}")
+    finally:
+        servidor.quit()

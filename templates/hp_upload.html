@@ -102,6 +102,12 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
         resultadoDiv.innerHTML = `
             <div class="alert alert-success">
                 <i class="bi bi-check-circle me-2"></i>${data.mensagem}
+                ${data.estatisticas ? `
+                <div class="mt-2">
+                    <small class="text-success">Sucessos: ${data.estatisticas.sucessos}</small>
+                    <small class="text-danger ms-3">Erros: ${data.estatisticas.erros}</small>
+                </div>
+                ` : ''}
             </div>
         `;
         // Atualiza o status final

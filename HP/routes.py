@@ -2,10 +2,13 @@ from . import hp_bp
 from flask import jsonify, render_template, request, Response
 import pandas as pd
 import json
-from .processors import processar_hp_data
-import requests
-from requests.auth import HTTPBasicAuth 
+import aiohttp
+import asyncio
+from requests.auth import HTTPBasicAuth
 import time
+from .processors import processar_hp_data
+from collections import deque
+
 # Configurações da API WooCommerce
 WOOCOMMERCE_CONSUMER_KEY = 'ck_131b451fd7b97ebbb0dfaab74ebd5ce3868e50fe'
 WOOCOMMERCE_CONSUMER_SECRET = 'cs_2fd8a064e9f6df929a2d63c7eceb26dea344b517'
@@ -14,8 +17,53 @@ WOOCOMMERCE_CONSUMER_SECRET = 'cs_2fd8a064e9f6df929a2d63c7eceb26dea344b517'
 progresso_atual = {
     'loteAtual': 0,
     'total': 0,
-    'status': 'Aguardando...'
+    'status': 'Aguardando...',
+    'erros': 0,
+    'sucessos': 0
 }
+
+async def enviar_lote(session, lote, numero_lote, url, max_tentativas=5):
+    batch_payload = {
+        "create": lote
+    }
+    
+    tentativas = 0
+    while tentativas < max_tentativas:
+        try:
+            # Validação dos produtos
+            for produto in lote:
+                if not all([produto.get('name'), produto.get('sku'), produto.get('price')]):
+                    raise Exception(f"Produto inválido no lote {numero_lote}: {produto}")
+
+            async with session.post(
+                url,
+                auth=aiohttp.BasicAuth(WOOCOMMERCE_CONSUMER_KEY, WOOCOMMERCE_CONSUMER_SECRET),
+                json=batch_payload,
+                timeout=300  # 5 minutos
+            ) as response:
+                if response.status == 200:
+                    print(f"Lote {numero_lote} enviado com sucesso!")
+                    progresso_atual['sucessos'] += 1
+                    return True
+                else:
+                    raise Exception(f"Erro API: {response.status} - {await response.text()}")
+
+        except Exception as e:
+            tentativas += 1
+            print(f"Tentativa {tentativas} falhou para o lote {numero_lote}: {str(e)}")
+            progresso_atual['erros'] += 1
+            
+            with open(f'erro_lote_{numero_lote}_tentativa_{tentativas}.txt', 'w') as f:
+                f.write(str(e))
+            
+            if tentativas == max_tentativas:
+                print(f"Erro crítico: lote {numero_lote} falhou após {max_tentativas} tentativas.")
+                return False
+            
+            # Espera progressiva entre tentativas (2, 4, 8, 16, 32 segundos)
+            await asyncio.sleep(2 ** tentativas)
+    
+    return False
 
 @hp_bp.route('/progresso')
 def progresso():
@@ -31,7 +79,7 @@ def listar_produtos():
     return render_template('hp_upload.html')
 
 @hp_bp.route('/hp', methods=['POST'])
-def processar_arquivo():
+async def processar_arquivo():
     global progresso_atual
     arquivo_produtos = request.files.get('arquivo_produtos')
     arquivo_precos = request.files.get('arquivo_precos')
@@ -41,69 +89,20 @@ def processar_arquivo():
 
     try:
         produtos_processados = processar_hp_data(arquivo_produtos, arquivo_precos)
-
-        url = "https://ecommerce.microware.com.br/hp/wp-json/wc/v3/products/batch"
-        total_produtos = len(produtos_processados)
-        print(f"Iniciando envio de {total_produtos} produtos em batch...")
-
-        progresso_atual['total'] = (total_produtos + 9) // 10
-
-        for i in range(0, total_produtos, 10):
-            lote_atual = produtos_processados[i:i + 10]
-            numero_lote = (i // 10) + 1
-            print(f"\nEnviando lote {numero_lote} ({i + 1} até {min(i + 10, total_produtos)} de {total_produtos})")
-
-            progresso_atual['loteAtual'] = numero_lote
-            progresso_atual['status'] = f'Enviando lote {numero_lote} de {progresso_atual["total"]}'
-
-            batch_payload = {
-                "create": lote_atual
-            }
-
-            tentativas = 0
-            sucesso = False
-            while tentativas < 3 and not sucesso:
-                try:
-                    # Validação opcional
-                    for produto in lote_atual:
-                        if not all([produto.get('name'), produto.get('sku'), produto.get('price')]):
-                            raise Exception(f"Produto inválido no lote {numero_lote}: {produto}")
-
-                    result = requests.post(
-                        url,
-                        auth=HTTPBasicAuth(WOOCOMMERCE_CONSUMER_KEY, WOOCOMMERCE_CONSUMER_SECRET),
-                        json=batch_payload,
-                        timeout=180
-                    )
-
-                    if result.status_code == 200:
-                        print(f"Lote {numero_lote} enviado com sucesso!")
-                        sucesso = True
-                    else:
-                        raise Exception(f"Erro API: {result.status_code} - {result.text}")
-
-                except Exception as e:
-                    tentativas += 1
-                    print(f"Tentativa {tentativas} falhou para o lote {numero_lote}: {str(e)}")
-
-                    with open(f'erro_lote_{numero_lote}_tentativa_{tentativas}.txt', 'w') as f:
-                        f.write(str(e))
-
-                    if tentativas == 3:
-                        print(f"Erro crítico: lote {numero_lote} falhou após 3 tentativas.")
-
-                time.sleep(2)  # Espera entre tentativas/lotes
-
-        print("\nProcesso de envio concluído!")
-        progresso_atual['status'] = 'Concluído!'
-
+        
+        # Cria um JSON e salva na pasta
+        with open('produtos_processados.json', 'w') as json_file:
+            json.dump(produtos_processados, json_file, ensure_ascii=False, indent=4)
+        
         return jsonify({
-            'mensagem': 'Produtos enviados com sucesso.',
-            'dados': produtos_processados
+            'mensagem': 'Produtos processados com sucesso.',
+            'total_produtos': len(produtos_processados)
         })
 
     except Exception as erro_geral:
-        print(f"Erro geral no envio: {str(erro_geral)}")
+        erro_msg = str(erro_geral) if erro_geral else "Erro desconhecido ao processar arquivos"
+        print(f"Erro geral no envio: {erro_msg}")
         with open('erro_geral_envio.txt', 'w') as f:
-            f.write(str(erro_geral))
-        return jsonify({'erro': str(erro_geral)})
+            f.write(erro_msg)
+        progresso_atual['status'] = 'Erro!'
+        return jsonify({'erro': erro_msg}), 500

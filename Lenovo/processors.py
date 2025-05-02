@@ -2,9 +2,14 @@ import pandas as pd
 import json
 import requests
 import re
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 
+EmailProducts = []
 normalized_values_cache = {}
+
 def processar_lenovo_data(lenovo_data):
     
     products_df = pd.concat(lenovo_data.values(), ignore_index=True)
@@ -49,6 +54,8 @@ def processar_lenovo_data(lenovo_data):
         produto_data.update(categories_data)
         combined_data.append(produto_data)
     
+
+    enviar_email(EmailProducts)
     return combined_data
 
 def processar_categories(product):
@@ -105,6 +112,8 @@ def processar_attributes(product):
             'options': anatel,
             'visible': True
         })
+    else:
+        EmailProducts.append(str(product['PRODUCT_CODE']) + " - " + "Produto sem codigo anatel")
     
     for lenovo_key, wp_name in attributes_mapping.items():
         # Encontra o ID correspondente no attributesWordpress
@@ -192,29 +201,14 @@ def processar_fotos(product, images, normalized_family):
         for index, row in df.iterrows():
             if row['category'] in default_category and row['manufacturer'] == "Lenovo" and row['family'] == "Default":
                 filtered_df = pd.concat([filtered_df, pd.DataFrame([row])])
+                EmailProducts.append(str(product['PRODUCT_CODE']) + " - " + "Produto com foto default")
 
-    # df = images
-    # base_url = "https://eprodutos-integracao.microware.com.br/api/photos/image/"
 
-    # normalize_family = normalized_family.get(product["PH4_DESCRIPTION"], "")
-
-    # # Tenta buscar imagens com a família específica
-    # filtered_df = df[
-    #     (df['manufacturer'] == "Lenovo") & 
-    #     (df['category'] == product['PH_BRAND']) & 
-    #     (df['family'] == (normalize_family if normalize_family else product['PRODUCT_CODE']))
-    # ]
-
-    # # Se não encontrar, tenta com a família Default
-    # if filtered_df.empty:
-    #     filtered_df = df[
-    #         (df['manufacturer'] == "Lenovo") &
-    #         (df['category'] == product['PH_BRAND']) &
-    #         (df['family'] == "Default")
-    #     ]
+        
 
     # Se ainda estiver vazio, retorna meta_data vazio
     if filtered_df.empty:
+        EmailProducts.append(str(product['PRODUCT_CODE']) + " - " + "Produto sem foto")
         return []
 
     # Cria a lista de URLs das imagens
@@ -257,6 +251,7 @@ def processar_dimmensions(product, delivery_info):
                     "height": dimmensions["height"]
                 }
             else:
+                EmailProducts.append(str(product['PRODUCT_CODE']) + " - " + "Produto sem dimensões")
                 return {
                     "length": 0.1,
                     "width": 0.1,
@@ -278,6 +273,7 @@ def processar_weight(product, delivery_info):
                 return dimmensions["weight"]
            
             else:
+                EmailProducts.append(str(product['PRODUCT_CODE']) + " - " + "Produto sem peso")
                 return 0
 
     except Exception as e:
@@ -300,3 +296,48 @@ def normalize_values_list(value):
                 normalized_values_cache[value] = normalize_values_list
                 break
     return normalize_values_list
+
+def enviar_email(email_products):
+    servidor_smtp = "smtp.microware.com.br"
+    porta = 25  
+    email_origem = "maycon.jardim@microware.com.br"
+    email_destino = "maycon.jardim@microware.com.br"
+    assunto = "Nova lista de produtos Lenovo enviada para o Ecommerce!"
+
+    # Agrupar informações por SKU
+    produtos_agrupados = {}
+    for produto in email_products:
+        sku = produto.split(" - ")[0]
+        problema = produto.split(" - ")[1]
+        if sku not in produtos_agrupados:
+            produtos_agrupados[sku] = []
+        produtos_agrupados[sku].append(problema)
+
+    # Montar o corpo do e-mail
+    corpo = "Segue informações de produtos sem alguns dados:\n\n"
+    for sku, problemas in produtos_agrupados.items():
+        corpo += f"SKU: {sku}\n"
+        corpo += "Problemas encontrados:\n"
+        for problema in problemas:
+            corpo += f"  - {problema}\n"
+        corpo += "\n"
+
+    # Criar a mensagem
+    mensagem = MIMEMultipart()
+    mensagem['From'] = email_origem
+    mensagem['To'] = email_destino
+    mensagem['Subject'] = assunto
+    mensagem.attach(MIMEText(corpo, 'plain'))
+
+    try:
+        # Conectar e enviar
+        servidor = smtplib.SMTP(servidor_smtp, porta)
+        servidor.sendmail(email_origem, email_destino, mensagem.as_string())
+        print("E-mail enviado com sucesso!")
+    except Exception as e:
+        print(f"Erro ao enviar e-mail: {e}")
+    finally:
+        servidor.quit()
+
+
+
