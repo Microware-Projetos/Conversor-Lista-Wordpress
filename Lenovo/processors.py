@@ -37,6 +37,9 @@ def processar_lenovo_data(lenovo_data):
         if product_name.startswith('NB'):
             product_name = product_name.replace('NB', 'Notebook', 1)
         
+
+        shipping_class = "importado" if product['PART_ORIGIN'] == "IMPORTED" else "local"
+
         produto_data = {
             'name': product_name,
             'sku': product['PRODUCT_CODE'],
@@ -49,7 +52,8 @@ def processar_lenovo_data(lenovo_data):
             'attributes': processar_attributes(product),
             'meta_data': processar_fotos(product, images, normalized_family),
             'dimmensions': processar_dimmensions(product, delivery_info),
-            'weight': processar_weight(product, delivery_info)
+            'weight': processar_weight(product, delivery_info),
+            'shipping_class': shipping_class
         }
         produto_data.update(categories_data)
         combined_data.append(produto_data)
@@ -141,7 +145,7 @@ def processar_attributes(product):
                     })
     
     attributes.append({
-        'id': 49,
+        'id': 67,
         'options': ["Lenovo"],
         'visible': True
     })                  

@@ -78,6 +78,12 @@ def combinar_dados(df_produtos, df_precos):
 
             pl_group = str(product.get("PL GROUP", "")).lower()
             categoria = "Display" if "display" in pl_group else "Acessório"
+
+            icms = price_info["ICMS %"]
+            if "7" in str(icms):
+                shipping_class = "local"
+            else:
+                shipping_class = "importado"
             
             produto_data = {
                 'name': str(product.get("DESCRIÇÃO", "")),
@@ -90,7 +96,8 @@ def combinar_dados(df_produtos, df_precos):
                 'meta_data': processar_fotos(product, images, normalized_family),
                 'dimmensions': processar_dimmensions(product, delivery),
                 'weight': processar_weight(product, delivery),
-                'categories': processar_categories(product, categoria)
+                'categories': processar_categories(product, categoria),
+                'shipping_class': shipping_class
             }
         
         else :
