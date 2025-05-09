@@ -4,3 +4,4 @@ pandas
 openpyxl
 requests
 aiohttp==3.9.3
+woocommerce

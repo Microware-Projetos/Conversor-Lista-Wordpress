@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from Lenovo import lenovo_bp
 from HP import hp_bp
 from Cisco import cisco_bp
+from Microware import microware_bp
 
 app = Flask(__name__, static_folder='static')
 
@@ -9,6 +10,7 @@ app = Flask(__name__, static_folder='static')
 app.register_blueprint(lenovo_bp)
 app.register_blueprint(hp_bp)
 app.register_blueprint(cisco_bp)
+app.register_blueprint(microware_bp)
 
 @app.route('/')
 def home():

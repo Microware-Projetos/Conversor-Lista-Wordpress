@@ -1,0 +1,122 @@
+[
+	{
+		"id": 62,
+		"name": "Acessório"
+	},
+	{
+		"id": 63,
+		"name": "Cabo"
+	},
+	{
+		"id": 64,
+		"name": "Componente"
+	},
+	{
+		"id": 65,
+		"name": "Consumível"
+	},
+	{
+		"id": 66,
+		"name": "Desktop"
+	},
+	{
+		"id": 67,
+		"name": "Display"
+	},
+	{
+		"id": 88,
+		"name": "DockStation"
+	},
+	{
+		"id": 68,
+		"name": "Equipamento de Segurança"
+	},
+	{
+		"id": 69,
+		"name": "Equipamento para Reunião"
+	},
+	{
+		"id": 86,
+		"name": "Gateway"
+	},
+	{
+		"id": 70,
+		"name": "Impressora"
+	},
+	{
+		"id": 85,
+		"name": "Infraestrutura"
+	},
+	{
+		"id": 71,
+		"name": "Leitores"
+	},
+	{
+		"id": 72,
+		"name": "Licença"
+	},
+	{
+		"id": 89,
+		"name": "Mobile"
+	},
+	{
+		"id": 73,
+		"name": "Notebook"
+	},
+	{
+		"id": 74,
+		"name": "Outros"
+	},
+	{
+		"id": 90,
+		"name": "Phone"
+	},
+	{
+		"id": 75,
+		"name": "Projetor"
+	},
+	{
+		"id": 76,
+		"name": "Rede"
+	},
+	{
+		"id": 15,
+		"name": "Sem categoria"
+	},
+	{
+		"id": 87,
+		"name": "Sensor"
+	},
+	{
+		"id": 77,
+		"name": "Serviço"
+	},
+	{
+		"id": 78,
+		"name": "Servidor"
+	},
+	{
+		"id": 79,
+		"name": "Software"
+	},
+	{
+		"id": 80,
+		"name": "Storage"
+	},
+	{
+		"id": 81,
+		"name": "Tablet"
+	},
+	{
+		"id": 82,
+		"name": "Telefonia"
+	},
+	{
+		"id": 83,
+		"name": "Videoconferência"
+	},
+	{
+		"id": 84,
+		"name": "Workstation"
+	}
+]

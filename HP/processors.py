@@ -47,18 +47,29 @@ def combinar_dados(df_produtos, df_precos):
             price_info = price_info.iloc[0]
             price_por = price_info["Preço Bundle R$"] / (1 - (20 / 100)) if price_info is not None else None
 
+            icms = price_info["ICMS %"]
+            leadtime = 0
+            if isinstance(icms, str):
+                icms = float(icms)
+
+            if icms == 0.04 or icms == 0.18:
+                leadtime = "importado"
+            elif icms == 0.07 or icms == 0.12:
+                leadtime = "local"
+
             produto_data = {
                 'name': str(product.get("SmartChoice", "")) + " " + str(product.get("Descrição", "")),
                 'sku': product["PN"],
                 'short_description': product.get("Descrição", ""),
                 'price': price_por,
                 'regular_price': price_por,
-                'stock_quantity': 100,
+                'stock_quantity': 10,
                 'attributes': processar_attributes(product),
                 'meta_data': processar_fotos(product, images, normalized_family),
                 'dimmensions': processar_dimmensions(product, delivery),
                 'weight': processar_weight(product, delivery),
-                'categories': processar_categories(product, "SmartChoice")
+                'categories': processar_categories(product, "SmartChoice"),
+                'shipping_class': leadtime,
             }
             
         elif product.get("sheet_name") == "Portfólio Acessorios_Monitores":
@@ -80,10 +91,15 @@ def combinar_dados(df_produtos, df_precos):
             categoria = "Display" if "display" in pl_group else "Acessório"
 
             icms = price_info["ICMS %"]
-            if "7" in str(icms):
-                shipping_class = "local"
-            else:
-                shipping_class = "importado"
+            print(icms)
+            leadtime = 0
+            if isinstance(icms, str):
+                icms = float(icms)
+
+            if icms == 0.04 or icms == 0.18:
+                leadtime = "importado"
+            elif icms == 0.07 or icms == 0.12:
+                leadtime = "local"
             
             produto_data = {
                 'name': str(product.get("DESCRIÇÃO", "")),
@@ -91,13 +107,13 @@ def combinar_dados(df_produtos, df_precos):
                 'short_description': product.get("Descrição", ""),
                 'price': price_por,
                 'regular_price': price_por,
-                'stock_quantity': 100,
+                'stock_quantity': 10,
                 'attributes': processar_attributes(product),
                 'meta_data': processar_fotos(product, images, normalized_family),
                 'dimmensions': processar_dimmensions(product, delivery),
                 'weight': processar_weight(product, delivery),
                 'categories': processar_categories(product, categoria),
-                'shipping_class': shipping_class
+                'shipping_class': leadtime,
             }
         
         else :
@@ -133,6 +149,16 @@ def combinar_dados(df_produtos, df_precos):
             elif product_type == "Thin Client":
                     descricao = product_type + " " + str(product.get("Model", "")) + " " + str(product.get("Processador", "")) + " " + str(product.get("OS", "")) + " " + str(product.get("RAM (MB)", "")) + " " + str(product.get("FLASH (GF)","" ))
 
+            icms = price_info["ICMS %"]
+            print(icms)
+            leadtime = 0
+            if isinstance(icms, str):
+                icms = float(icms)
+
+            if icms == 0.04 or icms == 0.18:
+                leadtime = "importado"
+            elif icms == 0.07 or icms == 0.12:
+                leadtime = "local"
 
             produto_data = {
                 'name': product_type + " " + product["Model"],
@@ -140,24 +166,23 @@ def combinar_dados(df_produtos, df_precos):
                 'short_description': descricao,
                 'price': price_por,
                 'regular_price': price_por,
-                'stock_quantity': 100,
+                'stock_quantity': 10,
                 'attributes': processar_attributes(product),
                 'meta_data': processar_fotos(product, images, normalized_family),
                 'dimmensions': processar_dimmensions(product, delivery),
                 'weight': processar_weight(product, delivery),
-                'categories': processar_categories(product, product_type)
+                'categories': processar_categories(product, product_type),
+                'shipping_class': leadtime,
             }
 
         combined_data.append(produto_data)
-    
-
     
     # Converter os dados combinados para JSON e salvar na pasta
     output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'produtos_processados_hp.json')
     with open(output_path, 'w', encoding='utf-8') as json_file:
         json.dump(combined_data, json_file, ensure_ascii=False, indent=4)
     
-    enviar_email(EmailProducts)
+    #enviar_email(EmailProducts)
     return combined_data
 
 def ler_arquivo_produto_hp(product_file):

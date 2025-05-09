@@ -53,9 +53,6 @@ async def enviar_lote(session, lote, numero_lote, url, max_tentativas=5):
             print(f"Tentativa {tentativas} falhou para o lote {numero_lote}: {str(e)}")
             progresso_atual['erros'] += 1
             
-            with open(f'erro_lote_{numero_lote}_tentativa_{tentativas}.txt', 'w') as f:
-                f.write(str(e))
-            
             if tentativas == max_tentativas:
                 print(f"Erro crítico: lote {numero_lote} falhou após {max_tentativas} tentativas.")
                 return False
@@ -94,15 +91,102 @@ async def processar_arquivo():
         with open('produtos_processados.json', 'w') as json_file:
             json.dump(produtos_processados, json_file, ensure_ascii=False, indent=4)
         
+        await deletar_todos_produtos()
+
+        url = "https://ecommerce.microware.com.br/hp/wp-json/wc/v3/products/batch"
+        
+        total_produtos = len(produtos_processados)
+        print(f"Iniciando envio de {total_produtos} produtos em batch...")
+        progresso_atual['total'] = (total_produtos + 9) // 10
+        progresso_atual['erros'] = 0
+        progresso_atual['sucessos'] = 0
+
+        # Configuração do cliente HTTP assíncrono
+        async with aiohttp.ClientSession() as session:
+            # Divide os produtos em lotes de 10
+            lotes = [produtos_processados[i:i+10] for i in range(0, total_produtos, 10)]
+            tarefas = []
+            fila_reprocessamento = deque()
+            
+            # Cria tarefas assíncronas para cada lote
+            for i, lote in enumerate(lotes, 1):
+                progresso_atual['loteAtual'] = i
+                progresso_atual['status'] = f'Enviando lote {i} de {progresso_atual["total"]}'
+                tarefa = enviar_lote(session, lote, i, url)
+                tarefas.append(tarefa)
+            
+            # Executa todas as tarefas em paralelo, limitando a 5 requisições simultâneas
+            resultados = await asyncio.gather(*tarefas, return_exceptions=True)
+            
+            # Verifica os resultados e adiciona lotes com erro à fila de reprocessamento
+            for i, resultado in enumerate(resultados, 1):
+                if not resultado:
+                    fila_reprocessamento.append((lotes[i-1], i))
+            
+            # Reprocessa lotes com erro
+            while fila_reprocessamento:
+                lote, numero_lote = fila_reprocessamento.popleft()
+                print(f"Reprocessando lote {numero_lote}...")
+                progresso_atual['status'] = f'Reprocessando lote {numero_lote} de {progresso_atual["total"]}'
+                
+                sucesso = await enviar_lote(session, lote, numero_lote, url, max_tentativas=10)
+                if not sucesso:
+                    # Se ainda falhar, salva o lote para processamento manual
+                    with open(f'lote_falha_{numero_lote}.json', 'w') as f:
+                        json.dump(lote, f, ensure_ascii=False, indent=4)
+
+        print("\nProcesso de envio concluído!")
+        progresso_atual['status'] = f'Concluído! Sucessos: {progresso_atual["sucessos"]}, Erros: {progresso_atual["erros"]}'
         return jsonify({
-            'mensagem': 'Produtos processados com sucesso.',
-            'total_produtos': len(produtos_processados)
+            'mensagem': 'Processo de envio concluído.',
+            'dados': produtos_processados,
+            'estatisticas': {
+                'sucessos': progresso_atual['sucessos'],
+                'erros': progresso_atual['erros']
+            }
         })
 
     except Exception as erro_geral:
-        erro_msg = str(erro_geral) if erro_geral else "Erro desconhecido ao processar arquivos"
-        print(f"Erro geral no envio: {erro_msg}")
+        print(f"Erro geral no envio: {str(erro_geral)}")
         with open('erro_geral_envio.txt', 'w') as f:
-            f.write(erro_msg)
+            f.write(str(erro_geral))
         progresso_atual['status'] = 'Erro!'
-        return jsonify({'erro': erro_msg}), 500
+        return jsonify({'erro': str(erro_geral)})
+
+async def deletar_todos_produtos():
+    url_base = "https://ecommerce.microware.com.br/hp/wp-json/wc/v3/products"
+    batch_url = f"{url_base}/batch"
+    auth = aiohttp.BasicAuth(WOOCOMMERCE_CONSUMER_KEY, WOOCOMMERCE_CONSUMER_SECRET)
+
+    async with aiohttp.ClientSession() as session:
+        page = 1
+        while True:
+            # Obtém até 100 produtos por página
+            async with session.get(
+                url_base,
+                auth=auth,
+                params={"per_page": 100, "page": page}
+            ) as response:
+                produtos = await response.json()
+
+                if not produtos:
+                    break  # Fim da lista
+
+                # Coleta os IDs dos produtos
+                ids_para_deletar = [produto["id"] for produto in produtos]
+
+                # Deleta todos de uma vez via batch
+                async with session.delete(
+                    batch_url,
+                    auth=auth,
+                    params={"force": "true"},
+                    json={"delete": ids_para_deletar}
+                ) as delete_response:
+                    if delete_response.status == 200:
+                        print(f"Batch da página {page} deletado com sucesso.")
+                    else:
+                        print(f"Erro ao deletar batch da página {page}: {delete_response.status}")
+
+                page += 1
+
+    print("Todos os produtos foram deletados com sucesso (em batch)!")

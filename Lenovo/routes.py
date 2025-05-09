@@ -1,13 +1,13 @@
 from . import lenovo_bp
 from flask import jsonify, render_template, request, Response
+from requests.auth import HTTPBasicAuth
+from .processors import processar_lenovo_data
+from collections import deque
 import pandas as pd
 import json
 import aiohttp
 import asyncio
-from requests.auth import HTTPBasicAuth
 import time
-from .processors import processar_lenovo_data
-from collections import deque
 
 # Configurações da API WooCommerce
 WOOCOMMERCE_CONSUMER_KEY = 'ck_27e249ea7ce48002377a8b34e210d56e683ba8a7'
@@ -53,9 +53,6 @@ async def enviar_lote(session, lote, numero_lote, url, max_tentativas=5):
             print(f"Tentativa {tentativas} falhou para o lote {numero_lote}: {str(e)}")
             progresso_atual['erros'] += 1
             
-            with open(f'erro_lote_{numero_lote}_tentativa_{tentativas}.txt', 'w') as f:
-                f.write(str(e))
-            
             if tentativas == max_tentativas:
                 print(f"Erro crítico: lote {numero_lote} falhou após {max_tentativas} tentativas.")
                 return False
@@ -94,9 +91,11 @@ async def processar_arquivo():
         # Cria um JSON e salva na pasta
         with open('produtos_processados.json', 'w') as json_file:
             json.dump(produtos_processados, json_file, ensure_ascii=False, indent=4)
+
+        await deletar_todos_produtos()
         
         url = "https://ecommerce.microware.com.br/lenovo/wp-json/wc/v3/products/batch"
-        
+
         total_produtos = len(produtos_processados)
         print(f"Iniciando envio de {total_produtos} produtos em batch...")
         progresso_atual['total'] = (total_produtos + 9) // 10
@@ -140,17 +139,59 @@ async def processar_arquivo():
         print("\nProcesso de envio concluído!")
         progresso_atual['status'] = f'Concluído! Sucessos: {progresso_atual["sucessos"]}, Erros: {progresso_atual["erros"]}'
         return jsonify({
-            'mensagem': 'Produtos enviados com sucesso.',
+            'mensagem': 'Processo de envio concluído!',
             'dados': produtos_processados,
             'estatisticas': {
                 'sucessos': progresso_atual['sucessos'],
                 'erros': progresso_atual['erros']
-            }
-        })
+            },
+            'status': 'success'
+        }), 200
 
     except Exception as erro_geral:
         print(f"Erro geral no envio: {str(erro_geral)}")
         with open('erro_geral_envio.txt', 'w') as f:
             f.write(str(erro_geral))
         progresso_atual['status'] = 'Erro!'
-        return jsonify({'erro': str(erro_geral)})
+        return jsonify({
+            'erro': str(erro_geral),
+            'status': 'error'
+        }), 500
+
+async def deletar_todos_produtos():
+    url_base = "https://ecommerce.microware.com.br/lenovo/wp-json/wc/v3/products"
+    batch_url = f"{url_base}/batch"
+    auth = aiohttp.BasicAuth(WOOCOMMERCE_CONSUMER_KEY, WOOCOMMERCE_CONSUMER_SECRET)
+
+    async with aiohttp.ClientSession() as session:
+        page = 1
+        while True:
+            # Obtém até 100 produtos por página
+            async with session.get(
+                url_base,
+                auth=auth,
+                params={"per_page": 100, "page": page}
+            ) as response:
+                produtos = await response.json()
+
+                if not produtos:
+                    break  # Fim da lista
+
+                # Coleta os IDs dos produtos
+                ids_para_deletar = [produto["id"] for produto in produtos]
+
+                # Deleta todos de uma vez via batch
+                async with session.delete(
+                    batch_url,
+                    auth=auth,
+                    params={"force": "true"},
+                    json={"delete": ids_para_deletar}
+                ) as delete_response:
+                    if delete_response.status == 200:
+                        print(f"Batch da página {page} deletado com sucesso.")
+                    else:
+                        print(f"Erro ao deletar batch da página {page}: {delete_response.status}")
+
+                page += 1
+
+    print("Todos os produtos foram deletados com sucesso (em batch)!")

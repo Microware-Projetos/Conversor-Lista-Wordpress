@@ -20,8 +20,8 @@
     </div>
 
     <!-- Cards com logos das marcas -->
-    <div class="row justify-content-center">
-        <div class="col-md-4 mb-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center">
+        <div class="col">
             <div class="card h-100 shadow-sm hover-card">
                 <div class="card-body text-center d-flex flex-column">
                     <a href="{{ url_for('lenovo.listar_produtos') }}" class="text-decoration-none flex-grow-1 d-flex flex-column">
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col">
             <div class="card h-100 shadow-sm hover-card">
                 <div class="card-body text-center d-flex flex-column">
                     <a href="{{ url_for('hp.listar_produtos') }}" class="text-decoration-none flex-grow-1 d-flex flex-column">
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col">
             <div class="card h-100 shadow-sm hover-card">
                 <div class="card-body text-center d-flex flex-column">
                     <a href="{{ url_for('cisco.listar_produtos') }}" class="text-decoration-none flex-grow-1 d-flex flex-column">
@@ -56,6 +56,19 @@
                         </div>
                         <h3 class="card-title">Cisco</h3>
                         <p class="card-text text-muted mt-auto">Clique para fazer upload de arquivos Cisco</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm hover-card">
+                <div class="card-body text-center d-flex flex-column">
+                    <a href="{{ url_for('microware.listar_produtos') }}" class="text-decoration-none flex-grow-1 d-flex flex-column">
+                        <div class="logo-container mb-3">
+                            <img src="{{ url_for('static', filename='logo_mw.png') }}" alt="Microware Logo" class="brand-logo">
+                        </div>
+                        <h3 class="card-title">Microware</h3>
+                        <p class="card-text text-muted mt-auto">Clique para fazer upload de arquivos Microware</p>
                     </a>
                 </div>
             </div>
@@ -104,6 +117,20 @@
 
 .card-text {
     margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .row-cols-md-2 > * {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .row-cols-1 > * {
+        flex: 0 0 auto;
+        width: 100%;
+    }
 }
 </style>
 {% endblock %} 

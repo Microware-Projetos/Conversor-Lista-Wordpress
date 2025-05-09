@@ -47,7 +47,7 @@ def processar_lenovo_data(lenovo_data):
             'description': product['PRODUCT_DESCRIPTION'],
             'price': str(product['UNIT_GROSS_PRICE(R$)'] * (1 + MARGIN / 100)),
             'regular_price': str(product['UNIT_GROSS_PRICE(R$)'] * (1 + MARGIN / 100)),
-            'stock_quantity': 100,
+            'stock_quantity': 10,
             'manage_stock': True,
             'attributes': processar_attributes(product),
             'meta_data': processar_fotos(product, images, normalized_family),
@@ -59,7 +59,7 @@ def processar_lenovo_data(lenovo_data):
         combined_data.append(produto_data)
     
 
-    enviar_email(EmailProducts)
+    #enviar_email(EmailProducts)
     return combined_data
 
 def processar_categories(product):
@@ -257,9 +257,9 @@ def processar_dimmensions(product, delivery_info):
             else:
                 EmailProducts.append(str(product['PRODUCT_CODE']) + " - " + "Produto sem dimensões")
                 return {
-                    "length": 0.1,
-                    "width": 0.1,
-                    "height": 0.1
+                    "length": 2.1,
+                    "width": 2.1,
+                    "height": 2.1
                 }
 
         except Exception as e:
@@ -278,7 +278,7 @@ def processar_weight(product, delivery_info):
            
             else:
                 EmailProducts.append(str(product['PRODUCT_CODE']) + " - " + "Produto sem peso")
-                return 0
+                return 1.0
 
     except Exception as e:
             print(f"Erro ao processar informações de entrega: {str(e)}")
@@ -342,6 +342,5 @@ def enviar_email(email_products):
         print(f"Erro ao enviar e-mail: {e}")
     finally:
         servidor.quit()
-
 
 

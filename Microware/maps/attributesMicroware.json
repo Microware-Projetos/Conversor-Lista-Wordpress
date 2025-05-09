@@ -1,0 +1,16 @@
+[
+    {
+        "BRAND": "Marca",
+        "MODEL": "Modelo",
+        "PROCESSOR": "Processador",
+        "MEMORY": "Memória RAM",
+        "STORAGE": "Armazenamento",
+        "OS": "Sistema Operacional",
+        "DISPLAY": "Tela",
+        "GRAPHICS": "Placa de Vídeo",
+        "CONNECTIVITY": "Conectividade",
+        "BATTERY": "Bateria",
+        "WARRANTY": "Garantia",
+        "COLOR": "Cor"
+    }
+] 

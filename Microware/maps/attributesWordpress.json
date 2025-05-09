@@ -1,0 +1,186 @@
+[
+	{
+		"id": 1,
+		"name": "Altura da embalagem (cm)"
+	},
+	{
+		"id": 2,
+		"name": "Bateria"
+	},
+	{
+		"id": 3,
+		"name": "Biometria"
+	},
+	{
+		"id": 4,
+		"name": "Câmera"
+	},
+	{
+		"id": 5,
+		"name": "Caracteristicas Adicionais"
+	},
+	{
+		"id": 6,
+		"name": "Carregador"
+	},
+	{
+		"id": 7,
+		"name": "Cartão SIM"
+	},
+	{
+		"id": 8,
+		"name": "Case Material"
+	},
+	{
+		"id": 9,
+		"name": "Categoria"
+	},
+	{
+		"id": 10,
+		"name": "Chipset"
+	},
+	{
+		"id": 11,
+		"name": "Classificação Fiscal"
+	},
+	{
+		"id": 12,
+		"name": "Código Anatel"
+	},
+	{
+		"id": 13,
+		"name": "Código EAN"
+	},
+	{
+		"id": 14,
+		"name": "Compatibilidade"
+	},
+	{
+		"id": 15,
+		"name": "Condição"
+	},
+	{
+		"id": 16,
+		"name": "Conteúdo da Embalagem"
+	},
+	{
+		"id": 17,
+		"name": "Cor"
+	},
+	{
+		"id": 18,
+		"name": "Description"
+	},
+	{
+		"id": 46,
+		"name": "Dimensões da embalagem"
+	},
+	{
+		"id": 19,
+		"name": "Dimensões do produto (cm)"
+	},
+	{
+		"id": 20,
+		"name": "Fabricante"
+	},
+	{
+		"id": 21,
+		"name": "Fonte de alimentação"
+	},
+	{
+		"id": 22,
+		"name": "Garantia"
+	},
+	{
+		"id": 23,
+		"name": "Largura da embalagem (cm)"
+	},
+	{
+		"id": 24,
+		"name": "Lead Time"
+	},
+	{
+		"id": 25,
+		"name": "Memória"
+	},
+	{
+		"id": 26,
+		"name": "Memória RAM (MB)"
+	},
+	{
+		"id": 27,
+		"name": "Microfone"
+	},
+	{
+		"id": 28,
+		"name": "NFC"
+	},
+	{
+		"id": 29,
+		"name": "Origem"
+	},
+	{
+		"id": 30,
+		"name": "Peso Bruto (kg)"
+	},
+	{
+		"id": 31,
+		"name": "Placa Gráfica"
+	},
+	{
+		"id": 32,
+		"name": "Price"
+	},
+	{
+		"id": 33,
+		"name": "Processador"
+	},
+	{
+		"id": 34,
+		"name": "Product Name"
+	},
+	{
+		"id": 35,
+		"name": "Profundidade da embalagem (cm)"
+	},
+	{
+		"id": 36,
+		"name": "Rede"
+	},
+	{
+		"id": 37,
+		"name": "Sistema Operacional"
+	},
+	{
+		"id": 38,
+		"name": "SKU"
+	},
+	{
+		"id": 39,
+		"name": "Storage"
+	},
+	{
+		"id": 40,
+		"name": "Teclado"
+	},
+	{
+		"id": 41,
+		"name": "Tela"
+	},
+	{
+		"id": 45,
+		"name": "Tipo de produto"
+	},
+	{
+		"id": 42,
+		"name": "Touch"
+	},
+	{
+		"id": 43,
+		"name": "Webcam"
+	},
+	{
+		"id": 44,
+		"name": "WLAN"
+	}
+]
