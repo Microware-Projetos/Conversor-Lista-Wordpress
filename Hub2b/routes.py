@@ -8,6 +8,7 @@ import time
 import os
 from datetime import datetime
 from .processor import buscar_produtos, processar_produtos, enviar_produtos
+import pytz
 
 WOOCOMMERCE_CONSUMER_KEY_Lenovo = 'ck_27e249ea7ce48002377a8b34e210d56e683ba8a7'
 WOOCOMMERCE_CONSUMER_SECRET_Lenovo = 'cs_326d654a9c568295e92714d51e93a4605e2683bf'
@@ -30,9 +31,13 @@ def salvar_historico(marca, status):
         print(f"Erro ao ler histórico: {str(e)}")
         historico = []
     
+    # Definir o timezone de São Paulo
+    sp_timezone = pytz.timezone('America/Sao_Paulo')
+    data_atual = datetime.now(sp_timezone)
+    
     historico.append({
         'marca': marca,
-        'data': datetime.now().isoformat(),
+        'data': data_atual.isoformat(),
         'status': status
     })
     
@@ -47,10 +52,13 @@ def listar_produtos():
     return render_template('hub2b.html')
 
 @hub2b_bp.route('/hub2b/enviar', methods=['POST'])
-async def enviar_produtos():
+async def enviar_produtos_rota():
     try:
+        print("Iniciando processo de envio...")
         data = request.get_json()
         marca = data.get('marca')
+        print(f"Marca selecionada: {marca}")
+        
         consumer_key = None
         consumer_secret = None
          
@@ -61,21 +69,31 @@ async def enviar_produtos():
             consumer_key = WOOCOMMERCE_CONSUMER_KEY_HP
             consumer_secret = WOOCOMMERCE_CONSUMER_SECRET_HP
         else:
+            print(f"Marca inválida: {marca}")
             return jsonify({'success': False, 'message': 'Marca inválida'})
         
+        print("Buscando produtos do WooCommerce...")
         # Busca os produtos do WooCommerce
         produtos = await buscar_produtos(marca, consumer_key, consumer_secret)
-        produtos_processados = processar_produtos(produtos, marca)
+        print(f"Produtos encontrados: {len(produtos)}")
         
-        # Json de produtos processados
-        with open('produtos_hub2b_processados.json', 'w') as f:
-            json.dump(produtos_processados, f, indent=4)
+        print("Processando produtos para o Hub2b...")
+        # Processa os produtos para o Hub2b
+        produtos_processados = processar_produtos(produtos, marca)
+        print(f"Produtos processados: {len(produtos_processados)}")
+        
+        print("Enviando produtos para o Hub2b...")
+        # Envia os produtos para o Hub2b
+        resultados = await enviar_produtos(produtos_processados)
+        print("Envio concluído!")
 
-        print(f"Total de produtos encontrados para {marca}: {len(produtos)}")
         salvar_historico(marca, 'Enviado com sucesso')
-        return jsonify({'success': True})
+        return jsonify({'success': True, 'message': f'Enviados {len(produtos)} produtos com sucesso!'})
         
     except Exception as e:
+        print(f"Erro durante o processo de envio: {str(e)}")
+        import traceback
+        print(f"Traceback completo: {traceback.format_exc()}")
         salvar_historico(marca, f'Erro: {str(e)}')
         return jsonify({'success': False, 'message': str(e)})
 

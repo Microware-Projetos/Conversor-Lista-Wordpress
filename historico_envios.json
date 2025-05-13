@@ -1,7 +1,1557 @@
 [
     {
+        "sku": "954Y6LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A09FPLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "8J9E6UT#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT5V1AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "8D5J5AA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A09FRLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B8JS5AT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT5V3AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "940J0LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JB0LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BN7V9LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EL1LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B0GD7LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "4J0A2AA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JE7LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JD2LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B8JR5LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "790P7AA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5ER5LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JA4LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "954Y7LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B8JU3LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A09FQLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "6R0Q1AA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B08VJLT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B08VDLT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BN7W6LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "9E0Y9UT#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "8D5J1AA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "8X530AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EJ6LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT5T7AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B4PZ1LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT3F3LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "T0Y15AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT5U6AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JD5LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B4NA2LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT5U1AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B8JR9LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JA1LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5ER4LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B0GD5LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "790F5AA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JF0LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A58PNLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A09FLLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JB7LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "340L1AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "827X8LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "957L4LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JB5LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A09FYLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B55TJLT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EK8LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B4NA1LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ5N7LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A59K2LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "6N4D6AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "8Y8Y1AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EJ4LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "AG4Y2LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ5K6LT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ5M2LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "940J5LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EK7LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "9E0G9UT#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JA5LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "F2B56AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "957L1LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JA3LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A09FKLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B8JS2LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "6B8Y1UT",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "AK5J3LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "Z9H48AA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "6N4C4AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT5U4AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "Z6A00AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EV8LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B55V9LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT5U0AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BN7W7LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B4PY8LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "N9K76AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "F3W43AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "940J7LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EP7LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A09FXLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT3F5LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "9E0G5AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "822M9UT#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A09FJLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "1P3K6AA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "77B10AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JE9LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ5M1LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ5L0LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EJ2LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "1WC36AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B92XBAT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "AK5J2LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "13L77AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JA9LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "6N6E6AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JC1LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "2MY05AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "K3R64AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "957K7LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B4NA7LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "9SR36AA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "T6F94AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "6N4E2AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EJ1LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT3F4LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JB4LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A08KLUT",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "3B4Q5UT#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EV7LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BG4W0AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A09FMLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ5K5LT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ5K9LT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "6KD15AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "7N7B9AA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EK6LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A59H6LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BN7X0LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B4QB7LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "FH973AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B8JW3LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "AK5J1LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JD4LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "H4F02AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A09FWLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JB3LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A06CVLT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BN7X1LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "3E2U5UT",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "9D9S0UT#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B55V5LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EK4LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "265A9AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "2JA63AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A59H8LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A58PLLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "940J6LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "86S97AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "9D9V7AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EM7LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "VN567AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "6N4E8AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EV5LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "J7H71AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BG4V5AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B8JS3AT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ5L9LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JE8LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "4Z527AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A58PMLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B55THLT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "9SR37AA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EM5LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "8RA46AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "940K1LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B97BTLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ2V0LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EJ0LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A09FVLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "4R009AA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "1E7D7AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "64W41AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "W8X25AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "9D9L6UT#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "F7W97AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "957L5LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B4MZ9LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "53X27AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BN7W8LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "AK5J0LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EM4LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JB9LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "1D0K8AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ5K8LT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EV4LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JB6LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "2DW53AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "1AJ39AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B89WLLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JA8LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "64X69AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ2U9LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT3F2LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "AS615AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "940K0LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B4PY7LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "AM0C5LT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EK3LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "9VA80AA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A59H7LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "QK555AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "6H1A5AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B97BWLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A09FGLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "763U8AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "1Y4D0UT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B8JR4LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "1E7D6UT",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "671R3UT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "9D9A7AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "AM8K9LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "A58U7LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "4J0G4AA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BN7W9LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B55V7LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B4NA3LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B59R7LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "13L75AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EL9LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "6UW42AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "957K5LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "4Z7Z7AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "286J4AA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EK2LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "1X644AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JB2LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JB1LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "89T56LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "AM0C0LT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "265D9AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5ET4LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JE6LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "8Y2R2AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "1B065AA#AC3",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "940H7LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ5L7LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "9J5D2AA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "5TW10AA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "3FJ80AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ2T7LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JD3LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B4NA0LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B55VDLT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "AM0B9LT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "957J9LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JD7LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B89WQLA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "H6Y90AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "8X534AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BN7X4LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B55TQLT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "940J8LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5AX8LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "AS1E7LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "21Y56AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT5V2AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "266C9AA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "G1K28AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "N2Z63AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BG4V3AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ5N6LT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "940H4LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "9E0Z2UT#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "169L0AA#ABA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "5TW13AA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "T1A62AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "4E407UT#ABM",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EK0LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "6R0Q2AA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5ES1LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "13L74AA",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EL3LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT3F1LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B4PZ2LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JB8LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "AS1E5LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JA2LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JD6LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT5T9AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B55V1LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EH5LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "AM8K7LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "50H55UT",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT5U3AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5AX7LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B4NA8LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JC0LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "957J8LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B4PY9LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ5L6LA#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EN3LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EJ8LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BG4V4AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5ES0LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT5U7AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "AP1K8AT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "AM0B8LT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT5U2AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JC3LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BT5T8AT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B4MZ8LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EL2LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B8JR6LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B55VCLT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JA6LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B55TKLT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5EJ7LA#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5ER7LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "B5JF1LT#AC4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
+        "sku": "BQ5K7LT#AK4",
+        "status": "sucesso",
+        "tentativa": 1
+    },
+    {
         "marca": "HP",
-        "data": "2025-05-09T18:02:00.029908",
+        "data": "2025-05-09T16:13:05.841005-03:00",
         "status": "Enviado com sucesso"
     }
 ]
