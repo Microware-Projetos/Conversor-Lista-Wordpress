@@ -5,7 +5,76 @@ import aiohttp
 import time
 import requests
 import re
+import unicodedata
+import os
 from .auth import get_token
+
+# Cache para os arquivos
+_ncm_cache = None
+_categoria_map_cache = None
+_delivery_info_cache = None
+
+def _get_utils_path():
+    # Obtém o diretório atual do arquivo processor.py
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    # Sobe um nível e entra na pasta Utils
+    return os.path.join(os.path.dirname(current_dir), 'Utils')
+
+def _carregar_categoria_map():
+    global _categoria_map_cache
+    if _categoria_map_cache is None:
+        try:
+            utils_path = _get_utils_path()
+            categoria_map_path = os.path.join(utils_path, 'categoria_map.json')
+            with open(categoria_map_path, 'r', encoding='utf-8') as f:
+                _categoria_map_cache = json.load(f)
+        except Exception as e:
+            print(f"Erro ao carregar arquivo de mapeamento de categorias: {str(e)}")
+            _categoria_map_cache = {}
+    return _categoria_map_cache
+
+def _carregar_delivery_info():
+    global _delivery_info_cache
+    if _delivery_info_cache is None:
+        try:
+            utils_path = _get_utils_path()
+            delivery_info_path = os.path.join(utils_path, 'delivery_info.json')
+            with open(delivery_info_path, 'r', encoding='utf-8') as f:
+                _delivery_info_cache = json.load(f)
+        except Exception as e:
+            print(f"Erro ao carregar arquivo de informações de entrega: {str(e)}")
+            _delivery_info_cache = {}
+    return _delivery_info_cache
+
+def _get_delivery_info(categoria_nome):
+    delivery_info = _carregar_delivery_info()
+    return delivery_info.get(categoria_nome, {
+        "weightKg": "0",
+        "height_m": "0",
+        "width_m": "0",
+        "length_m": "0"
+    })
+
+def _normalizar_texto(texto):
+    if not texto:
+        return ""
+    # Remove acentos
+    texto = unicodedata.normalize('NFKD', texto).encode('ASCII', 'ignore').decode('ASCII')
+    # Converte para minúsculo
+    return texto.lower().strip()
+
+def _carregar_ncm_cache():
+    global _ncm_cache
+    if _ncm_cache is None:
+        try:
+            utils_path = _get_utils_path()
+            ncm_path = os.path.join(utils_path, 'ncm.json')
+            with open(ncm_path, 'r', encoding='utf-8') as f:
+                _ncm_cache = json.load(f)
+        except Exception as e:
+            print(f"Erro ao carregar arquivo NCM: {str(e)}")
+            _ncm_cache = {}
+    return _ncm_cache
 
 def limpar_texto(texto):
     if not texto:
@@ -51,32 +120,53 @@ def processar_produtos(produtos, marca):
     combined_data = []
    
     for product in produtos:
+       
+        if product.get("shipping_class") == "importado" or product.get("shipping_class") == "Importado":
+            lead_time = 60
+        else:
+            lead_time = 45
+
+        # Obtém a categoria do produto para usar como fallback
+        categoria_nome = None
+        if product.get("categories") and len(product["categories"]) > 0:
+            categoria_slug = product["categories"][0].get("slug")
+            if categoria_slug:
+                categoria_map = _carregar_categoria_map()
+                categoria_nome = categoria_map.get(categoria_slug)
+
+        # Obtém informações de entrega da categoria
+        delivery_info = _get_delivery_info(categoria_nome) if categoria_nome else None
+
         product_data = {
             "sku": product["sku"], 
             "parentSku": product["sku"], 
             "ean13": next((attr["options"][0] for attr in product["attributes"] if attr["slug"] == "pa_codigo-ean"), None),
-            "warrantyMonths": 30, 
-            "handlingTime": 30, 
-            "stock": product["stock_quantity"], 
-            "weightKg": product["weight"], 
-            "url": product["permalink"], 
+            "warrantyMonths": 12, 
+            "handlingTime": lead_time, 
+            "stock": 10, 
+            "weightKg": str(product["weight"]) if product.get("weight") else delivery_info["weightKg"] if delivery_info else "0",
+            "url": product["permalink"],
+            "categoryCode": next((cat["name"] for cat in product["categories"]), ""),
             "name": limpar_texto(product["name"]), 
-            "sourceDescription": limpar_texto(product["description"]), 
-            "description": limpar_texto(product["description"]), 
-            "brand": marca, 
-            "ncm": "", 
-            "height_m": product["dimensions"]["height"] if product["dimensions"]["height"] else "0",
-            "width_m": product["dimensions"]["width"] if product["dimensions"]["width"] else "0",
-            "length_m": product["dimensions"]["length"] if product["dimensions"]["length"] else "0",
+            "sourceDescription": limpar_texto(product["description"]) or limpar_texto(product.get("short_description", "")), 
+            "description": limpar_texto(product["description"]) or limpar_texto(product.get("short_description", "")), 
+            "brand": marca,
+            "ncm": get_ncm(product), 
+            "height_m": str(product["dimensions"]["height"]) if product["dimensions"].get("height") else delivery_info["height_m"] if delivery_info else "0",
+            "width_m": str(product["dimensions"]["width"]) if product["dimensions"].get("width") else delivery_info["width_m"] if delivery_info else "0",
+            "length_m": str(product["dimensions"]["length"]) if product["dimensions"].get("length") else delivery_info["length_m"] if delivery_info else "0",
             "priceBase": product["regular_price"],
             "priceSale": product["price"],
             "images": [
-                {"url": meta["value"]} for meta in product["meta_data"] 
-                if meta["key"] == "_external_image_url"
-            ] + [
-                {"url": url} for meta in product["meta_data"] 
-                if meta["key"] == "_external_gallery_images" 
-                for url in meta["value"]
+                {"url": url, "rank": idx + 1} 
+                for idx, url in enumerate([
+                    meta["value"] for meta in product["meta_data"] 
+                    if meta["key"] == "_external_image_url"
+                ] + [
+                    url for meta in product["meta_data"] 
+                    if meta["key"] == "_external_gallery_images" 
+                    for url in meta["value"]
+                ])
             ],
             "specifications": [
                 {
@@ -176,7 +266,7 @@ async def enviar_produtos(combined_data):
         # Processa os lotes com erro para retry
         lotes_com_erro = [result["lote"] for result in results if result["status"] == "erro"]
         
-        # Realiza até 3 tentativas para os lotes com erro
+        # Realiza até 3 tentativas para os lotes com desc
         for tentativa in range(2, 4):  # Começa em 2 pois a primeira tentativa já foi feita
             if not lotes_com_erro:
                 break
@@ -187,10 +277,6 @@ async def enviar_produtos(combined_data):
             
             # Atualiza a lista de lotes com erro
             lotes_com_erro = [result["lote"] for result in retry_results if result["status"] == "erro"]
-        
-        # Salva o histórico em um arquivo JSON
-        with open('historico_envios.json', 'w') as f:
-            json.dump(historico_envios, f, indent=4)
         
         print(f"\n\nProcesso finalizado!")
         print(f"Total de produtos: {len(combined_data)}")
@@ -210,3 +296,44 @@ async def enviar_produtos(combined_data):
         import traceback
         print(f"Traceback completo: {traceback.format_exc()}")
         raise
+
+def get_ncm(product):
+    if not product:
+        return ""
+        
+    # Primeiro tenta pegar o NCM direto do produto
+    ncm = product.get("ncm")
+    if ncm and str(ncm).strip():
+        return str(ncm).strip()
+    
+    # Se não tiver NCM direto, busca pela categoria
+    try:
+        ncm_categorias = _carregar_ncm_cache()
+        categoria_map = _carregar_categoria_map()
+        
+        # Tenta encontrar a categoria do produto
+        if product.get("categories"):
+            for categoria in product["categories"]:
+                # Tenta primeiro pelo slug
+                if categoria.get("slug"):
+                    nome_categoria = categoria_map.get(categoria["slug"])
+                    if nome_categoria and nome_categoria in ncm_categorias:
+                        return str(ncm_categorias[nome_categoria])
+                
+                # Se não encontrou pelo slug, tenta pelo nome
+                if categoria.get("name"):
+                    nome_categoria = categoria["name"]
+                    if nome_categoria in ncm_categorias:
+                        return str(ncm_categorias[nome_categoria])
+                    
+        # Se não encontrou pela categoria, tenta pelo shipping_class
+        shipping_class = product.get("shipping_class", "").lower()
+        if shipping_class:
+            for nome_cat, ncm_valor in ncm_categorias.items():
+                if _normalizar_texto(nome_cat) == shipping_class:
+                    return str(ncm_valor)
+                    
+    except Exception as e:
+        print(f"Erro ao buscar NCM para produto {product.get('sku', 'N/A')}: {str(e)}")
+    
+    return ""

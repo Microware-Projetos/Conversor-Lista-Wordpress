@@ -1,0 +1,147 @@
+{
+    "Acessório": {
+      "weightKg": "0.2",
+      "height_m": "0.03",
+      "width_m": "0.1",
+      "length_m": "0.1"
+    },
+    "Cabo": {
+      "weightKg": "0.1",
+      "height_m": "0.02",
+      "width_m": "0.05",
+      "length_m": "1.0"
+    },
+    "Componente": {
+      "weightKg": "0.3",
+      "height_m": "0.03",
+      "width_m": "0.1",
+      "length_m": "0.15"
+    },
+    "Consumível": {
+      "weightKg": "0.4",
+      "height_m": "0.05",
+      "width_m": "0.1",
+      "length_m": "0.2"
+    },
+    "Desktop": {
+      "weightKg": "6.0",
+      "height_m": "0.4",
+      "width_m": "0.18",
+      "length_m": "0.4"
+    },
+    "Display": {
+      "weightKg": "4.5",
+      "height_m": "0.35",
+      "width_m": "0.5",
+      "length_m": "0.18"
+    },
+    "Equipamento de Segurança": {
+      "weightKg": "1.0",
+      "height_m": "0.1",
+      "width_m": "0.2",
+      "length_m": "0.2"
+    },
+    "Equipamento para Reunião": {
+      "weightKg": "1.5",
+      "height_m": "0.1",
+      "width_m": "0.25",
+      "length_m": "0.25"
+    },
+    "Impressora": {
+      "weightKg": "5.0",
+      "height_m": "0.3",
+      "width_m": "0.4",
+      "length_m": "0.4"
+    },
+    "Leitores": {
+      "weightKg": "0.4",
+      "height_m": "0.08",
+      "width_m": "0.08",
+      "length_m": "0.15"
+    },
+    "Licença": {
+      "weightKg": "0.0",
+      "height_m": "0.0",
+      "width_m": "0.0",
+      "length_m": "0.0"
+    },
+    "Notebook": {
+      "weightKg": "1.8",
+      "height_m": "0.025",
+      "width_m": "0.32",
+      "length_m": "0.22"
+    },
+    "Outros": {
+      "weightKg": "1.0",
+      "height_m": "0.1",
+      "width_m": "0.1",
+      "length_m": "0.1"
+    },
+    "Projetor": {
+      "weightKg": "2.5",
+      "height_m": "0.12",
+      "width_m": "0.25",
+      "length_m": "0.3"
+    },
+    "Rede": {
+      "weightKg": "1.2",
+      "height_m": "0.05",
+      "width_m": "0.25",
+      "length_m": "0.2"
+    },
+    "Sem categoria": {
+      "weightKg": "1.0",
+      "height_m": "0.1",
+      "width_m": "0.1",
+      "length_m": "0.1"
+    },
+    "Serviço": {
+      "weightKg": "0.0",
+      "height_m": "0.0",
+      "width_m": "0.0",
+      "length_m": "0.0"
+    },
+    "Servidor": {
+      "weightKg": "10.0",
+      "height_m": "0.45",
+      "width_m": "0.6",
+      "length_m": "0.75"
+    },
+    "Software": {
+      "weightKg": "0.0",
+      "height_m": "0.0",
+      "width_m": "0.0",
+      "length_m": "0.0"
+    },
+    "Storage": {
+      "weightKg": "7.0",
+      "height_m": "0.25",
+      "width_m": "0.4",
+      "length_m": "0.5"
+    },
+    "Tablet": {
+      "weightKg": "0.6",
+      "height_m": "0.008",
+      "width_m": "0.18",
+      "length_m": "0.25"
+    },
+    "Telefonia": {
+      "weightKg": "0.4",
+      "height_m": "0.015",
+      "width_m": "0.08",
+      "length_m": "0.16"
+    },
+    "Videoconferência": {
+      "weightKg": "3.0",
+      "height_m": "0.12",
+      "width_m": "0.3",
+      "length_m": "0.3"
+    },
+    "Workstation": {
+      "weightKg": "9.0",
+      "height_m": "0.45",
+      "width_m": "0.25",
+      "length_m": "0.5"
+    }
+  }
+  

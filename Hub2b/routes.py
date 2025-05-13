@@ -18,7 +18,7 @@ WOOCOMMERCE_CONSUMER_SECRET_HP = 'cs_2fd8a064e9f6df929a2d63c7eceb26dea344b517'
 
 HISTORICO_FILE = 'historico_envios.json'
 
-def salvar_historico(marca, status):
+def salvar_historico(marca, status, total_produtos=None, total_sucessos=None):
     historico = []
     try:
         if os.path.exists(HISTORICO_FILE) and os.path.getsize(HISTORICO_FILE) > 0:
@@ -38,7 +38,9 @@ def salvar_historico(marca, status):
     historico.append({
         'marca': marca,
         'data': data_atual.isoformat(),
-        'status': status
+        'status': status,
+        'total_produtos': total_produtos,
+        'total_sucessos': total_sucessos
     })
     
     try:
@@ -75,7 +77,8 @@ async def enviar_produtos_rota():
         print("Buscando produtos do WooCommerce...")
         # Busca os produtos do WooCommerce
         produtos = await buscar_produtos(marca, consumer_key, consumer_secret)
-        print(f"Produtos encontrados: {len(produtos)}")
+        total_produtos = len(produtos)
+        print(f"Produtos encontrados: {total_produtos}")
         
         print("Processando produtos para o Hub2b...")
         # Processa os produtos para o Hub2b
@@ -85,10 +88,12 @@ async def enviar_produtos_rota():
         print("Enviando produtos para o Hub2b...")
         # Envia os produtos para o Hub2b
         resultados = await enviar_produtos(produtos_processados)
+        total_sucessos = sum(1 for r in resultados if r == 'sucesso')
         print("Envio concluído!")
 
-        salvar_historico(marca, 'Enviado com sucesso')
-        return jsonify({'success': True, 'message': f'Enviados {len(produtos)} produtos com sucesso!'})
+        # Salvar histórico com os resultados do envio
+        salvar_historico(marca, 'Enviado com sucesso', total_produtos, total_sucessos)
+        return jsonify({'success': True, 'message': f'Enviados {total_sucessos} de {total_produtos} produtos com sucesso!'})
         
     except Exception as e:
         print(f"Erro durante o processo de envio: {str(e)}")

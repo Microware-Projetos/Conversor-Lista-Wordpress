@@ -36,6 +36,16 @@
             margin-bottom: 1.5rem;
         }
 
+        .logo-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo-container img {
+            max-height: 80px;
+            width: auto;
+        }
+
         .card {
             background: var(--card-background);
             border: none;
@@ -229,6 +239,9 @@
 </head>
 <body>
     <div class="container">
+        <div class="logo-container">
+            <img src="/static/logo_mw.png" alt="Logo MW" class="img-fluid">
+        </div>
         <h1 class="page-title">Envio de Produtos para HUB2B</h1>
         
         <div class="row">
@@ -313,7 +326,10 @@
                 const data = await response.json();
                 if (data.success) {
                     mostrarNotificacao('Produtos enviados com sucesso!', 'success');
-                    carregarHistorico();
+                    // Adiciona um pequeno delay antes de carregar o histórico para garantir que o arquivo JSON foi atualizado
+                    setTimeout(() => {
+                        carregarHistorico();
+                    }, 1000);
                 } else {
                     mostrarNotificacao('Erro ao enviar produtos: ' + data.message, 'error');
                 }
@@ -358,15 +374,19 @@
             const historicoPaginado = historicoOrdenado.slice(inicio, fim);
             
             const historicoDiv = document.getElementById('historico');
-            historicoDiv.innerHTML = historicoPaginado.map(item => `
+            historicoDiv.innerHTML = historicoPaginado.map(item => {
+                const data = new Date(item.data);
+                const dataFormatada = data.toLocaleDateString('pt-BR') + ', ' + data.toLocaleTimeString('pt-BR');
+                const statusClass = item.status.includes('sucesso') ? 'status-success' : 'status-error';
+                const statusText = item.status.includes('sucesso') ? 'Sucesso' : 'Erro';
+                return `
                 <div class="history-item">
                     <strong>Loja:</strong> ${item.marca}<br>
-                    <strong>Data:</strong> ${new Date(item.data).toLocaleString()}<br>
-                    <span class="status ${item.status.toLowerCase().includes('erro') ? 'status-error' : 'status-success'}">
-                        ${item.status}
-                    </span>
+                    <strong>Data:</strong> ${dataFormatada}<br>
+                    <strong>Status:</strong> 
+                    <span class="status ${statusClass}">${statusText}</span>
                 </div>
-            `).join('');
+            `}).join('');
 
             renderizarPaginacao(historicoOrdenado.length);
         }
@@ -413,8 +433,12 @@
         async function carregarHistorico() {
             try {
                 const response = await fetch('/hub2b/historico');
-                historicoCompleto = await response.json();
-                renderizarHistorico();
+                const novoHistorico = await response.json();
+                // Atualiza o histórico completo apenas se houver mudanças
+                if (JSON.stringify(historicoCompleto) !== JSON.stringify(novoHistorico)) {
+                    historicoCompleto = novoHistorico;
+                    renderizarHistorico();
+                }
             } catch (error) {
                 console.error('Erro ao carregar histórico:', error);
             }
