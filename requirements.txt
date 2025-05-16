@@ -5,3 +5,4 @@ openpyxl
 requests
 aiohttp==3.9.3
 woocommerce
+xlrd==2.0.1

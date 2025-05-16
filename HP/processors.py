@@ -61,6 +61,7 @@ def combinar_dados(df_produtos, df_precos):
                 'name': str(product.get("SmartChoice", "")) + " " + str(product.get("Descrição", "")),
                 'sku': product["PN"],
                 'short_description': product.get("Descrição", ""),
+                'description': "HP " + product.get("Descrição", ""),
                 'price': price_por,
                 'regular_price': price_por,
                 'stock_quantity': 10,
@@ -91,7 +92,7 @@ def combinar_dados(df_produtos, df_precos):
             categoria = "Display" if "display" in pl_group else "Acessório"
 
             icms = price_info["ICMS %"]
-            print(icms)
+            
             leadtime = 0
             if isinstance(icms, str):
                 icms = float(icms)
@@ -105,6 +106,7 @@ def combinar_dados(df_produtos, df_precos):
                 'name': str(product.get("DESCRIÇÃO", "")),
                 'sku': product["SKU"],
                 'short_description': product.get("Descrição", ""),
+                'description': "HP " + product.get("DESCRIÇÃO", ""),
                 'price': price_por,
                 'regular_price': price_por,
                 'stock_quantity': 10,
@@ -150,7 +152,7 @@ def combinar_dados(df_produtos, df_precos):
                     descricao = product_type + " " + str(product.get("Model", "")) + " " + str(product.get("Processador", "")) + " " + str(product.get("OS", "")) + " " + str(product.get("RAM (MB)", "")) + " " + str(product.get("FLASH (GF)","" ))
 
             icms = price_info["ICMS %"]
-            print(icms)
+            
             leadtime = 0
             if isinstance(icms, str):
                 icms = float(icms)
@@ -164,6 +166,7 @@ def combinar_dados(df_produtos, df_precos):
                 'name': product_type + " " + product["Model"],
                 'sku': product["SKU"],
                 'short_description': descricao,
+                'description': "HP " + descricao,
                 'price': price_por,
                 'regular_price': price_por,
                 'stock_quantity': 10,

@@ -3,6 +3,14 @@ import json
 import requests
 import re
 
+def limpar_texto(texto):
+    if not isinstance(texto, str):
+        return str(texto)
+    # Remove tags HTML e quebras de linha
+    texto = re.sub(r'<[^>]+>', '', texto)
+    texto = texto.replace('\n', ' ').strip()
+    return texto
+
 def processar_microware_data(microware_data):
     products_df = pd.concat(microware_data.values(), ignore_index=True)
 
@@ -15,10 +23,10 @@ def processar_microware_data(microware_data):
                 preco = 0
             
             produto_data = {
-                'name': str(product.get('Descrição', '')),
+                'name': limpar_texto(product.get('Descrição', '')),
                 'sku': str(product.get('PN', '')),
-                'short_description': str(product.get('Descrição', '')),
-                'description': str(product.get('Descrição', '')),
+                'short_description': limpar_texto(product.get('Descrição', '')),
+                'description': limpar_texto(product.get('Descrição', '')),
                 'price': str(preco),
                 'regular_price': str(preco),
                 'stock_quantity': int(product.get('Saldo em Estoque', 0)), 

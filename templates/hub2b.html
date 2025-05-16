@@ -260,10 +260,16 @@
                                     <option value="HP">HP</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100" id="enviarBtn">
-                                <span class="spinner-border spinner-border-sm me-2 d-none" id="loadingSpinner" role="status" aria-hidden="true"></span>
-                                <span id="btnText">Enviar Produtos</span>
-                            </button>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary" id="enviarBtn">
+                                    <span class="spinner-border spinner-border-sm me-2 d-none" id="loadingSpinner" role="status" aria-hidden="true"></span>
+                                    <span id="btnText">Enviar Produtos</span>
+                                </button>
+                                <button type="button" class="btn btn-outline-primary" id="gerarPlanilhaBtn">
+                                    <span class="spinner-border spinner-border-sm me-2 d-none" id="planilhaSpinner" role="status" aria-hidden="true"></span>
+                                    <span id="planilhaBtnText">Gerar Planilha Excel</span>
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -446,6 +452,58 @@
 
         // Carregar histórico ao iniciar a página
         carregarHistorico();
+
+        // Adicionar evento para o botão de gerar planilha
+        document.getElementById('gerarPlanilhaBtn').addEventListener('click', async () => {
+            const marca = document.getElementById('marca').value;
+            if (!marca) {
+                mostrarNotificacao('Por favor, selecione uma loja primeiro.', 'error');
+                return;
+            }
+
+            const btnText = document.getElementById('planilhaBtnText');
+            const loadingSpinner = document.getElementById('planilhaSpinner');
+            const gerarPlanilhaBtn = document.getElementById('gerarPlanilhaBtn');
+            
+            // Mostrar loading
+            loadingSpinner.classList.remove('d-none');
+            btnText.textContent = 'Gerando...';
+            gerarPlanilhaBtn.disabled = true;
+            
+            try {
+                const response = await fetch('/hub2b/gerar-planilha', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ marca })
+                });
+                
+                if (response.ok) {
+                    // Se a resposta for um arquivo Excel
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = response.headers.get('content-disposition')?.split('filename=')[1] || 'produtos_hub2b.xlsx';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    a.remove();
+                    mostrarNotificacao('Planilha gerada com sucesso!', 'success');
+                } else {
+                    const data = await response.json();
+                    mostrarNotificacao('Erro ao gerar planilha: ' + data.message, 'error');
+                }
+            } catch (error) {
+                mostrarNotificacao('Erro ao gerar planilha: ' + error.message, 'error');
+            } finally {
+                // Esconder loading
+                loadingSpinner.classList.add('d-none');
+                btnText.textContent = 'Gerar Planilha Excel';
+                gerarPlanilhaBtn.disabled = false;
+            }
+        });
     </script>
 </body>
 </html>

@@ -158,40 +158,46 @@ async def processar_arquivo():
             'status': 'error'
         }), 500
 
+async def deletar_produto(session, produto_id, auth):
+    url = f"https://ecommerce.microware.com.br/lenovo/wp-json/wc/v3/products/{produto_id}?force=true"
+    try:
+        async with session.delete(url, auth=auth) as response:
+            if response.status == 200:
+                print(f"Produto {produto_id} deletado com sucesso.")
+                return True
+            else:
+                print(f"Erro ao deletar produto {produto_id}: {response.status}")
+                return False
+    except Exception as e:
+        print(f"Erro ao deletar produto {produto_id}: {str(e)}")
+        return False
+
 async def deletar_todos_produtos():
     url_base = "https://ecommerce.microware.com.br/lenovo/wp-json/wc/v3/products"
-    batch_url = f"{url_base}/batch"
     auth = aiohttp.BasicAuth(WOOCOMMERCE_CONSUMER_KEY, WOOCOMMERCE_CONSUMER_SECRET)
+    todos_ids = []
 
+    # Primeiro, coletamos todos os IDs
     async with aiohttp.ClientSession() as session:
         page = 1
         while True:
-            # Obtém até 100 produtos por página
             async with session.get(
                 url_base,
                 auth=auth,
                 params={"per_page": 100, "page": page}
             ) as response:
                 produtos = await response.json()
-
                 if not produtos:
-                    break  # Fim da lista
-
-                # Coleta os IDs dos produtos
-                ids_para_deletar = [produto["id"] for produto in produtos]
-
-                # Deleta todos de uma vez via batch
-                async with session.delete(
-                    batch_url,
-                    auth=auth,
-                    params={"force": "true"},
-                    json={"delete": ids_para_deletar}
-                ) as delete_response:
-                    if delete_response.status == 200:
-                        print(f"Batch da página {page} deletado com sucesso.")
-                    else:
-                        print(f"Erro ao deletar batch da página {page}: {delete_response.status}")
-
+                    break
+                todos_ids.extend([produto["id"] for produto in produtos])
                 page += 1
 
-    print("Todos os produtos foram deletados com sucesso (em batch)!")
+    # Agora deletamos em grupos de 5
+    async with aiohttp.ClientSession() as session:
+        for i in range(0, len(todos_ids), 5):
+            grupo_ids = todos_ids[i:i+5]
+            tarefas = [deletar_produto(session, id, auth) for id in grupo_ids]
+            await asyncio.gather(*tarefas)
+            print(f"Grupo de {len(grupo_ids)} produtos processado.")
+
+    print("Todos os produtos foram deletados com sucesso!")

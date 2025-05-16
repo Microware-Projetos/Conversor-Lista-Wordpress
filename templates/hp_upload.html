@@ -15,13 +15,34 @@
             <div class="card-body">
                 <form id="uploadForm" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label for="arquivo_produtos" class="form-label">Arquivo de Produtos</label>
-                        <input type="file" class="form-control" id="arquivo_produtos" name="arquivo_produtos" accept=".xlsx,.xls" required>
+                        <label for="tipo_upload" class="form-label">Tipo de Upload</label>
+                        <select class="form-select" id="tipo_upload" name="tipo_upload" required>
+                            <option value="">Selecione o tipo de upload</option>
+                            <option value="produtos">Produtos HP</option>
+                            <option value="plotter">Plotter</option>
+                        </select>
                     </div>
-                    <div class="mb-3">
-                        <label for="arquivo_precos" class="form-label">Arquivo de Preços</label>
-                        <input type="file" class="form-control" id="arquivo_precos" name="arquivo_precos" accept=".xlsx,.xls" required>
+
+                    <!-- Campos para Produtos HP -->
+                    <div id="campos_produtos" style="display: none;">
+                        <div class="mb-3">
+                            <label for="arquivo_produtos" class="form-label">Arquivo de Produtos</label>
+                            <input type="file" class="form-control" id="arquivo_produtos" name="arquivo_produtos" accept=".xlsx,.xls">
+                        </div>
+                        <div class="mb-3">
+                            <label for="arquivo_precos" class="form-label">Arquivo de Preços</label>
+                            <input type="file" class="form-control" id="arquivo_precos" name="arquivo_precos" accept=".xlsx,.xls">
+                        </div>
                     </div>
+
+                    <!-- Campos para Plotter -->
+                    <div id="campos_plotter" style="display: none;">
+                        <div class="mb-3">
+                            <label for="arquivo_plotter" class="form-label">Arquivo de Plotter</label>
+                            <input type="file" class="form-control" id="arquivo_plotter" name="arquivo_plotter" accept=".xlsx,.xls">
+                        </div>
+                    </div>
+
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary" id="submitButton">
                             <i class="bi bi-upload me-2"></i>Enviar Arquivos
@@ -35,11 +56,35 @@
 </div>
 
 <script>
+document.getElementById('tipo_upload').addEventListener('change', function() {
+    const tipo = this.value;
+    const camposProdutos = document.getElementById('campos_produtos');
+    const camposPlotter = document.getElementById('campos_plotter');
+    
+    // Esconde todos os campos
+    camposProdutos.style.display = 'none';
+    camposPlotter.style.display = 'none';
+    
+    // Mostra os campos relevantes
+    if (tipo === 'produtos') {
+        camposProdutos.style.display = 'block';
+        document.getElementById('arquivo_produtos').required = true;
+        document.getElementById('arquivo_precos').required = true;
+        document.getElementById('arquivo_plotter').required = false;
+    } else if (tipo === 'plotter') {
+        camposPlotter.style.display = 'block';
+        document.getElementById('arquivo_plotter').required = true;
+        document.getElementById('arquivo_produtos').required = false;
+        document.getElementById('arquivo_precos').required = false;
+    }
+});
+
 document.getElementById('uploadForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
     const submitButton = document.getElementById('submitButton');
     const resultadoDiv = document.getElementById('resultado');
+    const tipoUpload = document.getElementById('tipo_upload').value;
     
     // Desabilita o botão e mostra loading
     submitButton.disabled = true;
@@ -47,13 +92,21 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
     resultadoDiv.innerHTML = '';
 
     const formData = new FormData();
-    const arquivoProdutos = document.getElementById('arquivo_produtos').files[0];
-    const arquivoPrecos = document.getElementById('arquivo_precos').files[0];
-    
-    formData.append('arquivo_produtos', arquivoProdutos);
-    formData.append('arquivo_precos', arquivoPrecos);
+    formData.append('tipo_upload', tipoUpload);
 
-    fetch('/hp', {
+    if (tipoUpload === 'produtos') {
+        const arquivoProdutos = document.getElementById('arquivo_produtos').files[0];
+        const arquivoPrecos = document.getElementById('arquivo_precos').files[0];
+        formData.append('arquivo_produtos', arquivoProdutos);
+        formData.append('arquivo_precos', arquivoPrecos);
+    } else if (tipoUpload === 'plotter') {
+        const arquivoPlotter = document.getElementById('arquivo_plotter').files[0];
+        formData.append('arquivo_plotter', arquivoPlotter);
+    }
+
+    const endpoint = tipoUpload === 'produtos' ? '/hp' : '/hp/plotter';
+
+    fetch(endpoint, {
         method: 'POST',
         body: formData
     })

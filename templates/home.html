@@ -20,7 +20,7 @@
     </div>
 
     <!-- Cards com logos das marcas -->
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 justify-content-center">
         <div class="col">
             <div class="card h-100 shadow-sm hover-card">
                 <div class="card-body text-center d-flex flex-column">
@@ -73,6 +73,19 @@
                 </div>
             </div>
         </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm hover-card">
+                <div class="card-body text-center d-flex flex-column">
+                    <a href="{{ url_for('hub2b.listar_produtos') }}" class="text-decoration-none flex-grow-1 d-flex flex-column">
+                        <div class="logo-container mb-3">
+                            <img src="{{ url_for('static', filename='hub2b.png') }}" alt="HUB2B Logo" class="brand-logo">
+                        </div>
+                        <h3 class="card-title">HUB2B</h3>
+                        <p class="card-text text-muted mt-auto">Clique para enviar produtos para HUB2B</p>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -82,6 +95,7 @@
     border: none;
     border-radius: 15px;
     height: 100%;
+    margin-bottom: 1rem;
 }
 
 .hover-card:hover {
@@ -120,16 +134,42 @@
 }
 
 @media (max-width: 768px) {
-    .row-cols-md-2 > * {
+    .row-cols-2 > * {
         flex: 0 0 auto;
         width: 50%;
+        padding: 0.5rem;
+    }
+    
+    .logo-container {
+        height: 80px;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+    }
+    
+    .card-text {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 576px) {
-    .row-cols-1 > * {
+    .row-cols-2 > * {
         flex: 0 0 auto;
-        width: 100%;
+        width: 50%;
+        padding: 0.25rem;
+    }
+    
+    .logo-container {
+        height: 60px;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+    }
+    
+    .card-text {
+        font-size: 0.8rem;
     }
 }
 </style>

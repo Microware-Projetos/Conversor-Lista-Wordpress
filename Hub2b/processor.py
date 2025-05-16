@@ -152,9 +152,9 @@ def processar_produtos(produtos, marca):
             "description": limpar_texto(product["description"]) or limpar_texto(product.get("short_description", "")), 
             "brand": marca,
             "ncm": get_ncm(product), 
-            "height_m": str(product["dimensions"]["height"]) if product["dimensions"].get("height") else delivery_info["height_m"] if delivery_info else "0",
-            "width_m": str(product["dimensions"]["width"]) if product["dimensions"].get("width") else delivery_info["width_m"] if delivery_info else "0",
-            "length_m": str(product["dimensions"]["length"]) if product["dimensions"].get("length") else delivery_info["length_m"] if delivery_info else "0",
+            "height_m": str(float(product["dimensions"]["height"])/100) if product["dimensions"].get("height") else delivery_info["height_m"] if delivery_info else "0",
+            "width_m": str(float(product["dimensions"]["width"])/100) if product["dimensions"].get("width") else delivery_info["width_m"] if delivery_info else "0",
+            "length_m": str(float(product["dimensions"]["length"])/100) if product["dimensions"].get("length") else delivery_info["length_m"] if delivery_info else "0",
             "priceBase": product["regular_price"],
             "priceSale": product["price"],
             "images": [
@@ -192,97 +192,104 @@ async def enviar_produtos(combined_data):
         print("Login realizado com sucesso: ", access_token)
         print(f"\nIniciando envio de {len(combined_data)} produtos...")
         
-        # Semáforo para limitar requisições concorrentes
-        sem = asyncio.Semaphore(5)
+        # Semáforo para limitar a 3 requisições simultâneas
+        sem = asyncio.Semaphore(3)
+        # Controle de taxa para garantir 3 requisições por segundo
+        rate_limiter = asyncio.Semaphore(3)
         results = []
         produtos_enviados = 0
         produtos_com_erro = 0
         historico_envios = []
         
-        # Dividir os produtos em lotes de 5
-        lotes = [combined_data[i:i + 5] for i in range(0, len(combined_data), 5)]
+        async def reset_rate_limiter():
+            while True:
+                await asyncio.sleep(1)  # Espera 1 segundo
+                for _ in range(3):  # Libera 3 slots
+                    try:
+                        rate_limiter.release()
+                    except ValueError:
+                        pass  # Ignora se o semáforo já estiver no máximo
         
-        async def enviar_lote(lote, tentativa=1):
+        # Inicia o reset do rate limiter em background
+        asyncio.create_task(reset_rate_limiter())
+        
+        async def enviar_produto(produto, tentativa=1):
             nonlocal produtos_enviados, produtos_com_erro
-            async with sem:
-                try:
-                    async with aiohttp.ClientSession() as session:
-                        async with session.post(
-                            f"https://rest.hub2b.com.br/catalog/product/setsku/{id_loja}?access_token={access_token}",
-                            json=lote
-                        ) as response:
-                            result = await response.json()
-                            if response.status != 200:
-                                erro_msg = result.get('message', 'Erro desconhecido')
-                                skus = [produto.get('sku', 'N/A') for produto in lote]
-                                print(f"\nErro ao enviar lote (Tentativa {tentativa}): Status {response.status}")
-                                print(f"SKUs afetados: {', '.join(skus)}")
-                                print(f"Detalhes do erro: {erro_msg}")
-                                
-                                # Registra no histórico
-                                for produto in lote:
+            async with sem:  # Limita a 3 requisições simultâneas
+                async with rate_limiter:  # Garante 3 requisições por segundo
+                    try:
+                        async with aiohttp.ClientSession() as session:
+                            async with session.post(
+                                f"https://rest.hub2b.com.br/catalog/product/setsku/{id_loja}?access_token={access_token}",
+                                json=[produto]  # Envia um produto por vez
+                            ) as response:
+                                result = await response.json()
+                                if response.status != 200:
+                                    erro_msg = result.get('message', 'Erro desconhecido')
+                                    print(f"\nErro ao enviar produto (Tentativa {tentativa}): Status {response.status}")
+                                    print(f"SKU afetado: {produto.get('sku', 'N/A')}")
+                                    print(f"Detalhes do erro: {erro_msg}")
+                                    
                                     historico_envios.append({
                                         "sku": produto.get("sku"),
                                         "status": "erro",
                                         "tentativa": tentativa,
                                         "erro": erro_msg
                                     })
-                                
-                                produtos_com_erro += len(lote)
-                                return {"status": "erro", "lote": lote, "erro": erro_msg}
-                            else:
-                                produtos_enviados += len(lote)
-                                # Registra no histórico
-                                for produto in lote:
+                                    
+                                    produtos_com_erro += 1
+                                    return {"status": "erro", "produto": produto, "erro": erro_msg}
+                                else:
+                                    produtos_enviados += 1
                                     historico_envios.append({
                                         "sku": produto.get("sku"),
                                         "status": "sucesso",
                                         "tentativa": tentativa
                                     })
-                                print(f"\rProgresso: {produtos_enviados}/{len(combined_data)} produtos enviados | Erros: {produtos_com_erro}", end="")
-                                await asyncio.sleep(0.2)
-                                return {"status": "sucesso", "lote": lote}
-                except Exception as e:
-                    produtos_com_erro += len(lote)
-                    skus = [produto.get('sku', 'N/A') for produto in lote]
-                    # Registra no histórico
-                    for produto in lote:
+                                    print(f"\rProgresso: {produtos_enviados}/{len(combined_data)} produtos enviados | Erros: {produtos_com_erro}", end="")
+                                    return {"status": "sucesso", "produto": produto}
+                    except Exception as e:
+                        produtos_com_erro += 1
                         historico_envios.append({
                             "sku": produto.get("sku"),
                             "status": "erro",
                             "tentativa": tentativa,
                             "erro": str(e)
                         })
-                    print(f"\nErro ao enviar lote (Tentativa {tentativa}): {str(e)}")
-                    print(f"SKUs afetados: {', '.join(skus)}")
-                    return {"status": "erro", "lote": lote, "erro": str(e)}
+                        print(f"\nErro ao enviar produto (Tentativa {tentativa}): {str(e)}")
+                        print(f"SKU afetado: {produto.get('sku', 'N/A')}")
+                        return {"status": "erro", "produto": produto, "erro": str(e)}
         
-        # Cria tarefas para todos os lotes
-        tasks = [enviar_lote(lote) for lote in lotes]
+        # Cria tarefas para todos os produtos
+        tasks = [enviar_produto(produto) for produto in combined_data]
         
         # Executa todas as tarefas e aguarda os resultados
         results = await asyncio.gather(*tasks)
         
-        # Processa os lotes com erro para retry
-        lotes_com_erro = [result["lote"] for result in results if result["status"] == "erro"]
+        # Processa os produtos com erro para retry
+        produtos_com_erro = [result["produto"] for result in results if result["status"] == "erro"]
         
-        # Realiza até 3 tentativas para os lotes com desc
+        # Realiza até 3 tentativas para os produtos com erro
         for tentativa in range(2, 4):  # Começa em 2 pois a primeira tentativa já foi feita
-            if not lotes_com_erro:
+            if not produtos_com_erro:
                 break
                 
-            print(f"\n\nIniciando tentativa {tentativa} para {len(lotes_com_erro)} lotes com erro...")
-            retry_tasks = [enviar_lote(lote, tentativa) for lote in lotes_com_erro]
+            print(f"\n\nIniciando tentativa {tentativa} para {len(produtos_com_erro)} produtos com erro...")
+            retry_tasks = [enviar_produto(produto, tentativa) for produto in produtos_com_erro]
             retry_results = await asyncio.gather(*retry_tasks)
             
-            # Atualiza a lista de lotes com erro
-            lotes_com_erro = [result["lote"] for result in retry_results if result["status"] == "erro"]
+            # Atualiza a lista de produtos com erro
+            produtos_com_erro = [result["produto"] for result in retry_results if result["status"] == "erro"]
         
         print(f"\n\nProcesso finalizado!")
         print(f"Total de produtos: {len(combined_data)}")
         print(f"Produtos enviados com sucesso: {produtos_enviados}")
         print(f"Produtos com erro: {produtos_com_erro}")
         print(f"Histórico de envios salvo em 'historico_envios.json'")
+        
+        # Salva o histórico em arquivo
+        with open('historico_envios.json', 'w') as f:
+            json.dump(historico_envios, f, indent=4)
         
         return {
             "total": len(combined_data),
@@ -337,3 +344,56 @@ def get_ncm(product):
         print(f"Erro ao buscar NCM para produto {product.get('sku', 'N/A')}: {str(e)}")
     
     return ""
+
+#gerar panilha hub2b
+def gerar_panilha_hub2b(products, MANUFACTURE):
+    combined_data = []
+    for product in products:
+        
+        lead_time = 0
+        if product.get("shipping_class") == "importado" or product.get("shipping_class") == "Importado":
+            lead_time = 60
+        else:
+            lead_time = 45
+
+        categoria_nome = None
+        if product.get("categories") and len(product["categories"]) > 0:
+            categoria_slug = product["categories"][0].get("slug")
+            if categoria_slug:
+                categoria_map = _carregar_categoria_map()
+                categoria_nome = categoria_map.get(categoria_slug)
+
+        # Obtém informações de entrega da categoria
+        delivery_info = _get_delivery_info(categoria_nome) if categoria_nome else None
+
+        # Dicionário base com os campos fixos
+        produto_dict = {
+            "Nome Produto": limpar_texto(product["name"]),
+            "Descrição": limpar_texto(product["description"]),
+            "URL do produto": product["permalink"],
+            "SKU": product["sku"],
+            "EAN ou ISBN (13 digitos)": "",
+            "Marca": MANUFACTURE,
+            "Preço De": product["price"],
+            "Preço Por": product["price"],
+            "Tempo Compra / Fabricação": lead_time,
+            "Estoque": 10,
+            "Categoria": product["categories"][0]["name"] if product.get("categories") else "",
+            "Altura*(m)": str(float(product["dimensions"]["height"])/100) if product["dimensions"].get("height") else delivery_info["height_m"] if delivery_info else "0",
+            "Largura*(m)": str(float(product["dimensions"]["width"])/100) if product["dimensions"].get("width") else delivery_info["width_m"] if delivery_info else "0",
+            "Profundidade*(m)": str(float(product["dimensions"]["length"])/100) if product["dimensions"].get("length") else delivery_info["length_m"] if delivery_info else "0",
+            "Peso*(kg)": str(product["weight"]) if product.get("weight") else delivery_info["weightKg"] if delivery_info else "0",
+            "Url Imagem 1": next((meta["value"] for meta in product["meta_data"] if meta["key"] == "_external_image_url"), "")
+        }
+
+        # Adiciona os atributos dinamicamente
+        if product.get("attributes"):
+            for idx, attr in enumerate(product["attributes"], start=1):
+                produto_dict[f"Atributo {idx}"] = attr["name"]
+                # Junta todos os valores do atributo em uma única string, separados por vírgula
+                produto_dict[f"Valores {idx}"] = ", ".join(attr["options"]) if attr["options"] else ""
+
+        combined_data.append(produto_dict)
+    return combined_data
+  
+    
