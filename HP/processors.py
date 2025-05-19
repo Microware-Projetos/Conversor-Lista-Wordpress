@@ -71,6 +71,7 @@ def combinar_dados(df_produtos, df_precos):
                 'weight': processar_weight(product, delivery),
                 'categories': processar_categories(product, "SmartChoice"),
                 'shipping_class': leadtime,
+                "manage_stock": True,
             }
             
         elif product.get("sheet_name") == "Portfólio Acessorios_Monitores":
@@ -116,6 +117,7 @@ def combinar_dados(df_produtos, df_precos):
                 'weight': processar_weight(product, delivery),
                 'categories': processar_categories(product, categoria),
                 'shipping_class': leadtime,
+                "manage_stock": True,
             }
         
         else :
@@ -176,6 +178,7 @@ def combinar_dados(df_produtos, df_precos):
                 'weight': processar_weight(product, delivery),
                 'categories': processar_categories(product, product_type),
                 'shipping_class': leadtime,
+                "manage_stock": True,
             }
 
         combined_data.append(produto_data)
@@ -299,6 +302,13 @@ def processar_attributes(product):
                                 'options': [valor],
                                 'visible': True
                             })
+
+
+    attributes.append({
+        'id': 46,
+        'options': [family],
+        'visible': True
+    })
 
     attributes.append({
         'id': 45,

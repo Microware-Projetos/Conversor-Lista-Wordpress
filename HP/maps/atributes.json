@@ -174,5 +174,9 @@
 		{
 			"id": 44,
 			"name": "WLAN"
+		},
+		{
+			"id": 46,
+			"name": "Família"
 		}
 	]
