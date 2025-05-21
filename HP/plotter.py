@@ -335,11 +335,29 @@ def processar_weight(product):
         }
         
 def extrair_familia(produto):
-    # Remove prefixos como "HP" ou "Impressora HP"
-    produto = re.sub(r"^(Impressora\s*)?HP\s+", "", produto, flags=re.IGNORECASE)
+    #Remover HP no Inicio do produto
+    produto = produto.replace("HP", "")
+    produto = produto.replace("Printer", "")
+    produto = produto.replace("24-in", "")
+    produto = produto.replace("42-in", "")
+    produto = produto.replace("36-in", "")
+    produto = produto.replace(":", "")
+    produto = produto.replace("NA/LA", "")
+    produto = produto.replace("24in", "")
+    produto = produto.replace("36in", "")
+    produto = produto.replace("42in", "")
+    produto = produto.replace("44in", "")
+    produto = produto.replace("64in", "")
+    produto = produto.replace('de 64"', "")
+    produto = produto.replace("64in", "")
+    produto = produto.replace("44-in", "")
+    produto = produto.replace("42-in", "")
+    produto = produto.replace("PS", "")
+    produto = produto.replace("MFP", "")
+    produto = produto.replace("Prntr", "")
+    produto = produto.replace("V-Trimmer", "")
 
-    # Pega só até o número ou aspas, removendo depois disso
-    match = re.match(r"([A-Za-z ]+?[A-Za-z0-9\+\-]+)", produto)
-    if match:
-        return match.group(1).strip()
+    #remover espaços em branco
+    produto = produto.strip()
+
     return produto

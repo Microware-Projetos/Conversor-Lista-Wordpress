@@ -8,6 +8,7 @@ from requests.auth import HTTPBasicAuth
 import time
 from .processors import processar_hp_data
 from .plotter import processar_plotter_data
+from .carepack import processar_carepack_data
 from collections import deque
 
 # Configurações da API WooCommerce
@@ -231,6 +232,81 @@ async def processar_plotter():
         progresso_atual['status'] = 'Erro!'
         return jsonify({'erro': str(erro_geral)})
 
+@hp_bp.route('/hp/carepack', methods=['POST'])
+async def processar_carepack():
+    global progresso_atual
+    arquivo_carepack = request.files.get('arquivo_carepack')
+    
+    if not arquivo_carepack:
+        return jsonify({'erro': 'Por favor, envie o arquivo de Care Pack'}), 400
+
+    try:
+        # Processar o arquivo de Care Pack
+        produtos_carepack = processar_carepack_data(arquivo_carepack)
+        
+        #  Deleta todos os produtos da categoria Care Pack (você precisará definir o ID da categoria)
+        await deletar_todos_produtos_carepack()
+        
+        url = "https://ecommerce.microware.com.br/hp/wp-json/wc/v3/products/batch"
+        
+        total_produtos = len(produtos_carepack)
+        print(f"Iniciando envio de {total_produtos} produtos Care Pack em batch...")
+        progresso_atual['total'] = (total_produtos + 9) // 10
+        progresso_atual['erros'] = 0
+        progresso_atual['sucessos'] = 0
+
+        # Configuração do cliente HTTP assíncrono
+        async with aiohttp.ClientSession() as session:
+            # Divide os produtos em lotes de 10
+            lotes = [produtos_carepack[i:i+10] for i in range(0, total_produtos, 10)]
+            tarefas = []
+            fila_reprocessamento = deque()
+            
+            # Cria tarefas assíncronas para cada lote
+            for i, lote in enumerate(lotes, 1):
+                progresso_atual['loteAtual'] = i
+                progresso_atual['status'] = f'Enviando lote {i} de {progresso_atual["total"]}'
+                tarefa = enviar_lote(session, lote, i, url)
+                tarefas.append(tarefa)
+            
+            # Executa todas as tarefas em paralelo
+            resultados = await asyncio.gather(*tarefas, return_exceptions=True)
+            
+            # Verifica os resultados e adiciona lotes com erro à fila de reprocessamento
+            for i, resultado in enumerate(resultados, 1):
+                if not resultado:
+                    fila_reprocessamento.append((lotes[i-1], i))
+            
+            # Reprocessa lotes com erro
+            while fila_reprocessamento:
+                lote, numero_lote = fila_reprocessamento.popleft()
+                print(f"Reprocessando lote {numero_lote}...")
+                progresso_atual['status'] = f'Reprocessando lote {numero_lote} de {progresso_atual["total"]}'
+                
+                sucesso = await enviar_lote(session, lote, numero_lote, url, max_tentativas=10)
+                if not sucesso:
+                    # Se ainda falhar, salva o lote para processamento manual
+                    with open(f'lote_falha_carepack_{numero_lote}.json', 'w') as f:
+                        json.dump(lote, f, ensure_ascii=False, indent=4)
+
+        print("\nProcesso de envio do Care Pack concluído!")
+        progresso_atual['status'] = f'Concluído! Sucessos: {progresso_atual["sucessos"]}, Erros: {progresso_atual["erros"]}'
+
+        return jsonify({
+            'mensagem': 'Arquivo de Care Pack processado com sucesso',
+            'estatisticas': {
+                'sucessos': progresso_atual['sucessos'],
+                'erros': progresso_atual['erros']
+            }
+        })
+
+    except Exception as erro_geral:
+        print(f"Erro geral no processamento do Care Pack: {str(erro_geral)}")
+        with open('erro_geral_carepack.txt', 'w') as f:
+            f.write(str(erro_geral))
+        progresso_atual['status'] = 'Erro!'
+        return jsonify({'erro': str(erro_geral)})
+
 async def deletar_produto(session, produto_id, auth):
     url = f"https://ecommerce.microware.com.br/hp/wp-json/wc/v3/products/{produto_id}?force=true"
     try:
@@ -323,5 +399,43 @@ async def deletar_todos_produtos_plotter():
             print(f"Grupo de {len(grupo_ids)} produtos processado.")
 
     print("Todos os produtos da categoria 24 foram deletados com sucesso!")
+    
+
+async def deletar_todos_produtos_carepack():
+    url_base = "https://ecommerce.microware.com.br/hp/wp-json/wc/v3/products"
+    auth = aiohttp.BasicAuth(WOOCOMMERCE_CONSUMER_KEY, WOOCOMMERCE_CONSUMER_SECRET)
+    todos_ids = []
+
+    # Primeiro, coletamos todos os IDs dos produtos da categoria Care Pack
+    # Você precisará definir o ID da categoria Care Pack
+    async with aiohttp.ClientSession() as session:
+        page = 1
+        while True:
+            async with session.get(
+                url_base,
+                auth=auth,
+                params={"per_page": 100, "page": page, "category": 32}
+            ) as response:
+                produtos = await response.json()
+                if not produtos:
+                    break
+                todos_ids.extend([produto["id"] for produto in produtos])
+                page += 1
+
+    if not todos_ids:
+        print("Nenhum produto encontrado na categoria Care Pack.")
+        return
+
+    print(f"Encontrados {len(todos_ids)} produtos na categoria Care Pack.")
+
+    # Agora deletamos em grupos de 5
+    async with aiohttp.ClientSession() as session:
+        for i in range(0, len(todos_ids), 5):
+            grupo_ids = todos_ids[i:i+5]
+            tarefas = [deletar_produto(session, id, auth) for id in grupo_ids]
+            await asyncio.gather(*tarefas)
+            print(f"Grupo de {len(grupo_ids)} produtos processado.")
+
+    print("Todos os produtos da categoria Care Pack foram deletados com sucesso!")
     
 

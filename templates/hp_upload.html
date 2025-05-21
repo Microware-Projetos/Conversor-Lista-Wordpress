@@ -18,8 +18,9 @@
                         <label for="tipo_upload" class="form-label">Tipo de Upload</label>
                         <select class="form-select" id="tipo_upload" name="tipo_upload" required>
                             <option value="">Selecione o tipo de upload</option>
-                            <option value="produtos">Produtos HP</option>
+                            <option value="produtos">Produtos</option>
                             <option value="plotter">Plotter</option>
+                            <option value="carepack">Care Pack</option>
                         </select>
                     </div>
 
@@ -43,6 +44,14 @@
                         </div>
                     </div>
 
+                    <!-- Campos para Care Pack -->
+                    <div id="campos_carepack" style="display: none;">
+                        <div class="mb-3">
+                            <label for="arquivo_carepack" class="form-label">Arquivo de Care Pack</label>
+                            <input type="file" class="form-control" id="arquivo_carepack" name="arquivo_carepack" accept=".xlsx,.xls">
+                        </div>
+                    </div>
+
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary" id="submitButton">
                             <i class="bi bi-upload me-2"></i>Enviar Arquivos
@@ -60,10 +69,12 @@ document.getElementById('tipo_upload').addEventListener('change', function() {
     const tipo = this.value;
     const camposProdutos = document.getElementById('campos_produtos');
     const camposPlotter = document.getElementById('campos_plotter');
+    const camposCarePack = document.getElementById('campos_carepack');
     
     // Esconde todos os campos
     camposProdutos.style.display = 'none';
     camposPlotter.style.display = 'none';
+    camposCarePack.style.display = 'none';
     
     // Mostra os campos relevantes
     if (tipo === 'produtos') {
@@ -71,11 +82,19 @@ document.getElementById('tipo_upload').addEventListener('change', function() {
         document.getElementById('arquivo_produtos').required = true;
         document.getElementById('arquivo_precos').required = true;
         document.getElementById('arquivo_plotter').required = false;
+        document.getElementById('arquivo_carepack').required = false;
     } else if (tipo === 'plotter') {
         camposPlotter.style.display = 'block';
         document.getElementById('arquivo_plotter').required = true;
         document.getElementById('arquivo_produtos').required = false;
         document.getElementById('arquivo_precos').required = false;
+        document.getElementById('arquivo_carepack').required = false;
+    } else if (tipo === 'carepack') {
+        camposCarePack.style.display = 'block';
+        document.getElementById('arquivo_carepack').required = true;
+        document.getElementById('arquivo_produtos').required = false;
+        document.getElementById('arquivo_precos').required = false;
+        document.getElementById('arquivo_plotter').required = false;
     }
 });
 
@@ -102,9 +121,14 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
     } else if (tipoUpload === 'plotter') {
         const arquivoPlotter = document.getElementById('arquivo_plotter').files[0];
         formData.append('arquivo_plotter', arquivoPlotter);
+    } else if (tipoUpload === 'carepack') {
+        const arquivoCarePack = document.getElementById('arquivo_carepack').files[0];
+        formData.append('arquivo_carepack', arquivoCarePack);
     }
 
-    const endpoint = tipoUpload === 'produtos' ? '/hp' : '/hp/plotter';
+    const endpoint = tipoUpload === 'produtos' ? '/hp' : 
+                    tipoUpload === 'plotter' ? '/hp/plotter' : 
+                    '/hp/carepack';
 
     fetch(endpoint, {
         method: 'POST',

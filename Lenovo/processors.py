@@ -145,6 +145,12 @@ def processar_attributes(product):
                     })
     
     attributes.append({
+        'id': 68,
+        'options': [product['PH4_DESCRIPTION']],
+        'visible': True
+    })
+
+    attributes.append({
         'id': 67,
         'options': ["Lenovo"],
         'visible': True

@@ -4091,3 +4091,589 @@ Caused by:
 2025-05-19 21:42:11,488 - INFO - Produtos com imagem: 61
 2025-05-19 21:42:11,488 - INFO - Produtos sem imagem: 0
 2025-05-19 21:43:36,333 - INFO - 172.24.0.1 - - [19/May/2025 21:43:36] "POST /hp/plotter HTTP/1.0" 200 -
+2025-05-20 10:34:26,485 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.3:5000
+2025-05-20 10:34:26,485 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-20 10:34:26,487 - INFO -  * Restarting with stat
+2025-05-20 10:34:28,042 - WARNING -  * Debugger is active!
+2025-05-20 10:34:28,044 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 10:34:28,095 - INFO - 172.24.0.1 - - [20/May/2025 10:34:28] "GET / HTTP/1.0" 200 -
+2025-05-20 10:34:28,219 - INFO - 172.24.0.1 - - [20/May/2025 10:34:28] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-05-20 10:34:28,242 - INFO - 172.24.0.1 - - [20/May/2025 10:34:28] "GET /static/lenovo.png HTTP/1.0" 200 -
+2025-05-20 10:34:28,262 - INFO - 172.24.0.1 - - [20/May/2025 10:34:28] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-05-20 10:34:28,280 - INFO - 172.24.0.1 - - [20/May/2025 10:34:28] "GET /static/cisco.png HTTP/1.0" 200 -
+2025-05-20 10:34:28,290 - INFO - 172.24.0.1 - - [20/May/2025 10:34:28] "GET /static/hub2b.png HTTP/1.0" 200 -
+2025-05-20 10:34:28,663 - INFO - 172.24.0.1 - - [20/May/2025 10:34:28] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+2025-05-20 10:34:29,981 - INFO - 172.24.0.1 - - [20/May/2025 10:34:29] "GET /hub2b HTTP/1.0" 200 -
+2025-05-20 10:34:30,101 - INFO - 172.24.0.1 - - [20/May/2025 10:34:30] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-05-20 10:34:30,268 - INFO - 172.24.0.1 - - [20/May/2025 10:34:30] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-05-20 10:35:02,058 - INFO - 172.24.0.1 - - [20/May/2025 10:35:02] "GET /hp HTTP/1.0" 200 -
+2025-05-20 10:35:02,174 - INFO - 172.24.0.1 - - [20/May/2025 10:35:02] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-05-20 10:35:08,331 - INFO - Iniciando processamento do arquivo: <FileStorage: 'PL 30 - WS VAR - Mai25.xls' ('application/vnd.ms-excel')>
+2025-05-20 10:35:08,382 - INFO - Cache carregado com 48 itens
+2025-05-20 10:35:08,383 - INFO - Processando produto 1/61 - PN: 5HB07D#AC4
+2025-05-20 10:35:08,384 - INFO - Imagem encontrada no cache para PN: 5HB07D#AC4
+2025-05-20 10:35:08,385 - INFO - Processando produto 2/61 - PN: 5HB06D#AC4
+2025-05-20 10:35:08,386 - INFO - Imagem encontrada no cache para PN: 5HB06D#AC4
+2025-05-20 10:35:08,387 - INFO - Processando produto 3/61 - PN: 5HB08D#AC4
+2025-05-20 10:35:08,387 - INFO - Imagem encontrada no cache para PN: 5HB08D#AC4
+2025-05-20 10:35:08,388 - INFO - Processando produto 4/61 - PN: 5HB10D#AC4
+2025-05-20 10:35:08,388 - INFO - Imagem encontrada no cache para PN: 5HB10D#AC4
+2025-05-20 10:35:08,393 - INFO - Processando produto 5/61 - PN: 5HB12A#B1K
+2025-05-20 10:35:08,393 - INFO - Imagem encontrada no cache para PN: 5HB12A#B1K
+2025-05-20 10:35:08,395 - INFO - Processando produto 6/61 - PN: 5HB12C#B1K
+2025-05-20 10:35:08,395 - INFO - Imagem encontrada no cache para PN: 5HB12C#B1K
+2025-05-20 10:35:08,396 - INFO - Processando produto 7/61 - PN: 2Y9H0A#AC4
+2025-05-20 10:35:08,398 - INFO - Imagem encontrada no cache para PN: 2Y9H0A#AC4
+2025-05-20 10:35:08,399 - INFO - Processando produto 8/61 - PN: 2Y9H1A#AC4
+2025-05-20 10:35:08,400 - INFO - Imagem encontrada no cache para PN: 2Y9H1A#AC4
+2025-05-20 10:35:08,401 - INFO - Processando produto 9/61 - PN: 3EK11A#B1K
+2025-05-20 10:35:08,402 - INFO - Imagem encontrada no cache para PN: 3EK11A#B1K
+2025-05-20 10:35:08,404 - INFO - Processando produto 10/61 - PN: W6B55A#B1K
+2025-05-20 10:35:08,405 - INFO - Imagem encontrada no cache para PN: W6B55A#B1K
+2025-05-20 10:35:08,406 - INFO - Processando produto 11/61 - PN: 3EK13A#B1K
+2025-05-20 10:35:08,410 - INFO - Imagem encontrada no cache para PN: 3EK13A#B1K
+2025-05-20 10:35:08,410 - INFO - Processando produto 12/61 - PN: 1VD88A#B1K
+2025-05-20 10:35:08,411 - INFO - Imagem encontrada no cache para PN: 1VD88A#B1K
+2025-05-20 10:35:08,412 - INFO - Processando produto 14/61 - PN: F9A28D#B1K
+2025-05-20 10:35:08,417 - INFO - Imagem encontrada no cache para PN: F9A28D#B1K
+2025-05-20 10:35:08,422 - INFO - Processando produto 15/61 - PN: 2Y9H2A#AC4
+2025-05-20 10:35:08,423 - INFO - Imagem encontrada no cache para PN: 2Y9H2A#AC4
+2025-05-20 10:35:08,425 - INFO - Processando produto 16/61 - PN: 2Y9H3A#AC4
+2025-05-20 10:35:08,426 - INFO - Imagem encontrada no cache para PN: 2Y9H3A#AC4
+2025-05-20 10:35:08,429 - INFO - Processando produto 17/61 - PN: 3XB78A#B1K
+2025-05-20 10:35:08,433 - INFO - Imagem encontrada no cache para PN: 3XB78A#B1K
+2025-05-20 10:35:08,435 - INFO - Processando produto 18/61 - PN: 3EK15A#B1K
+2025-05-20 10:35:08,436 - INFO - Imagem encontrada no cache para PN: 3EK15A#B1K
+2025-05-20 10:35:08,440 - INFO - Processando produto 19/61 - PN: 1GY94E#B1K
+2025-05-20 10:35:08,442 - INFO - Imagem encontrada no cache para PN: 1GY94E#B1K
+2025-05-20 10:35:08,444 - INFO - Processando produto 20/61 - PN: 2QX51E#B1K
+2025-05-20 10:35:08,446 - INFO - Imagem encontrada no cache para PN: 2QX51E#B1K
+2025-05-20 10:35:08,448 - INFO - Processando produto 21/61 - PN: 5EK01A#B1K
+2025-05-20 10:35:08,449 - INFO - Imagem encontrada no cache para PN: 5EK01A#B1K
+2025-05-20 10:35:08,452 - INFO - Processando produto 22/61 - PN: 5EK00A#B1K
+2025-05-20 10:35:08,454 - INFO - Imagem encontrada no cache para PN: 5EK00A#B1K
+2025-05-20 10:35:08,458 - INFO - Processando produto 24/61 - PN: T8W15A#B1K
+2025-05-20 10:35:08,461 - INFO - Imagem encontrada no cache para PN: T8W15A#B1K
+2025-05-20 10:35:08,462 - INFO - Processando produto 25/61 - PN: W3Z71A#B1K
+2025-05-20 10:35:08,465 - INFO - Imagem encontrada no cache para PN: W3Z71A#B1K
+2025-05-20 10:35:08,469 - INFO - Processando produto 26/61 - PN: T8W16A#B1K
+2025-05-20 10:35:08,473 - INFO - Imagem encontrada no cache para PN: T8W16A#B1K
+2025-05-20 10:35:08,478 - INFO - Processando produto 27/61 - PN: T8W18A#B1K
+2025-05-20 10:35:08,478 - INFO - Imagem encontrada no cache para PN: T8W18A#B1K
+2025-05-20 10:35:08,481 - INFO - Processando produto 28/61 - PN: W3Z72A#B1K
+2025-05-20 10:35:08,484 - INFO - Imagem encontrada no cache para PN: W3Z72A#B1K
+2025-05-20 10:35:08,490 - INFO - Processando produto 29/61 - PN: X9D24A#B1K
+2025-05-20 10:35:08,494 - INFO - Imagem encontrada no cache para PN: X9D24A#B1K
+2025-05-20 10:35:08,496 - INFO - Processando produto 30/61 - PN: 2QU12A#B1K
+2025-05-20 10:35:08,498 - INFO - Imagem encontrada no cache para PN: 2QU12A#B1K
+2025-05-20 10:35:08,501 - INFO - Processando produto 31/61 - PN: 2QU25A#B1K
+2025-05-20 10:35:08,502 - INFO - Imagem encontrada no cache para PN: 2QU25A#B1K
+2025-05-20 10:35:08,506 - INFO - Processando produto 32/61 - PN: 2RM82A#B1K
+2025-05-20 10:35:08,507 - INFO - Imagem encontrada no cache para PN: 2RM82A#B1K
+2025-05-20 10:35:08,510 - INFO - Processando produto 34/61 - PN: 2Y9H0A#AC4
+2025-05-20 10:35:08,511 - INFO - Imagem encontrada no cache para PN: 2Y9H0A#AC4
+2025-05-20 10:35:08,512 - INFO - Processando produto 35/61 - PN: 2Y9H2A#AC4
+2025-05-20 10:35:08,513 - INFO - Imagem encontrada no cache para PN: 2Y9H2A#AC4
+2025-05-20 10:35:08,516 - INFO - Processando produto 36/61 - PN: 2Y9H1A#AC4
+2025-05-20 10:35:08,517 - INFO - Imagem encontrada no cache para PN: 2Y9H1A#AC4
+2025-05-20 10:35:08,518 - INFO - Processando produto 37/61 - PN: 2Y9H3A#AC4
+2025-05-20 10:35:08,519 - INFO - Imagem encontrada no cache para PN: 2Y9H3A#AC4
+2025-05-20 10:35:08,521 - INFO - Processando produto 38/61 - PN: 3EK13A#B1K
+2025-05-20 10:35:08,523 - INFO - Imagem encontrada no cache para PN: 3EK13A#B1K
+2025-05-20 10:35:08,526 - INFO - Processando produto 39/61 - PN: 1VD88A#B1K
+2025-05-20 10:35:08,526 - INFO - Imagem encontrada no cache para PN: 1VD88A#B1K
+2025-05-20 10:35:08,529 - INFO - Processando produto 40/61 - PN: 3EK15A#B1K
+2025-05-20 10:35:08,531 - INFO - Imagem encontrada no cache para PN: 3EK15A#B1K
+2025-05-20 10:35:08,532 - INFO - Processando produto 41/61 - PN: T8W16A#B1K
+2025-05-20 10:35:08,533 - INFO - Imagem encontrada no cache para PN: T8W16A#B1K
+2025-05-20 10:35:08,535 - INFO - Processando produto 42/61 - PN: T8W18A#B1K
+2025-05-20 10:35:08,535 - INFO - Imagem encontrada no cache para PN: T8W18A#B1K
+2025-05-20 10:35:08,537 - INFO - Processando produto 43/61 - PN: W3Z72A#B1K
+2025-05-20 10:35:08,539 - INFO - Imagem encontrada no cache para PN: W3Z72A#B1K
+2025-05-20 10:35:08,541 - INFO - Processando produto 44/61 - PN: X9D24A#B1K
+2025-05-20 10:35:08,543 - INFO - Imagem encontrada no cache para PN: X9D24A#B1K
+2025-05-20 10:35:08,549 - INFO - Processando produto 45/61 - PN: 2QU12A#B1K
+2025-05-20 10:35:08,553 - INFO - Imagem encontrada no cache para PN: 2QU12A#B1K
+2025-05-20 10:35:08,561 - INFO - Processando produto 46/61 - PN: 2RM82A#B1K
+2025-05-20 10:35:08,570 - INFO - Imagem encontrada no cache para PN: 2RM82A#B1K
+2025-05-20 10:35:08,577 - INFO - Processando produto 48/61 - PN: 6TX91A
+2025-05-20 10:35:08,579 - INFO - Imagem encontrada no cache para PN: 6TX91A
+2025-05-20 10:35:08,585 - INFO - Processando produto 49/61 - PN: 3C753A
+2025-05-20 10:35:08,590 - INFO - Imagem encontrada no cache para PN: 3C753A
+2025-05-20 10:35:08,593 - INFO - Processando produto 50/61 - PN: 8AJ60A
+2025-05-20 10:35:08,598 - INFO - Imagem encontrada no cache para PN: 8AJ60A
+2025-05-20 10:35:08,600 - INFO - Processando produto 51/61 - PN: 9GF94A
+2025-05-20 10:35:08,601 - INFO - Imagem encontrada no cache para PN: 9GF94A
+2025-05-20 10:35:08,603 - INFO - Processando produto 52/61 - PN: 698G7A
+2025-05-20 10:35:08,604 - INFO - Imagem encontrada no cache para PN: 698G7A
+2025-05-20 10:35:08,607 - INFO - Processando produto 53/61 - PN: 698G8A
+2025-05-20 10:35:08,607 - INFO - Imagem encontrada no cache para PN: 698G8A
+2025-05-20 10:35:08,611 - INFO - Processando produto 54/61 - PN: 7F2C8A
+2025-05-20 10:35:08,612 - INFO - Imagem encontrada no cache para PN: 7F2C8A
+2025-05-20 10:35:08,613 - INFO - Processando produto 55/61 - PN: B3Q36A
+2025-05-20 10:35:08,614 - INFO - Imagem encontrada no cache para PN: B3Q36A
+2025-05-20 10:35:08,617 - INFO - Processando produto 56/61 - PN: B3Q37A
+2025-05-20 10:35:08,617 - INFO - Imagem encontrada no cache para PN: B3Q37A
+2025-05-20 10:35:08,619 - INFO - Processando produto 57/61 - PN: CN538A
+2025-05-20 10:35:08,620 - INFO - Imagem encontrada no cache para PN: CN538A
+2025-05-20 10:35:08,622 - INFO - Processando produto 58/61 - PN: 2QX55A
+2025-05-20 10:35:08,622 - INFO - Imagem encontrada no cache para PN: 2QX55A
+2025-05-20 10:35:08,625 - INFO - Processando produto 59/61 - PN: Q6700A
+2025-05-20 10:35:08,626 - INFO - Imagem encontrada no cache para PN: Q6700A
+2025-05-20 10:35:08,629 - INFO - Processando produto 60/61 - PN: Q6709A
+2025-05-20 10:35:08,630 - INFO - Imagem encontrada no cache para PN: Q6709A
+2025-05-20 10:35:08,632 - INFO - Processando produto 61/61 - PN: 1A4T0A
+2025-05-20 10:35:08,633 - INFO - Imagem encontrada no cache para PN: 1A4T0A
+2025-05-20 10:35:08,636 - INFO - Processando produto 62/61 - PN: 7HC73A
+2025-05-20 10:35:08,637 - INFO - Imagem encontrada no cache para PN: 7HC73A
+2025-05-20 10:35:08,639 - INFO - Processando produto 63/61 - PN: 7HC74A
+2025-05-20 10:35:08,639 - INFO - Imagem encontrada no cache para PN: 7HC74A
+2025-05-20 10:35:08,641 - INFO - Processando produto 64/61 - PN: 7HC75A
+2025-05-20 10:35:08,641 - INFO - Imagem encontrada no cache para PN: 7HC75A
+2025-05-20 10:35:08,643 - INFO - Processando produto 65/61 - PN: 7HC76A
+2025-05-20 10:35:08,644 - INFO - Imagem encontrada no cache para PN: 7HC76A
+2025-05-20 10:35:08,648 - INFO - Processamento concluído:
+2025-05-20 10:35:08,648 - INFO - Total de produtos processados: 61
+2025-05-20 10:35:08,649 - INFO - Produtos com imagem: 61
+2025-05-20 10:35:08,649 - INFO - Produtos sem imagem: 0
+2025-05-20 10:35:08,683 - INFO - 172.24.0.1 - - [20/May/2025 10:35:08] "POST /hp/plotter HTTP/1.0" 200 -
+2025-05-20 10:36:23,450 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/plotter.py', reloading
+2025-05-20 10:36:23,707 - INFO -  * Restarting with stat
+2025-05-20 10:36:26,273 - WARNING -  * Debugger is active!
+2025-05-20 10:36:26,275 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 10:36:46,617 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/plotter.py', reloading
+2025-05-20 10:36:46,870 - INFO -  * Restarting with stat
+2025-05-20 10:36:48,831 - WARNING -  * Debugger is active!
+2025-05-20 10:36:48,832 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 10:37:08,095 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/plotter.py', reloading
+2025-05-20 10:37:08,367 - INFO -  * Restarting with stat
+2025-05-20 10:37:10,522 - WARNING -  * Debugger is active!
+2025-05-20 10:37:10,524 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 10:37:42,964 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/plotter.py', reloading
+2025-05-20 10:37:43,146 - INFO -  * Restarting with stat
+2025-05-20 10:37:44,883 - WARNING -  * Debugger is active!
+2025-05-20 10:37:44,885 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 10:38:44,574 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/plotter.py', reloading
+2025-05-20 10:38:44,753 - INFO -  * Restarting with stat
+2025-05-20 10:38:46,170 - WARNING -  * Debugger is active!
+2025-05-20 10:38:46,171 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 10:38:46,829 - INFO - Iniciando processamento do arquivo: <FileStorage: 'PL 30 - WS VAR - Mai25.xls' ('application/vnd.ms-excel')>
+2025-05-20 10:38:46,868 - INFO - Cache carregado com 48 itens
+2025-05-20 10:38:46,868 - INFO - Processando produto 1/61 - PN: 5HB07D#AC4
+2025-05-20 10:38:46,869 - INFO - Imagem encontrada no cache para PN: 5HB07D#AC4
+2025-05-20 10:38:46,869 - INFO - Processando produto 2/61 - PN: 5HB06D#AC4
+2025-05-20 10:38:46,870 - INFO - Imagem encontrada no cache para PN: 5HB06D#AC4
+2025-05-20 10:38:46,870 - INFO - Processando produto 3/61 - PN: 5HB08D#AC4
+2025-05-20 10:38:46,871 - INFO - Imagem encontrada no cache para PN: 5HB08D#AC4
+2025-05-20 10:38:46,871 - INFO - Processando produto 4/61 - PN: 5HB10D#AC4
+2025-05-20 10:38:46,871 - INFO - Imagem encontrada no cache para PN: 5HB10D#AC4
+2025-05-20 10:38:46,872 - INFO - Processando produto 5/61 - PN: 5HB12A#B1K
+2025-05-20 10:38:46,872 - INFO - Imagem encontrada no cache para PN: 5HB12A#B1K
+2025-05-20 10:38:46,873 - INFO - Processando produto 6/61 - PN: 5HB12C#B1K
+2025-05-20 10:38:46,873 - INFO - Imagem encontrada no cache para PN: 5HB12C#B1K
+2025-05-20 10:38:46,874 - INFO - Processando produto 7/61 - PN: 2Y9H0A#AC4
+2025-05-20 10:38:46,875 - INFO - Imagem encontrada no cache para PN: 2Y9H0A#AC4
+2025-05-20 10:38:46,876 - INFO - Processando produto 8/61 - PN: 2Y9H1A#AC4
+2025-05-20 10:38:46,876 - INFO - Imagem encontrada no cache para PN: 2Y9H1A#AC4
+2025-05-20 10:38:46,878 - INFO - Processando produto 9/61 - PN: 3EK11A#B1K
+2025-05-20 10:38:46,878 - INFO - Imagem encontrada no cache para PN: 3EK11A#B1K
+2025-05-20 10:38:46,879 - INFO - Processando produto 10/61 - PN: W6B55A#B1K
+2025-05-20 10:38:46,880 - INFO - Imagem encontrada no cache para PN: W6B55A#B1K
+2025-05-20 10:38:46,881 - INFO - Processando produto 11/61 - PN: 3EK13A#B1K
+2025-05-20 10:38:46,881 - INFO - Imagem encontrada no cache para PN: 3EK13A#B1K
+2025-05-20 10:38:46,882 - INFO - Processando produto 12/61 - PN: 1VD88A#B1K
+2025-05-20 10:38:46,882 - INFO - Imagem encontrada no cache para PN: 1VD88A#B1K
+2025-05-20 10:38:46,884 - INFO - Processando produto 14/61 - PN: F9A28D#B1K
+2025-05-20 10:38:46,884 - INFO - Imagem encontrada no cache para PN: F9A28D#B1K
+2025-05-20 10:38:46,886 - INFO - Processando produto 15/61 - PN: 2Y9H2A#AC4
+2025-05-20 10:38:46,886 - INFO - Imagem encontrada no cache para PN: 2Y9H2A#AC4
+2025-05-20 10:38:46,887 - INFO - Processando produto 16/61 - PN: 2Y9H3A#AC4
+2025-05-20 10:38:46,887 - INFO - Imagem encontrada no cache para PN: 2Y9H3A#AC4
+2025-05-20 10:38:46,888 - INFO - Processando produto 17/61 - PN: 3XB78A#B1K
+2025-05-20 10:38:46,889 - INFO - Imagem encontrada no cache para PN: 3XB78A#B1K
+2025-05-20 10:38:46,889 - INFO - Processando produto 18/61 - PN: 3EK15A#B1K
+2025-05-20 10:38:46,890 - INFO - Imagem encontrada no cache para PN: 3EK15A#B1K
+2025-05-20 10:38:46,891 - INFO - Processando produto 19/61 - PN: 1GY94E#B1K
+2025-05-20 10:38:46,891 - INFO - Imagem encontrada no cache para PN: 1GY94E#B1K
+2025-05-20 10:38:46,892 - INFO - Processando produto 20/61 - PN: 2QX51E#B1K
+2025-05-20 10:38:46,892 - INFO - Imagem encontrada no cache para PN: 2QX51E#B1K
+2025-05-20 10:38:46,894 - INFO - Processando produto 21/61 - PN: 5EK01A#B1K
+2025-05-20 10:38:46,894 - INFO - Imagem encontrada no cache para PN: 5EK01A#B1K
+2025-05-20 10:38:46,895 - INFO - Processando produto 22/61 - PN: 5EK00A#B1K
+2025-05-20 10:38:46,895 - INFO - Imagem encontrada no cache para PN: 5EK00A#B1K
+2025-05-20 10:38:46,896 - INFO - Processando produto 24/61 - PN: T8W15A#B1K
+2025-05-20 10:38:46,896 - INFO - Imagem encontrada no cache para PN: T8W15A#B1K
+2025-05-20 10:38:46,897 - INFO - Processando produto 25/61 - PN: W3Z71A#B1K
+2025-05-20 10:38:46,898 - INFO - Imagem encontrada no cache para PN: W3Z71A#B1K
+2025-05-20 10:38:46,899 - INFO - Processando produto 26/61 - PN: T8W16A#B1K
+2025-05-20 10:38:46,899 - INFO - Imagem encontrada no cache para PN: T8W16A#B1K
+2025-05-20 10:38:46,900 - INFO - Processando produto 27/61 - PN: T8W18A#B1K
+2025-05-20 10:38:46,901 - INFO - Imagem encontrada no cache para PN: T8W18A#B1K
+2025-05-20 10:38:46,902 - INFO - Processando produto 28/61 - PN: W3Z72A#B1K
+2025-05-20 10:38:46,902 - INFO - Imagem encontrada no cache para PN: W3Z72A#B1K
+2025-05-20 10:38:46,904 - INFO - Processando produto 29/61 - PN: X9D24A#B1K
+2025-05-20 10:38:46,904 - INFO - Imagem encontrada no cache para PN: X9D24A#B1K
+2025-05-20 10:38:46,905 - INFO - Processando produto 30/61 - PN: 2QU12A#B1K
+2025-05-20 10:38:46,905 - INFO - Imagem encontrada no cache para PN: 2QU12A#B1K
+2025-05-20 10:38:46,906 - INFO - Processando produto 31/61 - PN: 2QU25A#B1K
+2025-05-20 10:38:46,906 - INFO - Imagem encontrada no cache para PN: 2QU25A#B1K
+2025-05-20 10:38:46,907 - INFO - Processando produto 32/61 - PN: 2RM82A#B1K
+2025-05-20 10:38:46,907 - INFO - Imagem encontrada no cache para PN: 2RM82A#B1K
+2025-05-20 10:38:46,909 - INFO - Processando produto 34/61 - PN: 2Y9H0A#AC4
+2025-05-20 10:38:46,909 - INFO - Imagem encontrada no cache para PN: 2Y9H0A#AC4
+2025-05-20 10:38:46,910 - INFO - Processando produto 35/61 - PN: 2Y9H2A#AC4
+2025-05-20 10:38:46,910 - INFO - Imagem encontrada no cache para PN: 2Y9H2A#AC4
+2025-05-20 10:38:46,912 - INFO - Processando produto 36/61 - PN: 2Y9H1A#AC4
+2025-05-20 10:38:46,912 - INFO - Imagem encontrada no cache para PN: 2Y9H1A#AC4
+2025-05-20 10:38:46,913 - INFO - Processando produto 37/61 - PN: 2Y9H3A#AC4
+2025-05-20 10:38:46,913 - INFO - Imagem encontrada no cache para PN: 2Y9H3A#AC4
+2025-05-20 10:38:46,914 - INFO - Processando produto 38/61 - PN: 3EK13A#B1K
+2025-05-20 10:38:46,915 - INFO - Imagem encontrada no cache para PN: 3EK13A#B1K
+2025-05-20 10:38:46,916 - INFO - Processando produto 39/61 - PN: 1VD88A#B1K
+2025-05-20 10:38:46,916 - INFO - Imagem encontrada no cache para PN: 1VD88A#B1K
+2025-05-20 10:38:46,918 - INFO - Processando produto 40/61 - PN: 3EK15A#B1K
+2025-05-20 10:38:46,919 - INFO - Imagem encontrada no cache para PN: 3EK15A#B1K
+2025-05-20 10:38:46,920 - INFO - Processando produto 41/61 - PN: T8W16A#B1K
+2025-05-20 10:38:46,921 - INFO - Imagem encontrada no cache para PN: T8W16A#B1K
+2025-05-20 10:38:46,922 - INFO - Processando produto 42/61 - PN: T8W18A#B1K
+2025-05-20 10:38:46,923 - INFO - Imagem encontrada no cache para PN: T8W18A#B1K
+2025-05-20 10:38:46,924 - INFO - Processando produto 43/61 - PN: W3Z72A#B1K
+2025-05-20 10:38:46,924 - INFO - Imagem encontrada no cache para PN: W3Z72A#B1K
+2025-05-20 10:38:46,925 - INFO - Processando produto 44/61 - PN: X9D24A#B1K
+2025-05-20 10:38:46,925 - INFO - Imagem encontrada no cache para PN: X9D24A#B1K
+2025-05-20 10:38:46,926 - INFO - Processando produto 45/61 - PN: 2QU12A#B1K
+2025-05-20 10:38:46,926 - INFO - Imagem encontrada no cache para PN: 2QU12A#B1K
+2025-05-20 10:38:46,927 - INFO - Processando produto 46/61 - PN: 2RM82A#B1K
+2025-05-20 10:38:46,928 - INFO - Imagem encontrada no cache para PN: 2RM82A#B1K
+2025-05-20 10:38:46,929 - INFO - Processando produto 48/61 - PN: 6TX91A
+2025-05-20 10:38:46,929 - INFO - Imagem encontrada no cache para PN: 6TX91A
+2025-05-20 10:38:46,930 - INFO - Processando produto 49/61 - PN: 3C753A
+2025-05-20 10:38:46,931 - INFO - Imagem encontrada no cache para PN: 3C753A
+2025-05-20 10:38:46,932 - INFO - Processando produto 50/61 - PN: 8AJ60A
+2025-05-20 10:38:46,933 - INFO - Imagem encontrada no cache para PN: 8AJ60A
+2025-05-20 10:38:46,934 - INFO - Processando produto 51/61 - PN: 9GF94A
+2025-05-20 10:38:46,935 - INFO - Imagem encontrada no cache para PN: 9GF94A
+2025-05-20 10:38:46,936 - INFO - Processando produto 52/61 - PN: 698G7A
+2025-05-20 10:38:46,936 - INFO - Imagem encontrada no cache para PN: 698G7A
+2025-05-20 10:38:46,937 - INFO - Processando produto 53/61 - PN: 698G8A
+2025-05-20 10:38:46,939 - INFO - Imagem encontrada no cache para PN: 698G8A
+2025-05-20 10:38:46,940 - INFO - Processando produto 54/61 - PN: 7F2C8A
+2025-05-20 10:38:46,942 - INFO - Imagem encontrada no cache para PN: 7F2C8A
+2025-05-20 10:38:46,943 - INFO - Processando produto 55/61 - PN: B3Q36A
+2025-05-20 10:38:46,944 - INFO - Imagem encontrada no cache para PN: B3Q36A
+2025-05-20 10:38:46,945 - INFO - Processando produto 56/61 - PN: B3Q37A
+2025-05-20 10:38:46,946 - INFO - Imagem encontrada no cache para PN: B3Q37A
+2025-05-20 10:38:46,948 - INFO - Processando produto 57/61 - PN: CN538A
+2025-05-20 10:38:46,950 - INFO - Imagem encontrada no cache para PN: CN538A
+2025-05-20 10:38:46,953 - INFO - Processando produto 58/61 - PN: 2QX55A
+2025-05-20 10:38:46,953 - INFO - Imagem encontrada no cache para PN: 2QX55A
+2025-05-20 10:38:46,955 - INFO - Processando produto 59/61 - PN: Q6700A
+2025-05-20 10:38:46,957 - INFO - Imagem encontrada no cache para PN: Q6700A
+2025-05-20 10:38:46,958 - INFO - Processando produto 60/61 - PN: Q6709A
+2025-05-20 10:38:46,959 - INFO - Imagem encontrada no cache para PN: Q6709A
+2025-05-20 10:38:46,959 - INFO - Processando produto 61/61 - PN: 1A4T0A
+2025-05-20 10:38:46,960 - INFO - Imagem encontrada no cache para PN: 1A4T0A
+2025-05-20 10:38:46,961 - INFO - Processando produto 62/61 - PN: 7HC73A
+2025-05-20 10:38:46,961 - INFO - Imagem encontrada no cache para PN: 7HC73A
+2025-05-20 10:38:46,963 - INFO - Processando produto 63/61 - PN: 7HC74A
+2025-05-20 10:38:46,968 - INFO - Imagem encontrada no cache para PN: 7HC74A
+2025-05-20 10:38:46,969 - INFO - Processando produto 64/61 - PN: 7HC75A
+2025-05-20 10:38:46,970 - INFO - Imagem encontrada no cache para PN: 7HC75A
+2025-05-20 10:38:46,971 - INFO - Processando produto 65/61 - PN: 7HC76A
+2025-05-20 10:38:46,971 - INFO - Imagem encontrada no cache para PN: 7HC76A
+2025-05-20 10:38:46,972 - INFO - Processamento concluído:
+2025-05-20 10:38:46,973 - INFO - Total de produtos processados: 61
+2025-05-20 10:38:46,973 - INFO - Produtos com imagem: 61
+2025-05-20 10:38:46,974 - INFO - Produtos sem imagem: 0
+2025-05-20 10:38:46,993 - INFO - 172.24.0.1 - - [20/May/2025 10:38:46] "POST /hp/plotter HTTP/1.0" 200 -
+2025-05-20 10:39:17,550 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-05-20 10:39:17,824 - INFO -  * Restarting with stat
+2025-05-20 10:39:19,312 - WARNING -  * Debugger is active!
+2025-05-20 10:39:19,313 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 10:39:19,352 - INFO - Iniciando processamento do arquivo: <FileStorage: 'PL 30 - WS VAR - Mai25.xls' ('application/vnd.ms-excel')>
+2025-05-20 10:39:19,392 - INFO - Cache carregado com 48 itens
+2025-05-20 10:39:19,393 - INFO - Processando produto 1/61 - PN: 5HB07D#AC4
+2025-05-20 10:39:19,393 - INFO - Imagem encontrada no cache para PN: 5HB07D#AC4
+2025-05-20 10:39:19,394 - INFO - Processando produto 2/61 - PN: 5HB06D#AC4
+2025-05-20 10:39:19,394 - INFO - Imagem encontrada no cache para PN: 5HB06D#AC4
+2025-05-20 10:39:19,395 - INFO - Processando produto 3/61 - PN: 5HB08D#AC4
+2025-05-20 10:39:19,395 - INFO - Imagem encontrada no cache para PN: 5HB08D#AC4
+2025-05-20 10:39:19,396 - INFO - Processando produto 4/61 - PN: 5HB10D#AC4
+2025-05-20 10:39:19,396 - INFO - Imagem encontrada no cache para PN: 5HB10D#AC4
+2025-05-20 10:39:19,398 - INFO - Processando produto 5/61 - PN: 5HB12A#B1K
+2025-05-20 10:39:19,398 - INFO - Imagem encontrada no cache para PN: 5HB12A#B1K
+2025-05-20 10:39:19,399 - INFO - Processando produto 6/61 - PN: 5HB12C#B1K
+2025-05-20 10:39:19,399 - INFO - Imagem encontrada no cache para PN: 5HB12C#B1K
+2025-05-20 10:39:19,401 - INFO - Processando produto 7/61 - PN: 2Y9H0A#AC4
+2025-05-20 10:39:19,401 - INFO - Imagem encontrada no cache para PN: 2Y9H0A#AC4
+2025-05-20 10:39:19,402 - INFO - Processando produto 8/61 - PN: 2Y9H1A#AC4
+2025-05-20 10:39:19,402 - INFO - Imagem encontrada no cache para PN: 2Y9H1A#AC4
+2025-05-20 10:39:19,403 - INFO - Processando produto 9/61 - PN: 3EK11A#B1K
+2025-05-20 10:39:19,403 - INFO - Imagem encontrada no cache para PN: 3EK11A#B1K
+2025-05-20 10:39:19,404 - INFO - Processando produto 10/61 - PN: W6B55A#B1K
+2025-05-20 10:39:19,404 - INFO - Imagem encontrada no cache para PN: W6B55A#B1K
+2025-05-20 10:39:19,405 - INFO - Processando produto 11/61 - PN: 3EK13A#B1K
+2025-05-20 10:39:19,405 - INFO - Imagem encontrada no cache para PN: 3EK13A#B1K
+2025-05-20 10:39:19,406 - INFO - Processando produto 12/61 - PN: 1VD88A#B1K
+2025-05-20 10:39:19,407 - INFO - Imagem encontrada no cache para PN: 1VD88A#B1K
+2025-05-20 10:39:19,408 - INFO - Processando produto 14/61 - PN: F9A28D#B1K
+2025-05-20 10:39:19,408 - INFO - Imagem encontrada no cache para PN: F9A28D#B1K
+2025-05-20 10:39:19,409 - INFO - Processando produto 15/61 - PN: 2Y9H2A#AC4
+2025-05-20 10:39:19,409 - INFO - Imagem encontrada no cache para PN: 2Y9H2A#AC4
+2025-05-20 10:39:19,410 - INFO - Processando produto 16/61 - PN: 2Y9H3A#AC4
+2025-05-20 10:39:19,410 - INFO - Imagem encontrada no cache para PN: 2Y9H3A#AC4
+2025-05-20 10:39:19,412 - INFO - Processando produto 17/61 - PN: 3XB78A#B1K
+2025-05-20 10:39:19,412 - INFO - Imagem encontrada no cache para PN: 3XB78A#B1K
+2025-05-20 10:39:19,413 - INFO - Processando produto 18/61 - PN: 3EK15A#B1K
+2025-05-20 10:39:19,414 - INFO - Imagem encontrada no cache para PN: 3EK15A#B1K
+2025-05-20 10:39:19,416 - INFO - Processando produto 19/61 - PN: 1GY94E#B1K
+2025-05-20 10:39:19,417 - INFO - Imagem encontrada no cache para PN: 1GY94E#B1K
+2025-05-20 10:39:19,418 - INFO - Processando produto 20/61 - PN: 2QX51E#B1K
+2025-05-20 10:39:19,418 - INFO - Imagem encontrada no cache para PN: 2QX51E#B1K
+2025-05-20 10:39:19,419 - INFO - Processando produto 21/61 - PN: 5EK01A#B1K
+2025-05-20 10:39:19,420 - INFO - Imagem encontrada no cache para PN: 5EK01A#B1K
+2025-05-20 10:39:19,421 - INFO - Processando produto 22/61 - PN: 5EK00A#B1K
+2025-05-20 10:39:19,421 - INFO - Imagem encontrada no cache para PN: 5EK00A#B1K
+2025-05-20 10:39:19,422 - INFO - Processando produto 24/61 - PN: T8W15A#B1K
+2025-05-20 10:39:19,422 - INFO - Imagem encontrada no cache para PN: T8W15A#B1K
+2025-05-20 10:39:19,423 - INFO - Processando produto 25/61 - PN: W3Z71A#B1K
+2025-05-20 10:39:19,423 - INFO - Imagem encontrada no cache para PN: W3Z71A#B1K
+2025-05-20 10:39:19,424 - INFO - Processando produto 26/61 - PN: T8W16A#B1K
+2025-05-20 10:39:19,424 - INFO - Imagem encontrada no cache para PN: T8W16A#B1K
+2025-05-20 10:39:19,425 - INFO - Processando produto 27/61 - PN: T8W18A#B1K
+2025-05-20 10:39:19,425 - INFO - Imagem encontrada no cache para PN: T8W18A#B1K
+2025-05-20 10:39:19,426 - INFO - Processando produto 28/61 - PN: W3Z72A#B1K
+2025-05-20 10:39:19,427 - INFO - Imagem encontrada no cache para PN: W3Z72A#B1K
+2025-05-20 10:39:19,428 - INFO - Processando produto 29/61 - PN: X9D24A#B1K
+2025-05-20 10:39:19,428 - INFO - Imagem encontrada no cache para PN: X9D24A#B1K
+2025-05-20 10:39:19,429 - INFO - Processando produto 30/61 - PN: 2QU12A#B1K
+2025-05-20 10:39:19,429 - INFO - Imagem encontrada no cache para PN: 2QU12A#B1K
+2025-05-20 10:39:19,430 - INFO - Processando produto 31/61 - PN: 2QU25A#B1K
+2025-05-20 10:39:19,430 - INFO - Imagem encontrada no cache para PN: 2QU25A#B1K
+2025-05-20 10:39:19,431 - INFO - Processando produto 32/61 - PN: 2RM82A#B1K
+2025-05-20 10:39:19,431 - INFO - Imagem encontrada no cache para PN: 2RM82A#B1K
+2025-05-20 10:39:19,433 - INFO - Processando produto 34/61 - PN: 2Y9H0A#AC4
+2025-05-20 10:39:19,433 - INFO - Imagem encontrada no cache para PN: 2Y9H0A#AC4
+2025-05-20 10:39:19,434 - INFO - Processando produto 35/61 - PN: 2Y9H2A#AC4
+2025-05-20 10:39:19,434 - INFO - Imagem encontrada no cache para PN: 2Y9H2A#AC4
+2025-05-20 10:39:19,435 - INFO - Processando produto 36/61 - PN: 2Y9H1A#AC4
+2025-05-20 10:39:19,435 - INFO - Imagem encontrada no cache para PN: 2Y9H1A#AC4
+2025-05-20 10:39:19,436 - INFO - Processando produto 37/61 - PN: 2Y9H3A#AC4
+2025-05-20 10:39:19,436 - INFO - Imagem encontrada no cache para PN: 2Y9H3A#AC4
+2025-05-20 10:39:19,437 - INFO - Processando produto 38/61 - PN: 3EK13A#B1K
+2025-05-20 10:39:19,437 - INFO - Imagem encontrada no cache para PN: 3EK13A#B1K
+2025-05-20 10:39:19,438 - INFO - Processando produto 39/61 - PN: 1VD88A#B1K
+2025-05-20 10:39:19,438 - INFO - Imagem encontrada no cache para PN: 1VD88A#B1K
+2025-05-20 10:39:19,439 - INFO - Processando produto 40/61 - PN: 3EK15A#B1K
+2025-05-20 10:39:19,440 - INFO - Imagem encontrada no cache para PN: 3EK15A#B1K
+2025-05-20 10:39:19,440 - INFO - Processando produto 41/61 - PN: T8W16A#B1K
+2025-05-20 10:39:19,441 - INFO - Imagem encontrada no cache para PN: T8W16A#B1K
+2025-05-20 10:39:19,441 - INFO - Processando produto 42/61 - PN: T8W18A#B1K
+2025-05-20 10:39:19,442 - INFO - Imagem encontrada no cache para PN: T8W18A#B1K
+2025-05-20 10:39:19,443 - INFO - Processando produto 43/61 - PN: W3Z72A#B1K
+2025-05-20 10:39:19,443 - INFO - Imagem encontrada no cache para PN: W3Z72A#B1K
+2025-05-20 10:39:19,444 - INFO - Processando produto 44/61 - PN: X9D24A#B1K
+2025-05-20 10:39:19,444 - INFO - Imagem encontrada no cache para PN: X9D24A#B1K
+2025-05-20 10:39:19,445 - INFO - Processando produto 45/61 - PN: 2QU12A#B1K
+2025-05-20 10:39:19,445 - INFO - Imagem encontrada no cache para PN: 2QU12A#B1K
+2025-05-20 10:39:19,446 - INFO - Processando produto 46/61 - PN: 2RM82A#B1K
+2025-05-20 10:39:19,447 - INFO - Imagem encontrada no cache para PN: 2RM82A#B1K
+2025-05-20 10:39:19,448 - INFO - Processando produto 48/61 - PN: 6TX91A
+2025-05-20 10:39:19,448 - INFO - Imagem encontrada no cache para PN: 6TX91A
+2025-05-20 10:39:19,449 - INFO - Processando produto 49/61 - PN: 3C753A
+2025-05-20 10:39:19,450 - INFO - Imagem encontrada no cache para PN: 3C753A
+2025-05-20 10:39:19,451 - INFO - Processando produto 50/61 - PN: 8AJ60A
+2025-05-20 10:39:19,452 - INFO - Imagem encontrada no cache para PN: 8AJ60A
+2025-05-20 10:39:19,453 - INFO - Processando produto 51/61 - PN: 9GF94A
+2025-05-20 10:39:19,453 - INFO - Imagem encontrada no cache para PN: 9GF94A
+2025-05-20 10:39:19,454 - INFO - Processando produto 52/61 - PN: 698G7A
+2025-05-20 10:39:19,454 - INFO - Imagem encontrada no cache para PN: 698G7A
+2025-05-20 10:39:19,455 - INFO - Processando produto 53/61 - PN: 698G8A
+2025-05-20 10:39:19,455 - INFO - Imagem encontrada no cache para PN: 698G8A
+2025-05-20 10:39:19,456 - INFO - Processando produto 54/61 - PN: 7F2C8A
+2025-05-20 10:39:19,456 - INFO - Imagem encontrada no cache para PN: 7F2C8A
+2025-05-20 10:39:19,457 - INFO - Processando produto 55/61 - PN: B3Q36A
+2025-05-20 10:39:19,457 - INFO - Imagem encontrada no cache para PN: B3Q36A
+2025-05-20 10:39:19,458 - INFO - Processando produto 56/61 - PN: B3Q37A
+2025-05-20 10:39:19,458 - INFO - Imagem encontrada no cache para PN: B3Q37A
+2025-05-20 10:39:19,462 - INFO - Processando produto 57/61 - PN: CN538A
+2025-05-20 10:39:19,462 - INFO - Imagem encontrada no cache para PN: CN538A
+2025-05-20 10:39:19,463 - INFO - Processando produto 58/61 - PN: 2QX55A
+2025-05-20 10:39:19,463 - INFO - Imagem encontrada no cache para PN: 2QX55A
+2025-05-20 10:39:19,464 - INFO - Processando produto 59/61 - PN: Q6700A
+2025-05-20 10:39:19,466 - INFO - Imagem encontrada no cache para PN: Q6700A
+2025-05-20 10:39:19,467 - INFO - Processando produto 60/61 - PN: Q6709A
+2025-05-20 10:39:19,467 - INFO - Imagem encontrada no cache para PN: Q6709A
+2025-05-20 10:39:19,470 - INFO - Processando produto 61/61 - PN: 1A4T0A
+2025-05-20 10:39:19,470 - INFO - Imagem encontrada no cache para PN: 1A4T0A
+2025-05-20 10:39:19,471 - INFO - Processando produto 62/61 - PN: 7HC73A
+2025-05-20 10:39:19,473 - INFO - Imagem encontrada no cache para PN: 7HC73A
+2025-05-20 10:39:19,474 - INFO - Processando produto 63/61 - PN: 7HC74A
+2025-05-20 10:39:19,474 - INFO - Imagem encontrada no cache para PN: 7HC74A
+2025-05-20 10:39:19,475 - INFO - Processando produto 64/61 - PN: 7HC75A
+2025-05-20 10:39:19,475 - INFO - Imagem encontrada no cache para PN: 7HC75A
+2025-05-20 10:39:19,476 - INFO - Processando produto 65/61 - PN: 7HC76A
+2025-05-20 10:39:19,477 - INFO - Imagem encontrada no cache para PN: 7HC76A
+2025-05-20 10:39:19,477 - INFO - Processamento concluído:
+2025-05-20 10:39:19,478 - INFO - Total de produtos processados: 61
+2025-05-20 10:39:19,478 - INFO - Produtos com imagem: 61
+2025-05-20 10:39:19,478 - INFO - Produtos sem imagem: 0
+2025-05-20 10:40:09,264 - INFO - 172.24.0.1 - - [20/May/2025 10:40:09] "POST /hp/plotter HTTP/1.0" 200 -
+2025-05-20 11:00:13,095 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-05-20 11:00:13,334 - INFO -  * Restarting with stat
+2025-05-20 11:00:14,795 - WARNING -  * Debugger is active!
+2025-05-20 11:00:14,796 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 11:00:42,105 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-05-20 11:00:42,366 - INFO -  * Restarting with stat
+2025-05-20 11:00:44,151 - WARNING -  * Debugger is active!
+2025-05-20 11:00:44,152 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 11:02:18,253 - INFO - 172.24.0.1 - - [20/May/2025 11:02:18] "GET / HTTP/1.0" 200 -
+2025-05-20 11:02:18,439 - INFO - 172.24.0.1 - - [20/May/2025 11:02:18] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-05-20 11:02:18,448 - INFO - 172.24.0.1 - - [20/May/2025 11:02:18] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-05-20 11:02:18,457 - INFO - 172.24.0.1 - - [20/May/2025 11:02:18] "GET /static/cisco.png HTTP/1.0" 200 -
+2025-05-20 11:02:18,471 - INFO - 172.24.0.1 - - [20/May/2025 11:02:18] "GET /static/lenovo.png HTTP/1.0" 200 -
+2025-05-20 11:02:18,475 - INFO - 172.24.0.1 - - [20/May/2025 11:02:18] "GET /static/hub2b.png HTTP/1.0" 200 -
+2025-05-20 11:02:19,292 - INFO - 172.24.0.1 - - [20/May/2025 11:02:19] "GET /lenovo HTTP/1.0" 200 -
+2025-05-20 11:02:19,651 - INFO - 172.24.0.1 - - [20/May/2025 11:02:19] "[36mGET /static/lenovo.png HTTP/1.0[0m" 304 -
+2025-05-20 11:11:13,781 - INFO - 172.24.0.1 - - [20/May/2025 11:11:13] "POST /lenovo HTTP/1.0" 200 -
+2025-05-20 11:37:06,482 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-05-20 11:37:07,007 - INFO -  * Restarting with stat
+2025-05-20 11:37:56,752 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.3:5000
+2025-05-20 11:37:56,753 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-20 11:37:56,756 - INFO -  * Restarting with stat
+2025-05-20 11:37:58,453 - WARNING -  * Debugger is active!
+2025-05-20 11:37:58,455 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 11:38:41,027 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-05-20 11:38:41,295 - INFO -  * Restarting with stat
+2025-05-20 11:38:42,767 - WARNING -  * Debugger is active!
+2025-05-20 11:38:42,768 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 11:38:55,939 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/carepack.py', reloading
+2025-05-20 11:38:56,130 - INFO -  * Restarting with stat
+2025-05-20 11:38:57,659 - WARNING -  * Debugger is active!
+2025-05-20 11:38:57,662 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 11:39:45,211 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/carepack.py', reloading
+2025-05-20 11:39:45,386 - INFO -  * Restarting with stat
+2025-05-20 11:39:47,050 - WARNING -  * Debugger is active!
+2025-05-20 11:39:47,052 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 11:40:52,769 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/carepack.py', reloading
+2025-05-20 11:40:53,125 - INFO -  * Restarting with stat
+2025-05-20 12:21:23,954 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.3:5000
+2025-05-20 12:21:23,955 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-20 12:21:23,957 - INFO -  * Restarting with stat
+2025-05-20 12:21:25,657 - WARNING -  * Debugger is active!
+2025-05-20 12:21:25,659 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 12:21:36,001 - INFO - 172.24.0.1 - - [20/May/2025 12:21:36] "GET / HTTP/1.0" 200 -
+2025-05-20 12:21:36,133 - INFO - 172.24.0.1 - - [20/May/2025 12:21:36] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-05-20 12:21:36,153 - INFO - 172.24.0.1 - - [20/May/2025 12:21:36] "[36mGET /static/cisco.png HTTP/1.0[0m" 304 -
+2025-05-20 12:21:36,156 - INFO - 172.24.0.1 - - [20/May/2025 12:21:36] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-05-20 12:21:36,163 - INFO - 172.24.0.1 - - [20/May/2025 12:21:36] "[36mGET /static/hub2b.png HTTP/1.0[0m" 304 -
+2025-05-20 12:21:36,169 - INFO - 172.24.0.1 - - [20/May/2025 12:21:36] "[36mGET /static/lenovo.png HTTP/1.0[0m" 304 -
+2025-05-20 12:21:41,328 - INFO - 172.24.0.1 - - [20/May/2025 12:21:41] "GET /hp HTTP/1.0" 200 -
+2025-05-20 12:21:41,476 - INFO - 172.24.0.1 - - [20/May/2025 12:21:41] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-05-20 12:22:03,250 - INFO - 172.24.0.1 - - [20/May/2025 12:22:03] "POST /hp/carepack HTTP/1.0" 200 -
+2025-05-20 12:23:45,277 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/carepack.py', reloading
+2025-05-20 12:23:45,512 - INFO -  * Restarting with stat
+2025-05-20 12:23:47,279 - WARNING -  * Debugger is active!
+2025-05-20 12:23:47,281 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 12:23:49,486 - INFO - 172.24.0.1 - - [20/May/2025 12:23:49] "POST /hp/carepack HTTP/1.0" 200 -
+2025-05-20 12:24:05,572 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/carepack.py', reloading
+2025-05-20 12:24:05,774 - INFO -  * Restarting with stat
+2025-05-20 12:24:07,356 - WARNING -  * Debugger is active!
+2025-05-20 12:24:07,357 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 12:24:12,687 - INFO - 172.24.0.1 - - [20/May/2025 12:24:12] "POST /hp/carepack HTTP/1.0" 200 -
+2025-05-20 12:24:21,544 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/carepack.py', reloading
+2025-05-20 12:24:21,820 - INFO -  * Restarting with stat
+2025-05-20 12:24:23,661 - WARNING -  * Debugger is active!
+2025-05-20 12:24:23,663 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 12:24:23,823 - INFO - 172.24.0.1 - - [20/May/2025 12:24:23] "POST /hp/carepack HTTP/1.0" 200 -
+2025-05-20 12:25:26,344 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/carepack.py', reloading
+2025-05-20 12:25:26,626 - INFO -  * Restarting with stat
+2025-05-20 12:25:28,219 - WARNING -  * Debugger is active!
+2025-05-20 12:25:28,221 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 12:26:09,180 - INFO - 172.24.0.1 - - [20/May/2025 12:26:09] "POST /hp/carepack HTTP/1.0" 200 -
+2025-05-20 12:47:25,557 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/carepack.py', reloading
+2025-05-20 12:47:25,869 - INFO -  * Restarting with stat
+2025-05-20 12:47:27,896 - WARNING -  * Debugger is active!
+2025-05-20 12:47:27,898 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 12:58:09,069 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/plotter.py', reloading
+2025-05-20 12:58:09,310 - INFO -  * Restarting with stat
+2025-05-20 12:58:10,856 - WARNING -  * Debugger is active!
+2025-05-20 12:58:10,858 - INFO -  * Debugger PIN: 272-207-539
+2025-05-20 13:40:45,241 - INFO - 172.24.0.1 - - [20/May/2025 13:40:45] "GET / HTTP/1.0" 200 -
+2025-05-20 13:40:45,351 - INFO - 172.24.0.1 - - [20/May/2025 13:40:45] "GET /static/lenovo.png HTTP/1.0" 200 -
+2025-05-20 13:40:45,364 - INFO - 172.24.0.1 - - [20/May/2025 13:40:45] "GET /static/hp.png HTTP/1.0" 200 -
+2025-05-20 13:40:45,376 - INFO - 172.24.0.1 - - [20/May/2025 13:40:45] "GET /static/hub2b.png HTTP/1.0" 200 -
+2025-05-20 13:40:45,387 - INFO - 172.24.0.1 - - [20/May/2025 13:40:45] "GET /static/cisco.png HTTP/1.0" 200 -
+2025-05-20 13:40:45,393 - INFO - 172.24.0.1 - - [20/May/2025 13:40:45] "GET /static/logo_mw.png HTTP/1.0" 200 -
+2025-05-20 13:40:45,711 - INFO - 172.24.0.1 - - [20/May/2025 13:40:45] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+2025-05-20 13:40:47,282 - INFO - 172.24.0.1 - - [20/May/2025 13:40:47] "GET /hub2b HTTP/1.0" 200 -
+2025-05-20 13:40:47,304 - INFO - 172.24.0.1 - - [20/May/2025 13:40:47] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-05-20 13:40:47,387 - INFO - 172.24.0.1 - - [20/May/2025 13:40:47] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-05-20 13:42:25,270 - INFO - 172.24.0.1 - - [20/May/2025 13:42:25] "POST /hub2b/gerar-planilha HTTP/1.0" 200 -
+2025-05-20 13:45:17,229 - INFO - 172.24.0.1 - - [20/May/2025 13:45:17] "GET /lenovo HTTP/1.0" 200 -
+2025-05-20 13:45:17,361 - INFO - 172.24.0.1 - - [20/May/2025 13:45:17] "[36mGET /static/lenovo.png HTTP/1.0[0m" 304 -
+2025-05-20 13:45:19,807 - INFO - 172.24.0.1 - - [20/May/2025 13:45:19] "GET /hub2b HTTP/1.0" 200 -
+2025-05-20 13:45:19,941 - INFO - 172.24.0.1 - - [20/May/2025 13:45:19] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-05-20 13:45:20,167 - INFO - 172.24.0.1 - - [20/May/2025 13:45:20] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-05-20 13:45:43,454 - INFO - 172.24.0.1 - - [20/May/2025 13:45:43] "POST /hub2b/gerar-planilha HTTP/1.0" 200 -
+2025-05-21 17:14:55,992 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/carepack.py', reloading
+2025-05-21 17:14:56,331 - INFO -  * Restarting with stat
+2025-05-21 17:14:58,348 - WARNING -  * Debugger is active!
+2025-05-21 17:14:58,429 - INFO -  * Debugger PIN: 272-207-539
+2025-05-21 17:17:06,423 - INFO - 172.24.0.1 - - [21/May/2025 17:17:06] "GET / HTTP/1.0" 200 -
+2025-05-21 17:17:06,573 - INFO - 172.24.0.1 - - [21/May/2025 17:17:06] "GET /static/logo_mw.png HTTP/1.0" 200 -
+2025-05-21 17:17:06,589 - INFO - 172.24.0.1 - - [21/May/2025 17:17:06] "GET /static/cisco.png HTTP/1.0" 200 -
+2025-05-21 17:17:06,591 - INFO - 172.24.0.1 - - [21/May/2025 17:17:06] "GET /static/lenovo.png HTTP/1.0" 200 -
+2025-05-21 17:17:06,592 - INFO - 172.24.0.1 - - [21/May/2025 17:17:06] "GET /static/hp.png HTTP/1.0" 200 -
+2025-05-21 17:17:06,604 - INFO - 172.24.0.1 - - [21/May/2025 17:17:06] "GET /static/hub2b.png HTTP/1.0" 200 -
+2025-05-21 17:17:06,732 - INFO - 172.24.0.1 - - [21/May/2025 17:17:06] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+2025-05-21 17:17:08,707 - INFO - 172.24.0.1 - - [21/May/2025 17:17:08] "GET /hp HTTP/1.0" 200 -
+2025-05-21 17:17:08,803 - INFO - 172.24.0.1 - - [21/May/2025 17:17:08] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-05-21 17:17:51,301 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-05-21 17:18:12,737 - INFO -  * Restarting with stat
+2025-05-21 17:18:14,343 - WARNING -  * Debugger is active!
+2025-05-21 17:18:14,345 - INFO -  * Debugger PIN: 272-207-539
+2025-05-21 17:18:36,640 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-05-21 17:18:36,836 - INFO -  * Restarting with stat
+2025-05-21 17:18:38,837 - WARNING -  * Debugger is active!
+2025-05-21 17:18:38,840 - INFO -  * Debugger PIN: 272-207-539
+2025-05-21 17:18:38,910 - INFO - 172.24.0.1 - - [21/May/2025 17:18:38] "GET /hp HTTP/1.0" 200 -
+2025-05-21 17:18:39,069 - INFO - 172.24.0.1 - - [21/May/2025 17:18:39] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-05-21 17:19:02,097 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/carepack.py', reloading
+2025-05-21 17:19:56,759 - INFO -  * Restarting with stat
+2025-05-21 17:19:58,475 - WARNING -  * Debugger is active!
+2025-05-21 17:19:58,476 - INFO -  * Debugger PIN: 272-207-539
+2025-05-21 17:19:58,526 - INFO - 172.24.0.1 - - [21/May/2025 17:19:58] "GET /hp HTTP/1.0" 200 -
+2025-05-21 17:19:58,533 - INFO - 172.24.0.1 - - [21/May/2025 17:19:58] "GET /hp HTTP/1.0" 200 -
+2025-05-21 17:19:58,883 - INFO - 172.24.0.1 - - [21/May/2025 17:19:58] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-05-21 17:20:25,453 - INFO - 172.24.0.1 - - [21/May/2025 17:20:25] "GET /hp HTTP/1.0" 200 -
+2025-05-21 17:20:25,584 - INFO - 172.24.0.1 - - [21/May/2025 17:20:25] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-05-21 17:20:55,358 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.3:5000
+2025-05-21 17:20:55,358 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 17:20:55,361 - INFO -  * Restarting with stat
+2025-05-21 17:20:56,862 - WARNING -  * Debugger is active!
+2025-05-21 17:20:56,863 - INFO -  * Debugger PIN: 272-207-539
+2025-05-21 17:21:08,503 - INFO - 172.24.0.1 - - [21/May/2025 17:21:08] "GET /hp HTTP/1.0" 200 -
+2025-05-21 17:21:08,627 - INFO - 172.24.0.1 - - [21/May/2025 17:21:08] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-05-21 17:21:22,213 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-05-21 17:21:22,466 - INFO -  * Restarting with stat
+2025-05-21 17:21:24,511 - WARNING -  * Debugger is active!
+2025-05-21 17:21:24,512 - INFO -  * Debugger PIN: 272-207-539
+2025-05-21 17:22:13,113 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-05-21 17:22:13,420 - INFO -  * Restarting with stat
+2025-05-21 17:22:15,220 - WARNING -  * Debugger is active!
+2025-05-21 17:22:15,222 - INFO -  * Debugger PIN: 272-207-539
+2025-05-21 17:22:21,288 - INFO - 172.24.0.1 - - [21/May/2025 17:22:21] "GET /hp HTTP/1.0" 200 -
+2025-05-21 17:22:21,445 - INFO - 172.24.0.1 - - [21/May/2025 17:22:21] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
