@@ -92,8 +92,10 @@ async def buscar_produtos(marca, consumer_key, consumer_secret):
     
     if marca == 'Lenovo':
         url_base = "https://ecommerce.microware.com.br/lenovo/wp-json/wc/v3/products"
+        categoria_ignorar = 33
     elif marca == 'HP':
         url_base = "https://ecommerce.microware.com.br/hp/wp-json/wc/v3/products"
+        categoria_ignorar = 32
     
     async with aiohttp.ClientSession() as session:
         page = 1
@@ -107,8 +109,14 @@ async def buscar_produtos(marca, consumer_key, consumer_secret):
                 
                 if not produtos:
                     break
+                
+                # Filtra os produtos que não pertencem à categoria que deve ser ignorada
+                produtos_filtrados = [
+                    produto for produto in produtos 
+                    if not any(cat['id'] == categoria_ignorar for cat in produto.get('categories', []))
+                ]
                     
-                todos_produtos.extend(produtos)
+                todos_produtos.extend(produtos_filtrados)
                 page += 1
 
     # Salvar Json
@@ -370,6 +378,7 @@ def gerar_panilha_hub2b(products, MANUFACTURE):
         produto_dict = {
             "Nome Produto": limpar_texto(product["name"]),
             "Descrição": limpar_texto(product["description"]),
+            "Descrição Personalizada": limpar_texto(product["description"]),
             "URL do produto": product["permalink"],
             "SKU": product["sku"],
             "EAN ou ISBN (13 digitos)": "",
@@ -382,7 +391,7 @@ def gerar_panilha_hub2b(products, MANUFACTURE):
             "Altura*(m)": str(float(product["dimensions"]["height"])/100) if product["dimensions"].get("height") else delivery_info["height_m"] if delivery_info else "0",
             "Largura*(m)": str(float(product["dimensions"]["width"])/100) if product["dimensions"].get("width") else delivery_info["width_m"] if delivery_info else "0",
             "Profundidade*(m)": str(float(product["dimensions"]["length"])/100) if product["dimensions"].get("length") else delivery_info["length_m"] if delivery_info else "0",
-            "Peso*(kg)": str(product["weight"]) if product.get("weight") else delivery_info["weightKg"] if delivery_info else "0",
+            "Peso*(kg)": extrair_peso(product.get("weight")) if product.get("weight") else delivery_info["weightKg"] if delivery_info else "0",
             "Url Imagem 1": next((meta["value"] for meta in product["meta_data"] if meta["key"] == "_external_image_url"), "")
         }
 
@@ -395,5 +404,10 @@ def gerar_panilha_hub2b(products, MANUFACTURE):
 
         combined_data.append(produto_dict)
     return combined_data
+
+def extrair_peso(weight):
+    if isinstance(weight, dict):
+        return str(weight.get("weight", "0"))
+    return str(weight)
   
     

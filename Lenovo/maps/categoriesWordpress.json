@@ -94,5 +94,9 @@
 		{
 			"id": 40,
 			"name": "Workstation"
+		},
+		{
+			"id": 550,
+			"name": "Tipo de Serviço"
 		}
 ]

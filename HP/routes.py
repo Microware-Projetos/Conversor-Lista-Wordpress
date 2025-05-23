@@ -406,36 +406,62 @@ async def deletar_todos_produtos_carepack():
     auth = aiohttp.BasicAuth(WOOCOMMERCE_CONSUMER_KEY, WOOCOMMERCE_CONSUMER_SECRET)
     todos_ids = []
 
-    # Primeiro, coletamos todos os IDs dos produtos da categoria Care Pack
-    # Você precisará definir o ID da categoria Care Pack
-    async with aiohttp.ClientSession() as session:
-        page = 1
-        while True:
-            async with session.get(
-                url_base,
-                auth=auth,
-                params={"per_page": 100, "page": page, "category": 32}
-            ) as response:
-                produtos = await response.json()
-                if not produtos:
-                    break
-                todos_ids.extend([produto["id"] for produto in produtos])
-                page += 1
+    try:
+        # Primeiro, coletamos todos os IDs dos produtos da categoria Care Pack
+        async with aiohttp.ClientSession() as session:
+            page = 1
+            while True:
+                try:
+                    async with session.get(
+                        url_base,
+                        auth=auth,
+                        params={"per_page": 100, "page": page, "category": 32},
+                        timeout=30
+                    ) as response:
+                        if response.status == 401:
+                            raise Exception("Erro de autenticação. Verifique as credenciais da API.")
+                        elif response.status == 404:
+                            raise Exception("Categoria Care Pack não encontrada (ID: 32).")
+                        elif response.status != 200:
+                            raise Exception(f"Erro na API: {response.status} - {await response.text()}")
+                        
+                        content_type = response.headers.get('content-type', '')
+                        if 'application/json' not in content_type:
+                            raise Exception(f"Resposta inválida da API. Content-Type: {content_type}")
+                        
+                        produtos = await response.json()
+                        if not produtos:
+                            break
+                            
+                        for produto in produtos:
+                            categorias = produto.get('categories', [])
+                            if any(cat['id'] == 32 for cat in categorias):
+                                todos_ids.append(produto["id"])
+                        
+                        page += 1
+                except aiohttp.ClientError as e:
+                    raise Exception(f"Erro de conexão com a API: {str(e)}")
+                except json.JSONDecodeError as e:
+                    raise Exception(f"Erro ao decodificar resposta da API: {str(e)}")
 
-    if not todos_ids:
-        print("Nenhum produto encontrado na categoria Care Pack.")
-        return
+        if not todos_ids:
+            print("Nenhum produto encontrado na categoria Care Pack.")
+            return
 
-    print(f"Encontrados {len(todos_ids)} produtos na categoria Care Pack.")
+        print(f"Encontrados {len(todos_ids)} produtos na categoria Care Pack.")
 
-    # Agora deletamos em grupos de 5
-    async with aiohttp.ClientSession() as session:
-        for i in range(0, len(todos_ids), 5):
-            grupo_ids = todos_ids[i:i+5]
-            tarefas = [deletar_produto(session, id, auth) for id in grupo_ids]
-            await asyncio.gather(*tarefas)
-            print(f"Grupo de {len(grupo_ids)} produtos processado.")
+        # Agora deletamos em grupos de 5
+        async with aiohttp.ClientSession() as session:
+            for i in range(0, len(todos_ids), 5):
+                grupo_ids = todos_ids[i:i+5]
+                tarefas = [deletar_produto(session, id, auth) for id in grupo_ids]
+                await asyncio.gather(*tarefas)
+                print(f"Grupo de {len(grupo_ids)} produtos processado.")
 
-    print("Todos os produtos da categoria Care Pack foram deletados com sucesso!")
+        print("Todos os produtos da categoria Care Pack foram deletados com sucesso!")
+        
+    except Exception as e:
+        print(f"Erro ao deletar produtos Care Pack: {str(e)}")
+        raise Exception(f"Erro ao deletar produtos Care Pack: {str(e)}")
     
 

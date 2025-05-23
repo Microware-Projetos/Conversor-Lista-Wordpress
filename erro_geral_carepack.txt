@@ -1,1 +1,1 @@
-cannot schedule new futures after interpreter shutdown
+0, message='Attempt to decode JSON with unexpected mimetype: text/html', url=URL('https://ecommerce.microware.com.br/hp/wp-json/wc/v3/products?per_page=100&page=1&category=32')
