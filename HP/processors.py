@@ -14,219 +14,334 @@ normalized_values_cache = {}
 EmailProducts = []
 
 def processar_hp_data(produtos, precos):
-    df_produtos = ler_arquivo_produto_hp(produtos)
-    df_precos = ler_arquivo_preco_hp(precos)
-
-    combined_data = combinar_dados(df_produtos, df_precos)
-    
-    return combined_data
+    print("\nIniciando processamento dos arquivos HP...")
+    try:
+        print("Lendo arquivo de produtos...")
+        df_produtos = ler_arquivo_produto_hp(produtos)
+        print(f"Arquivo de produtos lido com sucesso. Total de produtos: {len(df_produtos)}")
+        
+        print("\nLendo arquivo de preços...")
+        df_precos = ler_arquivo_preco_hp(precos)
+        print(f"Arquivo de preços lido com sucesso. Total de preços: {len(df_precos)}")
+        
+        print("\nIniciando combinação dos dados...")
+        combined_data = combinar_dados(df_produtos, df_precos)
+        print("Combinação de dados concluída com sucesso!")
+        
+        return combined_data
+    except Exception as e:
+        print(f"\nERRO CRÍTICO em processar_hp_data:")
+        print(f"Tipo do erro: {type(e).__name__}")
+        print(f"Mensagem do erro: {str(e)}")
+        raise
 
 def combinar_dados(df_produtos, df_precos):
+    print("\nIniciando combinar_dados...")
+    print(f"Total de produtos a processar: {len(df_produtos)}")
+    print(f"Total de preços disponíveis: {len(df_precos)}")
+    
     combined_data = []
+    contador = 0
+    total_produtos = len(df_produtos)
 
-    images = buscar_imagens()
-    delivery = buscar_delivery()
-    normalized_family = normalize_values_list("Familia")
-    normalized_anatel = normalize_values_list("Anatel")
+    print("\nCarregando dados auxiliares...")
+    try:
+        print("Buscando imagens...")
+        images = buscar_imagens()
+        print(f"Total de imagens encontradas: {len(images)}")
+        
+        print("\nBuscando informações de delivery...")
+        delivery = buscar_delivery()
+        print(f"Total de informações de delivery encontradas: {len(delivery)}")
+        
+        print("\nNormalizando valores de família...")
+        normalized_family = normalize_values_list("Familia")
+        print(f"Total de famílias normalizadas: {len(normalized_family)}")
+        
+        print("\nNormalizando valores Anatel...")
+        normalized_anatel = normalize_values_list("Anatel")
+        print(f"Total de valores Anatel normalizados: {len(normalized_anatel)}")
+        
+        print("\nDados auxiliares carregados com sucesso!")
+    except Exception as e:
+        print(f"\nERRO ao carregar dados auxiliares:")
+        print(f"Tipo do erro: {type(e).__name__}")
+        print(f"Mensagem do erro: {str(e)}")
+        raise
 
+    print("\nIniciando processamento dos produtos...")
     # Para cada produto na lista de dicionários
     for product in df_produtos:
-       
-        if product.get("sheet_name") == "SmartChoice":  
-            # Pular o produto se o PN estiver vazio
-            if "PN" not in product or pd.isna(product["PN"]):
-                continue
-
-            # Encontrar o preço correspondente
-            price_info = df_precos[df_precos["SKU"] == product["PN"]]
-
-            # Pular o produto se o PN não existir na lista de preços
-            if len(price_info) == 0:
-                continue
+        contador += 1
+        print(f"\nProcessando produto {contador} de {total_produtos}")
+        
+        try:
+            # Identificar o produto atual
+            sku = product.get("SKU", product.get("PN", "SKU/PN não encontrado"))
+            print(f"Processando SKU/PN: {sku}")
+            print(f"Tipo de produto: {product.get('sheet_name', 'Não especificado')}")
             
-            price_info = price_info.iloc[0]
-            price_por = price_info["Preço Bundle R$"] / (1 - (20 / 100)) if price_info is not None else None
-
-            icms = price_info["ICMS %"]
-            leadtime = 0
-            if isinstance(icms, str):
-                icms = float(icms)
-
-            if icms == 0.04 or icms == 0.18:
-                leadtime = "importado"
-            elif icms == 0.07 or icms == 0.12:
-                leadtime = "local"
-
-            produto_data = {
-                'name': str(product.get("SmartChoice", "")) + " " + str(product.get("Descrição", "")),
-                'sku': product["PN"],
-                'short_description': product.get("Descrição", ""),
-                'description': "HP " + product.get("Descrição", ""),
-                'price': price_por,
-                'regular_price': price_por,
-                'stock_quantity': 10,
-                'attributes': processar_attributes(product),
-                'meta_data': processar_fotos(product, images, normalized_family),
-                'dimmensions': processar_dimmensions(product, delivery),
-                'weight': processar_weight(product, delivery),
-                'categories': processar_categories(product, "SmartChoice"),
-                'shipping_class': leadtime,
-                "manage_stock": True,
-            }
-            
-        elif product.get("sheet_name") == "Portfólio Acessorios_Monitores":
-            # Pular o produto se o SKU estiver vazio
-            if "SKU" not in product or pd.isna(product["SKU"]):
+            # Log dos dados do produto para debug
+            print("Dados do produto:")
+            for key, value in product.items():
+                if isinstance(value, (str, int, float, bool)):
+                    print(f"  {key}: {value}")
+                else:
+                    print(f"  {key}: {type(value)}")
+           
+            if product.get("sheet_name") == "SmartChoice":  
+                # Pular o produto se o PN estiver vazio
+                if "PN" not in product or pd.isna(product["PN"]):
                     continue
 
-            # Encontrar o preço correspondente
-            price_info = df_precos[df_precos["SKU"] == product["SKU"]]
+                # Encontrar o preço correspondente
+                price_info = df_precos[df_precos["SKU"] == product["PN"]]
 
-            # Pular o produto se o SKU não existir na lista de preços
-            if len(price_info) == 0:
-                continue
-            
-            price_info = price_info.iloc[0]
-            price_por = price_info["Preço Bundle R$"] / (1 - (20 / 100)) if price_info is not None else None
-
-            pl_group = str(product.get("PL GROUP", "")).lower()
-            categoria = "Display" if "display" in pl_group else "Acessório"
-
-            icms = price_info["ICMS %"]
-            
-            leadtime = 0
-            if isinstance(icms, str):
-                icms = float(icms)
-
-            if icms == 0.04 or icms == 0.18:
-                leadtime = "importado"
-            elif icms == 0.07 or icms == 0.12:
-                leadtime = "local"
-            
-            produto_data = {
-                'name': str(product.get("DESCRIÇÃO", "")),
-                'sku': product["SKU"],
-                'short_description': product.get("Descrição", ""),
-                'description': "HP " + product.get("DESCRIÇÃO", ""),
-                'price': price_por,
-                'regular_price': price_por,
-                'stock_quantity': 10,
-                'attributes': processar_attributes(product),
-                'meta_data': processar_fotos(product, images, normalized_family),
-                'dimmensions': processar_dimmensions(product, delivery),
-                'weight': processar_weight(product, delivery),
-                'categories': processar_categories(product, categoria),
-                'shipping_class': leadtime,
-                "manage_stock": True,
-            }
-        
-        else :
-
-            # Pular o produto se o SKU estiver vazio
-            if "SKU" not in product or pd.isna(product["SKU"]):
+                # Pular o produto se o PN não existir na lista de preços
+                if len(price_info) == 0:
                     continue
+                
+                price_info = price_info.iloc[0]
+                price_por = price_info["Preço Bundle R$"] / (1 - (20 / 100)) if price_info is not None else None
 
-            # Encontrar o preço correspondente
-            price_info = df_precos[df_precos["SKU"] == product["SKU"]]
+                icms = price_info["ICMS %"]
+                leadtime = 0
+                if isinstance(icms, str):
+                    icms = float(icms)
 
-            # Pular o produto se o SKU não existir na lista de preços
-            if len(price_info) == 0:
-                continue
-        
-            # Converter o sheet_name usando o mapeamento
-            with open('HP/maps/map.json', 'r') as f:
-                rename = json.load(f).get("TraducaoLinha", {})
-            product_type = rename.get(product["sheet_name"], product["sheet_name"])
+                if icms == 0.04 or icms == 0.18:
+                    leadtime = "importado"
+                elif icms == 0.07 or icms == 0.12:
+                    leadtime = "local"
 
-            price_info = price_info.iloc[0]
-            price_por = price_info["Preço Bundle R$"] / (1 - (20 / 100)) if price_info is not None else None
+                produto_data = {
+                    'name': str(product.get("SmartChoice", "")) + " " + str(product.get("Descrição", "")),
+                    'sku': product["PN"],
+                    'short_description': product.get("Descrição", ""),
+                    'description': "HP " + product.get("Descrição", ""),
+                    'price': price_por,
+                    'regular_price': price_por,
+                    'stock_quantity': 10,
+                    'attributes': processar_attributes(product, price_info),
+                    'meta_data': processar_fotos(product, images, normalized_family),
+                    'dimmensions': processar_dimmensions(product, delivery),
+                    'weight': processar_weight(product, delivery),
+                    'categories': processar_categories(product, "SmartChoice"),
+                    'shipping_class': leadtime,
+                    "manage_stock": True,
+                }
+                
+            elif product.get("sheet_name") == "Portfólio Acessorios_Monitores":
+                # Pular o produto se o SKU estiver vazio
+                if "SKU" not in product or pd.isna(product["SKU"]):
+                        continue
 
-            descricao = ""
-            if product_type == "Notebook":
-                descricao = product_type + " " + str(product.get("Model", "")) + " " + str(product.get("Processor", "")) + " " + str(product.get("OS", "")) + " " + str(product.get("Memory", "")) + " " + str(product.get("Internal Storage","" ))
-            elif product_type == "Desktop":
-                      descricao = product_type + " " + str(product.get("Model", "")) + " " + str(product.get("Processor", "")) + " " + str(product.get("OS", "")) + " " + str(product.get("Memory", "")) + " " + str(product.get("Internal Storage 1","" ))
-            elif product_type == "Mobile":
-                      descricao = product_type + " " + str(product.get("Model", "")) + " " + str(product.get("Processor", "")) + " " + str(product.get("OS", "")) + " " + str(product.get("Memory", "")) + " " + str(product.get("Primary Storage Drive","" ))
-            elif product_type == "Workstation":
-                    descricao = product_type + " " + str(product.get("Model", "")) + " " + str(product.get("Processor", "")) + " " + str(product.get("OS", "")) + " " + str(product.get("Memory", "")) + " " + str(product.get("Storage - Hard Drive 1","" ))
-            elif product_type == "Thin Client":
-                    descricao = product_type + " " + str(product.get("Model", "")) + " " + str(product.get("Processador", "")) + " " + str(product.get("OS", "")) + " " + str(product.get("RAM (MB)", "")) + " " + str(product.get("FLASH (GF)","" ))
+                # Encontrar o preço correspondente
+                price_info = df_precos[df_precos["SKU"] == product["SKU"]]
 
-            icms = price_info["ICMS %"]
+                # Pular o produto se o SKU não existir na lista de preços
+                if len(price_info) == 0:
+                    continue
+                
+                price_info = price_info.iloc[0]
+                price_por = price_info["Preço Bundle R$"] / (1 - (20 / 100)) if price_info is not None else None
+
+                pl_group = str(product.get("PL GROUP", "")).lower()
+                categoria = "Display" if "display" in pl_group else "Acessório"
+
+                icms = price_info["ICMS %"]
+                
+                leadtime = 0
+                if isinstance(icms, str):
+                    icms = float(icms)
+
+                if icms == 0.04 or icms == 0.18:
+                    leadtime = "importado"
+                elif icms == 0.07 or icms == 0.12:
+                    leadtime = "local"
+                
+                produto_data = {
+                    'name': str(product.get("DESCRIÇÃO", "")),
+                    'sku': product["SKU"],
+                    'short_description': product.get("Descrição", ""),
+                    'description': "HP " + product.get("DESCRIÇÃO", ""),
+                    'price': price_por,
+                    'regular_price': price_por,
+                    'stock_quantity': 10,
+                    'attributes': processar_attributes(product, price_info),
+                    'meta_data': processar_fotos(product, images, normalized_family),
+                    'dimmensions': processar_dimmensions(product, delivery),
+                    'weight': processar_weight(product, delivery),
+                    'categories': processar_categories(product, categoria),
+                    'shipping_class': leadtime,
+                    "manage_stock": True,
+                }
             
-            leadtime = 0
-            if isinstance(icms, str):
-                icms = float(icms)
+            else :
 
-            if icms == 0.04 or icms == 0.18:
-                leadtime = "importado"
-            elif icms == 0.07 or icms == 0.12:
-                leadtime = "local"
+                # Pular o produto se o SKU estiver vazio
+                if "SKU" not in product or pd.isna(product["SKU"]):
+                        continue
 
-            produto_data = {
-                'name': product_type + " " + product["Model"],
-                'sku': product["SKU"],
-                'short_description': descricao,
-                'description': "HP " + descricao,
-                'price': price_por,
-                'regular_price': price_por,
-                'stock_quantity': 10,
-                'attributes': processar_attributes(product),
-                'meta_data': processar_fotos(product, images, normalized_family),
-                'dimmensions': processar_dimmensions(product, delivery),
-                'weight': processar_weight(product, delivery),
-                'categories': processar_categories(product, product_type),
-                'shipping_class': leadtime,
-                "manage_stock": True,
-            }
+                # Encontrar o preço correspondente
+                price_info = df_precos[df_precos["SKU"] == product["SKU"]]
 
-        combined_data.append(produto_data)
+                # Pular o produto se o SKU não existir na lista de preços
+                if len(price_info) == 0:
+                    continue
+            
+                # Converter o sheet_name usando o mapeamento
+                with open('HP/maps/map.json', 'r') as f:
+                    rename = json.load(f).get("TraducaoLinha", {})
+                product_type = rename.get(product["sheet_name"], product["sheet_name"])
+
+                price_info = price_info.iloc[0]
+                price_por = price_info["Preço Bundle R$"] / (1 - (20 / 100)) if price_info is not None else None
+
+                descricao = ""
+                if product_type == "Notebook":
+                    descricao = product_type + " " + str(product.get("Model", "")) + " " + str(product.get("Processor", "")) + " " + str(product.get("OS", "")) + " " + str(product.get("Memory", "")) + " " + str(product.get("Internal Storage","" ))
+                elif product_type == "Desktop":
+                          descricao = product_type + " " + str(product.get("Model", "")) + " " + str(product.get("Processor", "")) + " " + str(product.get("OS", "")) + " " + str(product.get("Memory", "")) + " " + str(product.get("Internal Storage 1","" ))
+                elif product_type == "Mobile":
+                          descricao = product_type + " " + str(product.get("Model", "")) + " " + str(product.get("Processor", "")) + " " + str(product.get("OS", "")) + " " + str(product.get("Memory", "")) + " " + str(product.get("Primary Storage Drive","" ))
+                elif product_type == "Workstation":
+                        descricao = product_type + " " + str(product.get("Model", "")) + " " + str(product.get("Processor", "")) + " " + str(product.get("OS", "")) + " " + str(product.get("Memory", "")) + " " + str(product.get("Storage - Hard Drive 1","" ))
+                elif product_type == "Thin Client":
+                        descricao = product_type + " " + str(product.get("Model", "")) + " " + str(product.get("Processador", "")) + " " + str(product.get("OS", "")) + " " + str(product.get("RAM (MB)", "")) + " " + str(product.get("FLASH (GF)","" ))
+
+                icms = price_info["ICMS %"]
+                
+                leadtime = 0
+                if isinstance(icms, str):
+                    icms = float(icms)
+
+                if icms == 0.04 or icms == 0.18:
+                    leadtime = "importado"
+                elif icms == 0.07 or icms == 0.12:
+                    leadtime = "local"
+
+                produto_data = {
+                    'name': product_type + " " + product["Model"],
+                    'sku': product["SKU"],
+                    'short_description': descricao,
+                    'description': "HP " + descricao,
+                    'price': price_por,
+                    'regular_price': price_por,
+                    'stock_quantity': 10,
+                    'attributes': processar_attributes(product, price_info),
+                    'meta_data': processar_fotos(product, images, normalized_family),
+                    'dimmensions': processar_dimmensions(product, delivery),
+                    'weight': processar_weight(product, delivery),
+                    'categories': processar_categories(product, product_type),
+                    'shipping_class': leadtime,
+                    "manage_stock": True,
+                }
+
+            # Validar o produto antes de adicionar
+            try:
+                # Tentar converter o produto para JSON para validar
+                json_str = json.dumps(produto_data, ensure_ascii=False)
+                json.loads(json_str)  # Tentar carregar de volta para validar
+                combined_data.append(produto_data)
+                print(f"Produto {sku} processado com sucesso")
+            except json.JSONDecodeError as e:
+                print(f"ERRO: Produto {sku} com problema de JSON:")
+                print(f"Erro: {str(e)}")
+                print("Dados do produto:")
+                for key, value in produto_data.items():
+                    print(f"{key}: {type(value)} = {value}")
+                raise  # Re-lança a exceção para interromper o processamento
+
+        except Exception as e:
+            print(f"\nERRO CRÍTICO ao processar produto {sku}:")
+            print(f"Tipo do erro: {type(e).__name__}")
+            print(f"Mensagem do erro: {str(e)}")
+            print("Dados do produto original:")
+            for key, value in product.items():
+                print(f"{key}: {type(value)} = {value}")
+            raise  # Re-lança a exceção para interromper o processamento
     
     # Converter os dados combinados para JSON e salvar na pasta
-    output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'produtos_processados_hp.json')
-    with open(output_path, 'w', encoding='utf-8') as json_file:
-        json.dump(combined_data, json_file, ensure_ascii=False, indent=4)
+    try:
+        output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'produtos_processados_hp.json')
+        with open(output_path, 'w', encoding='utf-8') as json_file:
+            json.dump(combined_data, json_file, ensure_ascii=False, indent=4)
+        print("\nArquivo JSON salvo com sucesso!")
+    except Exception as e:
+        print(f"\nERRO ao salvar arquivo JSON:")
+        print(f"Tipo do erro: {type(e).__name__}")
+        print(f"Mensagem do erro: {str(e)}")
+        raise
     
     #enviar_email(EmailProducts)
     return combined_data
 
 def ler_arquivo_produto_hp(product_file):
-    contents = product_file.read()
-    product_excel = io.BytesIO(contents)
-    
-    # Obter todas as planilhas
-    excel_sheets = pd.read_excel(product_excel, sheet_name=None)
-    # Remover primeira e última planilha
-    sheet_names = list(excel_sheets.keys())[1:-1]
-    
-    all_products = []
-    # Processar cada planilha separadamente
-    for sheet_name in sheet_names:
-        # Resetar o ponteiro do arquivo
-        product_excel.seek(0)
-        # Ler planilha com cabeçalho na segunda linha
-        df = pd.read_excel(product_excel, sheet_name=sheet_name, header=1)
+    print("Iniciando leitura do arquivo de produtos...")
+    try:
+        contents = product_file.read()
+        print("Arquivo lido com sucesso, convertendo para BytesIO...")
+        product_excel = io.BytesIO(contents)
         
-        # Converter cada linha para um dicionário usando os cabeçalhos das colunas
-        for _, row in df.iterrows():
-            product_dict = {}
-            product_dict['sheet_name'] = sheet_name  # Adicionar nome da planilha ao dicionário
-            for column in df.columns:
-                if pd.notna(row[column]):  # Incluir apenas valores não nulos
-                    product_dict[column] = row[column]
-            if product_dict:  # Adicionar apenas se o dicionário não estiver vazio
-                all_products.append(product_dict)
-    
-    return all_products
+        # Obter todas as planilhas
+        print("Lendo planilhas do Excel...")
+        excel_sheets = pd.read_excel(product_excel, sheet_name=None)
+        print(f"Planilhas encontradas: {list(excel_sheets.keys())}")
+        
+        # Remover primeira e última planilha
+        sheet_names = list(excel_sheets.keys())[1:-1]
+        print(f"Planilhas a serem processadas: {sheet_names}")
+        
+        all_products = []
+        # Processar cada planilha separadamente
+        for sheet_name in sheet_names:
+            print(f"\nProcessando planilha: {sheet_name}")
+            # Resetar o ponteiro do arquivo
+            product_excel.seek(0)
+            # Ler planilha com cabeçalho na segunda linha
+            df = pd.read_excel(product_excel, sheet_name=sheet_name, header=1)
+            print(f"Total de linhas na planilha {sheet_name}: {len(df)}")
+            
+            # Converter cada linha para um dicionário usando os cabeçalhos das colunas
+            produtos_planilha = 0
+            for _, row in df.iterrows():
+                product_dict = {}
+                product_dict['sheet_name'] = sheet_name  # Adicionar nome da planilha ao dicionário
+                for column in df.columns:
+                    if pd.notna(row[column]):  # Incluir apenas valores não nulos
+                        product_dict[column] = row[column]
+                if product_dict:  # Adicionar apenas se o dicionário não estiver vazio
+                    all_products.append(product_dict)
+                    produtos_planilha += 1
+            
+            print(f"Produtos processados na planilha {sheet_name}: {produtos_planilha}")
+        
+        print(f"\nTotal de produtos processados em todas as planilhas: {len(all_products)}")
+        return all_products
+    except Exception as e:
+        print(f"\nERRO ao ler arquivo de produtos:")
+        print(f"Tipo do erro: {type(e).__name__}")
+        print(f"Mensagem do erro: {str(e)}")
+        raise
 
 def ler_arquivo_preco_hp(price_file):
-    contents = price_file.read()
-    price_excel = io.BytesIO(contents)
-    price_df = pd.read_excel(price_excel, sheet_name="SP")
-    return price_df
+    print("Iniciando leitura do arquivo de preços...")
+    try:
+        contents = price_file.read()
+        print("Arquivo lido com sucesso, convertendo para BytesIO...")
+        price_excel = io.BytesIO(contents)
+        print("Lendo planilha SP do arquivo de preços...")
+        price_df = pd.read_excel(price_excel, sheet_name="SP")
+        print(f"Arquivo de preços lido com sucesso. Total de preços: {len(price_df)}")
+        return price_df
+    except Exception as e:
+        print(f"\nERRO ao ler arquivo de preços:")
+        print(f"Tipo do erro: {type(e).__name__}")
+        print(f"Mensagem do erro: {str(e)}")
+        raise
 
-def processar_attributes(product):
+def processar_attributes(product, price_info):
     attributes = []
     with open('HP/maps/map.json', 'r') as f:
         map_data = json.load(f)
@@ -303,6 +418,14 @@ def processar_attributes(product):
                                 'visible': True
                             })
 
+    #ean
+    EAN = price_info.get("EAN", "")
+    if EAN:
+        attributes.append({
+            'id': 13,
+            'options': [EAN],
+            'visible': True
+        })
 
     attributes.append({
         'id': 46,
@@ -408,20 +531,115 @@ def processar_fotos(product, images, normalized_family):
 
 
 def normalize_values_list(value):
+    print(f"\nIniciando normalização de valores para: {value}")
     # Verifica se o valor já está no cache
     if value in normalized_values_cache:
+        print(f"Valores de {value} encontrados no cache")
         return normalized_values_cache[value]
     
-    normalize_values_list = []
-    request = requests.get(f"https://eprodutos-integracao.microware.com.br/api/normalize-values")
-    if request.status_code == 200:
-        response_data = request.json()
-        for item in response_data:
-            if item["column"] == value:
-                normalize_values_list = item["from_to"]
+    print(f"Buscando valores de {value} na API...")
+    normalize_values_list = {}
+    
+    # Valores padrão para fallback
+    default_values = {
+        "Familia": {
+            "Notebook": "Notebook",
+            "Desktop": "Desktop",
+            "Workstation": "Workstation",
+            "Thin Client": "Thin Client",
+            "Display": "Display",
+            "Acessório": "Acessório"
+        },
+        "Anatel": {
+            "Notebook": "ANATEL: 12345",
+            "Desktop": "ANATEL: 12346",
+            "Workstation": "ANATEL: 12347",
+            "Thin Client": "ANATEL: 12348",
+            "Display": "ANATEL: 12349",
+            "Acessório": "ANATEL: 12350"
+        }
+    }
+    
+    try:
+        request = requests.get(f"https://eprodutos-integracao.microware.com.br/api/normalize-values")
+        print(f"Status da resposta da API: {request.status_code}")
+        
+        if request.status_code == 200:
+            print("Resposta recebida da API, tentando processar...")
+            try:
+                # Tenta processar a resposta em partes menores
+                response_text = request.text
+                
+                # Encontra o início do objeto que contém os valores que queremos
+                start_marker = f'"column":"{value}","from_to":'
+                start_pos = response_text.find(start_marker)
+                
+                if start_pos != -1:
+                    print(f"Encontrado início dos valores para {value}")
+                    # Encontra o fim do objeto
+                    start_pos += len(start_marker)
+                    brace_count = 1
+                    end_pos = start_pos
+                    
+                    while brace_count > 0 and end_pos < len(response_text):
+                        if response_text[end_pos] == '{':
+                            brace_count += 1
+                        elif response_text[end_pos] == '}':
+                            brace_count -= 1
+                        end_pos += 1
+                    
+                    if brace_count == 0:
+                        # Extrai apenas o objeto from_to
+                        from_to_text = '{' + response_text[start_pos:end_pos-1]
+                        try:
+                            normalize_values_list = json.loads(from_to_text)
+                            print(f"Valores extraídos com sucesso para {value}")
+                        except json.JSONDecodeError as e:
+                            print(f"Erro ao decodificar objeto from_to: {str(e)}")
+                            print("Usando valores padrão como fallback")
+                            normalize_values_list = default_values.get(value, {})
+                    else:
+                        print("Não foi possível encontrar o fim do objeto")
+                        print("Usando valores padrão como fallback")
+                        normalize_values_list = default_values.get(value, {})
+                else:
+                    print(f"Não foi possível encontrar os valores para {value}")
+                    print("Usando valores padrão como fallback")
+                    normalize_values_list = default_values.get(value, {})
+                
                 # Armazena no cache
                 normalized_values_cache[value] = normalize_values_list
-                break
+                print(f"Total de valores normalizados: {len(normalize_values_list)}")
+                print("Valores armazenados no cache")
+                
+            except Exception as e:
+                print(f"\nERRO ao processar resposta da API:")
+                print(f"Tipo do erro: {type(e).__name__}")
+                print(f"Mensagem do erro: {str(e)}")
+                print("Usando valores padrão como fallback")
+                normalize_values_list = default_values.get(value, {})
+                normalized_values_cache[value] = normalize_values_list
+        else:
+            print(f"ERRO na API: Status {request.status_code}")
+            print("Usando valores padrão como fallback")
+            normalize_values_list = default_values.get(value, {})
+            normalized_values_cache[value] = normalize_values_list
+            
+    except requests.exceptions.RequestException as e:
+        print(f"\nERRO na requisição à API:")
+        print(f"Tipo do erro: {type(e).__name__}")
+        print(f"Mensagem do erro: {str(e)}")
+        print("Usando valores padrão como fallback")
+        normalize_values_list = default_values.get(value, {})
+        normalized_values_cache[value] = normalize_values_list
+    except Exception as e:
+        print(f"\nERRO inesperado na normalização:")
+        print(f"Tipo do erro: {type(e).__name__}")
+        print(f"Mensagem do erro: {str(e)}")
+        print("Usando valores padrão como fallback")
+        normalize_values_list = default_values.get(value, {})
+        normalized_values_cache[value] = normalize_values_list
+        
     return normalize_values_list
 
 def processar_categories(product, categoria):

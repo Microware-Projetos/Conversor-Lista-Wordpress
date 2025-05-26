@@ -12,48 +12,12 @@ from .auth import get_token
 # Cache para os arquivos
 _ncm_cache = None
 _categoria_map_cache = None
-_delivery_info_cache = None
 
 def _get_utils_path():
     # Obtém o diretório atual do arquivo processor.py
     current_dir = os.path.dirname(os.path.abspath(__file__))
     # Sobe um nível e entra na pasta Utils
     return os.path.join(os.path.dirname(current_dir), 'Utils')
-
-def _carregar_categoria_map():
-    global _categoria_map_cache
-    if _categoria_map_cache is None:
-        try:
-            utils_path = _get_utils_path()
-            categoria_map_path = os.path.join(utils_path, 'categoria_map.json')
-            with open(categoria_map_path, 'r', encoding='utf-8') as f:
-                _categoria_map_cache = json.load(f)
-        except Exception as e:
-            print(f"Erro ao carregar arquivo de mapeamento de categorias: {str(e)}")
-            _categoria_map_cache = {}
-    return _categoria_map_cache
-
-def _carregar_delivery_info():
-    global _delivery_info_cache
-    if _delivery_info_cache is None:
-        try:
-            utils_path = _get_utils_path()
-            delivery_info_path = os.path.join(utils_path, 'delivery_info.json')
-            with open(delivery_info_path, 'r', encoding='utf-8') as f:
-                _delivery_info_cache = json.load(f)
-        except Exception as e:
-            print(f"Erro ao carregar arquivo de informações de entrega: {str(e)}")
-            _delivery_info_cache = {}
-    return _delivery_info_cache
-
-def _get_delivery_info(categoria_nome):
-    delivery_info = _carregar_delivery_info()
-    return delivery_info.get(categoria_nome, {
-        "weightKg": "0",
-        "height_m": "0",
-        "width_m": "0",
-        "length_m": "0"
-    })
 
 def _normalizar_texto(texto):
     if not texto:
@@ -62,19 +26,6 @@ def _normalizar_texto(texto):
     texto = unicodedata.normalize('NFKD', texto).encode('ASCII', 'ignore').decode('ASCII')
     # Converte para minúsculo
     return texto.lower().strip()
-
-def _carregar_ncm_cache():
-    global _ncm_cache
-    if _ncm_cache is None:
-        try:
-            utils_path = _get_utils_path()
-            ncm_path = os.path.join(utils_path, 'ncm.json')
-            with open(ncm_path, 'r', encoding='utf-8') as f:
-                _ncm_cache = json.load(f)
-        except Exception as e:
-            print(f"Erro ao carregar arquivo NCM: {str(e)}")
-            _ncm_cache = {}
-    return _ncm_cache
 
 def limpar_texto(texto):
     if not texto:
@@ -142,8 +93,6 @@ def processar_produtos(produtos, marca):
                 categoria_map = _carregar_categoria_map()
                 categoria_nome = categoria_map.get(categoria_slug)
 
-        # Obtém informações de entrega da categoria
-        delivery_info = _get_delivery_info(categoria_nome) if categoria_nome else None
 
         product_data = {
             "sku": product["sku"], 
@@ -152,7 +101,7 @@ def processar_produtos(produtos, marca):
             "warrantyMonths": 12, 
             "handlingTime": lead_time, 
             "stock": 10, 
-            "weightKg": str(product["weight"]) if product.get("weight") else delivery_info["weightKg"] if delivery_info else "0",
+            "weightKg": str(product["weight"]) if product.get("weight") else "0",
             "url": product["permalink"],
             "categoryCode": next((cat["name"] for cat in product["categories"]), ""),
             "name": limpar_texto(product["name"]), 
@@ -160,9 +109,9 @@ def processar_produtos(produtos, marca):
             "description": limpar_texto(product["description"]) or limpar_texto(product.get("short_description", "")), 
             "brand": marca,
             "ncm": get_ncm(product), 
-            "height_m": str(float(product["dimensions"]["height"])/100) if product["dimensions"].get("height") else delivery_info["height_m"] if delivery_info else "0",
-            "width_m": str(float(product["dimensions"]["width"])/100) if product["dimensions"].get("width") else delivery_info["width_m"] if delivery_info else "0",
-            "length_m": str(float(product["dimensions"]["length"])/100) if product["dimensions"].get("length") else delivery_info["length_m"] if delivery_info else "0",
+            "height_m": str(float(product["dimensions"]["height"])/100) if product["dimensions"].get("height") else "0",
+            "width_m": str(float(product["dimensions"]["width"])/100) if product["dimensions"].get("width") else "0",
+            "length_m": str(float(product["dimensions"]["length"])/100) if product["dimensions"].get("length") else "0",
             "priceBase": product["regular_price"],
             "priceSale": product["price"],
             "images": [
@@ -364,16 +313,6 @@ def gerar_panilha_hub2b(products, MANUFACTURE):
         else:
             lead_time = 45
 
-        categoria_nome = None
-        if product.get("categories") and len(product["categories"]) > 0:
-            categoria_slug = product["categories"][0].get("slug")
-            if categoria_slug:
-                categoria_map = _carregar_categoria_map()
-                categoria_nome = categoria_map.get(categoria_slug)
-
-        # Obtém informações de entrega da categoria
-        delivery_info = _get_delivery_info(categoria_nome) if categoria_nome else None
-
         # Dicionário base com os campos fixos
         produto_dict = {
             "Nome Produto": limpar_texto(product["name"]),
@@ -381,19 +320,20 @@ def gerar_panilha_hub2b(products, MANUFACTURE):
             "Descrição Personalizada": limpar_texto(product["description"]),
             "URL do produto": product["permalink"],
             "SKU": product["sku"],
-            "EAN ou ISBN (13 digitos)": "",
+            "EAN ou ISBN (13 digitos)": next((attr["options"][0] for attr in product["attributes"] if attr["slug"] == "pa_codigo-ean"), None) if next((attr["options"][0] for attr in product["attributes"] if attr["slug"] == "pa_codigo-ean"), None) else get_delivery_info(product, "ean13", product["categories"][0]["name"]),
             "Marca": MANUFACTURE,
             "Preço De": product["price"],
             "Preço Por": product["price"],
             "Tempo Compra / Fabricação": lead_time,
             "Estoque": 10,
             "Categoria": product["categories"][0]["name"] if product.get("categories") else "",
-            "Altura*(m)": str(float(product["dimensions"]["height"])/100) if product["dimensions"].get("height") else delivery_info["height_m"] if delivery_info else "0",
-            "Largura*(m)": str(float(product["dimensions"]["width"])/100) if product["dimensions"].get("width") else delivery_info["width_m"] if delivery_info else "0",
-            "Profundidade*(m)": str(float(product["dimensions"]["length"])/100) if product["dimensions"].get("length") else delivery_info["length_m"] if delivery_info else "0",
-            "Peso*(kg)": extrair_peso(product.get("weight")) if product.get("weight") else delivery_info["weightKg"] if delivery_info else "0",
+            "Altura*(m)": str(float(product["dimensions"]["height"])/100) if product["dimensions"].get("height") else get_delivery_info(product, "height_m", product["categories"][0]["name"]),
+            "Largura*(m)": str(float(product["dimensions"]["width"])/100) if product["dimensions"].get("width") else get_delivery_info(product, "width_m", product["categories"][0]["name"]),
+            "Profundidade*(m)": str(float(product["dimensions"]["length"])/100) if product["dimensions"].get("length") else get_delivery_info(product, "length_m", product["categories"][0]["name"]),
+            "Peso*(kg)": get_delivery_info(product, "weightKg", product["categories"][0]["name"]),
             "Url Imagem 1": next((meta["value"] for meta in product["meta_data"] if meta["key"] == "_external_image_url"), "")
         }
+
 
         # Adiciona os atributos dinamicamente
         if product.get("attributes"):
@@ -410,4 +350,45 @@ def extrair_peso(weight):
         return str(weight.get("weight", "0"))
     return str(weight)
   
-    
+def _carregar_delivery_info():
+    with open('Utils/delivery_info.json', 'r') as f:
+        return json.load(f)
+
+# Pegar infos delivery na pasta Utils 
+def get_delivery_info(product, value, category):
+    delivery_info = _carregar_delivery_info()
+    info = delivery_info.get(category)
+    if (category != "Plotter"):
+        if value == "weightKg":
+            return info.get("weightKg")
+        elif value == "height_m":
+            return info.get("height_m")
+        elif value == "width_m":
+            return info.get("width_m")
+        elif value == "length_m":
+            return info.get("length_m")
+        return "0" 
+    else:
+ 
+        #Ler xlsx que está na pasta Hub2b/delivery_info
+        df = pd.read_excel('Hub2b/Especificacoes Tecnicas Impressoras 1.xlsx')
+        #relacionar product via sku com o df
+        df_sku = df[df['SKU'] == product["sku"]]
+        if df_sku.empty:
+            if value == "weightKg":
+                return extrair_peso(product.get("weight")) if product.get("weight") else "0"
+                
+            else:
+                return "0"
+        else:
+            if value == "ean13":
+                return df_sku["EAN"].values[0]
+            if value == "weightKg":
+                return df_sku["Peso da embalagem (kg)"].values[0]
+            elif value == "height_m":
+                return df_sku["Altura da embalagem (cm)"].values[0] / 100
+            elif value == "width_m":
+                return df_sku["Largura da embalagem (cm)"].values[0] / 100
+            elif value == "length_m":
+                return df_sku["Comprimento da embalagem (cm)"].values[0] / 100
+        

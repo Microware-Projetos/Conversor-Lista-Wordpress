@@ -85,6 +85,9 @@ async def enviar_produtos_rota():
         # Processa os produtos para o Hub2b
         produtos_processados = processar_produtos(produtos, marca)
         print(f"Produtos processados: {len(produtos_processados)}")
+        #criar json com os produtos processados
+        with open('Hub2b/produtos_processados_hub2b_3.json', 'w') as f:
+            json.dump(produtos_processados, f)
         
         print("Enviando produtos para o Hub2b...")
         # Envia os produtos para o Hub2b

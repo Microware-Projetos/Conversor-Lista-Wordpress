@@ -339,16 +339,16 @@ async def deletar_todos_produtos():
                 if not produtos:
                     break
                 
-                # Filtra os produtos que NÃO pertencem à categoria 24
+                # Filtra os produtos que NÃO pertencem à categoria 24 e 32
                 for produto in produtos:
                     categorias = produto.get('categories', [])
-                    if not any(cat['id'] == 24 for cat in categorias):
+                    if not any(cat['id'] == 24 or cat['id'] == 32 for cat in categorias):
                         todos_ids.append(produto["id"])
                 
                 page += 1
 
     if not todos_ids:
-        print("Nenhum produto encontrado fora da categoria 24.")
+        print("Nenhum produto encontrado fora da categoria 24 e 32.")
         return
 
     print(f"Encontrados {len(todos_ids)} produtos fora da categoria 24.")

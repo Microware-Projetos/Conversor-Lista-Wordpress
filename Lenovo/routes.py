@@ -178,30 +178,62 @@ async def deletar_todos_produtos():
     auth = aiohttp.BasicAuth(WOOCOMMERCE_CONSUMER_KEY, WOOCOMMERCE_CONSUMER_SECRET)
     todos_ids = []
 
-    # Primeiro, coletamos todos os IDs
-    async with aiohttp.ClientSession() as session:
-        page = 1
-        while True:
-            async with session.get(
-                url_base,
-                auth=auth,
-                params={"per_page": 100, "page": page}
-            ) as response:
-                produtos = await response.json()
-                if not produtos:
-                    break
-                todos_ids.extend([produto["id"] for produto in produtos])
-                page += 1
+    try:
+        # Primeiro, coletamos todos os IDs dos produtos que não são Care Pack
+        async with aiohttp.ClientSession() as session:
+            page = 1
+            while True:
+                try:
+                    async with session.get(
+                        url_base,
+                        auth=auth,
+                        params={"per_page": 100, "page": page},
+                        timeout=30
+                    ) as response:
+                        if response.status == 401:
+                            raise Exception("Erro de autenticação. Verifique as credenciais da API.")
+                        elif response.status != 200:
+                            raise Exception(f"Erro na API: {response.status} - {await response.text()}")
+                        
+                        content_type = response.headers.get('content-type', '')
+                        if 'application/json' not in content_type:
+                            raise Exception(f"Resposta inválida da API. Content-Type: {content_type}")
+                        
+                        produtos = await response.json()
+                        if not produtos:
+                            break
+                            
+                        for produto in produtos:
+                            categorias = produto.get('categories', [])
+                            # Adiciona o ID apenas se o produto NÃO pertence à categoria Care Pack (ID 33)
+                            if not any(cat['id'] == 33 for cat in categorias):
+                                todos_ids.append(produto["id"])
+                        
+                        page += 1
+                except aiohttp.ClientError as e:
+                    raise Exception(f"Erro de conexão com a API: {str(e)}")
+                except json.JSONDecodeError as e:
+                    raise Exception(f"Erro ao decodificar resposta da API: {str(e)}")
 
-    # Agora deletamos em grupos de 5
-    async with aiohttp.ClientSession() as session:
-        for i in range(0, len(todos_ids), 5):
-            grupo_ids = todos_ids[i:i+5]
-            tarefas = [deletar_produto(session, id, auth) for id in grupo_ids]
-            await asyncio.gather(*tarefas)
-            print(f"Grupo de {len(grupo_ids)} produtos processado.")
+        if not todos_ids:
+            print("Nenhum produto encontrado fora da categoria Care Pack.")
+            return
 
-    print("Todos os produtos foram deletados com sucesso!")
+        print(f"Encontrados {len(todos_ids)} produtos fora da categoria Care Pack.")
+
+        # Agora deletamos em grupos de 5
+        async with aiohttp.ClientSession() as session:
+            for i in range(0, len(todos_ids), 5):
+                grupo_ids = todos_ids[i:i+5]
+                tarefas = [deletar_produto(session, id, auth) for id in grupo_ids]
+                await asyncio.gather(*tarefas)
+                print(f"Grupo de {len(grupo_ids)} produtos processado.")
+
+        print("Todos os produtos fora da categoria Care Pack foram deletados com sucesso!")
+        
+    except Exception as e:
+        print(f"Erro ao deletar produtos: {str(e)}")
+        raise Exception(f"Erro ao deletar produtos: {str(e)}")
 
 @lenovo_bp.route('/lenovo/carepack', methods=['POST'])
 async def processar_carepack():
