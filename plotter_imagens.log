@@ -58,3 +58,36 @@
 2025-05-26 16:51:34,487 - WARNING -  * Debugger is active!
 2025-05-26 16:51:34,488 - INFO -  * Debugger PIN: 542-593-872
 2025-05-26 17:08:01,415 - INFO - 172.24.0.1 - - [26/May/2025 17:08:01] "POST /lenovo/carepack HTTP/1.0" 200 -
+2025-05-26 17:21:55,038 - INFO - 172.24.0.1 - - [26/May/2025 17:21:55] "GET / HTTP/1.0" 200 -
+2025-05-26 17:21:55,668 - INFO - 172.24.0.1 - - [26/May/2025 17:21:55] "GET /static/hp.png HTTP/1.0" 200 -
+2025-05-26 17:21:55,678 - INFO - 172.24.0.1 - - [26/May/2025 17:21:55] "GET /static/cisco.png HTTP/1.0" 200 -
+2025-05-26 17:21:55,679 - INFO - 172.24.0.1 - - [26/May/2025 17:21:55] "GET /static/logo_mw.png HTTP/1.0" 200 -
+2025-05-26 17:21:55,687 - INFO - 172.24.0.1 - - [26/May/2025 17:21:55] "GET /static/hub2b.png HTTP/1.0" 200 -
+2025-05-26 17:21:55,715 - INFO - 172.24.0.1 - - [26/May/2025 17:21:55] "GET /static/lenovo.png HTTP/1.0" 200 -
+2025-05-26 17:21:57,128 - INFO - 172.24.0.1 - - [26/May/2025 17:21:57] "GET /hub2b HTTP/1.0" 200 -
+2025-05-26 17:21:57,180 - INFO - 172.24.0.1 - - [26/May/2025 17:21:57] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-05-26 17:21:57,271 - INFO - 172.24.0.1 - - [26/May/2025 17:21:57] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-05-26 17:22:50,027 - INFO - 172.24.0.1 - - [26/May/2025 17:22:50] "POST /hub2b/gerar-planilha HTTP/1.0" 200 -
+2025-05-26 17:23:50,735 - INFO - 172.24.0.1 - - [26/May/2025 17:23:50] "POST /hub2b/gerar-planilha HTTP/1.0" 200 -
+2025-05-26 17:30:54,776 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/processor.py', reloading
+2025-05-26 17:30:55,044 - INFO -  * Restarting with stat
+2025-05-26 17:31:13,922 - WARNING -  * Debugger is active!
+2025-05-26 17:31:13,924 - INFO -  * Debugger PIN: 542-593-872
+2025-05-26 17:32:49,109 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/processor.py', reloading
+2025-05-26 17:32:49,309 - INFO -  * Restarting with stat
+2025-05-26 17:32:50,919 - WARNING -  * Debugger is active!
+2025-05-26 17:32:50,921 - INFO -  * Debugger PIN: 542-593-872
+2025-05-26 17:32:51,947 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/processor.py', reloading
+2025-05-26 17:32:52,124 - INFO -  * Restarting with stat
+2025-05-26 17:32:53,555 - WARNING -  * Debugger is active!
+2025-05-26 17:32:53,556 - INFO -  * Debugger PIN: 542-593-872
+2025-05-26 17:33:19,213 - INFO - 172.24.0.1 - - [26/May/2025 17:33:19] "GET / HTTP/1.0" 200 -
+2025-05-26 17:33:19,315 - INFO - 172.24.0.1 - - [26/May/2025 17:33:19] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-05-26 17:33:19,325 - INFO - 172.24.0.1 - - [26/May/2025 17:33:19] "[36mGET /static/lenovo.png HTTP/1.0[0m" 304 -
+2025-05-26 17:33:19,335 - INFO - 172.24.0.1 - - [26/May/2025 17:33:19] "[36mGET /static/cisco.png HTTP/1.0[0m" 304 -
+2025-05-26 17:33:19,343 - INFO - 172.24.0.1 - - [26/May/2025 17:33:19] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-05-26 17:33:19,345 - INFO - 172.24.0.1 - - [26/May/2025 17:33:19] "[36mGET /static/hub2b.png HTTP/1.0[0m" 304 -
+2025-05-26 17:33:21,151 - INFO - 172.24.0.1 - - [26/May/2025 17:33:21] "GET /hub2b HTTP/1.0" 200 -
+2025-05-26 17:33:21,214 - INFO - 172.24.0.1 - - [26/May/2025 17:33:21] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-05-26 17:33:21,220 - INFO - 172.24.0.1 - - [26/May/2025 17:33:21] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-05-26 17:35:02,539 - INFO - 172.24.0.1 - - [26/May/2025 17:35:02] "POST /hub2b/gerar-planilha HTTP/1.0" 200 -

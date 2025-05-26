@@ -313,6 +313,21 @@ def gerar_panilha_hub2b(products, MANUFACTURE):
         else:
             lead_time = 45
 
+        # Função auxiliar para formatar EAN13
+        def formatar_ean13(ean):
+            if not ean:
+                return None
+            # Remove caracteres não numéricos e converte para string
+            ean = ''.join(filter(str.isdigit, str(ean)))
+            # Garante que tenha 13 dígitos, preenchendo com zeros à esquerda se necessário
+            return ean.zfill(13) if len(ean) <= 13 else ean
+
+        # Obtém o EAN13 e formata
+        ean13 = next((attr["options"][0] for attr in product["attributes"] if attr["slug"] == "pa_codigo-ean"), None)
+        if not ean13:
+            ean13 = get_delivery_info(product, "ean13", product["categories"][0]["name"])
+        ean13_formatado = formatar_ean13(ean13)
+
         # Dicionário base com os campos fixos
         produto_dict = {
             "Nome Produto": limpar_texto(product["name"]),
@@ -320,7 +335,7 @@ def gerar_panilha_hub2b(products, MANUFACTURE):
             "Descrição Personalizada": limpar_texto(product["description"]),
             "URL do produto": product["permalink"],
             "SKU": product["sku"],
-            "EAN ou ISBN (13 digitos)": next((attr["options"][0] for attr in product["attributes"] if attr["slug"] == "pa_codigo-ean"), None) if next((attr["options"][0] for attr in product["attributes"] if attr["slug"] == "pa_codigo-ean"), None) else get_delivery_info(product, "ean13", product["categories"][0]["name"]),
+            "EAN ou ISBN (13 digitos)": ean13_formatado,
             "Marca": MANUFACTURE,
             "Preço De": product["price"],
             "Preço Por": product["price"],
@@ -337,10 +352,16 @@ def gerar_panilha_hub2b(products, MANUFACTURE):
 
         # Adiciona os atributos dinamicamente
         if product.get("attributes"):
-            for idx, attr in enumerate(product["attributes"], start=1):
+            idx = 1
+            for attr in product["attributes"]:
+                # Ignora o atributo EAN pois já temos como coluna fixa
+                if attr["slug"] == "pa_codigo-ean":
+                    continue
+                    
                 produto_dict[f"Atributo {idx}"] = attr["name"]
                 # Junta todos os valores do atributo em uma única string, separados por vírgula
                 produto_dict[f"Valores {idx}"] = ", ".join(attr["options"]) if attr["options"] else ""
+                idx += 1
 
         combined_data.append(produto_dict)
     return combined_data
