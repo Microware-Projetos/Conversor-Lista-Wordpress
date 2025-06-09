@@ -5,10 +5,10 @@ from datetime import datetime, timedelta
 
 TOKEN_FILE = "token.json"
 
-CLIENT_ID = "21oa3e1y11NnXz7iA8lyBzLs4Zoin7RU"
-CLIENT_SECRET = "35MvIXXZn1iluv0KWKZhhv7yNo9U66oB"
-USERNAME = "6451microware@microwaretestesapi"
-PASSWORD = "p3rqfgpudcgw8cmevk7b"
+CLIENT_ID = "iPFSv5W9KAqCsVcBC14z95u4B8ezzTz3"
+CLIENT_SECRET = "WgibMLsaceE04lLMoM38ViJDY4O03try"
+USERNAME = "2792microware@microware"
+PASSWORD = "84c7dutc6fm35us45zvt"
 
 LOGIN_URL = "https://rest.hub2b.com.br/oauth2/login"
 REFRESH_URL = "https://rest.hub2b.com.br/oauth2/token"
@@ -38,7 +38,7 @@ def login():
         "client_id": CLIENT_ID,
         "client_secret": CLIENT_SECRET,
         "grant_type": "password",
-        "scope": "inventory catalog",
+        "scope": "catalog",
         "username": USERNAME,
         "password": PASSWORD
     }

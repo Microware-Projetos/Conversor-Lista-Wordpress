@@ -383,14 +383,23 @@
             historicoDiv.innerHTML = historicoPaginado.map(item => {
                 const data = new Date(item.data);
                 const dataFormatada = data.toLocaleDateString('pt-BR') + ', ' + data.toLocaleTimeString('pt-BR');
-                const statusClass = item.status.includes('sucesso') ? 'status-success' : 'status-error';
-                const statusText = item.status.includes('sucesso') ? 'Sucesso' : 'Erro';
+                const statusClass = item.status.includes('bem-sucedido') ? 'status-success' : 'status-error';
+                const statusText = item.status.includes('bem-sucedido') ? 'Sucesso' : 'Erro';
+                
+                // Extrai a mensagem principal do status
+                let mensagem = item.status;
+                if (item.total_produtos !== undefined && item.total_sucessos !== undefined) {
+                    const taxaSucesso = ((item.total_sucessos / item.total_produtos) * 100).toFixed(1);
+                    mensagem = `Envio ${statusText.toLowerCase()}: ${item.total_sucessos} de ${item.total_produtos} produtos (${taxaSucesso}%)`;
+                }
+                
                 return `
                 <div class="history-item">
                     <strong>Loja:</strong> ${item.marca}<br>
                     <strong>Data:</strong> ${dataFormatada}<br>
                     <strong>Status:</strong> 
-                    <span class="status ${statusClass}">${statusText}</span>
+                    <span class="status ${statusClass}">${statusText}</span><br>
+                    <strong>Detalhes:</strong> ${mensagem}
                 </div>
             `}).join('');
 

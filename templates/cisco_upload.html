@@ -15,6 +15,20 @@
             <div class="card-body">
                 <form id="uploadForm" enctype="multipart/form-data">
                     <div class="mb-3">
+                        <label for="tipoLista" class="form-label">Tipo de Lista</label>
+                        <select class="form-select" id="tipoLista" name="tipoLista" required>
+                            <option value="real">Lista Cisco Real (R$)</option>
+                            <option value="dolar">Lista Cisco Dólar (USD)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3" id="dolarGroup" style="display: none;">
+                        <label for="valorDolar" class="form-label">Valor do Dólar (USD)</label>
+                        <div class="input-group">
+                            <span class="input-group-text">R$</span>
+                            <input type="number" class="form-control" id="valorDolar" name="valorDolar" step="0.01" min="0">
+                        </div>
+                    </div>
+                    <div class="mb-3">
                         <label for="arquivo" class="form-label">Selecione o arquivo Excel</label>
                         <input type="file" class="form-control" id="arquivo" name="arquivo" accept=".xlsx,.xls" required>
                     </div>
@@ -40,6 +54,61 @@
 </div>
 
 <script>
+// Função para carregar o valor do dólar
+async function carregarValorDolar() {
+    try {
+        const response = await fetch('/cisco/dolar');
+        const data = await response.json();
+        document.getElementById('valorDolar').value = data.valor;
+    } catch (error) {
+        console.error('Erro ao carregar valor do dólar:', error);
+    }
+}
+
+// Função para salvar o valor do dólar
+async function salvarValorDolar(valor) {
+    try {
+        await fetch('/cisco/dolar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ valor: parseFloat(valor) })
+        });
+    } catch (error) {
+        console.error('Erro ao salvar valor do dólar:', error);
+    }
+}
+
+// Função para mostrar/esconder o campo de dólar baseado no tipo de lista
+function atualizarVisibilidadeDolar() {
+    const tipoLista = document.getElementById('tipoLista').value;
+    const dolarGroup = document.getElementById('dolarGroup');
+    const valorDolar = document.getElementById('valorDolar');
+    
+    if (tipoLista === 'dolar') {
+        dolarGroup.style.display = 'block';
+        valorDolar.required = true;
+    } else {
+        dolarGroup.style.display = 'none';
+        valorDolar.required = false;
+    }
+}
+
+// Adicionar evento para atualizar visibilidade quando o tipo de lista mudar
+document.getElementById('tipoLista').addEventListener('change', atualizarVisibilidadeDolar);
+
+// Chamar a função ao carregar a página
+document.addEventListener('DOMContentLoaded', function() {
+    carregarValorDolar();
+    atualizarVisibilidadeDolar();
+});
+
+// Salvar o valor do dólar quando ele for alterado
+document.getElementById('valorDolar').addEventListener('change', function(e) {
+    salvarValorDolar(e.target.value);
+});
+
 document.getElementById('uploadForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -60,7 +129,14 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
 
     const formData = new FormData();
     const arquivo = document.getElementById('arquivo').files[0];
+    const tipoLista = document.getElementById('tipoLista').value;
     formData.append('arquivo', arquivo);
+    formData.append('tipoLista', tipoLista);
+    
+    if (tipoLista === 'dolar') {
+        const valorDolar = document.getElementById('valorDolar').value;
+        formData.append('valorDolar', valorDolar);
+    }
 
     // Cria um EventSource para receber atualizações em tempo real
     const eventSource = new EventSource('/progresso');

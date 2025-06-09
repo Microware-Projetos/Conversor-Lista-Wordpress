@@ -76,35 +76,46 @@ async def enviar_produtos_rota():
             return jsonify({'success': False, 'message': 'Marca inválida'})
         
         print("Buscando produtos do WooCommerce...")
-        # Busca os produtos do WooCommerce
         produtos = await buscar_produtos(marca, consumer_key, consumer_secret)
         total_produtos = len(produtos)
         print(f"Produtos encontrados: {total_produtos}")
         
         print("Processando produtos para o Hub2b...")
-        # Processa os produtos para o Hub2b
         produtos_processados = processar_produtos(produtos, marca)
         print(f"Produtos processados: {len(produtos_processados)}")
-        #criar json com os produtos processados
-        with open('Hub2b/produtos_processados_hub2b_3.json', 'w') as f:
+        
+        #salvar produtos processados em um arquivo json
+        with open('processadosHub2b.json', 'w') as f:
             json.dump(produtos_processados, f)
         
         print("Enviando produtos para o Hub2b...")
-        # Envia os produtos para o Hub2b
         resultados = await enviar_produtos(produtos_processados)
-        total_sucessos = sum(1 for r in resultados if r == 'sucesso')
-        print("Envio concluído!")
+        total_sucessos = resultados.get('enviados', 0)
+        total_erros = len(resultados.get('erros', []))
+        
+        # Determina se o envio foi bem sucedido baseado na taxa de sucesso
+        taxa_sucesso = (total_sucessos / total_produtos) * 100 if total_produtos > 0 else 0
+        sucesso = taxa_sucesso >= 95  # Considera sucesso se 95% ou mais dos produtos foram enviados
+        
+        mensagem = f"Envio {'bem-sucedido' if sucesso else 'com falhas'}: {total_sucessos} de {total_produtos} produtos enviados ({taxa_sucesso:.1f}%)"
+        if not sucesso:
+            mensagem += f" - {total_erros} produtos com erro"
 
         # Salvar histórico com os resultados do envio
-        salvar_historico(marca, 'Enviado com sucesso', total_produtos, total_sucessos)
-        return jsonify({'success': True, 'message': f'Enviados {total_sucessos} de {total_produtos} produtos com sucesso!'})
+        #salvar_historico(marca, mensagem, total_produtos, total_sucessos)
+        
+        return jsonify({
+            'success': sucesso,
+            'message': mensagem
+        })
         
     except Exception as e:
         print(f"Erro durante o processo de envio: {str(e)}")
         import traceback
         print(f"Traceback completo: {traceback.format_exc()}")
-        salvar_historico(marca, f'Erro: {str(e)}')
-        return jsonify({'success': False, 'message': str(e)})
+        mensagem_erro = f"Erro no processo de envio: {str(e)}"
+        salvar_historico(marca, mensagem_erro)
+        return jsonify({'success': False, 'message': mensagem_erro})
 
 @hub2b_bp.route('/hub2b/historico', methods=['GET'])
 def obter_historico():

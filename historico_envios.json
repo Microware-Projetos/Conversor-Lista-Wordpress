@@ -1,0 +1,16 @@
+[
+    {
+        "marca": "HP",
+        "data": "2025-06-09T11:47:15.419897-03:00",
+        "status": "Erro no processo de envio: name 'sucesso' is not defined",
+        "total_produtos": null,
+        "total_sucessos": null
+    },
+    {
+        "marca": "Lenovo",
+        "data": "2025-06-09T12:55:37.564597-03:00",
+        "status": "Erro no processo de envio: name 'sucesso' is not defined",
+        "total_produtos": null,
+        "total_sucessos": null
+    }
+]

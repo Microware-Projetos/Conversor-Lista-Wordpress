@@ -7,6 +7,7 @@ import asyncio
 from requests.auth import HTTPBasicAuth
 import time
 from .processors import processar_hp_data
+from .processosAPI import processar_hp_dataAPI
 from .plotter import processar_plotter_data
 from .carepack import processar_carepack_data
 from collections import deque
@@ -463,5 +464,60 @@ async def deletar_todos_produtos_carepack():
     except Exception as e:
         print(f"Erro ao deletar produtos Care Pack: {str(e)}")
         raise Exception(f"Erro ao deletar produtos Care Pack: {str(e)}")
-    
 
+@hp_bp.route('/hp/teste', methods=['POST'])
+async def testar_processamento():
+    arquivo_produtos = request.files.get('arquivo_produtos')
+    arquivo_precos = request.files.get('arquivo_precos')
+    
+    if not arquivo_produtos or not arquivo_precos:
+        return jsonify({'erro': 'Por favor, envie ambos os arquivos (produtos e preços)'}), 400
+
+    try:
+        print("\n=== LEITURA DO ARQUIVO DE PRODUTOS ===")
+        print(f"Nome do arquivo: {arquivo_produtos.filename}")
+        
+        # Lê o arquivo de produtos com todas as sheets
+        xls_produtos = pd.ExcelFile(arquivo_produtos)
+        print(f"Sheets encontradas: {xls_produtos.sheet_names}")
+        
+        produtos_list = []
+        
+        # Processa cada sheet do arquivo de produtos
+        for sheet_name in xls_produtos.sheet_names:
+            print(f"\nProcessando sheet: {sheet_name}")
+            df_sheet = pd.read_excel(arquivo_produtos, sheet_name=sheet_name, header=1)
+            df_sheet['sheet_name'] = sheet_name
+            produtos_list.append(df_sheet)
+        
+        # Concatena todos os DataFrames
+        df_produtos = pd.concat(produtos_list, ignore_index=True)
+        print(f"\nTotal de linhas lidas: {len(df_produtos)}")
+        
+        print("\n=== LEITURA DO ARQUIVO DE PREÇOS ===")
+        print(f"Nome do arquivo: {arquivo_precos.filename}")
+        df_precos = pd.read_excel(arquivo_precos, header=0)
+        print(f"Total de preços lidos: {len(df_precos)}")
+        
+        print("\n=== INICIANDO PROCESSAMENTO ===")
+        # Processa os dados
+        produtos_processados = processar_hp_dataAPI(df_produtos, df_precos)
+        
+        # Salva o JSON com timestamp para não sobrescrever
+        timestamp = time.strftime("%Y%m%d_%H%M%S")
+        nome_arquivo = f'teste_produtos_hp_{timestamp}.json'
+        
+        with open(nome_arquivo, 'w', encoding='utf-8') as json_file:
+            json.dump(produtos_processados, json_file, ensure_ascii=False, indent=4)
+        
+        return jsonify({
+            'mensagem': 'Arquivo processado com sucesso e salvo para teste.',
+            'arquivo': nome_arquivo
+        })
+
+    except Exception as erro_geral:
+        print(f"Erro no teste: {str(erro_geral)}")
+        import traceback
+        print("Traceback completo:")
+        print(traceback.format_exc())
+        return jsonify({'erro': str(erro_geral)}) 

@@ -101,7 +101,7 @@ def processar_produtos(produtos, marca):
             "warrantyMonths": 12, 
             "handlingTime": lead_time, 
             "stock": 10, 
-            "weightKg": str(product["weight"]) if product.get("weight") else "0",
+            "weightKg": extrair_peso(product.get("weight")) if product.get("weight") else "0",
             "url": product["permalink"],
             "categoryCode": next((cat["name"] for cat in product["categories"]), ""),
             "name": limpar_texto(product["name"]), 
@@ -145,7 +145,7 @@ async def enviar_produtos(combined_data):
     try:
         token_data = get_token()
         access_token = token_data["access_token"]
-        id_loja = "6451"
+        id_loja = "2792"
         print("Login realizado com sucesso: ", access_token)
         print(f"\nIniciando envio de {len(combined_data)} produtos...")
         
@@ -412,4 +412,22 @@ def get_delivery_info(product, value, category):
                 return df_sku["Largura da embalagem (cm)"].values[0] / 100
             elif value == "length_m":
                 return df_sku["Comprimento da embalagem (cm)"].values[0] / 100
+        
+
+def _carregar_ncm_cache():
+    global _ncm_cache
+    if _ncm_cache is None:
+        utils_path = _get_utils_path()
+        with open(os.path.join(utils_path, 'ncm.json'), 'r') as f:
+            _ncm_cache = json.load(f)
+    return _ncm_cache
+
+def _carregar_categoria_map():
+    global _categoria_map_cache
+    if _categoria_map_cache is None:
+        utils_path = _get_utils_path()
+        with open(os.path.join(utils_path, 'categoria_map.json'), 'r') as f:
+            _categoria_map_cache = json.load(f)
+    return _categoria_map_cache
+
         

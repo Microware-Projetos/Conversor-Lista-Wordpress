@@ -13,51 +13,103 @@
                 </div>
             </div>
             <div class="card-body">
-                <form id="uploadForm" enctype="multipart/form-data">
-                    <div class="mb-3">
-                        <label for="tipo_upload" class="form-label">Tipo de Upload</label>
-                        <select class="form-select" id="tipo_upload" name="tipo_upload" required>
-                            <option value="">Selecione o tipo de upload</option>
-                            <option value="produtos">Produtos</option>
-                            <option value="plotter">Plotter</option>
-                            <option value="carepack">Care Pack</option>
-                        </select>
-                    </div>
-
-                    <!-- Campos para Produtos HP -->
-                    <div id="campos_produtos" style="display: none;">
-                        <div class="mb-3">
-                            <label for="arquivo_produtos" class="form-label">Arquivo de Produtos</label>
-                            <input type="file" class="form-control" id="arquivo_produtos" name="arquivo_produtos" accept=".xlsx,.xls">
-                        </div>
-                        <div class="mb-3">
-                            <label for="arquivo_precos" class="form-label">Arquivo de Preços</label>
-                            <input type="file" class="form-control" id="arquivo_precos" name="arquivo_precos" accept=".xlsx,.xls">
-                        </div>
-                    </div>
-
-                    <!-- Campos para Plotter -->
-                    <div id="campos_plotter" style="display: none;">
-                        <div class="mb-3">
-                            <label for="arquivo_plotter" class="form-label">Arquivo de Plotter</label>
-                            <input type="file" class="form-control" id="arquivo_plotter" name="arquivo_plotter" accept=".xlsx,.xls">
-                        </div>
-                    </div>
-
-                    <!-- Campos para Care Pack -->
-                    <div id="campos_carepack" style="display: none;">
-                        <div class="mb-3">
-                            <label for="arquivo_carepack" class="form-label">Arquivo de Care Pack</label>
-                            <input type="file" class="form-control" id="arquivo_carepack" name="arquivo_carepack" accept=".xlsx,.xls">
-                        </div>
-                    </div>
-
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-primary" id="submitButton">
-                            <i class="bi bi-upload me-2"></i>Enviar Arquivos
+                <!-- Tabs -->
+                <ul class="nav nav-tabs mb-3" id="uploadTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="upload-tab" data-bs-toggle="tab" data-bs-target="#upload" type="button" role="tab" aria-controls="upload" aria-selected="true">
+                            <i class="bi bi-cloud-upload me-2"></i>Upload para WooCommerce
                         </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="test-tab" data-bs-toggle="tab" data-bs-target="#test" type="button" role="tab" aria-controls="test" aria-selected="false">
+                            <i class="bi bi-code-square me-2"></i>Teste de Processamento
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content" id="uploadTabsContent">
+                    <!-- Upload Tab -->
+                    <div class="tab-pane fade show active" id="upload" role="tabpanel" aria-labelledby="upload-tab">
+                        <form id="uploadForm" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="tipo_upload" class="form-label">Tipo de Upload</label>
+                                <select class="form-select" id="tipo_upload" name="tipo_upload" required>
+                                    <option value="">Selecione o tipo de upload</option>
+                                    <option value="produtos">Produtos</option>
+                                    <option value="plotter">Plotter</option>
+                                    <option value="carepack">Care Pack</option>
+                                </select>
+                            </div>
+
+                            <!-- Campos para Produtos HP -->
+                            <div id="campos_produtos" style="display: none;">
+                                <div class="mb-3">
+                                    <label for="arquivo_produtos" class="form-label">Arquivo de Produtos</label>
+                                    <input type="file" class="form-control" id="arquivo_produtos" name="arquivo_produtos" accept=".xlsx,.xls">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="arquivo_precos" class="form-label">Arquivo de Preços</label>
+                                    <input type="file" class="form-control" id="arquivo_precos" name="arquivo_precos" accept=".xlsx,.xls">
+                                </div>
+                            </div>
+
+                            <!-- Campos para Plotter -->
+                            <div id="campos_plotter" style="display: none;">
+                                <div class="mb-3">
+                                    <label for="arquivo_plotter" class="form-label">Arquivo de Plotter</label>
+                                    <input type="file" class="form-control" id="arquivo_plotter" name="arquivo_plotter" accept=".xlsx,.xls">
+                                </div>
+                            </div>
+
+                            <!-- Campos para Care Pack -->
+                            <div id="campos_carepack" style="display: none;">
+                                <div class="mb-3">
+                                    <label for="arquivo_carepack" class="form-label">Arquivo de Care Pack</label>
+                                    <input type="file" class="form-control" id="arquivo_carepack" name="arquivo_carepack" accept=".xlsx,.xls">
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary" id="submitButton">
+                                    <i class="bi bi-upload me-2"></i>Enviar para WooCommerce
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                </form>
+
+                    <!-- Test Tab -->
+                    <div class="tab-pane fade" id="test" role="tabpanel" aria-labelledby="test-tab">
+                        <form id="testForm" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="tipo_teste" class="form-label">Tipo de Teste</label>
+                                <select class="form-select" id="tipo_teste" name="tipo_teste" required>
+                                    <option value="">Selecione o tipo de teste</option>
+                                    <option value="produtos">Produtos</option>
+                                </select>
+                            </div>
+
+                            <!-- Campos para Teste de Produtos -->
+                            <div id="campos_teste_produtos">
+                                <div class="mb-3">
+                                    <label for="arquivo_teste_produtos" class="form-label">Arquivo de Produtos</label>
+                                    <input type="file" class="form-control" id="arquivo_teste_produtos" name="arquivo_produtos" accept=".xlsx,.xls">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="arquivo_teste_precos" class="form-label">Arquivo de Preços</label>
+                                    <input type="file" class="form-control" id="arquivo_teste_precos" name="arquivo_precos" accept=".xlsx,.xls">
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-secondary" id="testButton">
+                                    <i class="bi bi-code-square me-2"></i>Testar Processamento
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
                 <div id="resultado" class="mt-3"></div>
             </div>
         </div>
@@ -65,18 +117,16 @@
 </div>
 
 <script>
-document.getElementById('tipo_upload').addEventListener('change', function() {
-    const tipo = this.value;
+// Função para mostrar/esconder campos baseado no tipo de upload
+function toggleUploadFields(tipo) {
     const camposProdutos = document.getElementById('campos_produtos');
     const camposPlotter = document.getElementById('campos_plotter');
     const camposCarePack = document.getElementById('campos_carepack');
     
-    // Esconde todos os campos
     camposProdutos.style.display = 'none';
     camposPlotter.style.display = 'none';
     camposCarePack.style.display = 'none';
     
-    // Mostra os campos relevantes
     if (tipo === 'produtos') {
         camposProdutos.style.display = 'block';
         document.getElementById('arquivo_produtos').required = true;
@@ -96,8 +146,14 @@ document.getElementById('tipo_upload').addEventListener('change', function() {
         document.getElementById('arquivo_precos').required = false;
         document.getElementById('arquivo_plotter').required = false;
     }
+}
+
+// Event listener para o tipo de upload
+document.getElementById('tipo_upload').addEventListener('change', function() {
+    toggleUploadFields(this.value);
 });
 
+// Event listener para o formulário de upload
 document.getElementById('uploadForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -105,27 +161,11 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
     const resultadoDiv = document.getElementById('resultado');
     const tipoUpload = document.getElementById('tipo_upload').value;
     
-    // Desabilita o botão e mostra loading
     submitButton.disabled = true;
     submitButton.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Enviando...';
     resultadoDiv.innerHTML = '';
 
-    const formData = new FormData();
-    formData.append('tipo_upload', tipoUpload);
-
-    if (tipoUpload === 'produtos') {
-        const arquivoProdutos = document.getElementById('arquivo_produtos').files[0];
-        const arquivoPrecos = document.getElementById('arquivo_precos').files[0];
-        formData.append('arquivo_produtos', arquivoProdutos);
-        formData.append('arquivo_precos', arquivoPrecos);
-    } else if (tipoUpload === 'plotter') {
-        const arquivoPlotter = document.getElementById('arquivo_plotter').files[0];
-        formData.append('arquivo_plotter', arquivoPlotter);
-    } else if (tipoUpload === 'carepack') {
-        const arquivoCarePack = document.getElementById('arquivo_carepack').files[0];
-        formData.append('arquivo_carepack', arquivoCarePack);
-    }
-
+    const formData = new FormData(this);
     const endpoint = tipoUpload === 'produtos' ? '/hp' : 
                     tipoUpload === 'plotter' ? '/hp/plotter' : 
                     '/hp/carepack';
@@ -147,17 +187,60 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
         }
     })
     .catch(error => {
-        const mensagemErro = error.message || 'Erro ao processar os arquivos';
         resultadoDiv.innerHTML = `
             <div class="alert alert-danger">
-                <i class="bi bi-exclamation-triangle me-2"></i>${mensagemErro}
+                <i class="bi bi-exclamation-triangle me-2"></i>${error.message}
             </div>
         `;
     })
     .finally(() => {
-        // Reabilita o botão e restaura o texto original
         submitButton.disabled = false;
-        submitButton.innerHTML = '<i class="bi bi-upload me-2"></i>Enviar Arquivos';
+        submitButton.innerHTML = '<i class="bi bi-upload me-2"></i>Enviar para WooCommerce';
+    });
+});
+
+// Event listener para o formulário de teste
+document.getElementById('testForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const testButton = document.getElementById('testButton');
+    const resultadoDiv = document.getElementById('resultado');
+    
+    testButton.disabled = true;
+    testButton.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Processando...';
+    resultadoDiv.innerHTML = '';
+
+    const formData = new FormData(this);
+    formData.append('teste', 'true');
+
+    fetch('/hp/teste', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.mensagem) {
+            resultadoDiv.innerHTML = `
+                <div class="alert alert-success">
+                    <i class="bi bi-check-circle me-2"></i>${data.mensagem}
+                    <br>
+                    <small>Arquivo JSON salvo em: ${data.arquivo}</small>
+                </div>
+            `;
+        } else {
+            throw new Error(data.erro || 'Erro ao processar os arquivos');
+        }
+    })
+    .catch(error => {
+        resultadoDiv.innerHTML = `
+            <div class="alert alert-danger">
+                <i class="bi bi-exclamation-triangle me-2"></i>${error.message}
+            </div>
+        `;
+    })
+    .finally(() => {
+        testButton.disabled = false;
+        testButton.innerHTML = '<i class="bi bi-code-square me-2"></i>Testar Processamento';
     });
 });
 </script>

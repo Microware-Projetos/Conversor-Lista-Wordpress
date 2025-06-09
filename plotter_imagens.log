@@ -1,93 +1,1237 @@
-2025-05-26 16:35:43,373 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-05-28 12:03:48,076 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://172.24.0.4:5000
-2025-05-26 16:35:43,373 - INFO - [33mPress CTRL+C to quit[0m
-2025-05-26 16:35:43,375 - INFO -  * Restarting with stat
-2025-05-26 16:35:45,367 - WARNING -  * Debugger is active!
-2025-05-26 16:35:45,369 - INFO -  * Debugger PIN: 542-593-872
-2025-05-26 16:35:49,002 - INFO - 172.24.0.1 - - [26/May/2025 16:35:49] "GET / HTTP/1.0" 200 -
-2025-05-26 16:35:49,089 - INFO - 172.24.0.1 - - [26/May/2025 16:35:49] "GET /static/logo_mw.png HTTP/1.0" 200 -
-2025-05-26 16:35:49,125 - INFO - 172.24.0.1 - - [26/May/2025 16:35:49] "GET /static/hp.png HTTP/1.0" 200 -
-2025-05-26 16:35:49,126 - INFO - 172.24.0.1 - - [26/May/2025 16:35:49] "GET /static/cisco.png HTTP/1.0" 200 -
-2025-05-26 16:35:49,132 - INFO - 172.24.0.1 - - [26/May/2025 16:35:49] "GET /static/lenovo.png HTTP/1.0" 200 -
-2025-05-26 16:35:49,135 - INFO - 172.24.0.1 - - [26/May/2025 16:35:49] "GET /static/hub2b.png HTTP/1.0" 200 -
-2025-05-26 16:35:49,263 - INFO - 172.24.0.1 - - [26/May/2025 16:35:49] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
-2025-05-26 16:35:50,476 - INFO - 172.24.0.1 - - [26/May/2025 16:35:50] "GET /hub2b HTTP/1.0" 200 -
-2025-05-26 16:35:50,558 - INFO - 172.24.0.1 - - [26/May/2025 16:35:50] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
-2025-05-26 16:35:50,701 - INFO - 172.24.0.1 - - [26/May/2025 16:35:50] "GET /hub2b/historico HTTP/1.0" 200 -
-2025-05-26 16:35:52,655 - INFO - 172.24.0.1 - - [26/May/2025 16:35:52] "GET /microware HTTP/1.0" 200 -
-2025-05-26 16:35:52,767 - INFO - 172.24.0.1 - - [26/May/2025 16:35:52] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
-2025-05-26 16:35:54,251 - INFO - 172.24.0.1 - - [26/May/2025 16:35:54] "GET /cisco HTTP/1.0" 200 -
-2025-05-26 16:35:54,318 - INFO - 172.24.0.1 - - [26/May/2025 16:35:54] "[36mGET /static/cisco.png HTTP/1.0[0m" 304 -
-2025-05-26 16:35:55,715 - INFO - 172.24.0.1 - - [26/May/2025 16:35:55] "GET /hp HTTP/1.0" 200 -
-2025-05-26 16:35:55,772 - INFO - 172.24.0.1 - - [26/May/2025 16:35:55] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
-2025-05-26 16:35:58,388 - INFO - 172.24.0.1 - - [26/May/2025 16:35:58] "GET /lenovo HTTP/1.0" 200 -
-2025-05-26 16:35:58,464 - INFO - 172.24.0.1 - - [26/May/2025 16:35:58] "[36mGET /static/lenovo.png HTTP/1.0[0m" 304 -
-2025-05-26 16:35:59,716 - INFO - 172.24.0.1 - - [26/May/2025 16:35:59] "GET /hp HTTP/1.0" 200 -
-2025-05-26 16:35:59,777 - INFO - 172.24.0.1 - - [26/May/2025 16:35:59] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
-2025-05-26 16:36:01,261 - INFO - 172.24.0.1 - - [26/May/2025 16:36:01] "GET /cisco HTTP/1.0" 200 -
-2025-05-26 16:36:01,330 - INFO - 172.24.0.1 - - [26/May/2025 16:36:01] "[36mGET /static/cisco.png HTTP/1.0[0m" 304 -
-2025-05-26 16:36:02,357 - INFO - 172.24.0.1 - - [26/May/2025 16:36:02] "GET /microware HTTP/1.0" 200 -
-2025-05-26 16:36:02,424 - INFO - 172.24.0.1 - - [26/May/2025 16:36:02] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
-2025-05-26 16:39:55,940 - INFO - 172.24.0.1 - - [26/May/2025 16:39:55] "GET /lenovo HTTP/1.0" 200 -
-2025-05-26 16:39:56,027 - INFO - 172.24.0.1 - - [26/May/2025 16:39:56] "[36mGET /static/lenovo.png HTTP/1.0[0m" 304 -
-2025-05-26 16:44:55,601 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/carepack.py', reloading
-2025-05-26 16:44:55,813 - INFO -  * Restarting with stat
-2025-05-26 16:44:57,456 - WARNING -  * Debugger is active!
-2025-05-26 16:44:57,458 - INFO -  * Debugger PIN: 542-593-872
-2025-05-26 16:45:12,466 - INFO - 172.24.0.1 - - [26/May/2025 16:45:12] "GET /lenovo HTTP/1.0" 200 -
-2025-05-26 16:45:12,530 - INFO - 172.24.0.1 - - [26/May/2025 16:45:12] "[36mGET /static/lenovo.png HTTP/1.0[0m" 304 -
-2025-05-26 16:45:24,389 - INFO - 172.24.0.1 - - [26/May/2025 16:45:24] "POST /lenovo/carepack HTTP/1.0" 200 -
-2025-05-26 16:46:03,244 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/carepack.py', reloading
-2025-05-26 16:46:03,488 - INFO -  * Restarting with stat
-2025-05-26 16:46:05,176 - WARNING -  * Debugger is active!
-2025-05-26 16:46:05,178 - INFO -  * Debugger PIN: 542-593-872
-2025-05-26 16:46:05,289 - INFO - 172.24.0.1 - - [26/May/2025 16:46:05] "POST /lenovo/carepack HTTP/1.0" 200 -
-2025-05-26 16:46:18,379 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/carepack.py', reloading
-2025-05-26 16:46:18,656 - INFO -  * Restarting with stat
-2025-05-26 16:46:20,287 - WARNING -  * Debugger is active!
-2025-05-26 16:46:20,289 - INFO -  * Debugger PIN: 542-593-872
-2025-05-26 16:50:30,395 - INFO - 172.24.0.1 - - [26/May/2025 16:50:30] "POST /lenovo/carepack HTTP/1.0" 200 -
-2025-05-26 16:51:22,507 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/carepack.py', reloading
-2025-05-26 16:51:22,751 - INFO -  * Restarting with stat
-2025-05-26 16:51:24,300 - WARNING -  * Debugger is active!
-2025-05-26 16:51:24,301 - INFO -  * Debugger PIN: 542-593-872
-2025-05-26 16:51:32,423 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/carepack.py', reloading
-2025-05-26 16:51:32,789 - INFO -  * Restarting with stat
-2025-05-26 16:51:34,487 - WARNING -  * Debugger is active!
-2025-05-26 16:51:34,488 - INFO -  * Debugger PIN: 542-593-872
-2025-05-26 17:08:01,415 - INFO - 172.24.0.1 - - [26/May/2025 17:08:01] "POST /lenovo/carepack HTTP/1.0" 200 -
-2025-05-26 17:21:55,038 - INFO - 172.24.0.1 - - [26/May/2025 17:21:55] "GET / HTTP/1.0" 200 -
-2025-05-26 17:21:55,668 - INFO - 172.24.0.1 - - [26/May/2025 17:21:55] "GET /static/hp.png HTTP/1.0" 200 -
-2025-05-26 17:21:55,678 - INFO - 172.24.0.1 - - [26/May/2025 17:21:55] "GET /static/cisco.png HTTP/1.0" 200 -
-2025-05-26 17:21:55,679 - INFO - 172.24.0.1 - - [26/May/2025 17:21:55] "GET /static/logo_mw.png HTTP/1.0" 200 -
-2025-05-26 17:21:55,687 - INFO - 172.24.0.1 - - [26/May/2025 17:21:55] "GET /static/hub2b.png HTTP/1.0" 200 -
-2025-05-26 17:21:55,715 - INFO - 172.24.0.1 - - [26/May/2025 17:21:55] "GET /static/lenovo.png HTTP/1.0" 200 -
-2025-05-26 17:21:57,128 - INFO - 172.24.0.1 - - [26/May/2025 17:21:57] "GET /hub2b HTTP/1.0" 200 -
-2025-05-26 17:21:57,180 - INFO - 172.24.0.1 - - [26/May/2025 17:21:57] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
-2025-05-26 17:21:57,271 - INFO - 172.24.0.1 - - [26/May/2025 17:21:57] "GET /hub2b/historico HTTP/1.0" 200 -
-2025-05-26 17:22:50,027 - INFO - 172.24.0.1 - - [26/May/2025 17:22:50] "POST /hub2b/gerar-planilha HTTP/1.0" 200 -
-2025-05-26 17:23:50,735 - INFO - 172.24.0.1 - - [26/May/2025 17:23:50] "POST /hub2b/gerar-planilha HTTP/1.0" 200 -
-2025-05-26 17:30:54,776 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/processor.py', reloading
-2025-05-26 17:30:55,044 - INFO -  * Restarting with stat
-2025-05-26 17:31:13,922 - WARNING -  * Debugger is active!
-2025-05-26 17:31:13,924 - INFO -  * Debugger PIN: 542-593-872
-2025-05-26 17:32:49,109 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/processor.py', reloading
-2025-05-26 17:32:49,309 - INFO -  * Restarting with stat
-2025-05-26 17:32:50,919 - WARNING -  * Debugger is active!
-2025-05-26 17:32:50,921 - INFO -  * Debugger PIN: 542-593-872
-2025-05-26 17:32:51,947 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/processor.py', reloading
-2025-05-26 17:32:52,124 - INFO -  * Restarting with stat
-2025-05-26 17:32:53,555 - WARNING -  * Debugger is active!
-2025-05-26 17:32:53,556 - INFO -  * Debugger PIN: 542-593-872
-2025-05-26 17:33:19,213 - INFO - 172.24.0.1 - - [26/May/2025 17:33:19] "GET / HTTP/1.0" 200 -
-2025-05-26 17:33:19,315 - INFO - 172.24.0.1 - - [26/May/2025 17:33:19] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
-2025-05-26 17:33:19,325 - INFO - 172.24.0.1 - - [26/May/2025 17:33:19] "[36mGET /static/lenovo.png HTTP/1.0[0m" 304 -
-2025-05-26 17:33:19,335 - INFO - 172.24.0.1 - - [26/May/2025 17:33:19] "[36mGET /static/cisco.png HTTP/1.0[0m" 304 -
-2025-05-26 17:33:19,343 - INFO - 172.24.0.1 - - [26/May/2025 17:33:19] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
-2025-05-26 17:33:19,345 - INFO - 172.24.0.1 - - [26/May/2025 17:33:19] "[36mGET /static/hub2b.png HTTP/1.0[0m" 304 -
-2025-05-26 17:33:21,151 - INFO - 172.24.0.1 - - [26/May/2025 17:33:21] "GET /hub2b HTTP/1.0" 200 -
-2025-05-26 17:33:21,214 - INFO - 172.24.0.1 - - [26/May/2025 17:33:21] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
-2025-05-26 17:33:21,220 - INFO - 172.24.0.1 - - [26/May/2025 17:33:21] "GET /hub2b/historico HTTP/1.0" 200 -
-2025-05-26 17:35:02,539 - INFO - 172.24.0.1 - - [26/May/2025 17:35:02] "POST /hub2b/gerar-planilha HTTP/1.0" 200 -
+2025-05-28 12:03:48,077 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-28 12:03:48,081 - INFO -  * Restarting with stat
+2025-05-28 12:03:49,539 - WARNING -  * Debugger is active!
+2025-05-28 12:03:49,540 - INFO -  * Debugger PIN: 542-593-872
+2025-05-28 12:03:51,815 - INFO - 172.24.0.1 - - [28/May/2025 12:03:51] "GET /progresso HTTP/1.0" 200 -
+2025-05-28 12:03:53,898 - INFO - 172.24.0.1 - - [28/May/2025 12:03:53] "POST /cisco HTTP/1.0" 200 -
+2025-05-28 12:05:10,431 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Cisco/processors.py', reloading
+2025-05-28 12:05:10,655 - INFO -  * Restarting with stat
+2025-05-28 12:05:12,148 - WARNING -  * Debugger is active!
+2025-05-28 12:05:12,150 - INFO -  * Debugger PIN: 542-593-872
+2025-05-28 12:05:30,862 - INFO - 172.24.0.1 - - [28/May/2025 12:05:30] "GET /progresso HTTP/1.0" 200 -
+2025-05-28 12:05:49,003 - INFO - 172.24.0.1 - - [28/May/2025 12:05:49] "POST /cisco HTTP/1.0" 200 -
+2025-05-28 12:06:45,455 - INFO - 172.24.0.1 - - [28/May/2025 12:06:45] "POST /cisco/dolar HTTP/1.0" 200 -
+2025-05-28 12:06:46,002 - INFO - 172.24.0.1 - - [28/May/2025 12:06:46] "GET /progresso HTTP/1.0" 200 -
+2025-05-28 12:07:04,107 - INFO - 172.24.0.1 - - [28/May/2025 12:07:04] "POST /cisco HTTP/1.0" 200 -
+2025-05-28 12:10:58,107 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Cisco/processors.py', reloading
+2025-05-28 12:10:58,289 - INFO -  * Restarting with stat
+2025-05-28 12:11:00,174 - WARNING -  * Debugger is active!
+2025-05-28 12:11:00,176 - INFO -  * Debugger PIN: 542-593-872
+2025-05-28 12:11:05,271 - INFO - 172.24.0.1 - - [28/May/2025 12:11:05] "GET /progresso HTTP/1.0" 200 -
+2025-05-28 12:11:23,406 - INFO - 172.24.0.1 - - [28/May/2025 12:11:23] "POST /cisco HTTP/1.0" 200 -
+2025-05-28 12:14:03,244 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Cisco/processors.py', reloading
+2025-05-28 12:14:03,458 - INFO -  * Restarting with stat
+2025-05-28 12:14:13,606 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-05-28 12:14:13,607 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-28 12:14:13,609 - INFO -  * Restarting with stat
+2025-05-28 12:14:15,158 - WARNING -  * Debugger is active!
+2025-05-28 12:14:15,160 - INFO -  * Debugger PIN: 542-593-872
+2025-05-28 12:14:20,950 - INFO - 172.24.0.1 - - [28/May/2025 12:14:20] "GET /progresso HTTP/1.0" 200 -
+2025-05-28 12:14:23,091 - INFO - 172.24.0.1 - - [28/May/2025 12:14:23] "POST /cisco HTTP/1.0" 200 -
+2025-05-28 12:14:52,124 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-05-28 12:14:52,125 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-28 12:14:52,127 - INFO -  * Restarting with stat
+2025-05-28 12:14:53,584 - WARNING -  * Debugger is active!
+2025-05-28 12:14:53,586 - INFO -  * Debugger PIN: 542-593-872
+2025-05-28 12:14:54,307 - INFO - 172.24.0.1 - - [28/May/2025 12:14:54] "GET /cisco HTTP/1.0" 200 -
+2025-05-28 12:14:54,461 - INFO - 172.24.0.1 - - [28/May/2025 12:14:54] "[36mGET /static/cisco.png HTTP/1.0[0m" 304 -
+2025-05-28 12:14:54,583 - INFO - 172.24.0.1 - - [28/May/2025 12:14:54] "GET /cisco/dolar HTTP/1.0" 200 -
+2025-05-28 12:15:00,766 - INFO - 172.24.0.1 - - [28/May/2025 12:15:00] "GET /progresso HTTP/1.0" 200 -
+2025-05-28 12:15:02,860 - INFO - 172.24.0.1 - - [28/May/2025 12:15:02] "POST /cisco HTTP/1.0" 200 -
+2025-05-28 12:15:48,203 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Cisco/processors.py', reloading
+2025-05-28 12:15:48,401 - INFO -  * Restarting with stat
+2025-05-28 12:15:49,926 - WARNING -  * Debugger is active!
+2025-05-28 12:15:49,927 - INFO -  * Debugger PIN: 542-593-872
+2025-05-28 12:15:53,586 - INFO - 172.24.0.1 - - [28/May/2025 12:15:53] "GET /progresso HTTP/1.0" 200 -
+2025-05-28 12:17:47,072 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-05-28 12:17:47,072 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-28 12:17:47,073 - INFO -  * Restarting with stat
+2025-05-28 12:17:48,466 - WARNING -  * Debugger is active!
+2025-05-28 12:17:48,467 - INFO -  * Debugger PIN: 542-593-872
+2025-05-28 12:17:49,026 - INFO - 172.24.0.1 - - [28/May/2025 12:17:49] "GET /progresso HTTP/1.0" 200 -
+2025-05-28 12:18:15,144 - INFO - 172.24.0.1 - - [28/May/2025 12:18:15] "POST /cisco HTTP/1.0" 200 -
+2025-05-28 12:18:31,962 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Cisco/processors.py', reloading
+2025-05-28 12:18:32,194 - INFO -  * Restarting with stat
+2025-05-28 12:18:33,697 - WARNING -  * Debugger is active!
+2025-05-28 12:18:33,698 - INFO -  * Debugger PIN: 542-593-872
+2025-05-28 12:18:55,073 - INFO - 172.24.0.1 - - [28/May/2025 12:18:55] "GET /progresso HTTP/1.0" 200 -
+2025-05-28 12:19:21,199 - INFO - 172.24.0.1 - - [28/May/2025 12:19:21] "POST /cisco HTTP/1.0" 200 -
+2025-05-28 12:20:15,790 - INFO - 172.24.0.1 - - [28/May/2025 12:20:15] "GET /progresso HTTP/1.0" 200 -
+2025-05-28 12:20:41,987 - INFO - 172.24.0.1 - - [28/May/2025 12:20:41] "POST /cisco HTTP/1.0" 200 -
+2025-05-28 12:21:48,065 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Cisco/processors.py', reloading
+2025-05-28 12:21:48,297 - INFO -  * Restarting with stat
+2025-05-28 12:21:49,821 - WARNING -  * Debugger is active!
+2025-05-28 12:21:49,822 - INFO -  * Debugger PIN: 542-593-872
+2025-05-28 12:21:50,850 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Cisco/processors.py', reloading
+2025-05-28 12:21:51,052 - INFO -  * Restarting with stat
+2025-05-28 12:21:52,746 - WARNING -  * Debugger is active!
+2025-05-28 12:21:52,748 - INFO -  * Debugger PIN: 542-593-872
+2025-05-28 12:22:09,092 - INFO - 172.24.0.1 - - [28/May/2025 12:22:09] "GET /cisco HTTP/1.0" 200 -
+2025-05-28 12:22:09,205 - INFO - 172.24.0.1 - - [28/May/2025 12:22:09] "[36mGET /static/cisco.png HTTP/1.0[0m" 304 -
+2025-05-28 12:22:09,318 - INFO - 172.24.0.1 - - [28/May/2025 12:22:09] "GET /cisco/dolar HTTP/1.0" 200 -
+2025-05-28 12:22:15,210 - INFO - 172.24.0.1 - - [28/May/2025 12:22:15] "GET /progresso HTTP/1.0" 200 -
+2025-05-28 12:22:39,302 - INFO - 172.24.0.1 - - [28/May/2025 12:22:39] "POST /cisco HTTP/1.0" 200 -
+2025-05-28 12:23:41,933 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Cisco/routes.py', reloading
+2025-05-28 12:23:42,178 - INFO -  * Restarting with stat
+2025-05-28 12:23:43,676 - WARNING -  * Debugger is active!
+2025-05-28 12:23:43,677 - INFO -  * Debugger PIN: 542-593-872
+2025-05-28 12:23:48,752 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Cisco/routes.py', reloading
+2025-05-28 12:23:49,006 - INFO -  * Restarting with stat
+2025-05-28 12:23:50,665 - WARNING -  * Debugger is active!
+2025-05-28 12:23:50,667 - INFO -  * Debugger PIN: 542-593-872
+2025-05-28 12:23:51,681 - INFO - 172.24.0.1 - - [28/May/2025 12:23:51] "GET /progresso HTTP/1.0" 200 -
+2025-05-28 12:24:15,805 - INFO - 172.24.0.1 - - [28/May/2025 12:24:15] "POST /cisco HTTP/1.0" 200 -
+2025-05-28 12:29:37,477 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Cisco/processors.py', reloading
+2025-05-28 12:29:37,773 - INFO -  * Restarting with stat
+2025-05-28 12:29:39,345 - WARNING -  * Debugger is active!
+2025-05-28 12:29:39,346 - INFO -  * Debugger PIN: 542-593-872
+2025-05-28 12:30:01,623 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Cisco/processors.py', reloading
+2025-05-28 12:30:01,832 - INFO -  * Restarting with stat
+2025-05-28 12:30:03,427 - WARNING -  * Debugger is active!
+2025-05-28 12:30:03,428 - INFO -  * Debugger PIN: 542-593-872
+2025-05-28 12:30:20,611 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Cisco/processors.py', reloading
+2025-05-28 12:30:20,772 - INFO -  * Restarting with stat
+2025-05-28 12:30:22,238 - WARNING -  * Debugger is active!
+2025-05-28 12:30:22,239 - INFO -  * Debugger PIN: 542-593-872
+2025-05-28 12:30:29,484 - INFO - 172.24.0.1 - - [28/May/2025 12:30:29] "GET /cisco HTTP/1.0" 200 -
+2025-05-28 12:30:29,598 - INFO - 172.24.0.1 - - [28/May/2025 12:30:29] "[36mGET /static/cisco.png HTTP/1.0[0m" 304 -
+2025-05-28 12:30:29,703 - INFO - 172.24.0.1 - - [28/May/2025 12:30:29] "GET /cisco/dolar HTTP/1.0" 200 -
+2025-05-28 12:30:34,266 - INFO - 172.24.0.1 - - [28/May/2025 12:30:34] "GET /progresso HTTP/1.0" 200 -
+2025-05-28 12:30:41,392 - INFO - 172.24.0.1 - - [28/May/2025 12:30:41] "POST /cisco HTTP/1.0" 200 -
+2025-05-28 14:24:35,536 - INFO - 172.24.0.1 - - [28/May/2025 14:24:35] "GET /cisco HTTP/1.0" 200 -
+2025-05-28 14:24:35,608 - INFO - 172.24.0.1 - - [28/May/2025 14:24:35] "[36mGET /static/cisco.png HTTP/1.0[0m" 304 -
+2025-05-28 14:24:35,729 - INFO - 172.24.0.1 - - [28/May/2025 14:24:35] "GET /cisco/dolar HTTP/1.0" 200 -
+2025-05-29 10:55:31,642 - INFO - 127.0.0.1 - - [29/May/2025 10:55:31] "GET / HTTP/1.1" 200 -
+2025-05-29 10:55:31,795 - INFO - 127.0.0.1 - - [29/May/2025 10:55:31] "GET /static/logo_mw.png HTTP/1.1" 200 -
+2025-05-29 10:55:32,723 - INFO - 127.0.0.1 - - [29/May/2025 10:55:32] "GET /static/lenovo.png HTTP/1.1" 200 -
+2025-05-29 10:55:32,812 - INFO - 127.0.0.1 - - [29/May/2025 10:55:32] "GET /static/hub2b.png HTTP/1.1" 200 -
+2025-05-29 10:55:32,890 - INFO - 127.0.0.1 - - [29/May/2025 10:55:32] "GET /static/hp.png HTTP/1.1" 200 -
+2025-05-29 10:55:32,964 - INFO - 127.0.0.1 - - [29/May/2025 10:55:32] "GET /static/cisco.png HTTP/1.1" 200 -
+2025-05-29 10:55:52,901 - INFO - 127.0.0.1 - - [29/May/2025 10:55:52] "GET / HTTP/1.1" 200 -
+2025-05-29 10:55:53,151 - INFO - 127.0.0.1 - - [29/May/2025 10:55:53] "[36mGET /static/logo_mw.png HTTP/1.1[0m" 304 -
+2025-05-29 10:55:54,041 - INFO - 127.0.0.1 - - [29/May/2025 10:55:54] "[36mGET /static/lenovo.png HTTP/1.1[0m" 304 -
+2025-05-29 10:55:54,167 - INFO - 127.0.0.1 - - [29/May/2025 10:55:54] "[36mGET /static/cisco.png HTTP/1.1[0m" 304 -
+2025-05-29 10:55:54,192 - INFO - 127.0.0.1 - - [29/May/2025 10:55:54] "[36mGET /static/hp.png HTTP/1.1[0m" 304 -
+2025-05-29 10:55:54,201 - INFO - 127.0.0.1 - - [29/May/2025 10:55:54] "[36mGET /static/hub2b.png HTTP/1.1[0m" 304 -
+2025-05-29 10:56:02,125 - INFO - 127.0.0.1 - - [29/May/2025 10:56:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-29 10:56:05,859 - INFO - 127.0.0.1 - - [29/May/2025 10:56:05] "GET / HTTP/1.1" 200 -
+2025-05-29 10:56:06,800 - INFO - 127.0.0.1 - - [29/May/2025 10:56:06] "[36mGET /static/logo_mw.png HTTP/1.1[0m" 304 -
+2025-05-29 10:56:07,149 - INFO - 127.0.0.1 - - [29/May/2025 10:56:07] "[36mGET /static/lenovo.png HTTP/1.1[0m" 304 -
+2025-05-29 10:56:07,277 - INFO - 127.0.0.1 - - [29/May/2025 10:56:07] "[36mGET /static/hp.png HTTP/1.1[0m" 304 -
+2025-05-29 10:56:07,290 - INFO - 127.0.0.1 - - [29/May/2025 10:56:07] "[36mGET /static/hub2b.png HTTP/1.1[0m" 304 -
+2025-05-29 10:56:07,300 - INFO - 127.0.0.1 - - [29/May/2025 10:56:07] "[36mGET /static/cisco.png HTTP/1.1[0m" 304 -
+2025-06-03 11:00:53,576 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-03 11:00:53,577 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 11:00:53,578 - INFO -  * Restarting with stat
+2025-06-03 11:00:55,153 - WARNING -  * Debugger is active!
+2025-06-03 11:00:55,154 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 11:00:58,714 - INFO - 172.24.0.1 - - [03/Jun/2025 11:00:58] "GET / HTTP/1.0" 200 -
+2025-06-03 11:00:58,926 - INFO - 172.24.0.1 - - [03/Jun/2025 11:00:58] "GET /static/logo_mw.png HTTP/1.0" 200 -
+2025-06-03 11:00:58,928 - INFO - 172.24.0.1 - - [03/Jun/2025 11:00:58] "GET /static/hp.png HTTP/1.0" 200 -
+2025-06-03 11:00:58,944 - INFO - 172.24.0.1 - - [03/Jun/2025 11:00:58] "GET /static/lenovo.png HTTP/1.0" 200 -
+2025-06-03 11:00:58,946 - INFO - 172.24.0.1 - - [03/Jun/2025 11:00:58] "[36mGET /static/cisco.png HTTP/1.0[0m" 304 -
+2025-06-03 11:00:58,948 - INFO - 172.24.0.1 - - [03/Jun/2025 11:00:58] "GET /static/hub2b.png HTTP/1.0" 200 -
+2025-06-03 11:00:59,521 - INFO - 172.24.0.1 - - [03/Jun/2025 11:00:59] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+2025-06-03 11:01:01,018 - INFO - 172.24.0.1 - - [03/Jun/2025 11:01:01] "GET /hp HTTP/1.0" 200 -
+2025-06-03 11:01:01,126 - INFO - 172.24.0.1 - - [03/Jun/2025 11:01:01] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-03 12:11:21,464 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:11:21,730 - INFO -  * Restarting with stat
+2025-06-03 12:11:23,498 - WARNING -  * Debugger is active!
+2025-06-03 12:11:23,500 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:11:46,776 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:11:46,990 - INFO -  * Restarting with stat
+2025-06-03 12:11:48,558 - WARNING -  * Debugger is active!
+2025-06-03 12:11:48,560 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:12:38,192 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:12:38,377 - INFO -  * Restarting with stat
+2025-06-03 12:12:40,117 - WARNING -  * Debugger is active!
+2025-06-03 12:12:40,119 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:14:00,062 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:14:00,330 - INFO -  * Restarting with stat
+2025-06-03 12:14:02,002 - WARNING -  * Debugger is active!
+2025-06-03 12:14:02,004 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:14:03,030 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:14:03,219 - INFO -  * Restarting with stat
+2025-06-03 12:14:04,758 - WARNING -  * Debugger is active!
+2025-06-03 12:14:04,759 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:23:13,272 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:23:13,534 - INFO -  * Restarting with stat
+2025-06-03 12:23:15,530 - WARNING -  * Debugger is active!
+2025-06-03 12:23:15,532 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:24:22,319 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:24:22,621 - INFO -  * Restarting with stat
+2025-06-03 12:24:24,509 - WARNING -  * Debugger is active!
+2025-06-03 12:24:24,510 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:24:29,594 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:24:29,994 - INFO -  * Restarting with stat
+2025-06-03 12:24:31,580 - WARNING -  * Debugger is active!
+2025-06-03 12:24:31,582 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:25:35,319 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:25:35,628 - INFO -  * Restarting with stat
+2025-06-03 12:25:37,427 - WARNING -  * Debugger is active!
+2025-06-03 12:25:37,428 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:26:00,727 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:26:01,024 - INFO -  * Restarting with stat
+2025-06-03 12:26:02,735 - WARNING -  * Debugger is active!
+2025-06-03 12:26:02,737 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:26:13,903 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:26:14,125 - INFO -  * Restarting with stat
+2025-06-03 12:26:15,577 - WARNING -  * Debugger is active!
+2025-06-03 12:26:15,578 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:26:29,751 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:26:30,025 - INFO -  * Restarting with stat
+2025-06-03 12:26:31,805 - WARNING -  * Debugger is active!
+2025-06-03 12:26:31,807 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:26:32,841 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:26:33,007 - INFO -  * Restarting with stat
+2025-06-03 12:26:34,482 - WARNING -  * Debugger is active!
+2025-06-03 12:26:34,483 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:26:48,663 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:26:48,895 - INFO -  * Restarting with stat
+2025-06-03 12:26:50,723 - WARNING -  * Debugger is active!
+2025-06-03 12:26:50,725 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:26:54,802 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:26:54,993 - INFO -  * Restarting with stat
+2025-06-03 12:26:56,491 - WARNING -  * Debugger is active!
+2025-06-03 12:26:56,492 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:28:14,402 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:28:14,638 - INFO -  * Restarting with stat
+2025-06-03 12:28:16,224 - WARNING -  * Debugger is active!
+2025-06-03 12:28:16,226 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:28:24,339 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:28:24,603 - INFO -  * Restarting with stat
+2025-06-03 12:28:26,177 - WARNING -  * Debugger is active!
+2025-06-03 12:28:26,179 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:28:51,511 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:28:51,727 - INFO -  * Restarting with stat
+2025-06-03 12:28:53,895 - WARNING -  * Debugger is active!
+2025-06-03 12:28:53,897 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:29:06,081 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:29:06,327 - INFO -  * Restarting with stat
+2025-06-03 12:29:08,172 - WARNING -  * Debugger is active!
+2025-06-03 12:29:08,174 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:29:24,417 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:29:24,650 - INFO -  * Restarting with stat
+2025-06-03 12:29:26,330 - WARNING -  * Debugger is active!
+2025-06-03 12:29:26,332 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:30:32,237 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:30:32,488 - INFO -  * Restarting with stat
+2025-06-03 12:30:33,946 - WARNING -  * Debugger is active!
+2025-06-03 12:30:33,947 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:32:21,148 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:32:21,379 - INFO -  * Restarting with stat
+2025-06-03 12:32:23,014 - WARNING -  * Debugger is active!
+2025-06-03 12:32:23,015 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:35:09,898 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:35:10,126 - INFO -  * Restarting with stat
+2025-06-03 12:35:11,829 - WARNING -  * Debugger is active!
+2025-06-03 12:35:11,832 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:36:16,723 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:36:16,972 - INFO -  * Restarting with stat
+2025-06-03 12:36:18,622 - WARNING -  * Debugger is active!
+2025-06-03 12:36:18,624 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:36:22,689 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:36:22,968 - INFO -  * Restarting with stat
+2025-06-03 12:36:24,519 - WARNING -  * Debugger is active!
+2025-06-03 12:36:24,521 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:36:49,864 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:36:50,183 - INFO -  * Restarting with stat
+2025-06-03 12:36:51,946 - WARNING -  * Debugger is active!
+2025-06-03 12:36:51,950 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:37:54,661 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:37:54,925 - INFO -  * Restarting with stat
+2025-06-03 12:37:56,548 - WARNING -  * Debugger is active!
+2025-06-03 12:37:56,549 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:39:46,773 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:39:47,003 - INFO -  * Restarting with stat
+2025-06-03 12:39:48,595 - WARNING -  * Debugger is active!
+2025-06-03 12:39:48,597 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:40:37,152 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:40:37,396 - INFO -  * Restarting with stat
+2025-06-03 12:40:39,020 - WARNING -  * Debugger is active!
+2025-06-03 12:40:39,021 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:41:09,386 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:41:09,556 - INFO -  * Restarting with stat
+2025-06-03 12:41:11,023 - WARNING -  * Debugger is active!
+2025-06-03 12:41:11,024 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:42:49,154 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:42:49,358 - INFO -  * Restarting with stat
+2025-06-03 12:42:51,008 - WARNING -  * Debugger is active!
+2025-06-03 12:42:51,009 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:43:30,494 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:43:30,799 - INFO -  * Restarting with stat
+2025-06-03 12:43:32,856 - WARNING -  * Debugger is active!
+2025-06-03 12:43:35,321 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:43:42,432 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:43:42,635 - INFO -  * Restarting with stat
+2025-06-03 12:43:44,294 - WARNING -  * Debugger is active!
+2025-06-03 12:43:44,295 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:45:23,428 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:45:23,662 - INFO -  * Restarting with stat
+2025-06-03 12:45:25,237 - WARNING -  * Debugger is active!
+2025-06-03 12:45:25,239 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:45:28,298 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:45:28,542 - INFO -  * Restarting with stat
+2025-06-03 12:45:30,600 - WARNING -  * Debugger is active!
+2025-06-03 12:45:30,601 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:46:11,083 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:46:11,350 - INFO -  * Restarting with stat
+2025-06-03 12:46:13,096 - WARNING -  * Debugger is active!
+2025-06-03 12:46:13,098 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:46:48,517 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:46:48,717 - INFO -  * Restarting with stat
+2025-06-03 12:46:50,322 - WARNING -  * Debugger is active!
+2025-06-03 12:46:50,324 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:48:31,648 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:48:31,848 - INFO -  * Restarting with stat
+2025-06-03 12:48:33,294 - WARNING -  * Debugger is active!
+2025-06-03 12:48:33,296 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:48:34,328 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:48:34,535 - INFO -  * Restarting with stat
+2025-06-03 12:48:36,119 - WARNING -  * Debugger is active!
+2025-06-03 12:48:36,121 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:50:10,149 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:50:10,396 - INFO -  * Restarting with stat
+2025-06-03 12:50:12,193 - WARNING -  * Debugger is active!
+2025-06-03 12:50:12,195 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:50:34,475 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:50:34,683 - INFO -  * Restarting with stat
+2025-06-03 12:50:36,502 - WARNING -  * Debugger is active!
+2025-06-03 12:50:36,503 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:51:22,005 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:51:22,224 - INFO -  * Restarting with stat
+2025-06-03 12:51:24,070 - WARNING -  * Debugger is active!
+2025-06-03 12:51:24,071 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:51:38,221 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:51:38,439 - INFO -  * Restarting with stat
+2025-06-03 12:51:40,325 - WARNING -  * Debugger is active!
+2025-06-03 12:51:40,327 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:51:53,524 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:51:53,728 - INFO -  * Restarting with stat
+2025-06-03 12:51:55,271 - WARNING -  * Debugger is active!
+2025-06-03 12:51:55,272 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:52:14,495 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:52:14,813 - INFO -  * Restarting with stat
+2025-06-03 12:52:16,429 - WARNING -  * Debugger is active!
+2025-06-03 12:52:16,430 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:52:34,703 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:52:34,974 - INFO -  * Restarting with stat
+2025-06-03 12:52:36,731 - WARNING -  * Debugger is active!
+2025-06-03 12:52:36,732 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:53:31,616 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:53:31,877 - INFO -  * Restarting with stat
+2025-06-03 12:53:33,847 - WARNING -  * Debugger is active!
+2025-06-03 12:53:33,849 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:53:39,932 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:53:40,193 - INFO -  * Restarting with stat
+2025-06-03 12:53:41,621 - WARNING -  * Debugger is active!
+2025-06-03 12:53:41,622 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:54:07,985 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:54:08,245 - INFO -  * Restarting with stat
+2025-06-03 12:54:10,218 - WARNING -  * Debugger is active!
+2025-06-03 12:54:10,220 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:54:24,400 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:54:24,656 - INFO -  * Restarting with stat
+2025-06-03 12:54:26,417 - WARNING -  * Debugger is active!
+2025-06-03 12:54:26,419 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:55:30,146 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:55:30,380 - INFO -  * Restarting with stat
+2025-06-03 12:55:31,920 - WARNING -  * Debugger is active!
+2025-06-03 12:55:31,922 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:57:55,492 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:57:55,659 - INFO -  * Restarting with stat
+2025-06-03 12:57:57,152 - WARNING -  * Debugger is active!
+2025-06-03 12:57:57,154 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:58:11,310 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:58:11,492 - INFO -  * Restarting with stat
+2025-06-03 12:58:13,041 - WARNING -  * Debugger is active!
+2025-06-03 12:58:13,042 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:58:47,434 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:58:47,655 - INFO -  * Restarting with stat
+2025-06-03 12:58:49,293 - WARNING -  * Debugger is active!
+2025-06-03 12:58:49,295 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:59:08,553 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:59:08,799 - INFO -  * Restarting with stat
+2025-06-03 12:59:10,527 - WARNING -  * Debugger is active!
+2025-06-03 12:59:10,529 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 12:59:31,929 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 12:59:32,195 - INFO -  * Restarting with stat
+2025-06-03 12:59:33,695 - WARNING -  * Debugger is active!
+2025-06-03 12:59:33,697 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:00:12,226 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 13:00:12,413 - INFO -  * Restarting with stat
+2025-06-03 13:00:14,200 - WARNING -  * Debugger is active!
+2025-06-03 13:00:14,202 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:01:08,825 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 13:01:09,046 - INFO -  * Restarting with stat
+2025-06-03 13:01:10,644 - WARNING -  * Debugger is active!
+2025-06-03 13:01:10,646 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:02:06,281 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 13:02:06,525 - INFO -  * Restarting with stat
+2025-06-03 13:02:08,289 - WARNING -  * Debugger is active!
+2025-06-03 13:02:08,290 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:06:19,156 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 13:06:19,419 - INFO -  * Restarting with stat
+2025-06-03 13:06:21,061 - WARNING -  * Debugger is active!
+2025-06-03 13:06:21,062 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:06:24,125 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 13:06:24,366 - INFO -  * Restarting with stat
+2025-06-03 13:06:26,224 - WARNING -  * Debugger is active!
+2025-06-03 13:06:26,225 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:06:44,457 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 13:06:44,716 - INFO -  * Restarting with stat
+2025-06-03 13:06:46,319 - WARNING -  * Debugger is active!
+2025-06-03 13:06:46,322 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:10:05,590 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-03 13:10:05,810 - INFO -  * Restarting with stat
+2025-06-03 13:10:07,483 - WARNING -  * Debugger is active!
+2025-06-03 13:10:07,484 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:12:13,906 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-03 13:12:14,132 - INFO -  * Restarting with stat
+2025-06-03 13:12:15,561 - WARNING -  * Debugger is active!
+2025-06-03 13:12:15,562 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:14:45,347 - INFO - 172.24.0.1 - - [03/Jun/2025 13:14:45] "GET /hp HTTP/1.0" 200 -
+2025-06-03 13:14:45,459 - INFO - 172.24.0.1 - - [03/Jun/2025 13:14:45] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-03 13:16:23,032 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-03 13:16:23,033 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 13:16:23,035 - INFO -  * Restarting with stat
+2025-06-03 13:16:24,546 - WARNING -  * Debugger is active!
+2025-06-03 13:16:24,548 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:16:32,676 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 13:16:32,974 - INFO -  * Restarting with stat
+2025-06-03 13:16:34,955 - WARNING -  * Debugger is active!
+2025-06-03 13:16:34,957 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:16:41,043 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-03 13:16:41,260 - INFO -  * Restarting with stat
+2025-06-03 13:16:42,859 - WARNING -  * Debugger is active!
+2025-06-03 13:16:42,860 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:16:55,019 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-03 13:16:55,250 - INFO -  * Restarting with stat
+2025-06-03 13:16:56,662 - WARNING -  * Debugger is active!
+2025-06-03 13:16:56,663 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:17:25,023 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-03 13:17:25,269 - INFO -  * Restarting with stat
+2025-06-03 13:17:27,025 - WARNING -  * Debugger is active!
+2025-06-03 13:17:27,026 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:17:37,292 - INFO - 172.24.0.1 - - [03/Jun/2025 13:17:37] "GET /hp HTTP/1.0" 200 -
+2025-06-03 13:17:37,414 - INFO - 172.24.0.1 - - [03/Jun/2025 13:17:37] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-03 13:17:59,482 - INFO - 172.24.0.1 - - [03/Jun/2025 13:17:59] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-03 13:19:03,210 - INFO - 172.24.0.1 - - [03/Jun/2025 13:19:03] "GET /hp HTTP/1.0" 200 -
+2025-06-03 13:19:03,322 - INFO - 172.24.0.1 - - [03/Jun/2025 13:19:03] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-03 13:19:20,243 - INFO - 172.24.0.1 - - [03/Jun/2025 13:19:20] "GET /hp HTTP/1.0" 200 -
+2025-06-03 13:19:20,321 - INFO - 172.24.0.1 - - [03/Jun/2025 13:19:20] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-03 13:22:14,069 - INFO - 172.24.0.1 - - [03/Jun/2025 13:22:14] "GET /hp HTTP/1.0" 200 -
+2025-06-03 13:22:14,148 - INFO - 172.24.0.1 - - [03/Jun/2025 13:22:14] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-03 13:22:54,409 - INFO - 172.24.0.1 - - [03/Jun/2025 13:22:54] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-03 13:23:42,367 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-03 13:23:42,636 - INFO -  * Restarting with stat
+2025-06-03 13:23:44,251 - WARNING -  * Debugger is active!
+2025-06-03 13:23:44,252 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:23:50,868 - INFO - 172.24.0.1 - - [03/Jun/2025 13:23:50] "GET /hp HTTP/1.0" 200 -
+2025-06-03 13:23:51,014 - INFO - 172.24.0.1 - - [03/Jun/2025 13:23:51] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-03 13:24:46,131 - INFO - 172.24.0.1 - - [03/Jun/2025 13:24:46] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-03 13:25:15,039 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 13:25:15,531 - INFO -  * Restarting with stat
+2025-06-03 13:25:17,161 - WARNING -  * Debugger is active!
+2025-06-03 13:25:17,162 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:25:55,601 - INFO - 172.24.0.1 - - [03/Jun/2025 13:25:55] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-03 13:28:02,330 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 13:28:02,836 - INFO -  * Restarting with stat
+2025-06-03 13:28:04,743 - WARNING -  * Debugger is active!
+2025-06-03 13:28:04,745 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:28:35,551 - INFO - 172.24.0.1 - - [03/Jun/2025 13:28:35] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-03 13:30:28,970 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-03 13:30:29,364 - INFO -  * Restarting with stat
+2025-06-03 13:30:30,988 - WARNING -  * Debugger is active!
+2025-06-03 13:30:30,989 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:31:45,925 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-03 13:31:46,261 - INFO -  * Restarting with stat
+2025-06-03 13:31:48,180 - WARNING -  * Debugger is active!
+2025-06-03 13:31:48,182 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:32:19,103 - INFO - 172.24.0.1 - - [03/Jun/2025 13:32:19] "[31m[1mPOST /hp/teste HTTP/1.0[0m" 400 -
+2025-06-03 13:33:29,227 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-03 13:33:29,675 - INFO -  * Restarting with stat
+2025-06-03 13:33:31,178 - WARNING -  * Debugger is active!
+2025-06-03 13:33:31,179 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:34:14,070 - INFO - 172.24.0.1 - - [03/Jun/2025 13:34:14] "[31m[1mPOST /hp/teste HTTP/1.0[0m" 400 -
+2025-06-03 13:35:36,080 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-03 13:35:36,516 - INFO -  * Restarting with stat
+2025-06-03 13:36:46,024 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-03 13:36:46,025 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 13:36:46,027 - INFO -  * Restarting with stat
+2025-06-03 13:36:47,532 - WARNING -  * Debugger is active!
+2025-06-03 13:36:47,533 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:36:48,983 - INFO - 172.24.0.1 - - [03/Jun/2025 13:36:48] "[33mGET /hp HTTP/1.0[0m" 404 -
+2025-06-03 13:36:50,843 - INFO - 172.24.0.1 - - [03/Jun/2025 13:36:50] "[33mGET /hp HTTP/1.0[0m" 404 -
+2025-06-03 13:38:56,836 - INFO - 172.24.0.1 - - [03/Jun/2025 13:38:56] "[33mGET /hp HTTP/1.0[0m" 404 -
+2025-06-03 13:39:07,114 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-03 13:39:07,284 - INFO -  * Restarting with stat
+2025-06-03 13:39:09,082 - WARNING -  * Debugger is active!
+2025-06-03 13:39:09,083 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:39:11,226 - INFO - 172.24.0.1 - - [03/Jun/2025 13:39:11] "GET /hp HTTP/1.0" 200 -
+2025-06-03 13:39:11,328 - INFO - 172.24.0.1 - - [03/Jun/2025 13:39:11] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-03 13:39:12,226 - INFO - 172.24.0.1 - - [03/Jun/2025 13:39:12] "GET /hp HTTP/1.0" 200 -
+2025-06-03 13:39:12,328 - INFO - 172.24.0.1 - - [03/Jun/2025 13:39:12] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-03 13:39:55,475 - INFO - 172.24.0.1 - - [03/Jun/2025 13:39:55] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-03 13:44:28,770 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-03 13:44:28,771 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 13:44:28,773 - INFO -  * Restarting with stat
+2025-06-03 13:44:30,296 - WARNING -  * Debugger is active!
+2025-06-03 13:44:30,297 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:47:10,096 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-03 13:47:10,097 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 13:47:10,098 - INFO -  * Restarting with stat
+2025-06-03 13:47:11,501 - WARNING -  * Debugger is active!
+2025-06-03 13:47:11,502 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:49:13,896 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-03 13:49:13,896 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 13:49:13,898 - INFO -  * Restarting with stat
+2025-06-03 13:49:15,294 - WARNING -  * Debugger is active!
+2025-06-03 13:49:15,296 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:49:30,494 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 13:49:30,764 - INFO -  * Restarting with stat
+2025-06-03 13:49:32,617 - WARNING -  * Debugger is active!
+2025-06-03 13:49:32,618 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:52:39,242 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-03 13:52:39,243 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 13:52:39,245 - INFO -  * Restarting with stat
+2025-06-03 13:52:40,945 - WARNING -  * Debugger is active!
+2025-06-03 13:52:40,948 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:54:45,246 - INFO - 172.24.0.1 - - [03/Jun/2025 13:54:45] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-03 13:56:57,116 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 13:56:57,587 - INFO -  * Restarting with stat
+2025-06-03 13:56:59,220 - WARNING -  * Debugger is active!
+2025-06-03 13:56:59,222 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 13:59:14,888 - INFO - 172.24.0.1 - - [03/Jun/2025 13:59:14] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-03 14:00:37,357 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/teste.py', reloading
+2025-06-03 14:00:37,781 - INFO -  * Restarting with stat
+2025-06-03 14:00:39,365 - WARNING -  * Debugger is active!
+2025-06-03 14:00:39,366 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 14:23:28,102 - INFO - 172.24.0.1 - - [03/Jun/2025 14:23:28] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-03 14:26:33,132 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 14:26:33,505 - INFO -  * Restarting with stat
+2025-06-03 14:26:34,939 - WARNING -  * Debugger is active!
+2025-06-03 14:26:34,940 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 14:27:20,359 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 14:27:20,591 - INFO -  * Restarting with stat
+2025-06-03 14:27:22,191 - WARNING -  * Debugger is active!
+2025-06-03 14:27:22,193 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 14:30:37,169 - INFO - 172.24.0.1 - - [03/Jun/2025 14:30:37] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-03 14:40:50,086 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 14:40:50,502 - INFO -  * Restarting with stat
+2025-06-03 15:00:30,933 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-03 15:00:30,934 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 15:00:30,936 - INFO -  * Restarting with stat
+2025-06-03 15:00:32,556 - WARNING -  * Debugger is active!
+2025-06-03 15:00:32,558 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 15:03:39,405 - INFO - 172.24.0.1 - - [03/Jun/2025 15:03:39] "GET /hp HTTP/1.0" 200 -
+2025-06-03 15:03:39,524 - INFO - 172.24.0.1 - - [03/Jun/2025 15:03:39] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-03 15:04:48,748 - INFO - 172.24.0.1 - - [03/Jun/2025 15:04:48] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-03 15:05:47,118 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-03 15:05:47,684 - INFO -  * Restarting with stat
+2025-06-03 15:05:49,159 - WARNING -  * Debugger is active!
+2025-06-03 15:05:49,160 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 15:05:50,185 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-03 15:05:50,391 - INFO -  * Restarting with stat
+2025-06-03 15:05:51,787 - WARNING -  * Debugger is active!
+2025-06-03 15:05:51,788 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 15:06:40,279 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-03 15:06:40,433 - INFO -  * Restarting with stat
+2025-06-03 15:06:41,900 - WARNING -  * Debugger is active!
+2025-06-03 15:06:41,901 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 15:07:26,331 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 15:07:26,509 - INFO -  * Restarting with stat
+2025-06-03 15:07:28,074 - WARNING -  * Debugger is active!
+2025-06-03 15:07:28,075 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 15:07:30,111 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 15:07:30,280 - INFO -  * Restarting with stat
+2025-06-03 15:07:31,668 - WARNING -  * Debugger is active!
+2025-06-03 15:07:31,669 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 15:09:54,892 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-03 15:09:54,893 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 15:09:54,894 - INFO -  * Restarting with stat
+2025-06-03 15:09:56,421 - WARNING -  * Debugger is active!
+2025-06-03 15:09:56,422 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 15:12:25,168 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-03 15:12:25,168 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 15:12:25,171 - INFO -  * Restarting with stat
+2025-06-03 15:12:26,612 - WARNING -  * Debugger is active!
+2025-06-03 15:12:26,614 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 15:14:24,885 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-03 15:14:24,886 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 15:14:24,888 - INFO -  * Restarting with stat
+2025-06-03 15:14:26,398 - WARNING -  * Debugger is active!
+2025-06-03 15:14:26,400 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 15:18:38,362 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-03 15:18:38,363 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 15:18:38,365 - INFO -  * Restarting with stat
+2025-06-03 15:18:39,799 - WARNING -  * Debugger is active!
+2025-06-03 15:18:39,801 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 15:35:56,884 - INFO - 172.24.0.1 - - [03/Jun/2025 15:35:56] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-03 17:21:16,486 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 17:21:17,017 - INFO -  * Restarting with stat
+2025-06-03 17:21:18,836 - WARNING -  * Debugger is active!
+2025-06-03 17:21:18,837 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 17:27:09,987 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 17:27:10,198 - INFO -  * Restarting with stat
+2025-06-03 17:27:11,702 - WARNING -  * Debugger is active!
+2025-06-03 17:27:11,703 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 17:29:26,275 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-03 17:29:26,276 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 17:29:26,277 - INFO -  * Restarting with stat
+2025-06-03 17:29:27,727 - WARNING -  * Debugger is active!
+2025-06-03 17:29:27,729 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 17:38:04,252 - INFO - 172.24.0.1 - - [03/Jun/2025 17:38:04] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-03 17:40:58,235 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-03 17:40:58,668 - INFO -  * Restarting with stat
+2025-06-03 17:41:00,235 - WARNING -  * Debugger is active!
+2025-06-03 17:41:00,236 - INFO -  * Debugger PIN: 542-593-872
+2025-06-03 17:51:17,542 - INFO - 172.24.0.1 - - [03/Jun/2025 17:51:17] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-04 11:12:16,104 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:12:16,497 - INFO -  * Restarting with stat
+2025-06-04 11:12:18,827 - WARNING -  * Debugger is active!
+2025-06-04 11:12:18,829 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:13:37,812 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:13:38,050 - INFO -  * Restarting with stat
+2025-06-04 11:13:39,964 - WARNING -  * Debugger is active!
+2025-06-04 11:13:39,965 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:13:49,124 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:13:49,364 - INFO -  * Restarting with stat
+2025-06-04 11:13:51,352 - WARNING -  * Debugger is active!
+2025-06-04 11:13:51,354 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:14:36,897 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:14:37,131 - INFO -  * Restarting with stat
+2025-06-04 11:14:39,170 - WARNING -  * Debugger is active!
+2025-06-04 11:14:39,171 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:14:46,275 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:14:46,516 - INFO -  * Restarting with stat
+2025-06-04 11:14:48,520 - WARNING -  * Debugger is active!
+2025-06-04 11:14:48,521 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:14:53,602 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:14:53,853 - INFO -  * Restarting with stat
+2025-06-04 11:14:55,590 - WARNING -  * Debugger is active!
+2025-06-04 11:14:55,591 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:15:04,718 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:15:04,989 - INFO -  * Restarting with stat
+2025-06-04 11:15:07,166 - WARNING -  * Debugger is active!
+2025-06-04 11:15:07,168 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:15:26,411 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:15:26,649 - INFO -  * Restarting with stat
+2025-06-04 11:15:28,306 - WARNING -  * Debugger is active!
+2025-06-04 11:15:28,308 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:16:19,976 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:16:20,440 - INFO -  * Restarting with stat
+2025-06-04 11:16:22,491 - WARNING -  * Debugger is active!
+2025-06-04 11:16:22,492 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:16:45,772 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:16:46,093 - INFO -  * Restarting with stat
+2025-06-04 11:16:48,346 - WARNING -  * Debugger is active!
+2025-06-04 11:16:48,348 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:16:55,438 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:16:55,670 - INFO -  * Restarting with stat
+2025-06-04 11:16:57,397 - WARNING -  * Debugger is active!
+2025-06-04 11:16:57,398 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:17:01,485 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:17:01,838 - INFO -  * Restarting with stat
+2025-06-04 11:17:04,072 - WARNING -  * Debugger is active!
+2025-06-04 11:17:04,073 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:17:07,149 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:17:07,395 - INFO -  * Restarting with stat
+2025-06-04 11:17:09,046 - WARNING -  * Debugger is active!
+2025-06-04 11:17:09,052 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:18:01,714 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:18:01,958 - INFO -  * Restarting with stat
+2025-06-04 11:18:03,909 - WARNING -  * Debugger is active!
+2025-06-04 11:18:03,911 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:19:22,789 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-04 11:19:22,988 - INFO -  * Restarting with stat
+2025-06-04 11:19:24,760 - WARNING -  * Debugger is active!
+2025-06-04 11:19:24,761 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:19:45,003 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-04 11:19:45,192 - INFO -  * Restarting with stat
+2025-06-04 11:19:46,834 - WARNING -  * Debugger is active!
+2025-06-04 11:19:46,835 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:19:58,813 - INFO - 172.24.0.1 - - [04/Jun/2025 11:19:58] "GET / HTTP/1.0" 200 -
+2025-06-04 11:19:59,014 - INFO - 172.24.0.1 - - [04/Jun/2025 11:19:59] "GET /static/logo_mw.png HTTP/1.0" 200 -
+2025-06-04 11:19:59,076 - INFO - 172.24.0.1 - - [04/Jun/2025 11:19:59] "GET /static/lenovo.png HTTP/1.0" 200 -
+2025-06-04 11:19:59,084 - INFO - 172.24.0.1 - - [04/Jun/2025 11:19:59] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-04 11:19:59,088 - INFO - 172.24.0.1 - - [04/Jun/2025 11:19:59] "GET /static/hub2b.png HTTP/1.0" 200 -
+2025-06-04 11:19:59,099 - INFO - 172.24.0.1 - - [04/Jun/2025 11:19:59] "[36mGET /static/cisco.png HTTP/1.0[0m" 304 -
+2025-06-04 11:20:00,493 - INFO - 172.24.0.1 - - [04/Jun/2025 11:20:00] "GET /hp HTTP/1.0" 200 -
+2025-06-04 11:20:00,593 - INFO - 172.24.0.1 - - [04/Jun/2025 11:20:00] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-04 11:20:28,684 - INFO - 172.24.0.1 - - [04/Jun/2025 11:20:28] "POST /hp HTTP/1.0" 200 -
+2025-06-04 11:23:18,690 - INFO - 172.24.0.1 - - [04/Jun/2025 11:23:18] "POST /hp HTTP/1.0" 200 -
+2025-06-04 11:24:21,371 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:24:21,924 - INFO -  * Restarting with stat
+2025-06-04 11:24:23,823 - WARNING -  * Debugger is active!
+2025-06-04 11:24:23,824 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:24:24,858 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:24:25,133 - INFO -  * Restarting with stat
+2025-06-04 11:24:26,753 - WARNING -  * Debugger is active!
+2025-06-04 11:24:26,755 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:25:14,440 - INFO - 172.24.0.1 - - [04/Jun/2025 11:25:14] "POST /hp HTTP/1.0" 200 -
+2025-06-04 11:28:14,111 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:28:14,532 - INFO -  * Restarting with stat
+2025-06-04 11:28:16,185 - WARNING -  * Debugger is active!
+2025-06-04 11:28:16,187 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:28:33,536 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 11:28:33,800 - INFO -  * Restarting with stat
+2025-06-04 11:28:35,981 - WARNING -  * Debugger is active!
+2025-06-04 11:28:35,992 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:29:59,320 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-04 11:29:59,320 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-04 11:29:59,321 - INFO -  * Restarting with stat
+2025-06-04 11:30:00,893 - WARNING -  * Debugger is active!
+2025-06-04 11:30:00,894 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:31:25,390 - INFO - 172.24.0.1 - - [04/Jun/2025 11:31:25] "POST /hp HTTP/1.0" 200 -
+2025-06-04 11:38:18,729 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-04 11:38:18,730 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-04 11:38:18,732 - INFO -  * Restarting with stat
+2025-06-04 11:38:20,211 - WARNING -  * Debugger is active!
+2025-06-04 11:38:20,212 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:39:40,142 - INFO - 172.24.0.1 - - [04/Jun/2025 11:39:40] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-04 11:46:08,225 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-04 11:46:08,496 - INFO -  * Restarting with stat
+2025-06-04 11:46:10,596 - WARNING -  * Debugger is active!
+2025-06-04 11:46:10,598 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:47:34,296 - INFO - 172.24.0.1 - - [04/Jun/2025 11:47:34] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-04 11:51:01,915 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-04 11:51:02,216 - INFO -  * Restarting with stat
+2025-06-04 11:51:03,803 - WARNING -  * Debugger is active!
+2025-06-04 11:51:03,805 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:51:23,051 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-04 11:51:23,306 - INFO -  * Restarting with stat
+2025-06-04 11:51:24,961 - WARNING -  * Debugger is active!
+2025-06-04 11:51:24,962 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:52:48,457 - INFO - 172.24.0.1 - - [04/Jun/2025 11:52:48] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-04 11:57:39,456 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processosAPI.py', reloading
+2025-06-04 11:57:39,731 - INFO -  * Restarting with stat
+2025-06-04 11:57:41,464 - WARNING -  * Debugger is active!
+2025-06-04 11:57:41,465 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 11:58:58,685 - INFO - 172.24.0.1 - - [04/Jun/2025 11:58:58] "POST /hp/teste HTTP/1.0" 200 -
+2025-06-04 12:00:58,017 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 12:00:58,445 - INFO -  * Restarting with stat
+2025-06-04 12:01:00,667 - WARNING -  * Debugger is active!
+2025-06-04 12:01:00,668 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 12:01:57,380 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 12:01:57,575 - INFO -  * Restarting with stat
+2025-06-04 12:01:59,424 - WARNING -  * Debugger is active!
+2025-06-04 12:01:59,425 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 12:02:34,841 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 12:02:35,099 - INFO -  * Restarting with stat
+2025-06-04 12:02:36,687 - WARNING -  * Debugger is active!
+2025-06-04 12:02:36,689 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 12:02:50,865 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 12:02:51,086 - INFO -  * Restarting with stat
+2025-06-04 12:02:53,035 - WARNING -  * Debugger is active!
+2025-06-04 12:02:53,037 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 12:03:02,153 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 12:03:02,348 - INFO -  * Restarting with stat
+2025-06-04 12:03:03,822 - WARNING -  * Debugger is active!
+2025-06-04 12:03:03,823 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 12:03:35,198 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 12:03:35,448 - INFO -  * Restarting with stat
+2025-06-04 12:07:14,409 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-04 12:07:14,410 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-04 12:07:14,411 - INFO -  * Restarting with stat
+2025-06-04 12:07:15,874 - WARNING -  * Debugger is active!
+2025-06-04 12:07:15,875 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 12:08:02,568 - INFO - 172.24.0.1 - - [04/Jun/2025 12:08:02] "POST /hp HTTP/1.0" 200 -
+2025-06-04 12:08:30,541 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 12:08:30,967 - INFO -  * Restarting with stat
+2025-06-04 12:08:32,763 - WARNING -  * Debugger is active!
+2025-06-04 12:08:32,765 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 12:09:52,706 - INFO - 172.24.0.1 - - [04/Jun/2025 12:09:52] "POST /hp HTTP/1.0" 200 -
+2025-06-04 12:10:53,361 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 12:10:53,662 - INFO -  * Restarting with stat
+2025-06-04 12:10:55,383 - WARNING -  * Debugger is active!
+2025-06-04 12:10:55,386 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 12:12:28,281 - INFO - 172.24.0.1 - - [04/Jun/2025 12:12:28] "POST /hp HTTP/1.0" 200 -
+2025-06-04 12:13:04,681 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 12:13:05,003 - INFO -  * Restarting with stat
+2025-06-04 12:13:06,532 - WARNING -  * Debugger is active!
+2025-06-04 12:13:06,533 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 12:14:20,442 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 12:14:20,698 - INFO -  * Restarting with stat
+2025-06-04 12:14:22,500 - WARNING -  * Debugger is active!
+2025-06-04 12:14:22,501 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 12:16:51,135 - INFO - 172.24.0.1 - - [04/Jun/2025 12:16:51] "POST /hp HTTP/1.0" 200 -
+2025-06-04 12:19:19,779 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/routes.py', reloading
+2025-06-04 12:19:20,115 - INFO -  * Restarting with stat
+2025-06-04 12:19:21,961 - WARNING -  * Debugger is active!
+2025-06-04 12:19:21,962 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 12:24:30,575 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/auth.py', reloading
+2025-06-04 12:24:30,830 - INFO -  * Restarting with stat
+2025-06-04 12:24:32,376 - WARNING -  * Debugger is active!
+2025-06-04 12:24:32,378 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 12:25:14,883 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/processor.py', reloading
+2025-06-04 12:25:15,155 - INFO -  * Restarting with stat
+2025-06-04 12:25:16,781 - WARNING -  * Debugger is active!
+2025-06-04 12:25:16,782 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 12:34:36,172 - INFO - 172.24.0.1 - - [04/Jun/2025 12:34:36] "GET /hp HTTP/1.0" 200 -
+2025-06-04 12:34:36,278 - INFO - 172.24.0.1 - - [04/Jun/2025 12:34:36] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-04 12:35:34,002 - INFO - 172.24.0.1 - - [04/Jun/2025 12:35:34] "GET / HTTP/1.0" 200 -
+2025-06-04 12:35:34,145 - INFO - 172.24.0.1 - - [04/Jun/2025 12:35:34] "GET /static/lenovo.png HTTP/1.0" 200 -
+2025-06-04 12:35:34,146 - INFO - 172.24.0.1 - - [04/Jun/2025 12:35:34] "GET /static/logo_mw.png HTTP/1.0" 200 -
+2025-06-04 12:35:34,157 - INFO - 172.24.0.1 - - [04/Jun/2025 12:35:34] "GET /static/hub2b.png HTTP/1.0" 200 -
+2025-06-04 12:35:37,660 - INFO - 172.24.0.1 - - [04/Jun/2025 12:35:37] "GET /hub2b HTTP/1.0" 200 -
+2025-06-04 12:35:37,788 - INFO - 172.24.0.1 - - [04/Jun/2025 12:35:37] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-06-04 12:35:38,044 - INFO - 172.24.0.1 - - [04/Jun/2025 12:35:38] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-06-04 12:36:45,000 - INFO - 172.24.0.1 - - [04/Jun/2025 12:36:45] "GET / HTTP/1.0" 200 -
+2025-06-04 12:36:45,049 - INFO - 172.24.0.1 - - [04/Jun/2025 12:36:45] "GET /static/logo_mw.png HTTP/1.0" 200 -
+2025-06-04 12:36:45,068 - INFO - 172.24.0.1 - - [04/Jun/2025 12:36:45] "GET /static/lenovo.png HTTP/1.0" 200 -
+2025-06-04 12:36:45,082 - INFO - 172.24.0.1 - - [04/Jun/2025 12:36:45] "GET /static/hp.png HTTP/1.0" 200 -
+2025-06-04 12:36:45,100 - INFO - 172.24.0.1 - - [04/Jun/2025 12:36:45] "GET /static/hub2b.png HTTP/1.0" 200 -
+2025-06-04 12:36:45,105 - INFO - 172.24.0.1 - - [04/Jun/2025 12:36:45] "GET /static/cisco.png HTTP/1.0" 200 -
+2025-06-04 12:36:45,341 - INFO - 172.24.0.1 - - [04/Jun/2025 12:36:45] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+2025-06-04 12:36:47,878 - INFO - 172.24.0.1 - - [04/Jun/2025 12:36:47] "GET /hp HTTP/1.0" 200 -
+2025-06-04 12:36:47,928 - INFO - 172.24.0.1 - - [04/Jun/2025 12:36:47] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-04 12:55:14,073 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/HP/processors.py', reloading
+2025-06-04 12:58:12,298 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-04 12:58:12,299 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-04 12:58:12,300 - INFO -  * Restarting with stat
+2025-06-04 12:58:13,957 - WARNING -  * Debugger is active!
+2025-06-04 12:58:13,959 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 13:08:50,362 - INFO - 172.24.0.1 - - [04/Jun/2025 13:08:50] "POST /hp HTTP/1.0" 200 -
+2025-06-04 13:09:23,450 - INFO - 172.24.0.1 - - [04/Jun/2025 13:09:23] "GET / HTTP/1.0" 200 -
+2025-06-04 13:09:23,496 - INFO - 172.24.0.1 - - [04/Jun/2025 13:09:23] "GET /static/logo_mw.png HTTP/1.0" 200 -
+2025-06-04 13:09:23,513 - INFO - 172.24.0.1 - - [04/Jun/2025 13:09:23] "GET /static/lenovo.png HTTP/1.0" 200 -
+2025-06-04 13:09:23,517 - INFO - 172.24.0.1 - - [04/Jun/2025 13:09:23] "GET /static/hub2b.png HTTP/1.0" 200 -
+2025-06-04 13:09:23,523 - INFO - 172.24.0.1 - - [04/Jun/2025 13:09:23] "GET /static/cisco.png HTTP/1.0" 200 -
+2025-06-04 13:09:27,393 - INFO - 172.24.0.1 - - [04/Jun/2025 13:09:27] "GET /hub2b HTTP/1.0" 200 -
+2025-06-04 13:09:27,443 - INFO - 172.24.0.1 - - [04/Jun/2025 13:09:27] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-06-04 13:09:27,596 - INFO - 172.24.0.1 - - [04/Jun/2025 13:09:27] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-06-04 13:11:38,417 - INFO - 172.24.0.1 - - [04/Jun/2025 13:11:38] "POST /hub2b/enviar HTTP/1.0" 200 -
+2025-06-04 13:12:13,397 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/processor.py', reloading
+2025-06-04 13:12:13,795 - INFO -  * Restarting with stat
+2025-06-04 13:12:15,617 - WARNING -  * Debugger is active!
+2025-06-04 13:12:15,621 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 13:14:06,417 - INFO - 172.24.0.1 - - [04/Jun/2025 13:14:06] "POST /hub2b/enviar HTTP/1.0" 200 -
+2025-06-04 13:18:58,953 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-04 13:18:58,954 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-04 13:18:58,955 - INFO -  * Restarting with stat
+2025-06-04 13:19:00,839 - WARNING -  * Debugger is active!
+2025-06-04 13:19:00,840 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 19:08:51,766 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/auth.py', reloading
+2025-06-04 19:08:52,048 - INFO -  * Restarting with stat
+2025-06-04 19:08:53,736 - WARNING -  * Debugger is active!
+2025-06-04 19:08:53,738 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 19:09:05,085 - INFO - 172.24.0.1 - - [04/Jun/2025 19:09:05] "GET /hub2b HTTP/1.0" 200 -
+2025-06-04 19:09:05,229 - INFO - 172.24.0.1 - - [04/Jun/2025 19:09:05] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-06-04 19:09:05,526 - INFO - 172.24.0.1 - - [04/Jun/2025 19:09:05] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-06-04 19:11:15,157 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/routes.py', reloading
+2025-06-04 19:11:15,366 - INFO -  * Restarting with stat
+2025-06-04 19:11:16,994 - WARNING -  * Debugger is active!
+2025-06-04 19:11:16,995 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 19:11:19,039 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/routes.py', reloading
+2025-06-04 19:11:19,308 - INFO -  * Restarting with stat
+2025-06-04 19:11:21,111 - WARNING -  * Debugger is active!
+2025-06-04 19:11:21,113 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 19:11:48,506 - INFO - 172.24.0.1 - - [04/Jun/2025 19:11:48] "GET /hub2b HTTP/1.0" 200 -
+2025-06-04 19:11:48,676 - INFO - 172.24.0.1 - - [04/Jun/2025 19:11:48] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-06-04 19:11:48,706 - INFO - 172.24.0.1 - - [04/Jun/2025 19:11:48] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-06-04 19:11:49,430 - INFO - 172.24.0.1 - - [04/Jun/2025 19:11:49] "GET /hub2b HTTP/1.0" 200 -
+2025-06-04 19:11:49,593 - INFO - 172.24.0.1 - - [04/Jun/2025 19:11:49] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-06-04 19:11:49,678 - INFO - 172.24.0.1 - - [04/Jun/2025 19:11:49] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-06-04 19:13:03,238 - INFO - 172.24.0.1 - - [04/Jun/2025 19:13:03] "GET /hub2b HTTP/1.0" 200 -
+2025-06-04 19:13:03,446 - INFO - 172.24.0.1 - - [04/Jun/2025 19:13:03] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-06-04 19:13:03,462 - INFO - 172.24.0.1 - - [04/Jun/2025 19:13:03] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-06-04 19:31:55,289 - INFO - 172.24.0.1 - - [04/Jun/2025 19:31:55] "GET /lenovo HTTP/1.0" 200 -
+2025-06-04 19:31:55,553 - INFO - 172.24.0.1 - - [04/Jun/2025 19:31:55] "[36mGET /static/lenovo.png HTTP/1.0[0m" 304 -
+2025-06-04 19:32:00,346 - INFO - 172.24.0.1 - - [04/Jun/2025 19:32:00] "GET /hp HTTP/1.0" 200 -
+2025-06-04 19:32:00,520 - INFO - 172.24.0.1 - - [04/Jun/2025 19:32:00] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-04 19:32:06,616 - INFO - 172.24.0.1 - - [04/Jun/2025 19:32:06] "GET /hub2b HTTP/1.0" 200 -
+2025-06-04 19:32:06,778 - INFO - 172.24.0.1 - - [04/Jun/2025 19:32:06] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-06-04 19:32:06,814 - INFO - 172.24.0.1 - - [04/Jun/2025 19:32:06] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-06-04 19:33:47,716 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-04 19:33:47,947 - INFO -  * Restarting with stat
+2025-06-04 19:33:49,481 - WARNING -  * Debugger is active!
+2025-06-04 19:33:49,482 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 19:36:34,422 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-04 19:36:34,634 - INFO -  * Restarting with stat
+2025-06-04 19:36:36,445 - WARNING -  * Debugger is active!
+2025-06-04 19:36:36,447 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 19:42:20,676 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-04 19:42:20,948 - INFO -  * Restarting with stat
+2025-06-04 19:42:22,831 - WARNING -  * Debugger is active!
+2025-06-04 19:42:22,832 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 19:42:55,285 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-04 19:42:55,518 - INFO -  * Restarting with stat
+2025-06-04 19:42:57,063 - WARNING -  * Debugger is active!
+2025-06-04 19:42:57,065 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 20:07:14,459 - INFO - 172.24.0.1 - - [04/Jun/2025 20:07:14] "POST /hub2b/enviar HTTP/1.0" 200 -
+2025-06-04 20:07:22,913 - INFO - 172.24.0.1 - - [04/Jun/2025 20:07:22] "GET /hub2b HTTP/1.0" 200 -
+2025-06-04 20:07:23,060 - INFO - 172.24.0.1 - - [04/Jun/2025 20:07:23] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-06-04 20:07:23,158 - INFO - 172.24.0.1 - - [04/Jun/2025 20:07:23] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-06-04 20:24:22,533 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-04 20:24:22,842 - INFO -  * Restarting with stat
+2025-06-04 20:24:24,438 - WARNING -  * Debugger is active!
+2025-06-04 20:24:24,440 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 20:24:31,545 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-04 20:24:31,755 - INFO -  * Restarting with stat
+2025-06-04 20:24:33,454 - WARNING -  * Debugger is active!
+2025-06-04 20:24:33,455 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 20:25:09,915 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-04 20:25:10,161 - INFO -  * Restarting with stat
+2025-06-04 20:25:11,844 - WARNING -  * Debugger is active!
+2025-06-04 20:25:11,846 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 20:25:45,268 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-04 20:25:45,494 - INFO -  * Restarting with stat
+2025-06-04 20:25:47,037 - WARNING -  * Debugger is active!
+2025-06-04 20:25:47,038 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 20:26:04,243 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-04 20:26:04,437 - INFO -  * Restarting with stat
+2025-06-04 20:26:06,051 - WARNING -  * Debugger is active!
+2025-06-04 20:26:06,053 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 20:27:27,990 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-04 20:27:28,243 - INFO -  * Restarting with stat
+2025-06-04 20:27:29,843 - WARNING -  * Debugger is active!
+2025-06-04 20:27:29,844 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 20:28:14,352 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-04 20:28:14,668 - INFO -  * Restarting with stat
+2025-06-04 20:28:16,239 - WARNING -  * Debugger is active!
+2025-06-04 20:28:16,241 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 20:28:37,514 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-04 20:28:37,782 - INFO -  * Restarting with stat
+2025-06-04 20:28:39,546 - WARNING -  * Debugger is active!
+2025-06-04 20:28:39,547 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 20:29:14,976 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-04 20:29:15,210 - INFO -  * Restarting with stat
+2025-06-04 20:29:16,871 - WARNING -  * Debugger is active!
+2025-06-04 20:29:16,873 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 20:31:48,681 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/routes.py', reloading
+2025-06-04 20:31:48,934 - INFO -  * Restarting with stat
+2025-06-04 20:31:50,656 - WARNING -  * Debugger is active!
+2025-06-04 20:31:50,658 - INFO -  * Debugger PIN: 542-593-872
+2025-06-04 20:31:54,361 - INFO - 172.24.0.1 - - [04/Jun/2025 20:31:54] "GET /lenovo HTTP/1.0" 200 -
+2025-06-04 20:31:54,521 - INFO - 172.24.0.1 - - [04/Jun/2025 20:31:54] "[36mGET /static/lenovo.png HTTP/1.0[0m" 304 -
+2025-06-04 20:39:42,180 - INFO - 172.24.0.1 - - [04/Jun/2025 20:39:42] "POST /lenovo HTTP/1.0" 200 -
+2025-06-05 10:40:54,409 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 10:40:54,904 - INFO -  * Restarting with stat
+2025-06-05 10:40:56,976 - WARNING -  * Debugger is active!
+2025-06-05 10:40:56,978 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 10:47:06,434 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 10:47:06,717 - INFO -  * Restarting with stat
+2025-06-05 10:47:08,416 - WARNING -  * Debugger is active!
+2025-06-05 10:47:08,418 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 10:47:59,130 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 10:47:59,387 - INFO -  * Restarting with stat
+2025-06-05 10:48:52,691 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-05 10:48:52,691 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 10:48:52,693 - INFO -  * Restarting with stat
+2025-06-05 10:48:54,115 - WARNING -  * Debugger is active!
+2025-06-05 10:48:54,116 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 10:49:20,466 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 10:49:20,671 - INFO -  * Restarting with stat
+2025-06-05 10:49:22,233 - WARNING -  * Debugger is active!
+2025-06-05 10:49:22,234 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 10:49:43,466 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 10:49:43,697 - INFO -  * Restarting with stat
+2025-06-05 10:49:45,334 - WARNING -  * Debugger is active!
+2025-06-05 10:49:45,335 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 10:50:24,955 - INFO - 172.24.0.1 - - [05/Jun/2025 10:50:24] "[35m[1mPOST /lenovo HTTP/1.0[0m" 500 -
+2025-06-05 10:51:55,814 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 10:51:56,109 - INFO -  * Restarting with stat
+2025-06-05 10:51:57,583 - WARNING -  * Debugger is active!
+2025-06-05 10:51:57,585 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 10:52:27,152 - INFO - 172.24.0.1 - - [05/Jun/2025 10:52:27] "POST /lenovo HTTP/1.0" 200 -
+2025-06-05 11:05:08,528 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 11:05:08,849 - INFO -  * Restarting with stat
+2025-06-05 11:05:10,701 - WARNING -  * Debugger is active!
+2025-06-05 11:05:10,703 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 11:05:42,103 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 11:05:42,356 - INFO -  * Restarting with stat
+2025-06-05 11:05:43,855 - WARNING -  * Debugger is active!
+2025-06-05 11:05:43,856 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 11:05:45,899 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 11:05:46,153 - INFO -  * Restarting with stat
+2025-06-05 11:05:47,797 - WARNING -  * Debugger is active!
+2025-06-05 11:05:47,799 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 11:06:14,151 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 11:06:14,413 - INFO -  * Restarting with stat
+2025-06-05 11:06:16,100 - WARNING -  * Debugger is active!
+2025-06-05 11:06:16,102 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 11:07:44,619 - INFO - 172.24.0.1 - - [05/Jun/2025 11:07:44] "POST /lenovo HTTP/1.0" 200 -
+2025-06-05 11:27:54,878 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 11:27:55,257 - INFO -  * Restarting with stat
+2025-06-05 11:27:56,925 - WARNING -  * Debugger is active!
+2025-06-05 11:27:56,927 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 11:28:47,651 - INFO - 172.24.0.1 - - [05/Jun/2025 11:28:47] "POST /lenovo HTTP/1.0" 200 -
+2025-06-05 11:48:56,851 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 11:48:57,203 - INFO -  * Restarting with stat
+2025-06-05 11:48:58,918 - WARNING -  * Debugger is active!
+2025-06-05 11:48:58,919 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 11:51:43,027 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 11:51:43,244 - INFO -  * Restarting with stat
+2025-06-05 11:51:44,688 - WARNING -  * Debugger is active!
+2025-06-05 11:51:44,690 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 11:52:09,010 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 11:52:09,256 - INFO -  * Restarting with stat
+2025-06-05 11:52:11,326 - WARNING -  * Debugger is active!
+2025-06-05 11:52:11,328 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 11:53:12,773 - INFO - 172.24.0.1 - - [05/Jun/2025 11:53:12] "POST /lenovo HTTP/1.0" 200 -
+2025-06-05 12:00:02,946 - INFO - 172.24.0.1 - - [05/Jun/2025 12:00:02] "POST /lenovo HTTP/1.0" 200 -
+2025-06-05 12:01:32,451 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 12:01:32,915 - INFO -  * Restarting with stat
+2025-06-05 12:01:34,612 - WARNING -  * Debugger is active!
+2025-06-05 12:01:34,614 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 12:01:35,667 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 12:01:35,952 - INFO -  * Restarting with stat
+2025-06-05 12:01:37,947 - WARNING -  * Debugger is active!
+2025-06-05 12:01:37,948 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 12:01:47,159 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 12:01:47,453 - INFO -  * Restarting with stat
+2025-06-05 12:01:49,131 - WARNING -  * Debugger is active!
+2025-06-05 12:01:49,132 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 12:02:26,866 - INFO - 172.24.0.1 - - [05/Jun/2025 12:02:26] "POST /lenovo HTTP/1.0" 200 -
+2025-06-05 12:03:29,503 - INFO - 172.24.0.1 - - [05/Jun/2025 12:03:29] "POST /lenovo HTTP/1.0" 200 -
+2025-06-05 12:21:17,702 - INFO - 172.24.0.1 - - [05/Jun/2025 12:21:17] "POST /lenovo HTTP/1.0" 200 -
+2025-06-05 12:23:47,582 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 12:23:47,962 - INFO -  * Restarting with stat
+2025-06-05 12:23:49,632 - WARNING -  * Debugger is active!
+2025-06-05 12:23:49,634 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 12:25:06,888 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 12:25:07,243 - INFO -  * Restarting with stat
+2025-06-05 12:25:09,175 - WARNING -  * Debugger is active!
+2025-06-05 12:25:09,177 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 12:26:53,338 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 12:26:53,624 - INFO -  * Restarting with stat
+2025-06-05 12:26:55,449 - WARNING -  * Debugger is active!
+2025-06-05 12:26:55,451 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 12:27:47,112 - INFO - 172.24.0.1 - - [05/Jun/2025 12:27:47] "POST /lenovo HTTP/1.0" 200 -
+2025-06-05 12:31:23,069 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 12:31:23,401 - INFO -  * Restarting with stat
+2025-06-05 12:31:25,412 - WARNING -  * Debugger is active!
+2025-06-05 12:31:25,414 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 12:31:56,668 - INFO - 172.24.0.1 - - [05/Jun/2025 12:31:56] "POST /lenovo HTTP/1.0" 200 -
+2025-06-05 12:41:51,952 - INFO - 172.24.0.1 - - [05/Jun/2025 12:41:51] "POST /lenovo HTTP/1.0" 200 -
+2025-06-05 12:43:18,522 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 12:43:18,810 - INFO -  * Restarting with stat
+2025-06-05 12:43:20,479 - WARNING -  * Debugger is active!
+2025-06-05 12:43:20,480 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 12:43:59,912 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 12:44:00,161 - INFO -  * Restarting with stat
+2025-06-05 12:44:01,971 - WARNING -  * Debugger is active!
+2025-06-05 12:44:01,975 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 12:44:27,933 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 12:44:28,478 - INFO -  * Restarting with stat
+2025-06-05 12:44:30,320 - WARNING -  * Debugger is active!
+2025-06-05 12:44:30,322 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 12:44:59,937 - INFO - 172.24.0.1 - - [05/Jun/2025 12:44:59] "POST /lenovo HTTP/1.0" 200 -
+2025-06-05 12:45:49,888 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-05 12:45:49,889 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 12:45:49,891 - INFO -  * Restarting with stat
+2025-06-05 12:45:51,593 - WARNING -  * Debugger is active!
+2025-06-05 12:45:51,602 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 12:45:53,702 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/processors.py', reloading
+2025-06-05 12:45:53,905 - INFO -  * Restarting with stat
+2025-06-05 12:45:55,478 - WARNING -  * Debugger is active!
+2025-06-05 12:45:55,479 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 12:46:18,755 - INFO - 172.24.0.1 - - [05/Jun/2025 12:46:18] "POST /lenovo HTTP/1.0" 200 -
+2025-06-05 12:47:28,385 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Lenovo/routes.py', reloading
+2025-06-05 12:47:28,743 - INFO -  * Restarting with stat
+2025-06-05 12:47:30,950 - WARNING -  * Debugger is active!
+2025-06-05 12:47:30,952 - INFO -  * Debugger PIN: 542-593-872
+2025-06-05 13:27:26,321 - INFO - 172.24.0.1 - - [05/Jun/2025 13:27:26] "GET / HTTP/1.0" 200 -
+2025-06-05 13:27:26,403 - INFO - 172.24.0.1 - - [05/Jun/2025 13:27:26] "GET /static/cisco.png HTTP/1.0" 200 -
+2025-06-05 13:27:26,419 - INFO - 172.24.0.1 - - [05/Jun/2025 13:27:26] "GET /static/logo_mw.png HTTP/1.0" 200 -
+2025-06-05 13:27:26,424 - INFO - 172.24.0.1 - - [05/Jun/2025 13:27:26] "GET /static/lenovo.png HTTP/1.0" 200 -
+2025-06-05 13:27:26,438 - INFO - 172.24.0.1 - - [05/Jun/2025 13:27:26] "GET /static/hp.png HTTP/1.0" 200 -
+2025-06-05 13:27:26,443 - INFO - 172.24.0.1 - - [05/Jun/2025 13:27:26] "GET /static/hub2b.png HTTP/1.0" 200 -
+2025-06-05 13:27:26,969 - INFO - 172.24.0.1 - - [05/Jun/2025 13:27:26] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+2025-06-05 13:27:30,278 - INFO - 172.24.0.1 - - [05/Jun/2025 13:27:30] "GET /lenovo HTTP/1.0" 200 -
+2025-06-05 13:27:30,305 - INFO - 172.24.0.1 - - [05/Jun/2025 13:27:30] "[36mGET /static/lenovo.png HTTP/1.0[0m" 304 -
+2025-06-05 13:39:16,232 - INFO - 172.24.0.1 - - [05/Jun/2025 13:39:16] "POST /lenovo HTTP/1.0" 200 -
+2025-06-05 13:57:26,887 - INFO - 172.24.0.1 - - [05/Jun/2025 13:57:26] "POST /lenovo/carepack HTTP/1.0" 200 -
+2025-06-05 14:08:51,633 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.4:5000
+2025-06-05 14:08:51,671 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 14:08:51,675 - INFO -  * Restarting with stat
+2025-06-05 14:08:53,109 - WARNING -  * Debugger is active!
+2025-06-05 14:08:53,266 - INFO -  * Debugger PIN: 115-065-214
+2025-06-05 14:08:59,946 - INFO - 172.24.0.1 - - [05/Jun/2025 14:08:59] "GET / HTTP/1.0" 200 -
+2025-06-05 14:09:00,114 - INFO - 172.24.0.1 - - [05/Jun/2025 14:09:00] "[36mGET /static/lenovo.png HTTP/1.0[0m" 304 -
+2025-06-05 14:09:00,114 - INFO - 172.24.0.1 - - [05/Jun/2025 14:09:00] "[36mGET /static/cisco.png HTTP/1.0[0m" 304 -
+2025-06-05 14:09:00,116 - INFO - 172.24.0.1 - - [05/Jun/2025 14:09:00] "[36mGET /static/hub2b.png HTTP/1.0[0m" 304 -
+2025-06-05 14:09:00,122 - INFO - 172.24.0.1 - - [05/Jun/2025 14:09:00] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-05 14:09:00,124 - INFO - 172.24.0.1 - - [05/Jun/2025 14:09:00] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-06-05 14:10:02,007 - INFO - 172.24.0.1 - - [05/Jun/2025 14:10:02] "GET /hp HTTP/1.0" 200 -
+2025-06-05 14:10:02,035 - INFO - 172.24.0.1 - - [05/Jun/2025 14:10:02] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-05 14:10:33,191 - INFO - 172.24.0.1 - - [05/Jun/2025 14:10:33] "GET /hub2b HTTP/1.0" 200 -
+2025-06-05 14:10:33,232 - INFO - 172.24.0.1 - - [05/Jun/2025 14:10:33] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-06-05 14:10:33,438 - INFO - 172.24.0.1 - - [05/Jun/2025 14:10:33] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-06-05 14:29:24,893 - INFO - 172.24.0.1 - - [05/Jun/2025 14:29:24] "POST /hub2b/enviar HTTP/1.0" 200 -
+2025-06-09 14:06:04,544 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.24.0.3:5000
+2025-06-09 14:06:04,599 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-09 14:06:04,606 - INFO -  * Restarting with stat
+2025-06-09 14:06:06,198 - WARNING -  * Debugger is active!
+2025-06-09 14:06:06,477 - INFO -  * Debugger PIN: 190-201-530
+2025-06-09 14:11:11,786 - INFO - 172.24.0.1 - - [09/Jun/2025 14:11:11] "GET / HTTP/1.0" 200 -
+2025-06-09 14:11:12,054 - INFO - 172.24.0.1 - - [09/Jun/2025 14:11:12] "GET /static/hub2b.png HTTP/1.0" 200 -
+2025-06-09 14:11:12,057 - INFO - 172.24.0.1 - - [09/Jun/2025 14:11:12] "GET /static/lenovo.png HTTP/1.0" 200 -
+2025-06-09 14:11:12,059 - INFO - 172.24.0.1 - - [09/Jun/2025 14:11:12] "GET /static/cisco.png HTTP/1.0" 200 -
+2025-06-09 14:11:12,061 - INFO - 172.24.0.1 - - [09/Jun/2025 14:11:12] "GET /static/hp.png HTTP/1.0" 200 -
+2025-06-09 14:11:12,066 - INFO - 172.24.0.1 - - [09/Jun/2025 14:11:12] "GET /static/logo_mw.png HTTP/1.0" 200 -
+2025-06-09 14:11:12,258 - INFO - 172.24.0.1 - - [09/Jun/2025 14:11:12] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+2025-06-09 14:11:14,333 - INFO - 172.24.0.1 - - [09/Jun/2025 14:11:14] "GET /cisco HTTP/1.0" 200 -
+2025-06-09 14:11:14,390 - INFO - 172.24.0.1 - - [09/Jun/2025 14:11:14] "[36mGET /static/cisco.png HTTP/1.0[0m" 304 -
+2025-06-09 14:11:14,420 - INFO - 172.24.0.1 - - [09/Jun/2025 14:11:14] "GET /cisco/dolar HTTP/1.0" 200 -
+2025-06-09 14:11:17,037 - INFO - 172.24.0.1 - - [09/Jun/2025 14:11:17] "GET /hub2b HTTP/1.0" 200 -
+2025-06-09 14:11:17,101 - INFO - 172.24.0.1 - - [09/Jun/2025 14:11:17] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-06-09 14:11:17,317 - INFO - 172.24.0.1 - - [09/Jun/2025 14:11:17] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-06-09 14:18:52,391 - INFO - 172.24.0.1 - - [09/Jun/2025 14:18:52] "GET / HTTP/1.0" 200 -
+2025-06-09 14:18:52,430 - INFO - 172.24.0.1 - - [09/Jun/2025 14:18:52] "GET /static/logo_mw.png HTTP/1.0" 200 -
+2025-06-09 14:18:52,435 - INFO - 172.24.0.1 - - [09/Jun/2025 14:18:52] "GET /static/lenovo.png HTTP/1.0" 200 -
+2025-06-09 14:18:52,444 - INFO - 172.24.0.1 - - [09/Jun/2025 14:18:52] "GET /static/hp.png HTTP/1.0" 200 -
+2025-06-09 14:18:52,453 - INFO - 172.24.0.1 - - [09/Jun/2025 14:18:52] "GET /static/hub2b.png HTTP/1.0" 200 -
+2025-06-09 14:18:52,459 - INFO - 172.24.0.1 - - [09/Jun/2025 14:18:52] "GET /static/cisco.png HTTP/1.0" 200 -
+2025-06-09 14:18:52,574 - INFO - 172.24.0.1 - - [09/Jun/2025 14:18:52] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+2025-06-09 14:18:54,155 - INFO - 172.24.0.1 - - [09/Jun/2025 14:18:54] "GET /hp HTTP/1.0" 200 -
+2025-06-09 14:18:54,198 - INFO - 172.24.0.1 - - [09/Jun/2025 14:18:54] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-09 14:19:15,261 - INFO - 172.24.0.1 - - [09/Jun/2025 14:19:15] "POST /hp/carepack HTTP/1.0" 200 -
+2025-06-09 14:20:52,676 - INFO - 172.24.0.1 - - [09/Jun/2025 14:20:52] "GET / HTTP/1.0" 200 -
+2025-06-09 14:20:52,717 - INFO - 172.24.0.1 - - [09/Jun/2025 14:20:52] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-06-09 14:20:52,722 - INFO - 172.24.0.1 - - [09/Jun/2025 14:20:52] "[36mGET /static/lenovo.png HTTP/1.0[0m" 304 -
+2025-06-09 14:20:52,737 - INFO - 172.24.0.1 - - [09/Jun/2025 14:20:52] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-09 14:20:52,739 - INFO - 172.24.0.1 - - [09/Jun/2025 14:20:52] "[36mGET /static/cisco.png HTTP/1.0[0m" 304 -
+2025-06-09 14:20:52,748 - INFO - 172.24.0.1 - - [09/Jun/2025 14:20:52] "[36mGET /static/hub2b.png HTTP/1.0[0m" 304 -
+2025-06-09 14:20:54,518 - INFO - 172.24.0.1 - - [09/Jun/2025 14:20:54] "GET /hp HTTP/1.0" 200 -
+2025-06-09 14:20:54,560 - INFO - 172.24.0.1 - - [09/Jun/2025 14:20:54] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-09 14:21:02,392 - INFO - 172.24.0.1 - - [09/Jun/2025 14:21:02] "POST /hp/carepack HTTP/1.0" 200 -
+2025-06-09 14:22:27,059 - INFO - 172.24.0.1 - - [09/Jun/2025 14:22:27] "GET / HTTP/1.0" 200 -
+2025-06-09 14:22:27,101 - INFO - 172.24.0.1 - - [09/Jun/2025 14:22:27] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-06-09 14:22:27,102 - INFO - 172.24.0.1 - - [09/Jun/2025 14:22:27] "[36mGET /static/lenovo.png HTTP/1.0[0m" 304 -
+2025-06-09 14:22:27,558 - INFO - 172.24.0.1 - - [09/Jun/2025 14:22:27] "[36mGET /static/cisco.png HTTP/1.0[0m" 304 -
+2025-06-09 14:22:27,559 - INFO - 172.24.0.1 - - [09/Jun/2025 14:22:27] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-09 14:22:27,575 - INFO - 172.24.0.1 - - [09/Jun/2025 14:22:27] "[36mGET /static/hub2b.png HTTP/1.0[0m" 304 -
+2025-06-09 14:22:28,441 - INFO - 172.24.0.1 - - [09/Jun/2025 14:22:28] "GET /hp HTTP/1.0" 200 -
+2025-06-09 14:22:28,493 - INFO - 172.24.0.1 - - [09/Jun/2025 14:22:28] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-09 14:33:26,280 - INFO - 172.24.0.1 - - [09/Jun/2025 14:33:26] "POST /hp/carepack HTTP/1.0" 200 -
+2025-06-09 14:43:12,497 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/routes.py', reloading
+2025-06-09 14:43:13,252 - INFO -  * Restarting with stat
+2025-06-09 14:43:15,129 - WARNING -  * Debugger is active!
+2025-06-09 14:43:15,131 - INFO -  * Debugger PIN: 190-201-530
+2025-06-09 14:43:28,326 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/routes.py', reloading
+2025-06-09 14:43:28,492 - INFO -  * Restarting with stat
+2025-06-09 14:43:30,072 - WARNING -  * Debugger is active!
+2025-06-09 14:43:30,073 - INFO -  * Debugger PIN: 190-201-530
+2025-06-09 14:43:38,201 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/routes.py', reloading
+2025-06-09 14:43:38,430 - INFO -  * Restarting with stat
+2025-06-09 14:43:39,933 - WARNING -  * Debugger is active!
+2025-06-09 14:43:39,934 - INFO -  * Debugger PIN: 190-201-530
+2025-06-09 14:43:41,985 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/routes.py', reloading
+2025-06-09 14:43:42,204 - INFO -  * Restarting with stat
+2025-06-09 14:43:43,749 - WARNING -  * Debugger is active!
+2025-06-09 14:43:43,750 - INFO -  * Debugger PIN: 190-201-530
+2025-06-09 14:43:45,790 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/routes.py', reloading
+2025-06-09 14:43:45,995 - INFO -  * Restarting with stat
+2025-06-09 14:43:47,495 - WARNING -  * Debugger is active!
+2025-06-09 14:43:47,497 - INFO -  * Debugger PIN: 190-201-530
+2025-06-09 14:45:19,750 - INFO - 172.24.0.1 - - [09/Jun/2025 14:45:19] "GET /hp HTTP/1.0" 200 -
+2025-06-09 14:45:19,797 - INFO - 172.24.0.1 - - [09/Jun/2025 14:45:19] "GET /static/hp.png HTTP/1.0" 200 -
+2025-06-09 14:45:20,093 - INFO - 172.24.0.1 - - [09/Jun/2025 14:45:20] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+2025-06-09 14:45:22,439 - INFO - 172.24.0.1 - - [09/Jun/2025 14:45:22] "GET / HTTP/1.0" 200 -
+2025-06-09 14:45:22,480 - INFO - 172.24.0.1 - - [09/Jun/2025 14:45:22] "GET /static/logo_mw.png HTTP/1.0" 200 -
+2025-06-09 14:45:22,497 - INFO - 172.24.0.1 - - [09/Jun/2025 14:45:22] "GET /static/lenovo.png HTTP/1.0" 200 -
+2025-06-09 14:45:22,506 - INFO - 172.24.0.1 - - [09/Jun/2025 14:45:22] "GET /static/cisco.png HTTP/1.0" 200 -
+2025-06-09 14:45:22,550 - INFO - 172.24.0.1 - - [09/Jun/2025 14:45:22] "GET /static/hub2b.png HTTP/1.0" 200 -
+2025-06-09 14:45:22,551 - INFO - 172.24.0.1 - - [09/Jun/2025 14:45:22] "[36mGET /static/hp.png HTTP/1.0[0m" 304 -
+2025-06-09 14:45:23,945 - INFO - 172.24.0.1 - - [09/Jun/2025 14:45:23] "GET /hub2b HTTP/1.0" 200 -
+2025-06-09 14:45:24,006 - INFO - 172.24.0.1 - - [09/Jun/2025 14:45:24] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-06-09 14:45:24,063 - INFO - 172.24.0.1 - - [09/Jun/2025 14:45:24] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-06-09 14:45:35,077 - INFO - 172.24.0.1 - - [09/Jun/2025 14:45:35] "GET /hub2b HTTP/1.0" 200 -
+2025-06-09 14:45:35,107 - INFO - 172.24.0.1 - - [09/Jun/2025 14:45:35] "[36mGET /static/logo_mw.png HTTP/1.0[0m" 304 -
+2025-06-09 14:45:35,124 - INFO - 172.24.0.1 - - [09/Jun/2025 14:45:35] "GET /hub2b/historico HTTP/1.0" 200 -
+2025-06-09 14:47:15,430 - INFO - 172.24.0.1 - - [09/Jun/2025 14:47:15] "POST /hub2b/enviar HTTP/1.0" 200 -
+2025-06-09 15:01:23,262 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/processor.py', reloading
+2025-06-09 15:01:23,505 - INFO -  * Restarting with stat
+2025-06-09 15:01:25,094 - WARNING -  * Debugger is active!
+2025-06-09 15:01:25,096 - INFO -  * Debugger PIN: 190-201-530
+2025-06-09 15:36:29,922 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/routes.py', reloading
+2025-06-09 15:36:30,158 - INFO -  * Restarting with stat
+2025-06-09 15:36:31,574 - WARNING -  * Debugger is active!
+2025-06-09 15:36:31,576 - INFO -  * Debugger PIN: 190-201-530
+2025-06-09 15:53:12,779 - INFO - 172.24.0.1 - - [09/Jun/2025 15:53:12] "POST /hub2b/gerar-planilha HTTP/1.0" 200 -
+2025-06-09 15:55:37,571 - INFO - 172.24.0.1 - - [09/Jun/2025 15:55:37] "POST /hub2b/enviar HTTP/1.0" 200 -
+2025-06-09 18:11:35,450 - INFO -  * Detected change in '/app/Conversor-Lista-Wordpress/Hub2b/routes.py', reloading
+2025-06-09 18:11:35,786 - INFO -  * Restarting with stat
+2025-06-09 18:11:37,695 - WARNING -  * Debugger is active!
+2025-06-09 18:11:37,697 - INFO -  * Debugger PIN: 190-201-530

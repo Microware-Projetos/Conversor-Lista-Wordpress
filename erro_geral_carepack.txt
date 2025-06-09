@@ -1,1 +1,1 @@
-object of type 'NoneType' has no len()
+Erro ao processar arquivo Care Pack: 'Canal - Custo \r\ncom impostos'
