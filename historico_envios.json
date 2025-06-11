@@ -12,5 +12,19 @@
         "status": "Erro no processo de envio: name 'sucesso' is not defined",
         "total_produtos": null,
         "total_sucessos": null
+    },
+    {
+        "marca": "Lenovo",
+        "data": "2025-06-11T09:10:50.342746-03:00",
+        "status": "Erro no processo de envio: name 'sucesso' is not defined",
+        "total_produtos": null,
+        "total_sucessos": null
+    },
+    {
+        "marca": "HP",
+        "data": "2025-06-11T09:13:57.438427-03:00",
+        "status": "Erro no processo de envio: name 'sucesso' is not defined",
+        "total_produtos": null,
+        "total_sucessos": null
     }
 ]

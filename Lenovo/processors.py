@@ -102,8 +102,8 @@ def processar_lenovo_data(lenovo_data):
             'manage_stock': True,
             'attributes': processar_attributes(product),
             'meta_data': processar_fotos(product, images, normalized_family, product_data),
-            'dimmensions': processar_dimmensions(product, delivery_info, product_data),
-            'weight': processar_weight(product, delivery_info, product_data),
+            'dimensions': processar_dimensions(product, delivery_info, product_data),
+            'weight': str(processar_weight(product, delivery_info, product_data)),
             'shipping_class': shipping_class
         }
         produto_data.update(categories_data)
@@ -165,7 +165,7 @@ def processar_attributes(product):
     if anatel:
         attributes.append({
             'id': 13,
-            'options': anatel,
+            'options': str(anatel),
             'visible': True
         })
     else:
@@ -192,13 +192,13 @@ def processar_attributes(product):
                     # Se o atributo não existe, cria um novo
                     attributes.append({
                         'id': wp_attribute['id'],
-                        'options': [valor],
+                        'options': [str(valor)],
                         'visible': True
                     })
     
     attributes.append({
         'id': 68,
-        'options': [product['PH4_DESCRIPTION']],
+        'options': [str(product['PH4_DESCRIPTION'])],
         'visible': True
     })
 
@@ -313,7 +313,7 @@ def processar_fotos(product, images, normalized_family, product_data):
     else:
         return process_api_photos(product_data)
 
-def processar_dimmensions(product, delivery_info, product_data):
+def processar_dimensions(product, delivery_info, product_data):
     if product_data:
         return process_api_dimensions(product_data)
     else:
@@ -322,11 +322,11 @@ def processar_dimmensions(product, delivery_info, product_data):
             family = normalized_family.get(product["PH4_DESCRIPTION"], "")
             delivery_info = delivery_info[delivery_info["family_code"] == family]
             if not delivery_info.empty:
-                dimmensions = delivery_info.iloc[0]
+                dimensions = delivery_info.iloc[0]
                 return {
-                    "length": dimmensions["depth"],
-                    "width": dimmensions["width"],
-                    "height": dimmensions["height"]
+                    "length": dimensions["depth"],
+                    "width": dimensions["width"],
+                    "height": dimensions["height"]
                 }
             else:
                 EmailProducts.append(str(product['PRODUCT_CODE']) + " - " + "Produto sem dimensões")
@@ -421,8 +421,8 @@ def processar_weight(product, delivery_info, product_data):
             family = normalized_family.get(product["PH4_DESCRIPTION"], "")
             delivery_info = delivery_info[delivery_info["family_code"] == family]
             if not delivery_info.empty:
-                dimmensions = delivery_info.iloc[0]
-                return str(dimmensions["weight"])  # Converte para string
+                dimensions = delivery_info.iloc[0]
+                return str(dimensions["weight"])  # Converte para string
            
             else:
                 EmailProducts.append(str(product['PRODUCT_CODE']) + " - " + "Produto sem peso")

@@ -91,7 +91,7 @@ async def processar_arquivo():
         produtos_processados = processar_hp_data(arquivo_produtos, arquivo_precos)
         
         # Cria um JSON e salva na pasta
-        with open('produtos_processados.json', 'w') as json_file:
+        with open(f'produtos_processados-teste-hoje.json', 'w') as json_file:
             json.dump(produtos_processados, json_file, ensure_ascii=False, indent=4)
         
         await deletar_todos_produtos()

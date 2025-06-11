@@ -182,13 +182,13 @@ def combinar_dados(df_produtos, df_precos):
                     'sku': product["PN"],
                     'short_description': product.get("Descrição", ""),
                     'description': "HP " + product.get("Descrição", ""),
-                    'price': price_por,
-                    'regular_price': price_por,
+                    'price': str(price_por),
+                    'regular_price': str(price_por),
                     'stock_quantity': 10,
                     'attributes': processar_attributes(product, price_info),
                     'meta_data': processar_fotos(product, images, normalized_family, product_info),
-                    'dimmensions': processar_dimmensions(product, delivery, product_attributes),
-                    'weight': processar_weight(product, delivery, product_attributes),
+                    'dimensions': processar_dimensions(product, delivery, product_attributes),
+                    'weight': str(processar_weight(product, delivery, product_attributes)),
                     'categories': processar_categories(product, "SmartChoice"),
                     'shipping_class': leadtime,
                     "manage_stock": True,
@@ -236,13 +236,13 @@ def combinar_dados(df_produtos, df_precos):
                     'sku': product["SKU"],
                     'short_description': product.get("Descrição", ""),
                     'description': "HP " + product.get("Descrição", ""),
-                    'price': price_por,
-                    'regular_price': price_por,
+                    'price': str(price_por),
+                    'regular_price': str(price_por),
                     'stock_quantity': 10,
                     'attributes': processar_attributes(product, price_info),
                     'meta_data': processar_fotos(product, images, normalized_family, product_info),
-                    'dimmensions': processar_dimmensions(product, delivery, product_attributes),
-                    'weight': processar_weight(product, delivery, product_attributes),
+                    'dimensions': processar_dimensions(product, delivery, product_attributes),
+                    'weight': str(processar_weight(product, delivery, product_attributes)),
                     'categories': processar_categories(product, categoria),
                     'shipping_class': leadtime,
                     "manage_stock": True,
@@ -305,13 +305,13 @@ def combinar_dados(df_produtos, df_precos):
                     'sku': product["SKU"],
                     'short_description': descricao,
                     'description': "HP " + descricao,
-                    'price': price_por,
-                    'regular_price': price_por,
+                    'price': str(price_por),
+                    'regular_price': str(price_por),
                     'stock_quantity': 10,
                     'attributes': processar_attributes(product, price_info),
                     'meta_data': processar_fotos(product, images, normalized_family, product_info),
-                    'dimmensions': processar_dimmensions(product, delivery, product_attributes),
-                    'weight': processar_weight(product, delivery, product_attributes),
+                    'dimensions': processar_dimensions(product, delivery, product_attributes),
+                    'weight': str(processar_weight(product, delivery, product_attributes)),
                     'categories': processar_categories(product, product_type),
                     'shipping_class': leadtime,
                     "manage_stock": True,
@@ -448,7 +448,7 @@ def processar_attributes(product, price_info):
     if anatel:
         attributes.append({
             'id': 13,
-            'options': anatel,
+            'options': str(anatel),
             'visible': True
         })
     else:
@@ -461,7 +461,7 @@ def processar_attributes(product, price_info):
         if anatel:
             attributes.append({
                 'id': 13,
-                'options': anatel,
+                'options': str(anatel),
                 'visible': True
             })
         else:
@@ -495,7 +495,7 @@ def processar_attributes(product, price_info):
                             # Se o atributo não existe, cria um novo
                             attributes.append({
                                 'id': wp_attribute['id'],
-                                'options': [valor],
+                                'options': [str(valor)],
                                 'visible': True
                             })
 
@@ -766,7 +766,7 @@ def processar_categories(product, categoria):
 
     return categories
 
-def processar_dimmensions(product, delivery_info, product_attributes):
+def processar_dimensions(product, delivery_info, product_attributes):
     # Define coluna com um valor padrão
     coluna = "SKU"  # Valor padrão caso não seja nenhum dos casos específicos
     
@@ -791,11 +791,11 @@ def processar_dimmensions(product, delivery_info, product_attributes):
             delivery_info_filtered = delivery_info[delivery_info["family_code"] == family]
             
             if not delivery_info_filtered.empty:
-                dimmensions = delivery_info_filtered.iloc[0]
+                dimensions = delivery_info_filtered.iloc[0]
                 return {
-                    "length": float(dimmensions["depth"]),  
-                    "width": float(dimmensions["width"]),   
-                    "height": float(dimmensions["height"])  
+                    "length": float(dimensions["depth"]),  
+                    "width": float(dimensions["width"]),   
+                    "height": float(dimensions["height"])  
                 }
 
             # Fallback para produtos que não são SmartChoice, Acessórios/Monitores ou Thin Clients
